@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'kasnova';
+  src: url('./assets/Fonts/kasnova.otf');
+}
+
+@font-face {
+  font-family: 'Outrun';
+  src: url('./assets/Fonts/Outrun.ttf');
+}
+
+:root {
+  --primary-color: #978F66;
+  --secondary-color: #492f79;
+  --background-color: #ddd4c5;
+  --text-color: #4a4a4a;
+  --text-colour: #b8b8b8;
+  --font-dmsans: 'DM Sans', sans-serif;
+  --font-barlow: 'Barlow Semi Condensed', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-bebas: 'Bebas Neue', cursive;
+  --font-stack:'Stack Sans Text',sans-serif;
+  --font-agdasima:"Agdasima";
+  --font-zalando:"Zalando Sans SemiExpanded";
+  --font-archivo:"Archivo";
+  --font-chivo:"Chivo Mono";
+    --font-kasnova:'kasnova';
+    --font-geonova:"geonova";
+    --font-Outrun: "Outrun";
+}
+
+html, body {
+  font-family: var(--font-zalando);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+.clip {
+  clip-path: url(#myClip);
+  -webkit-clip-path: url(#myClip);
+}
+
+
+.btn-fill-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-fill-sweep > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-fill-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #125d95, #5176A3);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 400ms ease;
+  z-index: 0;
+}
+
+.btn-fill-sweep:hover::before {
+  transform: scaleX(1);
+}
+
+
+.pointer{
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 1.7rem;
+  pointer-events: none;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-50%, -50%);
+  transition: 0.35s ease-out;
+
+ 
+}
+body:has(.btn:hover) .pointer { 
+  width: 3rem; 
+  background-color: transparent; 
+  /* Added border style and width so it's visible */
+  border: 1.6px solid #b4a89d; 
+}
+
+
+
+@layer utilities{
+
+    .font-heading{
+    font-family: var(--font-bebas);
+    text-transform: capitalize;
+
+    @apply text-[64px] leading-[58px] mt-2 lg:text-[98px] lg:leading-[84px];
+}
+
+.text_button{
+  font-weight: 500;
+  color: #fffced;
+
+}
+.chivo{
+  font-family: var(--font-chivo);
+}
+
+.Outrun{
+  font-family: var(--font-Outrun);
+}
+
+.archivo{
+  font-family: var(--font-archivo);
+}
+
+.zalando{
+  font-family: var(--font-zalando);
+}
+
+.bebas{
+  font-family: var(--font-bebas);
+
+}
+
+
+.geonova{
+  font-family: var(--font-kasnova);
+
+}
+
+
+}
+
+@layer components {
+  .btn-primary {
+    @apply  font-bold py-2 px-4 rounded;
+  }
+
+  .text_label{
+    font-family: var(--font-archivo);
+    @apply  text-[#fffced] text-[14px] transition-all duration-300 font-normal;
+  }
+
+  .section_header{
+    @apply w-full flex flex-col gap-4  mt-12 !py-0 
+  }
+  
+.flex-center{
+  @apply flex items-center justify-center;
+}
+
+.Section_title {
+  font-family: var(--font-kasnova);
+  @apply lg:text-[42px] text-[42px] leading-[44px] mt-2 max-w-[740px] lg:leading-[52px] font-semibold text-(--primary-color);
+}
+.overlay{
+  @apply absolute rounded-[14px] inset-0 bg-[var(--secondary-color)] opacity-20 mix-blend-multiply;
+}
+
+.text_date{
+  font-family: var(--font-stack);
+  @apply text-[#6f6969] tracking-wider  font-semibold  capitalize text-[14px];
+}
+.noise{
+  @apply absolute rounded-[14px] z-0 inset-0 mix-blend-overlay opacity-30  size-full object-cover;
+}
+ 
+.Section_bg{
+  @apply bg-[#242222] ;
+}
+
+.image_div{
+  @apply relative h-[240px] lg:h-[360px] overflow-hidden z-0 shadow-[0_6px_12px_rgba(121,115,10,0.2)];
+}
+
+
+.Counter_title{
+  font-family: var(--font-barlow);
+  @apply leading-[28px] text-[28px] lg:leading-[32px] lg:text-[32px] uppercase font-semibold  text-[var(--text-color)] ;
+}
+
+.page_title{
+  font-family: var(--font-agdasima);
+  @apply text-[16px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
+}
+.card_heading{
+  font-family: var(--font-archivo);
+  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[18px] text-[#fffced] mb-2 lg:mb-2;
+}
+
+.bigcard_heading{
+  font-family: var(--font-archivo);
+  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[28px] text-[#fffced] mb-2 lg:mb-2;
+}
+
+.text_para{
+  color: #4a4a4a;
+  font-family: var(--font-zalando);
+  @apply lg:text-[16px] font-light tracking-wide lg:leading-[24.7px]  text-[16px] leading-relaxed;
+}
+
+.top_margin{
+  @apply mt-6 lg:mt-12;
+}
+
+.Section_wrapper{
+  @apply lg:py-12 py-6 mx-auto px-4 rounded-2xl lg:px-18;
+}
+
+.flex_cols{ 
+  @apply flex flex-col gap-2 mb-4 items-start justify-center;
+}
+
+.Grid_4{
+  @apply lg:mt-12 mt-6 grid grid-cols-1 lg:grid-cols-4 gap-8;
+}
+
+.text_link{
+  font-family: var(--font-zalando);
+  color: #4a4a4a;
+  @apply block p-4 lg:text-[14px] text-[10px]  hover:text-(--primary-color) hover:translate-x-2 transition-all duration-490 ease-in-out;
+}
+
+.Glassy_btn{
+  @apply flex border cursor-pointer  transition-transform duration-460 ease-in-out hover:-translate-y-2 hover:shadow-[4px_8px_12px_rgba(221,115,10,0.6)] shadow-[0_6px_12px_rgba(221,115,10,0.4)]  border-[#fffced]/30 items-center justify-center rounded-sm backdrop-blur-2xl bg-[#fffced]/20 mt-6 w-fit px-6 py-3  gap-4 
+}
+
+.text_field{
+  @apply block w-full bg-transparent border rounded-sm px-4 py-2 text-(--text-colour) border-(--text-color) text-base  outline-none   transition-all font-light 
+}
+
+}
