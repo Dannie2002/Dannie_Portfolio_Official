@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-import bag from "../assets/052.png";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Civo_tower.jpg";

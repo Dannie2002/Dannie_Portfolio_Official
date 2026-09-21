@@ -47,6 +47,7 @@ const MoonBalls = () => {
           via-[#0b0b0d]
           to-[#978F22]/70
           opacity-78
+    
           shadow-[15px_10px_16px_2px_rgba(151,143,34,0.3)]
         "
         animate={{
@@ -70,6 +71,7 @@ const MoonBalls = () => {
           bg-gradient-to-r
           from-[#0b0b0d]
           via-[#0b0b0d]
+                hidden
           to-[#b8b8b8]/40
           opacity-88
         "

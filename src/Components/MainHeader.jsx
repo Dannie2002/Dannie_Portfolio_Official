@@ -117,10 +117,10 @@ export default function MainHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-99  w-full border-b border-[#fffced]/15 transition-all duration-400 ${
+      className={`fixed top-0 left-0 z-99  w-full border-b border-[#fffced]/19 transition-all duration-400 ${
         scrolled
           ? "bg-(--secondary-color) shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
-          : "bg-transparent"
+          : "bg-transparent border-0"
       }`}
     >
       {/* Glass Navbar */}

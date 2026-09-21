@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import bag from "../assets/052.png";
 import code from "../assets/code.png";
 import webbb from "../assets/Webbb.jpg";
 import branding from "../assets/Hero.jpg";

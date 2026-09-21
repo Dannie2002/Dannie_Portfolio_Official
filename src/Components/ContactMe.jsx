@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import bag from "../assets/052.png";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/ISP.jpg";

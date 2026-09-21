@@ -164,7 +164,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="min-h-[40vh] relative bg-[#0d0e0e]">
+    <footer className="min-h-[40vh] relative border border-t-[#fffced] bg-[#0d0e0e]">
 
       
 

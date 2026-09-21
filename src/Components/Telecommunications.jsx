@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import bag from "../assets/052.png";
 import banner from "../assets/Good2.jpg";
 import fat from "../assets/FAT.jpg";
 import netoperations from "../assets/NetOperations.jpg";

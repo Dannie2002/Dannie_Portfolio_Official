@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import bag from "../assets/15.png";
+import bag from "../assets/12.png";
 import code from "../assets/code.png";
 import bg8 from "../assets/Webbb.jpg";
 import noise from "../assets/noise.png";
@@ -216,9 +216,9 @@ const LandingPage = () => {
             className="flex gap-5 mt-6"
           >
 
-             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm hover:bg-(--primary-color) bg-(--secondary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) hover:bg-(--secondary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
                                  <div className='relative flex overflow-hidden'>
-                                         <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
+                                         <h3 className=' text-[#101011] archivo font-medium text-[16.5px] group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
                                       About Me
                                     </h3>
                                     <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
@@ -227,7 +227,7 @@ const LandingPage = () => {
                                  </div>
                                  
                                     <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
-                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--primary-color)' />
+                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-[#101011]' />
                                       <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
                                    

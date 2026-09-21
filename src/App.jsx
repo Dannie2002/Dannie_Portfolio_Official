@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {Routes, Route, Router } from "react-router";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
-import contact from './assets/Contact1.jpg'
 import branding from './assets/WorkExp.jpg'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
 import noise from './assets/noise.png'
