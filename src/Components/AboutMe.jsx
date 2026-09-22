@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 import { Link } from "react-router";
 import MoonBalls from "./MoonBalls.jsx";
 import Web from '../SVGS/Web.jsx';
+import Energy from '../SVGS/Energy.jsx';
+import ContactPlane from '../SVGS/ContactPlane.jsx'
+import ThreeStars from '../SVGS/ThreeStars.jsx';
+import Telecom from "../SVGS/Telecom.jsx"
 
 
 
@@ -26,7 +30,7 @@ const AboutMe = () => {
   return (
     <section className="h-min-screen relative bg-(--background-color)">
 
-<MoonBalls />
+
        
 
         <div className='Section_wrapper'>
@@ -68,9 +72,13 @@ const AboutMe = () => {
             I design modern digital products that dont just look great but bring seamless experience. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients. I belive every learning oppportunity is a step closer to a win.
         </motion.p>
 
-        <div className='bg-transparent outline-2 outline-(--primary-color) items-center rounded-full px-10 flex py-2'>
+        <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-(--primary-color) items-center rounded-full px-6 flex '>
            <Web fill="#978F66" size={33} />
-          <h4 className='uppercase text-[15px]'>See more about Dannie</h4>
+           <Energy fill="#978f66" size={30} />
+           <Telecom fill="#978F66" size={33} />
+           <ContactPlane fill="#978f66" size={30} />
+           <ThreeStars color="#978F66" size={33} />
+          
 
         </div>
           
@@ -88,7 +96,7 @@ const AboutMe = () => {
 </div>
 
 <div className='lg:w-1/4'>
-  <div className="relative outline  outline-[#201f1f] outline-80 mt-16  rounded-full bg-transparent h-50 w-50 [perspective:1000px]">
+  <div className="relative outline  outline-[#4A4A4A] outline-80 mt-16  rounded-full bg-transparent h-50 w-50 [perspective:1000px]">
     
   </div>
 
