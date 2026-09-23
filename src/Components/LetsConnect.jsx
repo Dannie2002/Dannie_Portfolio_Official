@@ -65,11 +65,7 @@ const LetsConnect = () => {
  
 
 
-      <div className="w-full clip relative overflow-hidden rounded-3xl flex items-center justify-center"  style={{
-    ...bg6,
-    clipPath:
-      "polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%)",
-  }}>
+      <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
          <div className="absolute flex z-0 inset-0 bg-gradient-to-l from-[#060607] via-[#060607] to-[#070708]/70 opacity-80"></div>
           <MoonBalls />
          <motion.div

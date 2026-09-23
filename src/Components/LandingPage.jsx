@@ -61,7 +61,7 @@ const LandingPage = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute z-10 inset-0 bg-gradient-to-r opacity-100 from-[#0b0b0d] via-[#0b0b0d]/90 to-[#272726]/50" />
+      <div className="absolute z-10 inset-0 bg-gradient-to-r opacity-100 from-[#0b0b0d] via-[#0b0b0d]/90 to-[#272726]/85" />
 
       <div className="absolute z-0 top-40 right-5 size-30 rounded-full shadow-[15px_10px_16px_2px_rgba(224,222,218,0.1)] z-0 bg-gradient-to-l opacity-78 from-[#0b0b0d] via-[#0b0b0d] to-[#b8b8b8]/40" />
             <motion.div
@@ -180,21 +180,21 @@ const LandingPage = () => {
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[16px] tracking-[3px] mb-2 bebas uppercase font-light text-[#fffced]"
+            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
           >
-          Hi, Get to know Dannie's
+          Fleelance FrontEnd Developer
             
           </motion.h1>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading geonova !text-[58px] !leading-[68px] !capitalize font-bold leading-[68px] text-[#fffced]"
+            className="font-heading geonova !text-[58px] !leading-[68px] !capitalize font-bold leading-[68px] text-(--primary-color)"
           >    
               
-            Seamless <br />  Experience <br />  
+            beyond<br /> business <br />  
             <span className="text-(--secondary-color)">
-            in business IT.
+            authenticity.
             </span>
         
           </motion.h1>
@@ -216,7 +216,7 @@ const LandingPage = () => {
             className="flex gap-5 mt-6"
           >
 
-             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) hover:bg-(--secondary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-[#F2EAE0] hover:bg-(--secondary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
                                  <div className='relative flex overflow-hidden'>
                                          <h3 className=' text-[#101011] archivo font-medium text-[16.5px] group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
                                       About Me

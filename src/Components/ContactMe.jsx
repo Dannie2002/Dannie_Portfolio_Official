@@ -1,15 +1,16 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
-import branding from "../assets/ISP.jpg";
 import noise from "../assets/noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk.jpg"
 import ContactPlane from "../SVGS/ContactPlane.jsx";
 import MoonBalls from "./MoonBalls.jsx";
+
+
 
 
 const ContactMe = () => {
@@ -50,17 +51,6 @@ const ContactMe = () => {
       },
     },
   };
-
-
-  /* --------------------------------
-     Product Cards
-
-
-
-  /* --------------------------------
-     Card Component
-  -------------------------------- */
-
 
 
 
@@ -105,7 +95,7 @@ const ContactMe = () => {
 
   
 
-    <div className="w-full flex mt-12 gap-16  flex-col-reverse lg:flex-row">
+    <div className="flex_container flex-col-reverse">
       
 <div className="lg:w-[45%] flex flex-col gap-4">
 
@@ -145,7 +135,7 @@ const ContactMe = () => {
 
        
 
-               <form action="#" method="POST" className="mt-6 lg:mt-0 border-3 bg-[#201f1f] rounded-sm backdrop-blur-[3px] z-50 border-(--text-colour)/25 p-4">
+               <form action="#" method="POST" className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className=''>
                   <label htmlFor="first-name" className="text_label">First name:</label>
@@ -239,6 +229,9 @@ const ContactMe = () => {
 
     </div>
 
+    
+
+    
  
 
 

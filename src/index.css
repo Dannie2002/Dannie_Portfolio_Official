@@ -23,8 +23,9 @@
 
 :root {
   --primary-color: #978F66;
-  --secondary-color: #694faf;
+  --secondary-color: #5650a7;
   --background-color: #ddd4c5;
+  --black-color: #101111;
   --text-color: #4a4a4a;
   --text-colour: #b8b8b8;
   --font-dmsans: 'DM Sans', sans-serif;
@@ -189,6 +190,10 @@ body:has(.btn:hover) .pointer {
   @apply bg-[#242222] ;
 }
 
+.flex_container {
+  @apply w-full flex mt-12 gap-12 flex-col lg:flex-row
+}
+
 .image_div{
   @apply relative h-[240px] lg:h-[360px] overflow-hidden z-0 shadow-[0_6px_12px_rgba(121,115,10,0.2)];
 }
@@ -205,7 +210,7 @@ body:has(.btn:hover) .pointer {
 }
 .card_heading{
   font-family: var(--font-archivo);
-  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[18px] text-[#fffced] mb-2 lg:mb-2;
+  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[20px] text-[#fffced] mb-2 lg:mb-2;
 }
 
 .bigcard_heading{
@@ -216,7 +221,7 @@ body:has(.btn:hover) .pointer {
 .text_para{
   color: #4a4a4a;
   font-family: var(--font-zalando);
-  @apply lg:text-[16px] font-light tracking-wide lg:leading-[24.7px]  text-[16px] leading-relaxed;
+  @apply lg:text-[16.4px] font-light tracking-wide lg:leading-[29px]  text-[16px] leading-relaxed;
 }
 
 .top_margin{
@@ -238,7 +243,7 @@ body:has(.btn:hover) .pointer {
 .text_link{
   font-family: var(--font-zalando);
   color: #4a4a4a;
-  @apply block p-4 lg:text-[14px] text-[10px]  hover:text-(--primary-color) hover:translate-x-2 transition-all duration-490 ease-in-out;
+  @apply block p-4 lg:text-[19px] text-[10px]  hover:text-(--primary-color) hover:translate-x-2 transition-all duration-490 ease-in-out;
 }
 
 .Glassy_btn{

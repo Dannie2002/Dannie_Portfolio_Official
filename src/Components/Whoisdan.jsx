@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, AnimatePresence,  useTransform, useScroll} from "framer-motion";
+import { motion, AnimatePresence,  useTransform, useScroll,useMotionValueEvent} from "framer-motion";
 import { Check } from "lucide-react";
 import {Children, useEffect, useRef, useState } from "react";
 import digital from "../assets/digitalMarketing.jpg";
@@ -17,6 +17,7 @@ import WebPerformance from "../SVGS/WebPerformance.jsx";
 import Telecom from "../SVGS/Telecom.jsx";
 import ArrowDown from "../SVGS/ArrowDown.jsx";
 import Github from "../SVGS/Github.jsx";
+import WorkExperience from "./WorkExperience.jsx";
 
 const Whoisdan = () => {
 
@@ -265,23 +266,32 @@ useEffect(() => {
   };
 }, []);
 
-  const ref = useRef(null)
+const ref = useRef(null);
+
 const { scrollYProgress } = useScroll({
   target: ref,
-  offset: ["start end", "center center"]
-})
+  offset: ["start end", "end start"],
+});
 
-const scale = useTransform(
+const rotate = useTransform(
   scrollYProgress,
   [0, 1],
-  [0.4, 1]
+  [0, 360]
 );
 
-const textY = useTransform(
-  scrollYProgress,
-  [0, 1],
-  [0, 0]
-);
+const [scrollDirection, setScrollDirection] = useState("down");
+
+useMotionValueEvent(scrollYProgress, "change", (current) => {
+  const previous = scrollYProgress.getPrevious();
+
+  if (previous === undefined) return;
+
+  if (current > previous) {
+    setScrollDirection("down");
+  } else if (current < previous) {
+    setScrollDirection("up");
+  }
+});
 
   return (
 
@@ -290,18 +300,24 @@ const textY = useTransform(
     <section className="bg-[#101011] min:h-screen flex flex-col lg:items-start lg:justify-center relative  w-full">
 
 
-     <MoonBalls />
+      <MoonBalls />
      
-     
-
-  <div className="Section_wrapper z-10">
+      <div className="Section_wrapper z-10">
 
 
 
-       <div className="section_header mt-34">
-            <motion.h1  className="page_title"  > Who is Dannie? </motion.h1>
-            <h3   className="Section_title "> Service desk Engineer& Frontend Engineer </h3>
-        </div>
+          <div className="section_header mt-34">
+                <motion.h1  className="page_title"  > Who is Dannie? </motion.h1>
+                <h3  ref={ref}
+  animate={{
+    opacity: scrollDirection === "down" ? 1 : 0.35,
+    y: scrollDirection === "down" ? 0 : 8,
+  }}
+  transition={{
+    duration: 0.6,
+    ease: [0.22, 1, 0.36, 1],
+  }}  className="Section_title text-[#fffced]"> Service desk Engineer & Frontend Engineer </h3>
+            </div>
 
 
 
@@ -309,206 +325,201 @@ const textY = useTransform(
 
 
 
-    <div className="w-full flex mt-12 gap-8 flex-col lg:flex-row">
+        <div className="flex_container">
 
-            <motion.p
-            style={{ y: textY }}
-                    
-          
-                      className="text_para max-w-[460px] text-[#fffced] " 
-                    >
-                    Hands-on experience in telecommunications and ISP
-                      operations, with practical exposure to ISP network architecture, Internet backbone 
-                      connectivity, and Fibre-to-the-Home (FTTH) installation.
-            </motion.p> 
-            <div className="flex flex-color lg:flex-col gap-4">
-              <motion.div
-                className="z-50"
-                animate={{
-                rotate: [0, 10, -10, 0],
-                scale: [1, 1.15, 1],
-                        }}
-              transition={{
-              duration: 1.8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-  <Communication color="#978F66" size={43} />
+                <motion.p
+             
+                        
+              
+                          className="text_para max-w-[460px] text-[#fffced] " 
+                        >
+                        Hands-on experience in telecommunications and ISP
+                          operations, with practical exposure to ISP network architecture, Internet backbone 
+                          connectivity, and Fibre-to-the-Home (FTTH) installation.
+                </motion.p> 
+                <div className="flex flex-color lg:flex-col gap-4">
+                  <motion.div
+                    className="z-50"
+                    animate={{
+                    rotate: [0, 10, -10, 0],
+                    scale: [1, 1.15, 1],
+                            }}
+                  transition={{
+                  duration: 1.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+      <Communication color="#978F66" size={43} />
+                  </motion.div>
+                    <Github color="#978F66" size={33} />
+                    <Telecom fill="#978F66" size={33} />
+                    <ArrowDown color="#978F22" className="mt-20" size={43} />
+                  
+
+                </div>
+            
+
+                <div className="Grid_4 grid-cols-3 gap-4 z-50 w-full">
+
+                <div className="mt-6 outline-(--text-colour)/50 outline-3 overflow-hidden rounded-2xl lg:h-[360px] h-[220px]">
+                <img src={photography} className="size-full object-cover grayscale" />
+                
+              </div>
+
+                <motion.div  ref={ref}   className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
+                <img src={branding} className="size-full object-cover" />
+                
               </motion.div>
-                <Github color="#978F66" size={33} />
-                <Telecom fill="#978F66" size={33} />
-                 <ArrowDown color="#978F22" className="mt-20" size={43} />
+
+                  <div>
+                      <div className=" flex "> 
+                  {expertiseSlides.map((slide, index) => ( 
+                    <button key={index} type="button" aria-label={`Show ${slide.title}`} onClick={() => setExpertiseIndex(index)} className="relative flex items-center justify-center p-1" >
+                      <motion.div animate={{ width: expertiseIndex === index ? 24 : 7, height: expertiseIndex === index ? 7 : 7, opacity: expertiseIndex === index ? 1 : 0.55, }} transition={{ duration: 0.35, ease: "easeOut", }} className="rounded-full bg-(--primary-color)" />
+                        </button> ))} 
+                        </div>
+
+                          <div className="mt-22 relative lg:w-44 rounded-2xl flex flex-col items-center justify-center  overflow-hidden lg:h-[370px] h-[200px]">
+                    
+
+                        <div>
+
+                              {/* Image */}
+              
+                  <AnimatePresence mode="sync">
+              <motion.img
+                key={expertiseIndex}
+                src={expertiseSlides[expertiseIndex].image}
+                className="absolute inset-0 size-full rounded-2xl object-cover grayscale"
+                initial={{ x: "100%" }}
+                animate={{ x: "0%" }}
+                exit={{ x: "-5%" }}
+                transition={{
+                  duration: 0.05,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              />
+            </AnimatePresence>
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                  <div className="left-5 hidden rotate-270 bottom-16  z-20"> 
+                    <AnimatePresence mode="wait">
+                      <motion.div key={expertiseIndex} 
+                      initial={{ opacity: 0, y: 12, }} 
+                      animate={{ opacity: 1, y: 0, }}
+                      exit={{ opacity: 0, y: -8, }} transition={{ duration: 0.45, }} > 
+                      <p className="text-[#978F66] text-xs tracking-[0.2em] uppercase mb-1"> 0{expertiseIndex + 1} </p>
+                        <h3 className="card_heading"> {expertiseSlides[expertiseIndex].title} </h3>
+                        <p className="text-[#fffced]/70 text-xs mt-1"> {expertiseSlides[expertiseIndex].description} </p>
+                          </motion.div>
+                    </AnimatePresence> </div>
+
+                        </div>
+
+                
+              </div>
+            </div>
+            
               
 
-            </div>
-         
-
-
-
-
-
-
-     <div className="Grid_4 grid-cols-3 gap-4 z-50 w-full">
-
-     <div className="mt-6 outline-(--text-colour)/50 outline-3 overflow-hidden rounded-2xl lg:h-[360px] h-[220px]">
-    <img src={photography} className="size-full object-cover grayscale" />
-    
-   </div>
-
-    <motion.div  ref={ref}  style={{ scale }}  className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
-    <img src={branding} className="size-full object-cover" />
-    
-   </motion.div>
-
-       <div>
-           <div className=" flex "> 
-       {expertiseSlides.map((slide, index) => ( 
-        <button key={index} type="button" aria-label={`Show ${slide.title}`} onClick={() => setExpertiseIndex(index)} className="relative flex items-center justify-center p-1" >
-           <motion.div animate={{ width: expertiseIndex === index ? 24 : 7, height: expertiseIndex === index ? 7 : 7, opacity: expertiseIndex === index ? 1 : 0.55, }} transition={{ duration: 0.35, ease: "easeOut", }} className="rounded-full bg-(--primary-color)" />
-            </button> ))} 
-            </div>
-
-               <div className="mt-22 relative lg:w-44 rounded-2xl flex flex-col items-center justify-center  overflow-hidden lg:h-[370px] h-[200px]">
-        
-
-            <div>
-
-                  {/* Image */}
-   
-       <AnimatePresence mode="sync">
-  <motion.img
-    key={expertiseIndex}
-    src={expertiseSlides[expertiseIndex].image}
-    className="absolute inset-0 size-full rounded-2xl object-cover grayscale"
-    initial={{ x: "100%" }}
-    animate={{ x: "0%" }}
-    exit={{ x: "-5%" }}
-    transition={{
-      duration: 0.05,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-  />
-</AnimatePresence>
-       
-       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
-       <div className="left-5 hidden rotate-270 bottom-16  z-20"> 
-        <AnimatePresence mode="wait">
-           <motion.div key={expertiseIndex} 
-           initial={{ opacity: 0, y: 12, }} 
-           animate={{ opacity: 1, y: 0, }}
-           exit={{ opacity: 0, y: -8, }} transition={{ duration: 0.45, }} > 
-           <p className="text-[#978F66] text-xs tracking-[0.2em] uppercase mb-1"> 0{expertiseIndex + 1} </p>
-             <h3 className="card_heading"> {expertiseSlides[expertiseIndex].title} </h3>
-             <p className="text-[#fffced]/70 text-xs mt-1"> {expertiseSlides[expertiseIndex].description} </p>
-              </motion.div>
-         </AnimatePresence> </div>
-
-            </div>
-
-    
-   </div>
-</div>
- 
-   
-
-     </div>
-    </div>
-
- 
-
- 
-
-  
-    
-        <div className="w-full mt-12 hidden flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
-
-          {/* IMAGE - Sticky */}
-
-          <div className="lg:h-[520px] outline outline-2 gap-6 z-10 flex flex-col p-6 rounded-r-sm bg-[#0b0b0d] outline-[#4a4a4a]/60 lg:w-[45%] w-full sticky top-30 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
-
-          <motion.h2
-          animate={{
-            opacity: scrollExperience === 0 ? 1 : 0.35,
-            x: scrollExperience === 0 ? 0 : -10,
-            fontSize: scrollExperience === 0 ? "36px" : "24px",
-            color: scrollExperience === 0 ? "#978F66" : "#b8b8b8",
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-          className="card_heading leading-[38.6px]"
-        >
-          1. Service Desk Engineer
-        </motion.h2>
-
-            <motion.h2
-          animate={{
-            opacity: scrollExperience === 0 ? 1 : 0.35,
-            x: scrollExperience === 0 ? 0 : -10,
-            fontSize: scrollExperience === 0 ? "24px" : "36px",
-                color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
-          }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              className="card_heading text-[32px] leading-[38.6px]"
-            >
-              2. ICT Support Officer
-            </motion.h2>
-
-              <motion.h2
-          animate={{
-            opacity: scrollExperience === 0 ? 1 : 0.35,
-            x: scrollExperience === 0 ? 0 : -10,
-            fontSize: scrollExperience === 0 ? "24px" : "36px",
-                color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
-          }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              className="card_heading text-[32px] leading-[38.6px]"
-            >
-              2. Trainer Technical
-            </motion.h2>
-
-          </div>
-
-            {/* CONTENT */}
-            {/* CONTENT */}
-
-        <div className="w-full lg:w-[55%] z-0 flex flex-col gap-8">
-
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
-
-            {productCards.map((card, index) => (
-              <div
-                key={index}
-                ref={(element) => {
-                  experienceRefs.current[index] = element;
-                }}
-                data-experience={index}
-              >
-                <ProductCard
-                  title={card.title}
-                  image={card.image}
-                  description={card.description}
-                  responsibilities={card.responsibilities}
-                />
-              </div>
-            ))}
-
-          </div>
-
+                </div>
         </div>
 
-          </div>
-  </div>
+    
 
+    
 
+      
+        
+            <div className="w-full mt-12 hidden flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+
+              {/* IMAGE - Sticky */}
+
+              <div className="lg:h-[520px] outline outline-2 gap-6 z-10 flex flex-col p-6 rounded-r-sm bg-[#0b0b0d] outline-[#4a4a4a]/60 lg:w-[45%] w-full sticky top-30 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
+
+              <motion.h2
+              animate={{
+                opacity: scrollExperience === 0 ? 1 : 0.35,
+                x: scrollExperience === 0 ? 0 : -10,
+                fontSize: scrollExperience === 0 ? "36px" : "24px",
+                color: scrollExperience === 0 ? "#978F66" : "#b8b8b8",
+              }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              className="card_heading leading-[38.6px]"
+            >
+              1. Service Desk Engineer
+            </motion.h2>
+
+                <motion.h2
+              animate={{
+                opacity: scrollExperience === 0 ? 1 : 0.35,
+                x: scrollExperience === 0 ? 0 : -10,
+                fontSize: scrollExperience === 0 ? "24px" : "36px",
+                    color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
+              }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  className="card_heading text-[32px] leading-[38.6px]"
+                >
+                  2. ICT Support Officer
+                </motion.h2>
+
+                  <motion.h2
+              animate={{
+                opacity: scrollExperience === 0 ? 1 : 0.35,
+                x: scrollExperience === 0 ? 0 : -10,
+                fontSize: scrollExperience === 0 ? "24px" : "36px",
+                    color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
+              }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                  }}
+                  className="card_heading text-[32px] leading-[38.6px]"
+                >
+                  2. Trainer Technical
+                </motion.h2>
+
+              </div>
+
+                {/* CONTENT */}
+                {/* CONTENT */}
+
+            <div className="w-full lg:w-[55%] z-0 flex flex-col gap-8">
+
+              <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
+
+                {productCards.map((card, index) => (
+                  <div
+                    key={index}
+                    ref={(element) => {
+                      experienceRefs.current[index] = element;
+                    }}
+                    data-experience={index}
+                  >
+                    <ProductCard
+                      title={card.title}
+                      image={card.image}
+                      description={card.description}
+                      responsibilities={card.responsibilities}
+                    />
+                  </div>
+                ))}
+
+              </div>
+
+            </div>
+
+              </div>
+      </div>
+
+      <WorkExperience />
 
 
     </section>

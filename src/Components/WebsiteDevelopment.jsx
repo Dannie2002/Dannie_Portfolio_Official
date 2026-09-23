@@ -12,6 +12,7 @@ import CleanCode from "../SVGS/CleanCode.jsx";
 import ResponsiveLayout from "../SVGS/ResponsiveLayout.jsx";
 import Scribble from "./Scribble.jsx";
 import CodeMerge from "../SVGS/CodeMeerge.jsx";
+import MoonBalls from "./MoonBalls.jsx"
 
 const WebsiteDevelopment = () => {
 
@@ -73,7 +74,7 @@ const productCards = [
   },
 
   {
-    title: "Seamless user Experience",
+    title: "SEO",
     icon: ResponsiveLayout,
     description:
       "Creating clean, engaging visuals that expand your brand.",
@@ -96,10 +97,10 @@ const ProductCard = ({ title, icon: Icon, description }) => {
   return (
     <motion.div
      variants={itemVariants}
-      className=" group relative overflow-hidden border-b border-(--text-color) flex flex-col lg:items-start lg:justify-start p-4 h-auto  "
+      className=" group relative overflow-hidden border border-(--text-color)/40 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
     >
       {/* Card Content */}
-      <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6" >
+      <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6 lg:gap-8" >
 
         <div className=" flex items-center lg:items-start lg:justify-start justify-center rounded-sm">
           <Icon color="#fffced" size={52} />
@@ -126,34 +127,35 @@ const ProductCard = ({ title, icon: Icon, description }) => {
 
     
     <section className="bg-[#101011] relative  w-full">
-                       <SectionHeader
-  title="Website Design & Development"
-  bgImage={webbb}
-  breadcrumbs={[
-    { label: "Home", link: "/" },
-    { label: "/ Publication" },
-    { label: "/ Reports" }
-  ]}
-/>
 
 
-  
+            <SectionHeader
+              title="Website Design & Development"
+              bgImage={webbb}
+              breadcrumbs={[
+                { label: "Home", link: "/" },
+                { label: "/ Competencies" },
+                { label: "/ Web development" }
+              ]}
+              />
+
 
       <div className="Section_wrapper mt-16 !py-0">
 
-       
-            <div className="section_header">
-                  <motion.h1  className="page_title"  > Web Desing & Development </motion.h1>
-                   <h3 className="Section_title ">I deliver modern interfaces with 100% business efficiency. </h3>
-                <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
+        
+
+         <div className="section_header">
+            <motion.h1  className="page_title"  > Web Desing & Development </motion.h1>
+            <h3 className="Section_title ">I deliver <span className="text-(--secondary-color)">elite</span> interfaces with 100% business efficiency. </h3>
+            <div className="flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para text-[#fffced] max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
                       </motion.p>
                                                     
                        <CodeMerge color="#978F66" size={36} className="hidden lg:flex"/>
                                                     
-                 </div>
             </div>
+        </div>
 
       </div>
 
@@ -178,7 +180,7 @@ const ProductCard = ({ title, icon: Icon, description }) => {
 
     {/* CONTENT */}
     <div className="w-full lg:w-[55%] flex flex-col gap-8">
-      <div className="grid lg:grid-cols-2  gap-6 lg:gap-8">
+      <div className="grid lg:grid-cols-1  gap-6 lg:gap-8">
        {productCards.map((card, index) => (
   <ProductCard
     key={index}

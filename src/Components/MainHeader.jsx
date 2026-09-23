@@ -69,7 +69,7 @@ export default function MainHeader() {
           link: "/client-relationship-management",
         },
         {
-          title: "Media & Strategic Communications Consultancy",
+          title: "Graphic Designing",
           link: "/media-strategic-communications",
         },
       ],
@@ -159,7 +159,7 @@ export default function MainHeader() {
 
                 <Link
                 to={item.link}
-                  className="flex items-center gap-1 cursor-pointer text-[#fffced] archivo
+                  className="flex items-center text-[16.4px] gap-1 cursor-pointer text-[#fffced] archivo
                   transition-all duration-300 relative group"
                 >
                   {item.title}

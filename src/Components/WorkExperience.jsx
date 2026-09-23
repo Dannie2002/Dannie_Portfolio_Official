@@ -2,8 +2,16 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
-import branding from '../assets/WorkExp2.jpg'
+import branding from '../assets/ServiceDesk2.jpg'
 import noise from "../assets/noise.png";
+import png from "../assets/Letsee.png";
+import ContactPlane from "../SVGS/ContactPlane.jsx";
+import TwoRings from "../SVGS/TwoRings.jsx";
+import Graduate from "../SVGS/Graduate.jsx";
+import Web from '../SVGS/Web.jsx';
+import Energy from '../SVGS/Energy.jsx';
+import ThreeStars from '../SVGS/ThreeStars.jsx';
+import Telecom from "../SVGS/Telecom.jsx";
 
 const WorkExperience = () => {
 
@@ -41,40 +49,22 @@ const WorkExperience = () => {
 
 
 
-   const WhyUs = [
+const experience = [
   {
-    id: 1,
     point: "Service Desk Engineer",
+    duration: "Feb 2026 — Present",
     description:
-      "Monitoring network and service alarms and escalating incidents in accordance with established procedures.",
-
-    employer: "INQ Digital",
-    duration: "February 2026 – August 2026",
-
-    responsibilities: [
-      "Monitoring network and service alarms.",
-      "Handling and documenting client technical issues.",
-      "Escalating incidents to the appropriate technical teams.",
-      "Providing technical support to clients.",
-      "Processing and updating service desk tickets.",
-      "Communicating with clients regarding service interruptions.",
-      "Following established incident management procedures.",
-    ],
-
-    referee: {
-      name: "Referee Name",
-      position: "Position",
-      phone: "+265 XXX XXX XXX",
-      email: "referee@example.com",
-    },
+      "Supporting ISP operations and client connectivity while coordinating technical issues across network and service teams.",
   },
 
-  // Add your other experiences here...
+  {
+    point: "ICT Support Officer",
+    duration: "2025 — 2026",
+    description:
+      "Provided technical support and maintained ICT systems while assisting with connectivity and digital operations.",
+  },
 ];
 
-
-
-const [navOpen, setNavOpen] = useState(false);
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -82,438 +72,251 @@ const toggleAccordion = (index) => {
   setActiveIndex(activeIndex === index ? null : index);
 };
 
-const [selectedExperience, setSelectedExperience] = useState(null);
-
-
-const openExperience = (item) => {
-  setSelectedExperience(item);
-};
-
-const closeExperience = () => {
-  setSelectedExperience(null);
-};
 
 
 
   return (
-       <section className="lg:min-h-[95vh] w-full py-6 bore bg-[#ada6a6] relative overflow-hidden">
+       <section className="h-min-screen relative bg-(--black-color)">
 
   {/* Section Heading */}
- <div className="Section_wrapper mt-12 !py-0">
-
-        <div className="section_header ">
-
-          <h3 className="Section_title text-[#201f1f]">
-            <span className="text-[#201f1f]">
-              Work
-            </span>{" "}
-            Experience
-          </h3>
-
-        </div>
-
-      </div>
-
 
   <div className="Section_wrapper relative z-50">
+          <div className="section_header">
+       
+                  <motion.h1  className="page_title"  > Explore more </motion.h1>
+                 <h3   className="Section_title text-[#fffced]"> I believe in <span className="text-(--secondary-color)">dedication </span> and hardwork.</h3>
+       
+       
+                 <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
+       
+                   <motion.p
+                     className="text_para max-w-xl text-[#fffced] "
+                   >
+                     From the internet backbone to telecommunications and ISP operations, Internet
+                   and Fibre-to-the-Home (FTTH) installation
+                   </motion.p>
+       
+                       <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+                            <div className='relative flex overflow-hidden'>
+                                    <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
+                                 Exlpore more
+                               </h3>
+                               <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
+                                 Contact Us
+                               </h3>
+                            </div>
+                            
+                               <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
+                                 <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--primary-color)' />
+                                 <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
+                               </div>
+                              
+                             </motion.div>
+       
+                 </div>
+       
+               </div>
 
-    <div className="flex flex-col w-full lg:gap-8">
+  <div className="mt-16  ">
 
-      {/* MAIN EXPERIENCE CONTAINER */}
-      <div className="w-full h-[550px] relative px-6  py-6  flex items-end border border-(--text-color)/40  mt-6 lg:mt-0 rounded-sm shadow_red overflow-hidden " >
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 ">
 
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 overflow-hidden rounded-sm size-full">
+        <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
+           <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>
 
-          <motion.img
-            src={branding}
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.08 }}
-            transition={{
-              duration: 8,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            className="
-              size-full
-           
-              rounded-sm
-              object-cover
-            "
-          />
+               <h4 className="card_heading relative leading-[30px] text-[26px] z-10 text-[#fffced]">Industry Exposure in Telecommunications and ICT support.</h4>
 
-        </div>
-
-
-        {/* Background Overlay */}
-        <div
-          className="
-            absolute
-            rounded-sm
-            z-10
-            inset-0
-            bg-gradient-to-t
-            from-(--primary-color)/85
-            via-(--primary-color)/60
-            to-transparent
-            opacity-100
-          "
-        />
-
-
-        {/* EXPERIENCE CONTENT */}
-        <div className="z-50 w-full">
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className=" lg:w-[60%]  w-full z-50 flex  bottom-8 left-8 flex-col lg:mt-0  mt-6 justify-start gap-6 items-start">
-
-            {WhyUs.map((item, index) => (
-
-              <motion.div
-                variants={itemVariants}
-                key={item.id}
-                id={item.id}
-                className=" px-4  py-4 w-full rounded-sm backdrop-blur-xl  bg-[#272626]/50  border border-[#fffced]/20"  >
-
-                {/* Accordion Header */}
-                <div
-                  onClick={() => toggleAccordion(index)}
-                  className=" flex items-center z-50 justify-between cursor-pointer">
-
-                  <motion.h4 className=" card_heading " >
-                    {item.point}
-                  </motion.h4>
-
-
-                  <motion.div
-                    animate={{
-                      rotate:
-                        activeIndex === index
-                          ? 180
-                          : 0,
-                    }}
+                <div className="absolute inset-0 z-0 overflow-hidden rounded-sm size-full">
+                  <motion.img
+                    src={branding}
+                    initial={{ scale: 1 }}
+                    animate={{ scale: 1.08 }}
                     transition={{
-                      duration: 0.4,
+                      duration: 8,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "reverse",
                     }}
-                    className="z-50"
-                  >
-                    <ChevronDown
-                      size={26}
-                      color="#e0ded2"
-                    />
-                  </motion.div>
-
+                    className="size-full rounded-sm grayscale object-cover"
+                  />
                 </div>
 
+                 <div className="absolute z-5 inset-0 bg-gradient-to-b opacity-90 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
 
-                {/* ACCORDION CONTENT */}
-                <AnimatePresence>
+        <div className="relative z-10 mt-8 flex flex-col gap-4 w-full">
 
-                  {activeIndex === index && (
+  {experience.map((item, index) => (
+      <div key={index} className="bg-(--primary-colour)/6 rounded-sm backdrop-blur-[16px] px-3 border border-[#fffced]/40 py-2">
 
-                    <motion.div
-                      initial={{
-                        opacity: 0,
-                        y: -8,
-                        clipPath:
-                          "inset(0 0 100% 0)",
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                        clipPath:
-                          "inset(0 0 0% 0)",
-                      }}
-                      exit={{
-                        opacity: 0,
-                        y: -8,
-                        clipPath:
-                          "inset(0 0 100% 0)",
-                      }}
-                      transition={{
-                        duration: 0.75,
-                        ease: "easeInOut",
-                      }}
-                      className="overflow-hidden"
-                    >
+      {/* POSITION */}
+      <div
+        onClick={() => toggleAccordion(index)}
+        className="flex items-center gap-2 justify-between cursor-pointer"
+      >
+        <motion.h4 className="card_heading text-[#fffced]">
+          {item.point}
+        </motion.h4>
 
-                      {/* Role Summary */}
-                      <p  className="mt-4 text-[#fffced] text_para"> {item.description}</p>
-
-                      {/* LEARN MORE */}
-                      <button
-                        onClick={(e) => {
-                        e.stopPropagation();
-                        openExperience(item);
-                        }}
-                        className="mt-4 text-[#978F66] uppercase font-semibold text-[14px] hover:text-[#fffced]  transition-colors  duration-300 cursor-pointer  ">
-                        Learn More →
-                      </button>
-
-                    </motion.div>
-
-                  )}
-
-                </AnimatePresence>
-
-              </motion.div>
-
-            ))}
-
-          </motion.div>
-
-        </div>
-
-
-        {/* ================================================= */}
-        {/* DETAILED EXPERIENCE MODAL */}
-        {/* ================================================= */}
-
-        <AnimatePresence>
-
-          {selectedExperience && (
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.97,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-              }}
-              exit={{
-                opacity: 0,
-                scale: 0.97,
-              }}
-              transition={{
-                duration: 0.45,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                inset-0
-                z-[200]
-                rounded-sm
-                bg-[#161819]/95
-                backdrop-blur-xl
-                border
-                border-[#fffced]/20
-                overflow-hidden
-              "
-            >
-
-              {/* Modal Header */}
-              <div
-                className="
-                  sticky
-                  top-0
-                  z-20
-                  flex
-                  items-center
-                  justify-between
-                  px-6
-                  py-5
-                  bg-[#161819]/95
-                  backdrop-blur-xl
-                  border-b
-                  border-[#fffced]/10
-                "
-              >
-
-                <div>
-                  <p className="page_title"  > Work Experience </p>
-                  <h2  className=" Section_title "  >{selectedExperience.point} </h2>
-                </div>
-
-
-                {/* CLOSE BUTTON */}
-                <button
-                  onClick={closeExperience}
-                  className="
-                    size-10
-                    rounded-full
-                    border
-                    border-[#fffced]/30
-                    flex
-                    items-center
-                    justify-center
-                    text-[#fffced]
-                    hover:bg-[#fffced]
-                    hover:text-[#161819]
-                    transition-all
-                    duration-300
-                    cursor-pointer
-                  "
-                  aria-label="Close experience details"
-                >
-                  <span className="text-[22px]">
-                    -
-                  </span>
-                </button>
-
-              </div>
-
-
-              {/* SCROLLABLE CONTENT */}
-              <div
-                className="
-                  h-[calc(100%-90px)]
-                  overflow-y-auto
-                  px-6
-                  py-6
-                  lg:px-10
-                  lg:py-8
-                "
-              >
-
-                {/* Employer + Duration */}
-                <div
-                  className="
-                    grid
-                    grid-cols-1
-                    md:grid-cols-2
-                    gap-4
-                    mb-8
-                  "
-                >
-
-                  <div
-                    className="
-                      border
-                      border-[#fffced]/15
-                      bg-[#fffced]/5
-                      rounded-sm
-                      p-4
-                    "
-                  >
-
-                    <p
-                      className="
-                        uppercase
-                        text-[11px]
-                        text-[#b8b8b8]
-                        font-semibold
-                        mb-1
-                      "
-                    >
-                      Employer
-                    </p>
-
-                    <p
-                      className="
-                        text-[#fffced]
-                        text-[17px]
-                        font-semibold
-                      "
-                    >
-                      {selectedExperience.employer}
-                    </p>
-
-                  </div>
-
-
-                  <div
-                    className="
-                      border
-                      border-[#fffced]/15
-                      bg-[#fffced]/5
-                      rounded-sm
-                      p-4
-                    "
-                  >
-
-                    <p
-                      className="
-                        uppercase
-                        text-[11px]
-                        text-[#b8b8b8]
-                        font-semibold
-                        mb-1
-                      "
-                    >
-                      Duration
-                    </p>
-
-                    <p
-                      className="
-                        text-[#fffced]
-                        text-[17px]
-                        font-semibold
-                      "
-                    >
-                      {selectedExperience.duration}
-                    </p>
-
-                  </div>
-
-                </div>
-
-
-                {/* Role Summary */}
-                <div className="mb-8">
-                  <h3 className=" card_heading " > Role Summary </h3>
-                  <p className=" text-[#fffced]/80 text-[15px] leading-7"> {selectedExperience.description}</p>
-                </div>
-
-                {/* ROLES & RESPONSIBILITIES */}
-                <div className="mb-8">
-
-                  <h3
-                    className="
-                      text-[#fffced]
-                      uppercase
-                      font-bold
-                      text-[18px]
-                      mb-4
-                    "
-                  >
-                    Roles & Responsibilities
-                  </h3>
-
-
-                  <div className="flex flex-col gap-3">
-
-                    {selectedExperience.responsibilities?.map(
-                      (responsibility, index) => (
-
-                        <div
-                          key={index}
-                          className=" flex gap-3 items-start border-b  border-[#fffced]/10  pb-3 " >
-
-                          <span  className=" text-[#978F66] font-bold ">
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
-
-                          <p className="  text-[#fffced]/85 text-[15px]  leading-6  "> {responsibility} </p>
-
-                        </div>
-
-                      )
-                    )}
-
-                  </div>
-
-                </div>
-
-
-
-              </div>
-
-            </motion.div>
-
-          )}
-
-        </AnimatePresence>
-
+        <motion.div
+          animate={{
+            rotate: activeIndex === index ? 180 : 0,
+          }}
+          transition={{
+            duration: 0.4,
+          }}
+          className="z-50 "
+        >
+          <ChevronDown
+            size={26}
+            color="#fffced"
+          />
+        </motion.div>
       </div>
 
+      {/* ACCORDION CONTENT */}
+      <AnimatePresence>
+        {activeIndex === index && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -8,
+              clipPath: "inset(0 0 100% 0)",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              clipPath: "inset(0 0 0% 0)",
+            }}
+            exit={{
+              opacity: 0,
+              y: -8,
+              clipPath: "inset(0 0 100% 0)",
+            }}
+            transition={{
+              duration: 0.75,
+              ease: "easeInOut",
+            }}
+            className="overflow-hidden"
+          >
+
+            {/* DURATION */}
+            <p className="mt-3 text-[#fffced] text-sm font-medium">
+              {item.duration}
+            </p>
+
+            {/* SHORT DESCRIPTION */}
+            <p className="mt-2 text-[#101011] text_para line-clamp-2 max-w-xl">
+              {item.description}
+            </p>
+
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      </div>
+  ))}
+
+       </div>
+         </div>
+
+        <div className="relative bg-[#BDA6CE] lg:col-span-4 p-6 flex flex-col items-start justify-between  h-64 rounded-3xl">
+        <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>
+          <div className="flex flex-col gap-3">
+
+            <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Let's create something together.</h4>
+             <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-8 p-2'>
+                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--black-color) btn' />
+                                      <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
+                                    </div>
+          </div>
+            
+               <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex '>
+                  <Web fill="#101111" size={33} />
+                  <Energy fill="#101111" size={30} />
+                  <Telecom fill="#101111" size={33} />
+                  <ContactPlane fill="#101111" size={30} />
+                  <ThreeStars color="#101111" size={33} />
+                  
+                </div> 
+        </div>
+
+      <div className="bg-(--primary-color) flex flex-col items-start justify-between p-6 relative lg:col-span-4 h-64 rounded-3xl overflow-hidden">
+           <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Turning ideas into reality.</h4>
+           <p className="text_para font-normal text-[#fffced]">Transforming creative ideas into purposeful digital experiences of impact.</p>
+
+  {/* CENTER ICON */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <TwoRings
+                  size={90}
+                  color="#fffced"
+                  className="size-14"
+                />
+              </div>
+
+  {/* TAGLINE */}
+   
+
+     </div>
+
+    <div className="relative overflow-hidden border border-(--primary-color) bg-(--black-color) lg:col-span-5 h-auto py-4 lg:h-44 rounded-3xl flex lg:flex-row flex-col w-full items-center justify-center px-4 lg:px-6">
+          <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -right-32" />
+          <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -right-35" />
+          <div className="flex lg:flex-row flex-col items-start w-full gap-6 justify-center">
+          {/* Years of Experience */}
+                    <div className="flex flex-col items-start justify-center flex-1">
+                      <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
+                        1.5+
+                      </span>
+
+                      <span className="mt-2 text-[12px] lg:text-base text-(--primary-color)">
+                        Years of Experience
+                      </span>
+                    </div>
+
+                    {/* Divider */}
+                    
+                    {/* Projects Delivered */}
+                  <div className="flex flex-col items-start justify-center flex-1">
+                      <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
+                        95%+
+                      </span>
+
+                      <span className="mt-2 text-[12px] lg:text-base text-(--primary-color)">
+                        Client Satfaction Rate
+                      </span>
+                    </div>
+
+                    {/* Divider */}
+
+                    {/* Certifications */}
+                  <div className="flex flex-col items-start justify-center flex-1">
+                      <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
+                        15+
+                      </span>
+
+                      <span className="mt-2 text-[12px] lg:text-base text-(--primary-color)">
+                        Certifications 
+                      </span>
+                    </div>
+          </div>
+        
     </div>
+
+        <div className="relative overflow-hidden bg-[#101111] border border-(--primary-color) flex items-center justify-center lg:col-span-3 h-44 rounded-3xl">
+      
+          <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-32" />
+     <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-35" />
+
+          <Graduate size={86} color="#fffced" className="z-10" />
+
+        </div>
+
+
+        
+
+      </div>
+    </div>
+
 
   </div>
 
