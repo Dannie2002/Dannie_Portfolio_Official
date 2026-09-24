@@ -48,7 +48,12 @@ const AboutMe = () => {
 
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
-            <motion.p className="text_para text-[#101011] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients. I belive every learning oppportunity is a step closer to a win. </motion.p>
+            <div>
+                    <h4 className="card_heading text-(--primary-color) chivo uppercase">Resorceful.Creative</h4>
+            <motion.p className="text_para text-[#101011] mt-3 font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients.</motion.p>
+            </div>
+           
+
                  <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex '>
                   <Web fill="#101111" size={33} />
                   <Energy fill="#101111" size={30} />

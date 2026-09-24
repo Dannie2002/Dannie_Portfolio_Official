@@ -90,7 +90,7 @@ const productCards = [
   {
     title: "Troubleshooting",
     paragraph:
-      "Diagnose connectivity and service issues to restore reliable network access.",
+      "From troubleshooting issues to ensuring system reliability.",
       icon: Management,
   },
 ];
@@ -101,22 +101,22 @@ const productCards = [
       <motion.div
    
         variants={itemVariants}
-        className={`group relativeoverflow-hidden rounded-sm outline outline-[#fffced]/60 flex flex-col items-start justify-start px-6  py-8 h-auto bg-[#242222]
+        className={`group relativeoverflow-hidden rounded-sm outline outline-[#fffced]/40 flex flex-col items-start justify-start px-6  py-8 h-auto bg-[#242222]
         `}
     
       >
 
         {/* Card Content */}
-        <div className="relative z-10 flex flex-col gap-4">
+        <div className="relative z-10 flex flex-col items-start gap-6">
 
           {/* Icon */}
        <div className=" flex items-center justify-center rounded-sm">
           <Icon color="#ffffff" size={42} />
         </div>
 
-       <div>
+       <div className="flex flex-col gap-3">
           <h4 className=" card_heading"> {title} </h4>
-          <p className="text-[#b8b8b8]"> {paragraph}</p>
+          <p className="text_para text-[#fffced]"> {paragraph}</p>
         </div>
    
 
@@ -153,7 +153,7 @@ const productCards = [
 
       <div className="section_header">
                      <motion.h1  className="page_title"  > Service Desk Engineering </motion.h1>
-                     <h3 className="Section_title "><span className="text-[]"> Well experienced </span>{" "} in customer support. </h3>
+                     <h3 className="Section_title "> Bridging the gap between technology and users. </h3>
                      <div className="flex w-full justify-between items-center gap-20">
                        <motion.p
                                  className="
@@ -165,7 +165,7 @@ const productCards = [
                                    max-w-2xl
                                  "
                                >
-                                I engage in professional communication with local and internation partners at Inq. digital's service desk.
+                                I engage in maintaining seamless IT operations. From troubleshooting issues to ensuring system reliability.
                         </motion.p>
                      
                         <Communication color="#978F66" size={36} className="hidden"/>

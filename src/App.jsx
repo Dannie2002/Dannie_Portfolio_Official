@@ -15,6 +15,7 @@ import MouseDiv from './Components/MouseDiv.jsx';
 import ContactMe from "./Components/ContactMe.jsx"
 import ProgressBar from './Components/ProgressBar.jsx';
 import MyGallery from './Components/MyGallery.jsx'
+import NetworkArchitecture from './Components/NetworkArchitecture.jsx';
 
 
 
@@ -32,6 +33,7 @@ function App() {
     <Routes>
       <Route path="/" element={<CoverPages />} />
       <Route path="/telecommunications" element={<Telecommunications />} />
+      <Route path='/network-architecture' element={<NetworkArchitecture />} />
       <Route path='/service-desk' element={<ServiceDesk />} />
       <Route path="/client-relationship-management" element={<ClientRelationship />} />
       <Route path="/website-design-development" element = {<WebsiteDevelopment />} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 import { useState } from "react";
 import banner from "../assets/Good2.jpg";
 import fat from "../assets/FAT.jpg";
@@ -86,6 +87,8 @@ const TeleExpertiseCard = ({ title, image, description }) => {
       variants={itemVariants}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
       className="group relative overflow-hidden rounded-sm shadow-[3px_6px_28px_rgba(255,255,255,0.2)] flex flex-col items-start justify-end px-6 py-8 lg:min-h-[480px] min-h-[400px] btn"
     >
       {/* IMAGE */}
@@ -219,12 +222,13 @@ const TeleExpertiseCard = ({ title, image, description }) => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
 
           {teleExpertise.map((card, index) => (
-
+      <Link to="/network-architecture">
         <TeleExpertiseCard
           title={card.title}
           image={card.image}
          description={card.description}
          />
+         </Link>
 
           ))}
 

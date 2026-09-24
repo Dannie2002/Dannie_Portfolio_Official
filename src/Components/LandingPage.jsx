@@ -51,7 +51,6 @@ const LandingPage = () => {
         className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-overlay"
       />
 
-  
 
         <img
         src={bag}
@@ -63,7 +62,7 @@ const LandingPage = () => {
       <div className="absolute z-10 inset-0 bg-gradient-to-r opacity-100 from-[#0b0b0d] via-[#0b0b0d]/90 to-[#272726]/85" />
 
       <div className="absolute z-0 top-40 right-5 size-30 rounded-full shadow-[15px_10px_16px_2px_rgba(224,222,218,0.1)] z-0 bg-gradient-to-l opacity-78 from-[#0b0b0d] via-[#0b0b0d] to-[#b8b8b8]/40" />
-            <motion.div
+         <motion.div
         className="
           absolute z-0 top-60 right-40
           size-15 rounded-full
@@ -171,26 +170,23 @@ const LandingPage = () => {
 
           {/* Scribble */}
           <motion.div variants={itemVariants}>
-            <Scribble className="" 
+            <Scribble className="mb-4" 
               size={20}
-              color="#
-"
+              color="#fffced"
             />
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
+            className="text-[14px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
           >
-          Fleelance FrontEnd Developer
-            
+          Fleelance FrontEnd Developer  
           </motion.h1>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
             className="font-heading geonova !text-[58px] !leading-[68px] !capitalize font-bold leading-[68px] text-(--primary-color)"
-          >    
-              
+          >          
             beyond<br /> business <br />  
             <span className="text-(--secondary-color)">
             authenticity.
@@ -202,7 +198,7 @@ const LandingPage = () => {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="pt-6  text-[#fffced] font-normal  text-[16.5062px] leading-[23.754px] max-w-2xl"
+            className="pt-6 text_para max-w-2xl"
           >
             I design and build modern digital products<span className="">  enabling your business to grow effortlessly, access new markets and deliver reliable digital solutions.</span>
            
@@ -215,14 +211,10 @@ const LandingPage = () => {
             className="flex gap-5 mt-6"
           >
 
-             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-[#F2EAE0] hover:bg-(--secondary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-[#F2EAE0] hover:bg-(--secondary-color) border-(--primary-color)/40 px-10  py-2 items-center gap-6' >
                                  <div className='relative flex overflow-hidden'>
-                                         <h3 className=' text-[#101011] archivo font-medium text-[16.5px] group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
-                                      About Me
-                                    </h3>
-                                    <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
-                                      Contact Us
-                                    </h3>
+                                    <h3 className=' text-[#101011] archivo font-medium text-[16.5px] group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>About Me</h3>
+                                    <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'> Contact Us</h3>
                                  </div>
                                  
                                     <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>

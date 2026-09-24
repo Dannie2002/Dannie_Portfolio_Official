@@ -96,22 +96,7 @@ const toggleAccordion = (index) => {
                    and Fibre-to-the-Home (FTTH) installation
                    </motion.p>
        
-                       <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
-                            <div className='relative flex overflow-hidden'>
-                                    <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
-                                 Exlpore more
-                               </h3>
-                               <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
-                                 Contact Us
-                               </h3>
-                            </div>
-                            
-                               <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
-                                 <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--primary-color)' />
-                                 <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
-                               </div>
-                              
-                             </motion.div>
+                   
        
                  </div>
        

@@ -95,7 +95,7 @@ const ContactMe = () => {
 
   
 
-    <div className="flex_container flex-col-reverse">
+    <div className="flex_container ">
       
 <div className="lg:w-[45%] flex flex-col gap-4">
 

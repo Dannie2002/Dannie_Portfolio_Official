@@ -172,7 +172,7 @@ body:has(.btn:hover) .pointer {
 
 .Section_title {
   font-family: var(--font-kasnova);
-  @apply lg:text-[42px] text-[42px] leading-[44px] mt-2 max-w-[740px] lg:leading-[52px] font-semibold text-(--primary-color);
+  @apply lg:text-[42px] text-[42px] leading-[48px] lg:leading-[44px] mt-2 max-w-[740px] lg:leading-[52px] font-semibold text-(--primary-color);
 }
 .overlay{
   @apply absolute rounded-[14px] inset-0 bg-[var(--secondary-color)] opacity-20 mix-blend-multiply;
@@ -206,7 +206,7 @@ body:has(.btn:hover) .pointer {
 
 .page_title{
   font-family: var(--font-agdasima);
-  @apply text-[18px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
+  @apply lg:text-[18px] text-[16.5px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
 }
 .card_heading{
   font-family: var(--font-archivo);
@@ -219,7 +219,7 @@ body:has(.btn:hover) .pointer {
 }
 
 .text_para{
-  color: #4a4a4a;
+  color: #fffced;
   font-family: var(--font-zalando);
   @apply lg:text-[16.4px] font-light tracking-wide lg:leading-[29px]  text-[16px] leading-relaxed;
 }

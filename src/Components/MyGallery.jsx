@@ -18,6 +18,7 @@ import radwin from "../assets/Radwin.jpg"
 import tplink from "../assets/TpLink.jpg"
 import onu from "../assets/ONU.jpg"
 import fat2 from "../assets/FAT2.jpg"
+import roundedrouter from "../assets/RoundRouter.jpeg"
 import SectionHeader from "./SectionHeader.jsx";
 import MoonBalls from "./MoonBalls.jsx";
 
@@ -149,7 +150,7 @@ const MyGallery = () => {
     },
 
     {
-      image: branding,
+      image: roundedrouter,
       title: "Internet Service Provider",
       category: "ISP Operations",
     },
@@ -181,16 +182,13 @@ const MyGallery = () => {
         <div className="section_header">
 
           <motion.h1
-            className="page_title autoShow"
+            className="page_title autoShow ]"
           >
             Evidence Of The Work
           </motion.h1>
 
-          <h3 className="Section_title">
-            <span>
-              A visual record of my work, dedication and
-              hardwork.
-            </span>
+          <h3 className="Section_title text-[#fffced]">
+            Relavance through <span className="text-(--secondary-color)">Evidence.</span>
           </h3>
 
         </div>
