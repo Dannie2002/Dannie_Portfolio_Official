@@ -298,7 +298,7 @@ const Footer = () => {
                           <Link
                             key={i}
                             to={item.link}
-                            className="link cursor-pointer lg:text-[17.5px] text-(--text-colour) link-hover"
+                            className="link cursor-pointer lg:text-[16.5px] text-(--text-colour) link-hover"
                           >
                             {item.label}
                           </Link>

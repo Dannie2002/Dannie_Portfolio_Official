@@ -23,7 +23,7 @@
 
 :root {
   --primary-color: #978F66;
-  --secondary-color: #5650a7;
+  --secondary-color: #635985;
   --background-color: #ddd4c5;
   --black-color: #101111;
   --text-color: #4a4a4a;
@@ -206,7 +206,7 @@ body:has(.btn:hover) .pointer {
 
 .page_title{
   font-family: var(--font-agdasima);
-  @apply text-[16px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
+  @apply text-[18px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
 }
 .card_heading{
   font-family: var(--font-archivo);
@@ -243,7 +243,7 @@ body:has(.btn:hover) .pointer {
 .text_link{
   font-family: var(--font-zalando);
   color: #4a4a4a;
-  @apply block p-4 lg:text-[19px] text-[10px]  hover:text-(--primary-color) hover:translate-x-2 transition-all duration-490 ease-in-out;
+  @apply block p-4 lg:text-[16px] text-[10px]  hover:text-(--primary-color) hover:translate-x-3 transition-all duration-490 ease-in-out;
 }
 
 .Glassy_btn{

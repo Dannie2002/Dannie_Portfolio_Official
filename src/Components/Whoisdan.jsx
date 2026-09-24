@@ -279,19 +279,7 @@ const rotate = useTransform(
   [0, 360]
 );
 
-const [scrollDirection, setScrollDirection] = useState("down");
 
-useMotionValueEvent(scrollYProgress, "change", (current) => {
-  const previous = scrollYProgress.getPrevious();
-
-  if (previous === undefined) return;
-
-  if (current > previous) {
-    setScrollDirection("down");
-  } else if (current < previous) {
-    setScrollDirection("up");
-  }
-});
 
   return (
 
@@ -308,15 +296,7 @@ useMotionValueEvent(scrollYProgress, "change", (current) => {
 
           <div className="section_header mt-34">
                 <motion.h1  className="page_title"  > Who is Dannie? </motion.h1>
-                <h3  ref={ref}
-  animate={{
-    opacity: scrollDirection === "down" ? 1 : 0.35,
-    y: scrollDirection === "down" ? 0 : 8,
-  }}
-  transition={{
-    duration: 0.6,
-    ease: [0.22, 1, 0.36, 1],
-  }}  className="Section_title text-[#fffced]"> Service desk Engineer & Frontend Engineer </h3>
+                <h3   className="Section_title text-[#fffced]"> Service desk Engineer & Frontend Engineer </h3>
             </div>
 
 
@@ -367,7 +347,7 @@ useMotionValueEvent(scrollYProgress, "change", (current) => {
                 
               </div>
 
-                <motion.div  ref={ref}   className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
+                <motion.div  ref={ref}  className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
                 <img src={branding} className="size-full object-cover" />
                 
               </motion.div>

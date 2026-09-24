@@ -119,7 +119,7 @@ const toggleAccordion = (index) => {
 
   <div className="mt-16  ">
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 ">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8n ">
 
         <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
            <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>

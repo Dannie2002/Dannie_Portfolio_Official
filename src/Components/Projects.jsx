@@ -242,7 +242,7 @@ const Projects = () => {
         w-full
         min-h-screen
         overflow-hidden
-       bg-[#101011]
+       bg-[#101011] 
         py-6
       "
     >

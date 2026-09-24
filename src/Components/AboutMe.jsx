@@ -48,7 +48,7 @@ const AboutMe = () => {
 
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
-            <motion.p className="text_para text-[#101011] font-normal max-w-sm" >I design modern digital products that dont just look great but bring seamless experience. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients. I belive every learning oppportunity is a step closer to a win. </motion.p>
+            <motion.p className="text_para text-[#101011] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients. I belive every learning oppportunity is a step closer to a win. </motion.p>
                  <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex '>
                   <Web fill="#101111" size={33} />
                   <Energy fill="#101111" size={30} />
@@ -69,7 +69,7 @@ const AboutMe = () => {
         </div>
 
         <div className='w-full flex lg:items-start justify-center lg:w-1/4 lg:ml-16'>
-          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-90 mt-16  rounded-full bg-transparent size-20 lg:h-40 lg:w-40 [perspective:1000px]"></div>
+          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-110 mt-22  rounded-full bg-transparent size-20 lg:h-30 lg:w-30 [perspective:1000px]"></div>
 
         </div>
 

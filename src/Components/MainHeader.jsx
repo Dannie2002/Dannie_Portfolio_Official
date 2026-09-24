@@ -2,16 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import cv from "../assets/Dannie_Mankhwazi_CV_SEPTEMBER.pdf";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  ChevronDown,
-  ArrowRight,
-  Home,
-  Info,
-  Download,
-  Briefcase,
-  Palette,
-  Phone,
-} from "lucide-react";
+import { ChevronDown, ArrowRight, Home, Info, Download, Briefcase, Palette,  Phone,} from "lucide-react";
 import { title } from "motion/react-client";
 
 export default function MainHeader() {
@@ -117,18 +108,16 @@ export default function MainHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-99  w-full border-b border-[#fffced]/19 transition-all duration-400 ${
+      className={`fixed top-0 left-0 z-99 w-full border-b border-[#fffced]/22 transition-all duration-400 ${
         scrolled
           ? "bg-(--secondary-color) shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
           : "bg-transparent border-0"
       }`}
     >
       {/* Glass Navbar */}
-      <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-24 relative z-90">
+      <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-22 relative z-90">
 
-        {/* =================================
-            Logo
-        ================================= */}
+        {/* Logo */}
 
         <Link
           to="/"
@@ -139,46 +128,30 @@ export default function MainHeader() {
           </h2>
         </Link>
 
-        {/* =================================
-            Desktop Navigation
-        ================================= */}
+        {/* Desktop Navigation */}
 
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center justify-center gap-10">
           {navLinks.map((item, index) => {
             const hasGrandChildren =
-              item.children?.some((child) => child.children);
+            item.children?.some((child) => child.children);
 
             return (
-              <div
-                key={index}
-                className="relative"
+              <div key= {index} className="relative"
                 onMouseEnter={() => setActiveMenu(index)}
-                onMouseLeave={() => setActiveMenu(null)}
-              >
-                {/* Main Navigation Button */}
+                onMouseLeave={() => setActiveMenu(null)}>
 
-                <Link
-                to={item.link}
-                  className="flex items-center text-[16.4px] gap-1 cursor-pointer text-[#fffced] archivo
-                  transition-all duration-300 relative group"
-                >
-                  {item.title}
+                {/* Main Navigation Button */}
+                <Link to={item.link}   className="flex items-center text-[16.7px] gap-1 cursor-pointer text-[#fffced] archivo transition-all duration-300 relative group" > {item.title}
 
                   {item.children && (
-                    <ChevronDown
-                      size={17}
-                      className={`transition duration-300 ${
-                        activeMenu === index ? "rotate-180" : ""
-                      }`}
-                    />
+                    <ChevronDown size={18} className={`transition duration-300 ${
+                        activeMenu === index ? "rotate-180" : ""}`} />
                   )}
 
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fffced] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
 
-                {/* =================================
-                    Mega Menu
-                ================================= */}
+                {/* Mega Menu*/}
 
                 <AnimatePresence>
                   {item.children && activeMenu === index && (
@@ -208,8 +181,7 @@ export default function MainHeader() {
                     >
                       <div className="pt-[37px]">
                         <div
-                          className={`shadow-2xl border border-white/10
-                          bg-[#f8f6ed] backdrop-blur-2xl
+                          className={`shadow-2xl border border-white/10 bg-[#f8f6ed] backdrop-blur-2xl
                           ${
                             hasGrandChildren
                               ? "grid grid-cols-2 min-w-[620px] gap-10"
@@ -217,13 +189,11 @@ export default function MainHeader() {
                           }`}
                         >
 
-                          {/* =================================
-                              Simple Dropdown
-                          ================================= */}
+                          {/*Simple Dropdown*/}
 
                           {!hasGrandChildren && (
                             <motion.ul
-                              className="py-3"
+                              className=" p-2"
                               initial="hidden"
                               animate="visible"
                               variants={{
@@ -256,14 +226,7 @@ export default function MainHeader() {
                                 >
                                   <Link
                                     to={child.link}
-                                    className="block btn px-6 py-4
-                                    text-(--text-color)
-                                    hover:bg-white/5
-                                    hover:translate-x-2
-                                    ease-in-out duration-250
-                                    hover:text-(--primary-color)
-                                    transition"
-                                  >
+                                    className="block text_link btn" >
                                     {child.title}
                                   </Link>
                                 </motion.li>
@@ -271,9 +234,7 @@ export default function MainHeader() {
                             </motion.ul>
                           )}
 
-                          {/* =================================
-                              Mega Menu
-                          ================================= */}
+                          {/*Mega Menu*/}
 
                           {hasGrandChildren &&
                             item.children.map((section, i) => (
@@ -339,11 +300,9 @@ export default function MainHeader() {
           })}
         </nav>
 
-        {/* =================================
-            CTA
-        ================================= */}
+        {/*CTA */}
 
-      <motion.a
+    <motion.a
   href={cv}
   target="_blank"
   rel="noopener noreferrer"

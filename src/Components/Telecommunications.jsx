@@ -49,7 +49,7 @@ const Telecommunications = () => {
 
   const teleExpertise = [
     {
-      title: "Network Infrastructure",
+      title: "Network architecture & Infrastructure",
       image: banner,
       items: [
         "GPON/FTTH architecture",
@@ -229,7 +229,7 @@ const Telecommunications = () => {
             and Fibre-to-the-Home (FTTH) installation
             </motion.p>
 
-                <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+                <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-transparent border-(--text-colour)/60 px-6  py-2 items-center gap-4' >
                      <div className='relative flex overflow-hidden'>
                              <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
                           Exlpore more

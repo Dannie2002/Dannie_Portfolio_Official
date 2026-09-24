@@ -2,11 +2,11 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
-import branding from '../assets/Handshake.jpg'
+import branding from '../assets/ServiceDesk3.jpg'
 import noise from "../assets/Noise.png";
 import border from "../assets/12.png";
-import MoonBalls from "./MoonBalls";
 import ThreeStars from "../SVGS/ThreeStars";
+import { filter } from "motion/react-client";
 
 const LetsConnect = () => {
 
@@ -38,6 +38,7 @@ const LetsConnect = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
+    
   };
 
 
@@ -66,35 +67,20 @@ const LetsConnect = () => {
 
 
       <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
-         <div className="absolute flex z-0 inset-0 bg-gradient-to-l from-[#060607] via-[#060607] to-[#070708]/70 opacity-80"></div>
-          <MoonBalls />
-         <motion.div
-      className="absolute top-50 left-20 z-50"
-  animate={{
-    rotate: [0, 10, -10, 0],
-    scale: [1, 1.15, 1],
-  }}
-  transition={{
-    duration: 7,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  <ThreeStars color="#978F66" size={32} />
-         </motion.div>
+         <div className="absolute z-5 inset-0 bg-gradient-to-b opacity-90 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
+   
        
-    
       
         <div className="flex relative flex-col items-center justify-center " >
                        
                 
                     <div className="flex z-10  barlow  lg:gap-6 flex-col items-center justify-center ">
                                           
-                    <h4 className="text-(--secondary-color) font-bold text-center text-[46px] geonova white leading-[40px]">Ready to improve your Business?</h4>
+                    <h4 className="text-[#fffced] font-bold text-center text-[46px] geonova white leading-[40px]">Have an idea? Feel free to reach out.</h4>
 
                      <div className="flex mt-3 gap-4">
                         
-                      <p className="text_para text-center  text-(--text-colour)"><span className="  ">Take </span> your business on the first step. We look forward to being part of your journey.</p>
+                      <p className="text_para text-center  text-[#fffced]"><span className="  ">Take </span> your business on the first step. We look forward to being part of your journey.</p>
                       </div>
                                    <div className="mt-0 flex flex-row  gap-6">
                     
