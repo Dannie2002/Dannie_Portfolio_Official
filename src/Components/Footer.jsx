@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown,Plus, ChevronUp, ChevronRight } from "lucide-react";
 import { MessageCircle } from "lucide-react";

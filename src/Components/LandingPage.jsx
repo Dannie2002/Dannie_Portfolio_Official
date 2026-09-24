@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import bag from "../assets/12.png";
-import code from "../assets/code.png";
 import bg8 from "../assets/Webbb.jpg";
 import noise from "../assets/Noise.png";
 import Scribble from "../Components/Scribble.jsx";
