@@ -1,10 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Routes, Route, Router } from "react-router";
-import {motion, AnimatePresence, backInOut} from 'framer-motion'
-import branding from './assets/WorkExp.jpg'
-import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
-import noise from './assets/noise.png'
-import { FlipWords } from './Components/FlipWords'
 import MainHeader from './Components/MainHeader.jsx'
 import Footer from './Components/Footer.jsx'
 import Telecommunications from './Components/Telecommunications.jsx'
@@ -26,33 +21,8 @@ import MyGallery from './Components/MyGallery.jsx'
 function App() {
 
 
-    const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -80 },
-    show: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.75, ease: "easeInOut" }
-    },
-  };
-  
-
-
-
   return (
-
-
-    
+ 
     <>
     <MouseDiv />
     <ProgressBar />
