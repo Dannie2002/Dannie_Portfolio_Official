@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";

@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import bag from "../assets/052.png";
 import banner from "../assets/WorkExp.jpg";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Hero.jpg";
 import noise from "../assets/Noise.png";

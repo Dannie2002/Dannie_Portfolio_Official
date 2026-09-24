@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import client from "../assets/CRM.jpg";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk.jpg"

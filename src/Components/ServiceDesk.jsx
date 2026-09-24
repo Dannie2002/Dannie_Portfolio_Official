@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import code from "../assets/code.png";
 import banner from "../assets/ServiceDesk2.jpg";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
@@ -144,12 +143,7 @@ const productCards = [
 />
 
 
-             <img
-              src={code}
-              alt=""
-              className="absolute top-0 right-0 z-0 size-85 object-contain opacity-0 mix-blend-overlay"
-            />
-      
+
             
       {/* --------------------------------
           Section Heading

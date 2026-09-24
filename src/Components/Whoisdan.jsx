@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence,  useTransform, useScroll,useMotionValueEvent} from "framer-motion";
 import { Check } from "lucide-react";
 import {Children, useEffect, useRef, useState } from "react";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import banner from "../assets/ISP.jpg"
 import branding from "../assets/ISP.jpg";

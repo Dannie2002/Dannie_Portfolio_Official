@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import digital from "../assets/digitalMarketing.jpg";
+import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Civo_tower.jpg";
 import noise from "../assets/Noise.png";
