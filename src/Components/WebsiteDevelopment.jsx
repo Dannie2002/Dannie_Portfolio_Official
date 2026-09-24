@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import code from "../assets/code.png";
 import webbb from "../assets/Webbb.jpg";
 import branding from "../assets/Hero.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import webdev from "../assets/Webdevelopment.jpg"
 import WebPerformance from "../SVGS/WebPerformance.jsx";
@@ -107,9 +107,7 @@ const ProductCard = ({ title, icon: Icon, description }) => {
         </div>
 
         <div className="flex flex-col lg:items-start items-center lg:justify-start justify-center">
-          <h4 className=" card_heading">
-            {title}
-          </h4>
+          <h4 className=" card_heading"> {title}</h4>
 
           <p className="text-[#b8b8b8] text-center lg:text-start">
             {description}

@@ -129,18 +129,7 @@ const MoonBalls = () => {
       />
 
       {/* Noise Overlay */}
-      <img
-        src={noise}
-        alt=""
-        className="
-          absolute inset-0
-          h-full w-full
-          object-cover
-          opacity-10
-          mix-blend-multiply
-          pointer-events-none
-        "
-      />
+      <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-10  mix-blend-multiply pointer-events-none  "/>
     </>
   );
 };

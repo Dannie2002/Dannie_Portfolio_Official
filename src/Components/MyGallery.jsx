@@ -4,7 +4,7 @@ import { useState } from "react";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Civo_tower.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import servicedesk from "../assets/Field3.jpg";
 import banner from "../assets/Gallery.jpg";
 import field4 from "../assets/Field4.jpg"

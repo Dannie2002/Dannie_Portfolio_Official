@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import bag from "../assets/052.png";
-import code from "../assets/code.png";
 import banner from "../assets/WorkExp.jpg";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Hero.jpg";
-import consultancy from "../assets/Consultancy.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk.jpg"
 

@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {Link} from "react-router";
 import header from "../assets/Hero.jpg";
 import { House } from "lucide-react";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 
 const SectionHeader = ({ title,link ,breadcrumbs = [],bgImage }) => {
 

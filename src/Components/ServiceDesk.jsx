@@ -5,7 +5,7 @@ import code from "../assets/code.png";
 import banner from "../assets/ServiceDesk2.jpg";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk3.jpg"
 import Communication from "../SVGS/Communication.jsx";

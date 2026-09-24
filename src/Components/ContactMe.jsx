@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import digital from "../assets/digitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk.jpg"
 import ContactPlane from "../SVGS/ContactPlane.jsx";

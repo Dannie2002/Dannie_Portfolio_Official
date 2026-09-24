@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
 import branding from '../assets/Handshake.jpg'
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import border from "../assets/12.png";
 import MoonBalls from "./MoonBalls";
 import ThreeStars from "../SVGS/ThreeStars";

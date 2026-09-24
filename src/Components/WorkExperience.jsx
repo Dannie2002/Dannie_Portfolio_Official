@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
 import branding from '../assets/ServiceDesk2.jpg'
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import png from "../assets/Letsee.png";
 import ContactPlane from "../SVGS/ContactPlane.jsx";
 import TwoRings from "../SVGS/TwoRings.jsx";

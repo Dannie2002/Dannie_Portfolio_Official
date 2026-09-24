@@ -6,7 +6,7 @@ import fat from "../assets/FAT.jpg";
 import netoperations from "../assets/NetOperations.jpg";
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
 import router from "../assets/Router.jpg";
-import noise from "../assets/noise.png";
+import noise from "../assets/Noise.png";
 import isp from "../assets/Good.jpg";
 import SectionHeader from "./SectionHeader.jsx";
 import Telecom from "../SVGS/Telecom.jsx";
