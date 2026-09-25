@@ -73,8 +73,8 @@ const AboutMe = () => {
 
         </div>
 
-        <div className='w-full flex lg:items-start justify-center lg:w-1/4 lg:ml-16'>
-          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-110 mt-22  rounded-full bg-transparent size-20 lg:h-30 lg:w-30 [perspective:1000px]"></div>
+        <div className='w-full flex lg:items-start items-center justify-center lg:w-1/4 lg:ml-16'>
+          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-110 lg:mt-22  rounded-full bg-transparent size-10 lg:h-30 lg:w-30 [perspective:1000px]"></div>
 
         </div>
 

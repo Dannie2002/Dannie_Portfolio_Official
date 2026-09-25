@@ -12,11 +12,15 @@ import servicedesk from "../assets/ServiceDesk.jpg"
 import MoonBalls from "./MoonBalls.jsx";
 import Scribble from "./Scribble.jsx";
 import Communication from "../SVGS/Communication.jsx";
+import AnalyticalThinking from "../SVGS/AnalyticalThinking.jsx";
 import ThreeStars from "../SVGS/ThreeStars.jsx";
 import WebPerformance from "../SVGS/WebPerformance.jsx";
 import Telecom from "../SVGS/Telecom.jsx";
+import Energy from '../SVGS/Energy.jsx';
+import ContactPlane from '../SVGS/ContactPlane.jsx'
 import ArrowDown from "../SVGS/ArrowDown.jsx";
 import Github from "../SVGS/Github.jsx";
+import Web from '../SVGS/Web.jsx';
 import WorkExperience from "./WorkExperience.jsx";
 
 const Whoisdan = () => {
@@ -296,7 +300,7 @@ const rotate = useTransform(
 
           <div className="section_header mt-34">
                 <motion.h1  className="page_title"  > Who is Dannie? </motion.h1>
-                <h3   className="Section_title text-[#fffced]"> Service desk Engineer & Frontend Engineer </h3>
+                <h3   className="Section_title text-[#fffced]">IT Service desk Engineer & Frontend Engineer </h3>
             </div>
 
 
@@ -306,17 +310,27 @@ const rotate = useTransform(
 
 
         <div className="flex_container">
-
-                <motion.p
-             
+          <div className="lg:w-[40%] w-full flex flex-col items-start justify-between ">
+              <motion.p
+                      
+                                  
                         
+                                    className="text_para max-w-[460px] text-[#fffced] " 
+                                  >
+                                  Hands-on experience in telecommunications and ISP
+                                    operations, with practical exposure to ISP network architecture, Internet backbone 
+                                    connectivity, and Fibre-to-the-Home (FTTH) installation.
+                          </motion.p> 
+                                <div className='bg-transparent mt-4 lg:mt-34 py-2 gap-2 outline-[1.2px] outline-(--primary-color) items-center rounded-full px-6 flex '>
+                            <Web fill="#978F66" size={33} />
+                            <Energy fill="#978F66" size={30} />
+                            <AnalyticalThinking color="#978F66" size={33} />
+                            <ContactPlane fill="#978F66" size={30} />
+                            <ThreeStars color="#978F66" size={33} />                           
+                          </div> 
+          </div>
               
-                          className="text_para max-w-[460px] text-[#fffced] " 
-                        >
-                        Hands-on experience in telecommunications and ISP
-                          operations, with practical exposure to ISP network architecture, Internet backbone 
-                          connectivity, and Fibre-to-the-Home (FTTH) installation.
-                </motion.p> 
+            
                 <div className="flex flex-color lg:flex-col gap-4">
                   <motion.div
                     className="z-50"
@@ -340,7 +354,7 @@ const rotate = useTransform(
                 </div>
             
 
-                <div className="Grid_4 grid-cols-3 gap-4 z-50 w-full">
+                <div className="Grid_4 grid-cols-3 mt-0 lg:w-1/2 gap-4 z-50 ">
 
                 <div className="mt-6 outline-(--text-colour)/50 outline-3 overflow-hidden rounded-2xl lg:h-[360px] h-[220px]">
                 <img src={photography} className="size-full object-cover grayscale" />

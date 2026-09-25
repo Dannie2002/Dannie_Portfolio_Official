@@ -88,15 +88,13 @@ const productCards = [
 ];
 
 
-  /* --------------------------------
-     Card Component
-  -------------------------------- */
+  /*Card Component*/
 
 const ProductCard = ({ title, icon: Icon, description }) => {
   return (
     <motion.div
      variants={itemVariants}
-      className=" group relative overflow-hidden border border-(--text-color)/40 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
+      className=" group relative overflow-hidden rounded-sm border border-(--text-color)/60 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
     >
       {/* Card Content */}
       <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6 lg:gap-8" >
@@ -105,12 +103,9 @@ const ProductCard = ({ title, icon: Icon, description }) => {
           <Icon color="#fffced" size={52} />
         </div>
 
-        <div className="flex flex-col lg:items-start items-center lg:justify-start justify-center">
+        <div className="flex flex-col gap-2 lg:items-start items-center lg:justify-start justify-center">
           <h4 className=" card_heading"> {title}</h4>
-
-          <p className="text-[#b8b8b8] text-center lg:text-start">
-            {description}
-          </p>
+          <p className="text-[#b8b8b8] text-center lg:text-start"> {description}</p>
         </div>
 
       </div>
@@ -118,13 +113,9 @@ const ProductCard = ({ title, icon: Icon, description }) => {
   );
 };
 
-
   return (
 
-
-    
     <section className="bg-[#101011] relative  w-full">
-
 
             <SectionHeader
               title="Website Design & Development"
@@ -137,15 +128,12 @@ const ProductCard = ({ title, icon: Icon, description }) => {
               />
 
 
-      <div className="Section_wrapper mt-16 !py-0">
-
-        
-
+      <div className="Section_wrapper">
          <div className="section_header">
             <motion.h1  className="page_title"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title ">I deliver <span className="text-(--secondary-color)">elite</span> interfaces with 100% business efficiency. </h3>
+            <h3 className="Section_title">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
             <div className="flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
-                      <motion.p className=" text_para text-[#fffced] max-w-2xl " >
+                      <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
                       </motion.p>
                                                     
@@ -153,19 +141,15 @@ const ProductCard = ({ title, icon: Icon, description }) => {
                                                     
             </div>
         </div>
-
       </div>
 
 
-{/* --------------------------------
-    Main Products Layout
--------------------------------- */}
-<div className="Section_wrapper mt-6 lg:mt-12">
+{/*  Main Products Layout-------- */}
 
-  <div className="w-full  flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+<div className="Section_wrapper ">
 
+  <div className="flex_container ">
     {/* IMAGE - Sticky */}
-    
       <div className="lg:h-[520px] outline outline-2 outline-[#fffced]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
         <img
           src={webdev}
@@ -174,27 +158,23 @@ const ProductCard = ({ title, icon: Icon, description }) => {
         />
       </div>
     
-
-    {/* CONTENT */}
+    {/*Right CONTENT */}
     <div className="w-full lg:w-[55%] flex flex-col gap-8">
       <div className="grid lg:grid-cols-1  gap-6 lg:gap-8">
        {productCards.map((card, index) => (
-  <ProductCard
-    key={index}
-    title={card.title}
-    icon={card.icon}
-    description={card.description}
-  />
-))}
+        <ProductCard
+          key={index}
+          title={card.title}
+          icon={card.icon}
+          description={card.description}
+        />
+      ))}
       </div>
-      {/* Add a few more paragraphs if needed so the right side is clearly taller */}
+
     </div>
 
   </div>
 </div>
-
-
-
 
     </section>
   );

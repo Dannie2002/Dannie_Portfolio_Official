@@ -60,8 +60,8 @@ export default function MainHeader() {
           link: "/client-relationship-management",
         },
         {
-          title: "Graphic Designing",
-          link: "/media-strategic-communications",
+          title: "UI/UX Designing",
+          link: "/ui-ux-design",
         },
       ],
     },
@@ -87,19 +87,19 @@ export default function MainHeader() {
   const getIconForLink = (title) => {
     switch (title) {
       case "Home":
-        return <Home size={18} />;
+        return <Home size={20} />;
 
       case "About Dannie":
-        return <Info size={18} />;
+        return <Info size={20} />;
 
       case "Core Competencies":
-        return <Briefcase size={18} />;
+        return <Briefcase size={20} />;
 
       case "My Projects":
-        return <Palette size={18} />;
+        return <Palette size={20} />;
 
       case "Contact Me":
-        return <Phone size={18} />;
+        return <Phone size={20} />;
 
       default:
         return null;
@@ -324,13 +324,11 @@ export default function MainHeader() {
   </div>
 </motion.a>
 
-        {/* =================================
-            Mobile Menu Button
-        ================================= */}
+        {/* Mobile Menu Button */}
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex lg:hidden rounded-full p-2 flex-col justify-center items-end gap-1.5 relative z-90"
+          className="flex lg:hidden rounded-sm border border-[#fffced]/80 p-3 flex-col justify-center items-end gap-1.5 relative z-90"
         >
           <motion.span
             className="w-6 h-0.5 bg-[#fffced]"
@@ -385,9 +383,9 @@ export default function MainHeader() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-(--secondary-color)   relative z-50 border-t border-white/10"
+              className="md:hidden bg-(--secondary-color)   relative z-999 border-t border-white/10"
             >
-              <nav className="flex flex-col px-6 py-6 gap-4">
+              <nav className="flex flex-col px-6 py-6 mx-auto gap-4">
 
                 {navLinks.map((item, index) => (
                   <div key={index}>
@@ -404,7 +402,7 @@ export default function MainHeader() {
 
                       {item.children && (
                         <ChevronDown
-                          size={18}
+                          size={24}
                           className={`transition-transform duration-300 ${
                             expandedMobileItems[index]
                               ? "rotate-180"
@@ -450,7 +448,7 @@ export default function MainHeader() {
                                     {child.link ? (
                                       <Link
                                         to={child.link}
-                                        className="block py-2 text-sm text-(--primary-color) hover:text-[#b98815] transition-colors duration-300"
+                                        className="block py-2 text-[16px] text-(--primary-color) hover:text-[#b98815] transition-colors duration-300"
                                         onClick={() =>
                                           setIsOpen(false)
                                         }

@@ -54,14 +54,14 @@ const experience = [
     point: "Service Desk Engineer",
     duration: "Feb 2026 — Present",
     description:
-      "Supporting ISP operations and client connectivity while coordinating technical issues across network and service teams.",
+      "Provide frontline support and act as initial contact for clients at inq. digital Ltd.",
   },
 
   {
     point: "ICT Support Officer",
-    duration: "2025 — 2026",
+    duration: "Sept 2025 — Jan 2026",
     description:
-      "Provided technical support and maintained ICT systems while assisting with connectivity and digital operations.",
+      "Provided technical support and maintained ICT systems while assisting with connectivity and digital operations across balaka district council.",
   },
 ];
 
@@ -106,7 +106,7 @@ const toggleAccordion = (index) => {
 
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8n ">
 
-        <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
+        <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative h-auto row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
            <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>
 
                <h4 className="card_heading relative leading-[30px] text-[26px] z-10 text-[#fffced]">Industry Exposure in Telecommunications and ICT support.</h4>
@@ -138,9 +138,7 @@ const toggleAccordion = (index) => {
         onClick={() => toggleAccordion(index)}
         className="flex items-center gap-2 justify-between cursor-pointer"
       >
-        <motion.h4 className="card_heading text-[#fffced]">
-          {item.point}
-        </motion.h4>
+        <motion.h4 className="card_heading text-[18px] text-[#fffced]">{item.point}</motion.h4>
 
         <motion.div
           animate={{
@@ -185,12 +183,10 @@ const toggleAccordion = (index) => {
           >
 
             {/* DURATION */}
-            <p className="mt-3 text-[#fffced] text-sm font-medium">
-              {item.duration}
-            </p>
+            <h6 className="mt-3 text-[#fffced] text-[16px] font-medium">{item.duration}</h6>
 
             {/* SHORT DESCRIPTION */}
-            <p className="mt-2 text-[#101011] text_para line-clamp-2 max-w-xl">
+            <p className="mt-2 text_para  max-w-xl">
               {item.description}
             </p>
 
@@ -204,8 +200,8 @@ const toggleAccordion = (index) => {
        </div>
          </div>
 
-        <div className="relative bg-[#BDA6CE] lg:col-span-4 p-6 flex flex-col items-start justify-between  h-64 rounded-3xl">
-        <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>
+        <div className="relative bg-[#BDA6CE] lg:col-span-4 p-6 flex flex-col items-start justify-between  min-h-64 rounded-3xl">
+        <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-20  mix-blend-overlay pointer-events-none  "/>
           <div className="flex flex-col gap-3">
 
             <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Let's create something together.</h4>
@@ -225,7 +221,8 @@ const toggleAccordion = (index) => {
                 </div> 
         </div>
 
-      <div className="bg-(--primary-color) flex flex-col items-start justify-between p-6 relative lg:col-span-4 h-64 rounded-3xl overflow-hidden">
+      <div className="bg-(--primary-color) relative flex flex-col items-start justify-between p-6 relative lg:col-span-4 h-74 rounded-3xl overflow-hidden">
+          <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-5  mix-blend-overlay pointer-events-none  "/>
            <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Turning ideas into reality.</h4>
            <p className="text_para font-normal text-[#fffced]">Transforming creative ideas into purposeful digital experiences of impact.</p>
 
@@ -243,12 +240,12 @@ const toggleAccordion = (index) => {
 
      </div>
 
-    <div className="relative overflow-hidden border border-(--primary-color) bg-(--black-color) lg:col-span-5 h-auto py-4 lg:h-44 rounded-3xl flex lg:flex-row flex-col w-full items-center justify-center px-4 lg:px-6">
-          <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -right-32" />
+    <div className="relative overflow-hidden  border border-(--primary-color) bg-(--black-color) lg:col-span-5 h-auto py-4 lg:h-44 rounded-3xl flex lg:flex-row flex-col w-full items-center justify-center px-4 lg:px-6">
+         
           <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -right-35" />
-          <div className="flex lg:flex-row flex-col items-start w-full gap-6 justify-center">
+          <div className="flex lg:flex-row flex-col  items-start w-full gap-8 justify-center">
           {/* Years of Experience */}
-                    <div className="flex flex-col items-start justify-center flex-1">
+                    <div className="flex flex-col  items-start justify-center ">
                       <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
                         1.5+
                       </span>
@@ -261,7 +258,7 @@ const toggleAccordion = (index) => {
                     {/* Divider */}
                     
                     {/* Projects Delivered */}
-                  <div className="flex flex-col items-start justify-center flex-1">
+                  <div className="flex flex-col items-start justify-center ">
                       <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
                         95%+
                       </span>
@@ -274,7 +271,7 @@ const toggleAccordion = (index) => {
                     {/* Divider */}
 
                     {/* Certifications */}
-                  <div className="flex flex-col items-start justify-center flex-1">
+                  <div className="flex flex-col items-start justify-center">
                       <span className="text-4xl geonova lg:text-4xl font-semibold text-[#fffced]">
                         15+
                       </span>

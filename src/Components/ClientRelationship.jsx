@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import client from "../assets/CRM.jpg";
+import client from "../assets/Handshake.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import SectionHeader from "./SectionHeader.jsx";
-import servicedesk from "../assets/ServiceDesk.jpg"
+import servicedesk from "../assets/Conversation.jpg"
 import CodeMerge from "../SVGS/Management.jsx"
 
 const ClientRelationship = () => {
@@ -67,14 +67,14 @@ const productCards = [
   {
     title: "Product Knowledge",
     paragraph:
-      "Understand fiber broadband and other connectivity solutions.",
+      "Understand the products or service being offered to ensure clarity during communications.",
   },
 
 
   {
-    title: "SLA Monitoring",
+    title: "User Satisfaction Assuarance",
     paragraph:
-      "Monitor service performance to support SLA compliance.",
+      "Provide updates and timely resolution of incidents or requests.",
   },
 
 ];
@@ -88,8 +88,8 @@ const productCards = [
       <motion.div
   variants={itemVariants}
     className={`  group relative  overflow-hidden  rounded-sm
-    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex   flex-col  items-start   justify-start   px-6   py-8
-    ${index === 0 ? 'bg-(--secondary-color)' : 'bg-(--primary-color)/30'}`}>
+    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex border border-(--primary-color)/40  flex-col  items-start   justify-start   px-6   py-8
+    ${index === 0 ? 'bg-(--secondary-color)' : 'bg-transparent'}`}>
 
   
       <div className="relative z-10 flex flex-col gap-4">
@@ -121,7 +121,7 @@ const productCards = [
 
               <div className="section_header">
                                <motion.h1  className="page_title"  > Client Relationship Management </motion.h1>
-                               <h3 className="Section_title "> Engaging in professional customer communication. </h3>
+                               <h3 className="Section_title "> Engaging in <span className="text-(--secondary-color)"> professional</span> customer communication. </h3>
                                     <div className="flex w-full justify-between items-center gap-20">
                                                       <motion.p
                                                                 className="
@@ -144,14 +144,14 @@ const productCards = [
 
       </div>
 
-<div className="Section_wrapper lg:mt-12">
+<div className="Section_wrapper">
 
-  <div className="w-full  flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+  <div className="flex_container">
 
 
       {/* CONTENT */}
     <div className="w-full  lg:w-[55%] flex flex-col gap-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
        {productCards.map((card, index) => (
   <ProductCard
     key={index}

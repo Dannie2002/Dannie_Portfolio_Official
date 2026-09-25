@@ -74,7 +74,7 @@ const LetsConnect = () => {
         <div className="flex relative flex-col items-center justify-center " >
                        
                 
-                    <div className="flex z-10  barlow  lg:gap-6 flex-col items-center justify-center ">
+                    <div className="flex z-10  p-6 lg:gap-6 flex-col items-center justify-center ">
                                           
                     <h4 className="text-[#fffced] font-bold text-center text-[46px] geonova white leading-[40px]">Have an idea? Feel free to reach out.</h4>
 

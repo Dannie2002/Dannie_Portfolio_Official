@@ -54,6 +54,12 @@ const Projects = () => {
       image: banner,
    
     },
+     {
+      title: "Bike Tech E-commerce",
+      image: mwapata,
+ 
+    },
+
 
     {
       title: "Electronic Cashbox",
@@ -90,7 +96,7 @@ const Projects = () => {
 
     if (!carousel) return;
 
-    setCanScrollLeft(carousel.scrollLeft > 0);
+    setCanScrollLeft(carousel.scrollLeft > 40);
 
     setCanScrollRight(
       carousel.scrollLeft <
@@ -150,7 +156,7 @@ const Projects = () => {
     const cardWidth =
       firstCard.getBoundingClientRect().width;
 
-    const gap = 32;
+    const gap = 42;
 
     const scrollAmount = cardWidth + gap;
 
@@ -171,61 +177,22 @@ const Projects = () => {
 
  const ProductCard = ({ title, image, index }) => {
   return (
-    <div
-      className="
-        shrink-0
-        snap-start
-        mt-12
-        w-[87%]
-        sm:w-[62%]
-        md:w-[48%]
-        lg:w-[38%]
-      "
-    >
+    <div className="shrink-0   snap-start mt-12  w-[87%] sm:w-[62%] md:w-[48%] lg:w-[38%]" >
 
-      <div
-        className="
-          group
-          relative
-    
-          shadow-[inset_0_0_0_4px_#A29922] 
-              
-               outline-(--primary-color)
-          h-[430px]
-          w-full
-        "
-      >
-        <div className="absolute shadow-[inset_0_0_0_4px_#A29922] bg-(--secondary-color) z-50  "></div>
-
+      <div  className=" group relative shadow-[inset_0_0_0_4px_#A29922]  outline-(--primary-color) h-[430px] w-full " >
+      
         <img
           src={image}
           alt={title}
           loading="eager"
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-          "
+          className=" absolute inset-0  h-full  w-full object-cover"
         />
 
 
 
       </div>
 
-      <h3
-        className="
-          mt-4
-          text-[18px]
-          font-bold
-          text-(--text-colour)
-          zalando
-          
-        "
-      >
-        {title}
-      </h3>
+      <h3 className="mt-4 text-[18px] font-bold text-(--text-colour) zalando">{title} </h3>
 
     </div>
   );
@@ -236,51 +203,27 @@ const Projects = () => {
   -------------------------------- */
 
   return (
-    <section
-      className="
-        relative
-        w-full
-        min-h-screen
-        overflow-hidden
-       bg-[#101011] 
-        py-6
-      "
-    >
+    <section className=" relative w-full min-h-screen  overflow-hidden bg-[#101011]   py-6 " >
 
       {/* --------------------------------
           Section Heading
       -------------------------------- */}
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper ">
 
             <div className="section_header">
                         <motion.h1  className="page_title"  > My Projects </motion.h1>
                         <h3 className="Section_title "><span className="text-[]"> Work is more than tasks—it’s shared experiences, collaboration, </span>{" "}&  growth.</h3>
-                 </div>
+             </div>
 
       </div>
 
-
-      {/* --------------------------------
-          Projects Carousel
-      -------------------------------- */}
+      {/* Projects Carousel----- */}
 
       <div className="Section_wrapper ">
+       {/*  Carousel Controls----- */}
 
- 
-       {/* --------------------------------
-            Carousel Controls
-        -------------------------------- */}
-
-        <div
-          className="
-            mb-6
-            flex
-            justify-end
-            gap-2
-          "
-        >
-
+        <div className="mb-4 flex justify-end gap-2">
           {/* Previous */}
 
           <button
@@ -355,23 +298,13 @@ const Projects = () => {
             once: true,
             amount: 0.15,
           }}
-          className="
-            flex
-            lg:gap-8
-            gap-6
-            overflow-x-auto
-            scroll-smooth
-            snap-x
-            snap-mandatory
-            pb-4
-            pr-[8%]
-
-            [scrollbar-width:none]
+          className=" flex  lg:gap-8 gap-6  overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pr-[5%] scrollbar-none
             [-ms-overflow-style:none]
             [&::-webkit-scrollbar]:hidden
           "
         >
 
+         
           {productCards.map(
             (card, index) => (
 

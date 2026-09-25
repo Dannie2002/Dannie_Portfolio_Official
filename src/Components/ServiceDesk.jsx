@@ -55,21 +55,21 @@ const productCards = [
   {
     title: "Incident Management",
     paragraph:
-      "Track, prioritise, escalate, and resolve service incidents efficiently.",
+      "Log, categorise incidents and service requests in the ticketing system.",
       icon: Communication,
   },
 
   {
-    title: "Professional Communication",
+    title: "Communication & Coordination",
     paragraph:
-      "Communicate clearly with clients, NOC teams, and technical partners.",
+      "From internal coordination, to provide clients incidents and request. ",
    icon: Communication,
   },
 
   {
     title: "Root Cause Analysis",
     paragraph:
-      "Investigate incidents to identify root causes and prevent recurrence.",
+      "Investigating underlying cause of incidents using diagostic tools.",
        icon: Management,
   },
 
@@ -153,7 +153,7 @@ const productCards = [
 
       <div className="section_header">
                      <motion.h1  className="page_title"  > Service Desk Engineering </motion.h1>
-                     <h3 className="Section_title "> Bridging the gap between technology and users. </h3>
+                     <h3 className="Section_title "> Bridging the gap between business and<span className="text-(--secondary-color)"> clients.</span>  </h3>
                      <div className="flex w-full justify-between items-center gap-20">
                        <motion.p
                                  className="
@@ -165,7 +165,7 @@ const productCards = [
                                    max-w-2xl
                                  "
                                >
-                                I engage in maintaining seamless IT operations. From troubleshooting issues to ensuring system reliability.
+                                I provide front-line support. From troubleshooting incidents to ensuring system reliability.
                         </motion.p>
                      
                         <Communication color="#978F66" size={36} className="hidden"/>
@@ -180,9 +180,9 @@ const productCards = [
 {/* --------------------------------
     Main Products Layout
 -------------------------------- */}
-<div className="Section_wrapper mt-12">
+<div className="Section_wrapper ">
 
-  <div className="w-full  flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+  <div className="flex_container">
 
     {/* IMAGE - Sticky */}
     
