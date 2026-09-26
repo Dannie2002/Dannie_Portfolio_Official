@@ -236,7 +236,7 @@ const handleSubmit = async (e) => {
            <form
   name="contact"
   method="POST"
-  data-netlify="true"
+  netlify
   onSubmit={handleSubmit}
   className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4"
 >
