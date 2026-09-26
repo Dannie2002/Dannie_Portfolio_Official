@@ -54,7 +54,7 @@ const ContactMe = () => {
 
 
   // Stores validation errors for each field
-
+const [phone, setPhone] = useState("");
 const [errors, setErrors] = useState({});
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitted, setSubmitted] = useState(false);
@@ -95,10 +95,9 @@ const handleSubmit = async (e) => {
   }
 
   // Validate phone number
-  if (!phone) {
-    newErrors.phone = "Please enter your mobile number.";
-  }
-
+ if (!phone) {
+  newErrors.phone = "Please enter your mobile number.";
+}
   // Validate category
   if (!category) {
     newErrors.category = "Please select a category.";
@@ -373,14 +372,24 @@ const handleSubmit = async (e) => {
 
         {/* Phone number */}
         <input
-          id="phone"
-          type="tel"
-          name="phone"
-          placeholder="881 234 567"
-          autoComplete="tel"
-          required
-          className="text_field"
-        />
+    type="tel"
+    name="phone"
+    id="phone"
+    inputMode="numeric"
+    autoComplete="tel"
+    placeholder="881234567"
+    value={phone}
+    onChange={(e) => {
+      // Numbers only
+      const value = e.target.value.replace(/\D/g, "");
+
+      // Maximum 10 digits
+      if (value.length <= 10) {
+        setPhone(value);
+      }
+    }}
+    className="text_field"
+  />
       </div>
 
       {/* Phone validation message */}
@@ -551,13 +560,7 @@ const handleSubmit = async (e) => {
       </motion.span>
     )}
   </AnimatePresence>
-</motion.button>  <button
-      type="submit"
-      className="block btn cursor-pointer text-[16px] w-full rounded-[4px] px-3.5 py-2.5 text-center font-medium text-[#0b0b0d] shadow-sm transition-all tracking-wide"
-    >
-      Send a Message
-    </button>
-
+</motion.button> 
   </div>
 
 </form>
