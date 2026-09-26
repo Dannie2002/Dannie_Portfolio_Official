@@ -195,22 +195,11 @@ useEffect(() => { const interval = setInterval(() => { setExpertiseIndex((prev) 
 
 
           {/* Title */}
-          <h4
-            className="
-              card_heading
-              uppercase
-              text-[#fffced]
-              leading-tight
-            "
-          >
-            {title}
-          </h4>
+          <h4 className="card_heading uppercase text-[#fffced]  leading-tight" >{title}</h4>
           <h3 className="text-[#ffced2]">Employer:</h3>
           <h3 className="text-[#ffced2]">Duration:</h3>
 
-     <p className="text-[#fffced] leading-relaxed">
-  {description}
-</p>
+   <p className="text-[#fffced] leading-relaxed">{description}</p>
 
 <div className="flex flex-col gap-3 mt-2">
   {responsibilities.map((responsibility, index) => (
@@ -299,7 +288,7 @@ const rotate = useTransform(
 
 
           <div className="section_header mt-34">
-                <motion.h1  className="page_title"  > Who is Dannie? </motion.h1>
+                <motion.h1  className="page_title"  > My carrer overview </motion.h1>
                 <h3   className="Section_title text-[#fffced]">IT Service desk Engineer & Frontend Engineer </h3>
             </div>
 
@@ -361,9 +350,8 @@ const rotate = useTransform(
                 
               </div>
 
-                <motion.div  ref={ref}  className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
+              <motion.div  ref={ref}  className="mt-12 rounded-2xl  overflow-hidden lg:h-[360px] h-[210px]">
                 <img src={branding} className="size-full object-cover" />
-                
               </motion.div>
 
                   <div>
@@ -374,9 +362,8 @@ const rotate = useTransform(
                         </button> ))} 
                         </div>
 
-                          <div className="mt-22 relative lg:w-44 rounded-2xl flex flex-col items-center justify-center  overflow-hidden lg:h-[370px] h-[200px]">
+                          <div className="mt-18 relative  rounded-2xl flex flex-col items-center justify-center  overflow-hidden lg:h-[370px] h-[200px]">
                     
-
                         <div>
 
                               {/* Image */}
@@ -426,7 +413,7 @@ const rotate = useTransform(
 
       
         
-            <div className="w-full mt-12 hidden flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
+            <div className="w-full mt-12 flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
 
               {/* IMAGE - Sticky */}
 
@@ -450,9 +437,9 @@ const rotate = useTransform(
 
                 <motion.h2
               animate={{
-                opacity: scrollExperience === 0 ? 1 : 0.35,
+                opacity: scrollExperience === 1 ? 1 : 0.35,
                 x: scrollExperience === 0 ? 0 : -10,
-                fontSize: scrollExperience === 0 ? "24px" : "36px",
+                fontSize: scrollExperience === 1 ? "36px" : "24px",
                     color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
               }}
                   transition={{
@@ -466,9 +453,9 @@ const rotate = useTransform(
 
                   <motion.h2
               animate={{
-                opacity: scrollExperience === 0 ? 1 : 0.35,
+                opacity: scrollExperience === 2 ? 1 : 0.35,
                 x: scrollExperience === 0 ? 0 : -10,
-                fontSize: scrollExperience === 0 ? "24px" : "36px",
+                fontSize: scrollExperience === 2 ? "36px" : "24px",
                     color: scrollExperience === 0 ? "#b8b8b8" : "#978F66",
               }}
                   transition={{
@@ -513,7 +500,7 @@ const rotate = useTransform(
               </div>
       </div>
 
-      <WorkExperience />
+      <WorkExperience className="hidden" />
 
 
     </section>

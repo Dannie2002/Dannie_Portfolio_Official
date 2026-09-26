@@ -81,10 +81,10 @@ const toggleAccordion = (index) => {
   {/* Section Heading */}
 
   <div className="Section_wrapper relative z-50">
-          <div className="section_header">
+          <div className="section_header ">
        
                   <motion.h1  className="page_title"  > Explore more </motion.h1>
-                 <h3   className="Section_title text-[#fffced]"> I believe in <span className="text-(--secondary-color)">dedication </span> and hardwork.</h3>
+                 <h3   className="Section_title z-99"> I believe in <span className="text-(--secondary-color)">dedication </span> and hardwork.</h3>
        
        
                  <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
@@ -104,12 +104,12 @@ const toggleAccordion = (index) => {
 
   <div className="mt-16  ">
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8n ">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
 
         <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative h-auto row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
-           <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-25  mix-blend-multiply pointer-events-none  "/>
+           <img src={noise} alt="" className="absolute inset-0 z-5   h-full w-full  object-cover  opacity-20  mix-blend-overlay pointer-events-none  "/>
 
-               <h4 className="card_heading relative leading-[30px] text-[26px] z-10 text-[#fffced]">Industry Exposure in Telecommunications and ICT support.</h4>
+               <h4 className="card_heading relative leading-[30px] text-[25.5px] z-20 text-[#fffced]">Industry Exposure in Telecommunications and ICT support.</h4>
 
                 <div className="absolute inset-0 z-0 overflow-hidden rounded-sm size-full">
                   <motion.img
@@ -126,12 +126,12 @@ const toggleAccordion = (index) => {
                   />
                 </div>
 
-                 <div className="absolute z-5 inset-0 bg-gradient-to-b opacity-90 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
+                 <div className="absolute z-10 inset-0 bg-gradient-to-b opacity-90 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
 
         <div className="relative z-10 mt-8 flex flex-col gap-4 w-full">
 
   {experience.map((item, index) => (
-      <div key={index} className="bg-(--primary-colour)/6 rounded-sm backdrop-blur-[16px] px-3 border border-[#fffced]/40 py-2">
+      <div key={index} className="bg-(--primary-colour)/16 rounded-sm backdrop-blur-[10px] px-3 border border-[#fffced]/40 py-2">
 
       {/* POSITION */}
       <div
@@ -200,7 +200,7 @@ const toggleAccordion = (index) => {
        </div>
          </div>
 
-        <div className="relative bg-[#BDA6CE] lg:col-span-4 p-6 flex flex-col items-start justify-between  min-h-64 rounded-3xl">
+        <div className="relative bg-[#BDA6CE] lg:col-span-4 p-6 flex flex-col items-start justify-between  min-h-74 rounded-3xl">
         <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-20  mix-blend-overlay pointer-events-none  "/>
           <div className="flex flex-col gap-3">
 
@@ -221,7 +221,7 @@ const toggleAccordion = (index) => {
                 </div> 
         </div>
 
-      <div className="bg-(--primary-color) relative flex flex-col items-start justify-between p-6 relative lg:col-span-4 h-74 rounded-3xl overflow-hidden">
+      <div className="bg-(--primary-color) relative flex flex-col items-start justify-between p-6  lg:col-span-4 h-74 rounded-3xl overflow-hidden">
           <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-5  mix-blend-overlay pointer-events-none  "/>
            <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Turning ideas into reality.</h4>
            <p className="text_para font-normal text-[#fffced]">Transforming creative ideas into purposeful digital experiences of impact.</p>

@@ -184,7 +184,7 @@ const MyGallery = () => {
           <motion.h1
             className="page_title autoShow ]"
           >
-            Evidence Of The Work
+            Welcome to Dannie's Gallery
           </motion.h1>
 
           <h3 className="Section_title text-[#fffced]">
@@ -207,7 +207,7 @@ const MyGallery = () => {
             "
           >
             This
-            gallery documents some of the work I have been involved in.
+            gallery documents some of the work and projects I have been involved in.
             These are moments from the environments where the work actually
             happens.
           </motion.p>

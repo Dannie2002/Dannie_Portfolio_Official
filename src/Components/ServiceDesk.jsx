@@ -9,7 +9,7 @@ import SectionHeader from "./SectionHeader.jsx";
 import servicedesk from "../assets/ServiceDesk3.jpg"
 import Communication from "../SVGS/Communication.jsx";
 import Management from "../SVGS/Management.jsx";
-import AnalyticalThinking from "./AnalyticalThinking.jsx";
+import AnalyticalThinking from "../SVGS/AnalyticalThinking.jsx";
 import Scribble from "./Scribble.jsx";
 
 const ServiceDesk = () => {
@@ -153,7 +153,7 @@ const productCards = [
 
       <div className="section_header">
                      <motion.h1  className="page_title"  > Service Desk Engineering </motion.h1>
-                     <h3 className="Section_title "> Bridging the gap between business and<span className="text-(--secondary-color)"> clients.</span>  </h3>
+                     <h3 className="Section_title "> Bridging the gap between <span className="text-(--secondary-color)"> business</span> and clients.  </h3>
                      <div className="flex w-full justify-between items-center gap-20">
                        <motion.p
                                  className="

@@ -67,7 +67,7 @@ const LetsConnect = () => {
 
 
       <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
-         <div className="absolute z-5 inset-0 bg-gradient-to-b opacity-90 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
+         <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-98 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
    
        
       

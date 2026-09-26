@@ -36,7 +36,7 @@ const LandingPage = () => {
 
   return (
     <section
-      className="h-[90vh] overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center"
+      className="min-h-[90vh] overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center"
       style={{
         backgroundImage: `url(${bg8})`,
         backgroundSize: "cover",

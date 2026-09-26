@@ -47,7 +47,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+
   width: 100%;
 }
 
@@ -72,7 +72,7 @@ html, body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #BDA6CE, #5176A3);
+  background: linear-gradient(90deg, #BDA6CE, rgb(81, 126, 163));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 400ms ease;

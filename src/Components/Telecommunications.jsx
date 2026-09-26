@@ -179,7 +179,7 @@ const TeleExpertiseCard = ({ title, image, description }) => {
           <h3   className="Section_title text-[#fffced]"> Exposed to <span className="text-(--secondary-color)">cutting edge </span> technologies in Telecommunications.</h3>
 
 
-          <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
+          <div className="flex lg:flex-row flex-col items-start lg:items-center justify-between gap-4 lg:gap-20">
 
             <motion.p
               className="text_para max-w-xl text-[#fffced] "

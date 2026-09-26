@@ -32,7 +32,7 @@ export default function MainHeader() {
       title: "About Dannie",
       children: [
         {
-          title: "Who is Dannie", link: "/who-is-dan?",
+          title: "Professional work experience", link: "/who-is-dan?",
         },
         {
           title: "My Gallery", link: "/my-gallery",
