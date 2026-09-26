@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import webbb from "../assets/Webbb.jpg";
 import branding from "../assets/Hero.jpg";
 import noise from "../assets/Noise.png";
@@ -12,6 +15,9 @@ import ResponsiveLayout from "../SVGS/ResponsiveLayout.jsx";
 import Scribble from "./Scribble.jsx";
 import CodeMerge from "../SVGS/CodeMeerge.jsx";
 import MoonBalls from "./MoonBalls.jsx"
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const WebsiteDevelopment = () => {
 
@@ -113,9 +119,29 @@ const ProductCard = ({ title, icon: Icon, description }) => {
   );
 };
 
+ const containerRef = useRef(null);
+  useGSAP(() => {
+    // Target elements by class name securely inside your scoped container
+    gsap.from(".scroll-heading", {
+      opacity: 0,
+      y: 50,                // Start 50px below its original position
+      duration: 1.2,
+      ease: "power3.out",   // Smooth decelerating ease curve
+      scrollTrigger: {
+        trigger: ".scroll-heading", // Element that fires the trigger
+        start: "top 80%",          // Animation starts when the top of the heading hits 80% from the top of the viewport
+        end: "top 50%",            // Animation ends/reaches full execution at 50% threshold
+        toggleActions: "play none none reverse", // Plays moving down, reverses moving back up
+        // scrub: true            // Uncomment if you want the animation speed tethered exactly to the scrollbar movement
+      }
+    });
+  }, { scope: containerRef }); // 4. Pass the scope context configuration
+
+
+
   return (
 
-    <section className="bg-[#101011] relative  w-full">
+    <section className="bg-[#101011] relative w-full">
 
             <SectionHeader
               title="Website Design & Development"
@@ -129,10 +155,10 @@ const ProductCard = ({ title, icon: Icon, description }) => {
 
 
       <div className="Section_wrapper">
-         <div className="section_header">
+         <div ref={containerRef}   className="section_header">
             <motion.h1  className="page_title"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
-            <div className="flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
+            <h3 className="Section_title scroll-heading">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
+            <div className="scroll-heading flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
                       </motion.p>
