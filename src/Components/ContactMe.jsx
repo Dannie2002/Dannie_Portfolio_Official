@@ -59,96 +59,102 @@ const [errors, setErrors] = useState({});
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitted, setSubmitted] = useState(false);
 // Handles form submission and validates the fields
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-  const firstName = formData.get("first-name")?.trim();
-  const lastName = formData.get("last-name")?.trim();
-  const email = formData.get("email")?.trim();
-  const phone = formData.get("phone")?.trim();
-  const category = formData.get("category");
-  const message = formData.get("message")?.trim();
+    const firstName = formData.get("first-name")?.trim();
+    const lastName = formData.get("last-name")?.trim();
+    const email = formData.get("email")?.trim();
+    const phoneVal = phone.trim(); // Use state value directly to avoid React lag
+    const category = formData.get("category");
+    const message = formData.get("message")?.trim();
 
-  const newErrors = {};
+    const newErrors = {};
 
-  // Validate first name
-  if (!firstName) {
-    newErrors.firstName = "Please enter your first name.";
-  }
+    // Validate first name
+    if (!firstName) {
+      newErrors.firstName = "Please enter your first name.";
+    }
 
-  // Validate last name
-  if (!lastName) {
-    newErrors.lastName = "Please enter your last name.";
-  }
+    // Validate last name
+    if (!lastName) {
+      newErrors.lastName = "Please enter your last name.";
+    }
 
-  // Validate email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      newErrors.email = "Please enter your email address.";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Your email is invalid please enter the correct email address";
+    }
 
-  if (!email) {
-    newErrors.email = "Please enter your email address.";
-  } else if (!emailRegex.test(email)) {
-    newErrors.email =
-      "Your email is invalid please enter the correct email address";
-  }
+    // Validate phone number
+    if (!phoneVal) {
+      newErrors.phone = "Please enter your mobile number.";
+    }
+    
+    // Validate category
+    if (!category) {
+      newErrors.category = "Please select a category.";
+    }
 
-  // Validate phone number
- if (!phone) {
-  newErrors.phone = "Please enter your mobile number.";
-}
-  // Validate category
-  if (!category) {
-    newErrors.category = "Please select a category.";
-  }
+    // Validate message
+    if (!message) {
+      newErrors.message = "Please enter your message.";
+    }
 
-  // Validate message
-  if (!message) {
-    newErrors.message = "Please enter your message.";
-  }
+    // Store validation errors
+    setErrors(newErrors);
 
-  // Store validation errors
-  setErrors(newErrors);
+    // Do not submit if there are validation errors
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
 
-  // Do not submit if there are validation errors
-  if (Object.keys(newErrors).length > 0) {
-    return;
-  }
+    // ------------------------------------------------
+    // ACTUAL SUBMISSION TO NETLIFY
+    // ------------------------------------------------
+    setIsSubmitting(true);
 
-  // ------------------------------------------------
-  // EVERYTHING BELOW HERE IS THE ACTUAL SUBMISSION
-  // ------------------------------------------------
+    try {
+      // Re-bundle data to guarantee controlled inputs and hidden fields are included
+      const submissionData = new FormData(form);
+      submissionData.set("form-name", "contact");
+      submissionData.set("phone", phoneVal);
 
-  setIsSubmitting(true);
+      // Send the form data to Netlify
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(submissionData).toString(),
+      });
 
-  try {
-    // Send the form data to Netlify
-    await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(formData).toString(),
-    });
+      // Clear the form elements and state
+      form.reset();
+      setPhone("");
+      setErrors({});
 
-    // Clear the form after successful submission
-    form.reset();
+      // Show the green "Message Sent!" state
+      setSubmitted(true);
 
-    // Show the green "Message Sent!" state
-    setSubmitted(true);
+      // Return the button to normal after 4 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 4000);
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    } finally {
+      // Stop the loading state
+      setIsSubmitting(false);
+    }
+  };
 
-    // Return the button to normal after 4 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 4000);
-  } catch (error) {
-    console.error("Form submission failed:", error);
-  } finally {
-    // Stop the loading state
-    setIsSubmitting(false);
-  }
-};
 
 
 
@@ -234,10 +240,11 @@ const handleSubmit = async (e) => {
        
 
            <form
-  name="contact"
-  method="POST"
-  netlify
-  onSubmit={handleSubmit}
+      name="contact"
+      method="POST"
+      netlify="true"
+      data-netlify="true"
+      onSubmit={handleSubmit}
   className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4"
 >
   {/* Required by Netlify for React-rendered forms */}
