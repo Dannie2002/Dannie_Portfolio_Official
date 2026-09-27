@@ -116,26 +116,27 @@ const productCards = [
       <motion.div
    
         variants={itemVariants}
-        className={`group relativeoverflow-hidden rounded-sm outline outline-[#fffced]/40 flex flex-col items-start justify-start px-6  py-8 h-auto bg-[#242222]
+        className={`hover:rotate-5 transition-rotate duration-500 ease-in-out btn-fill-sweep relativeoverflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]
         `}
     
       >
 
         {/* Card Content */}
-        <div className="relative z-10 flex flex-col items-start gap-6">
+    
 
           {/* Icon */}
-       <div className=" flex items-center justify-center rounded-sm">
+     
+
+       <div className="flex flex-col items-start gap-3">
+          <div className=" flex items-center justify-center rounded-sm">
           <Icon color="#ffffff" size={42} />
         </div>
-
-       <div className="flex flex-col gap-3">
           <h4 className=" card_heading"> {title} </h4>
-          <p className="text_para text-[#fffced]"> {paragraph}</p>
         </div>
+        <p className="text_para text-[#fffced]"> {paragraph}</p>
    
 
-        </div>
+ 
 
       </motion.div>
     );

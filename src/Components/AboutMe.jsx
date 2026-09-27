@@ -24,7 +24,15 @@ const AboutMe = () => {
       
     };
   
+const words =[
+  {text : "Resourceful" },
+  {text : "Creative" },
+  {text : "Akatundu"},
+  {text : "Namateture"},
+  {text : "Machine"},
+  {text : "Katakwe"},
 
+]
 
 
   return (
@@ -49,7 +57,20 @@ const AboutMe = () => {
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
             <div>
-                    <h4 className="card_heading text-(--primary-color) chivo uppercase">Resorceful.Creative</h4>
+                    <h4 className="card_heading text-(--primary-color) chivo uppercase">Resorceful.
+                      <span className='slide'>
+                    
+                          <span className='wrapper'>
+                            {words.map((word) => (
+                           <span key={word.text}>
+                            <span>{word.text}</span>
+                           </span>
+                          
+                            ))}
+                          </span>
+                 
+                      </span>
+                    </h4>
             <motion.p className="text_para text-[#101011] mt-3 font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients.</motion.p>
             </div>
            

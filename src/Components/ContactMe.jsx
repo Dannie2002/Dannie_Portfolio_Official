@@ -184,12 +184,12 @@ const [submitted, setSubmitted] = useState(false);
               <div className="section_header mt-34">
           
                      <motion.h1  className="page_title"  > Start a conversation </motion.h1>
-                    <h3   className="Section_title "> I would be glad to hear from you.</h3>
+                    <h3   className="Section_title "> We can build our next projects together.</h3>
           
           
                     <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
           
-                      <motion.p className="text_para text-[#fffced] " > Write to me through the form and will update you shortly. </motion.p>
+                      <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>
                       <ContactPlane color="#ca852b" size={36} className="hidden lg:flex" />
           
                     </div>

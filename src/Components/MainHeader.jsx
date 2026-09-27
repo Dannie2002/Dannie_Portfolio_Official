@@ -374,7 +374,7 @@ export default function MainHeader() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-(--secondary-color)60 backdrop-blur-xs z-40 md:hidden"
+              className="fixed inset-0 bg-(--secondary-color)/60 backdrop-blur-xs z-40 md:hidden"
             />
 
             {/* Mobile Menu Drawer */}
@@ -508,6 +508,30 @@ export default function MainHeader() {
                 ))}
 
               </nav>
+              <div className="flex flex-col px-6 py-6 mx-auto gap-4">
+                  <motion.a
+  href={cv}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex border btn-fill-sweep  btn lg:hidden group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-trasparent hover:bg-(--primary-color)/80 border-[#fffced]/60 px-6 py-2 items-center gap-4 relative z-90"
+>
+  <h3 className="text_button archivo">
+    Download My CV
+  </h3>
+
+  <div className="flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm justify-center bg-[#fffced] size-7 p-3">
+
+    <Download
+      className="absolute size-6 group-hover:rotate-15 ease-in-out transform transition-all duration-490 group-hover:translate-x-10 text-(--primary-color)"
+    />
+<Download 
+      className="absolute group-hover:-rotate-45 ease-in-out size-6 transform -translate-x-10 opacity-0 transition-all duration-600 group-hover:opacity-100 group-hover:translate-x-0 text-[#272626]"
+    />
+
+  </div>
+</motion.a>
+
+              </div>
             </motion.div>
           </>
         )}

@@ -75,7 +75,7 @@ function AnimatedPath({
       d={path}
       fill="none"
       stroke={color}
-      strokeWidth="3"
+      strokeWidth="8"
       strokeLinecap="round"
       strokeDasharray="45 700"
       style={{
