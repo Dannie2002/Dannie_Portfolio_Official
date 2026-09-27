@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, useScroll,useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import client from "../assets/Handshake.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import SectionHeader from "./SectionHeader.jsx";
-import servicedesk from "../assets/Conversation.jpg"
+import servicedesk from "../assets/Webbb.jpg"
 import CodeMerge from "../SVGS/Management.jsx"
 
 const ClientRelationship = () => {
@@ -45,11 +46,35 @@ const ClientRelationship = () => {
     },
   };
 
+const svgRef = useRef(null);
+const imgRef = useRef(null);
 
+// 1. First scroll tracker (for SVG)
+const { scrollYProgress: svgScrollProgress } = useScroll({
+  target: svgRef,
+  offset: ["start end", "center center"],
+});
+
+// 2. Second scroll tracker (for Image) - Renamed to avoid conflict
+const { scrollYProgress: imgScrollProgress } = useScroll({
+  target: imgRef,
+  offset: ["start end", "center center"],
+});
+
+// --- SVG ANIMATIONS ---
+const rawX = useTransform(svgScrollProgress, [0, 1], [700, 0]);
+const rawRotate = useTransform(svgScrollProgress, [0, 1], [180, 0]);
+const x = useSpring(rawX, { stiffness: 100, damping: 20 });
+const rotate = useSpring(rawRotate, { stiffness: 100, damping: 20 });
+
+// --- IMAGE ANIMATIONS ---
+const rawScale = useTransform(imgScrollProgress, [0, 1], [0.5, 1]);
+const scale = useSpring(rawScale, { stiffness: 90, damping: 25, mass: 0.8 });
   /* --------------------------------
      Product Cards
   -------------------------------- */
 
+  
 const productCards = [
   {
     title: "Customer Communication",
@@ -87,11 +112,28 @@ const productCards = [
     return (
       <motion.div
   variants={itemVariants}
-    className={`  group relative  overflow-hidden  rounded-sm
+    className={`moving-border-card group relative  overflow-hidden  rounded-sm
     shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex border border-(--primary-color)/40  flex-col  items-start   justify-start   px-6   py-8
     ${index === 0 ? 'bg-(--secondary-color)' : 'bg-transparent'}`}>
 
-  
+    <div >
+      <motion.svg
+        style={{
+          x,
+          rotate,
+        }}
+        className="size-10 mb-4 text-[#fffced]"
+        viewBox="0 0 16 16"
+        fill="#fffced"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 8C0 12.4183 3.58172 16 8 16V0C3.58172 0 0 3.58172 0 8Z"
+          fill="#fffced"
+        />
+      </motion.svg>
+    </div>
+
       <div className="relative z-10 flex flex-col gap-4">
          <h4  className=" card_heading"> {title} </h4>
          <p className="text-[#fffced]">{paragraph}</p>    
@@ -122,7 +164,7 @@ const productCards = [
               <div className="section_header">
                                <motion.h1  className="page_title"  > Client Relationship Management </motion.h1>
                                <h3 className="Section_title "> Engaging in <span className="text-(--secondary-color)"> professional</span> customer communication. </h3>
-                                    <div className="flex w-full justify-between items-center gap-20">
+                                    <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-20">
                                                       <motion.p
                                                                 className="
                                                                   pt-6
@@ -144,7 +186,7 @@ const productCards = [
 
       </div>
 
-<div className="Section_wrapper">
+<div ref={svgRef} className="Section_wrapper">
 
   <div className="flex_container">
 
@@ -166,10 +208,11 @@ const productCards = [
 
     {/* IMAGE - Sticky */}
     
-      <div className="lg:h-[520px] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
-        <img
+      <div ref={imgRef} className="lg:h-[520px] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
+       <motion.img
           src={servicedesk}
           alt="Photography and creative services"
+           style={{ scale }}
           className="w-full h-full object-cover grayscale"
         />
       </div>

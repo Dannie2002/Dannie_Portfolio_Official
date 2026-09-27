@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll,useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import banner from "../assets/ServiceDesk2.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
@@ -48,6 +48,21 @@ const ServiceDesk = () => {
       },
     },
   };
+
+
+  const svgRef = useRef(null);
+
+
+// 1. First scroll tracker (for SVG)
+const { scrollYProgress: svgScrollProgress } = useScroll({
+  target: svgRef,
+  offset: ["start end", "center center"],
+});
+
+
+// --- SVG ANIMATIONS ---
+const rawY = useTransform(svgScrollProgress, [0, 1], [200, 0]);
+const y = useSpring(rawY, { stiffness: 100, damping: 20 });
 
 
 
@@ -186,8 +201,9 @@ const productCards = [
 
     {/* IMAGE - Sticky */}
     
-      <div className="lg:h-[520px] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
-        <img
+      <div ref={svgRef}   className="lg:h-[520px] bg-(--primary-color) outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
+        <motion.img
+          style={{ y }}
           src={servicedesk}
           alt="Photography and creative services"
           className="w-full h-full object-cover grayscale"
@@ -197,7 +213,10 @@ const productCards = [
 
     {/* CONTENT */}
     <div className="w-full lg:w-[55%] flex flex-col gap-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      <motion.div        style={{
+          y,
+      
+        }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
          {productCards.map((card, index) => (
           <ProductCard
             key={index}
@@ -206,7 +225,7 @@ const productCards = [
             paragraph={card.paragraph}
           />
         ))}
-      </div>
+      </motion.div>
       {/* Add a few more paragraphs if needed so the right side is clearly taller */}
     </div>
 

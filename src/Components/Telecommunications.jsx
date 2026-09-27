@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll,useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Link } from "react-router";
 import { useState } from "react";
 import banner from "../assets/Good2.jpg";
@@ -47,6 +48,13 @@ const Telecommunications = () => {
     },
   };
 
+ const svgRef = useRef(null);
+
+const { scrollYProgress: svgScrollProgress } = useScroll({
+  target: svgRef,
+  offset: ["start end", "center center"],
+});
+
 
 const teleExpertise = [
   {
@@ -79,12 +87,44 @@ const teleExpertise = [
 ];
 
 
-const TeleExpertiseCard = ({ title, image, description }) => {
+const TeleExpertiseCard = ({
+  title,
+  image,
+  description,
+  index,
+  scrollProgress,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  // Each card gets its own scroll tracker
+  const rawY = useTransform(
+  scrollProgress,
+  [
+    0,
+    0.15 + index * 0.08,
+    0.55 + index * 0.08,
+    1,
+  ],
+  [
+    140,
+    140,
+    0,
+    0,
+  ]
+);
+
+const y = useSpring(rawY, {
+  stiffness: 100,
+  damping: 20,
+});
 
   return (
     <motion.div
-      variants={itemVariants}
+      ref={svgRef}
+      style={{
+        y,
+       
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
@@ -125,10 +165,13 @@ const TeleExpertiseCard = ({ title, image, description }) => {
               <path d="M23.748,2.747c2.271,0,4.405,0.884,6.011,2.489l24.506,24.506c1.646,1.645,2.546,3.921,2.479,6.255c0.068,2.337-0.833,4.614-2.479,6.261L29.758,66.764c-1.605,1.605-3.739,2.489-6.01,2.489c-2.271,0-4.405-0.884-6.01-2.489c-3.314-3.314-3.314-8.707,0-12.021L36.481,36L17.738,17.258c-3.314-3.314-3.314-8.707,0-12.021C19.344,3.631,21.478,2.747,23.748,2.747z M23.748,65.253c1.202,0,2.332-0.468,3.182-1.317L50.963,39.43c0.891-0.893,0.833-2.084-0.833-3.355c0-0.051,0-0.101,0-0.151c0-1.271,0.058-2.461,0.833-3.353L26.693,8.064c-0.85-0.85-1.862-1.317-3.063-1.317c-1.203,0-2.273,0.468-3.123,1.317c-1.755,1.755-1.725,4.61,0.03,6.365l20.172,20.156c0.781,0.781,0.788,2.047,0.007,2.828L20.563,57.57c-1.754,1.755-1.753,4.61,0.001,6.365C21.413,64.785,22.546,65.253,23.748,65.253z" />
             </g>
           </svg>
-          {/* TITLE */}
-          <h4 className="bigcard_heading">{title}</h4>
 
-          {/* DESCRIPTION REVEAL */}
+          {/* TITLE */}
+          <h4 className="bigcard_heading">
+            {title}
+          </h4>
+
+          {/* DESCRIPTION */}
           <motion.div
             animate={{
               height: isHovered ? "auto" : 0,
@@ -146,7 +189,9 @@ const TeleExpertiseCard = ({ title, image, description }) => {
             }}
             className="overflow-hidden w-full"
           >
-            <p className="text_para mt-2 max-w-xl"> {description} </p>
+            <p className="text_para mt-2 max-w-xl">
+              {description}
+            </p>
           </motion.div>
 
         </div>
@@ -212,19 +257,25 @@ const TeleExpertiseCard = ({ title, image, description }) => {
       </div>
 
 
-      <div className="Section_wrapper">
+      <div ref={svgRef}  className="Section_wrapper">
     {/* The grid where the cards are */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
-      {teleExpertise.map((card, index) => (
-        <Link to="/network-architecture">
-         <TeleExpertiseCard
-          title={card.title}
-          image={card.image}
-         description={card.description}
-         />
-        </Link>
-
-          ))}
+      <div
+        
+         className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+    {teleExpertise.map((card, index) => (
+  <Link
+    to="/network-architecture"
+    key={card.title}
+  >
+    <TeleExpertiseCard
+      index={index}
+      scrollProgress={svgScrollProgress}
+      title={card.title}
+      image={card.image}
+      description={card.description}
+    />
+  </Link>
+))}
 
       </div>
 

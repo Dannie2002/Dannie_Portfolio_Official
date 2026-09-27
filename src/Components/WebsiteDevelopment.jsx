@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll,useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -15,8 +15,6 @@ import ResponsiveLayout from "../SVGS/ResponsiveLayout.jsx";
 import Scribble from "./Scribble.jsx";
 import CodeMerge from "../SVGS/CodeMeerge.jsx";
 import MoonBalls from "./MoonBalls.jsx"
-
-gsap.registerPlugin(ScrollTrigger);
 
 
 const WebsiteDevelopment = () => {
@@ -59,9 +57,7 @@ const WebsiteDevelopment = () => {
   };
 
 
-  /* --------------------------------
-     Product Cards
-  -------------------------------- */
+  /* --- Product Cards---- */
 
 const productCards = [
   {
@@ -93,14 +89,46 @@ const productCards = [
   },
 ];
 
+ const svgRef = useRef(null);
+
+const { scrollYProgress: svgScrollProgress } = useScroll({
+  target: svgRef,
+  offset: ["start end", "center center"],
+});
+
 
   /*Card Component*/
 
-const ProductCard = ({ title, icon: Icon, description }) => {
+const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) => {
+
+    const rawY = useTransform(
+    scrollProgress,
+    [
+      0,
+      0.15 + index * 0.08,
+      0.55 + index * 0.08,
+      1,
+    ],
+    [
+      140,
+      140,
+      0,
+      0,
+    ]
+  );
+  
+  const y = useSpring(rawY, {
+    stiffness: 100,
+    damping: 20,
+  });
   return (
     <motion.div
-     variants={itemVariants}
-      className=" group relative overflow-hidden rounded-sm border border-(--text-color)/60 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
+        ref={svgRef}
+      style={{
+        y,
+       
+      }}
+      className="moving-border-card group relative overflow-hidden rounded-sm border border-(--text-color)/60 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
     >
       {/* Card Content */}
       <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6 lg:gap-8" >
@@ -119,25 +147,6 @@ const ProductCard = ({ title, icon: Icon, description }) => {
   );
 };
 
- const containerRef = useRef(null);
-  useGSAP(() => {
-    // Target elements by class name securely inside your scoped container
-    gsap.from(".scroll-heading", {
-      opacity: 0,
-      y: 50,                // Start 50px below its original position
-      duration: 1.2,
-      ease: "power3.out",   // Smooth decelerating ease curve
-      scrollTrigger: {
-        trigger: ".scroll-heading", // Element that fires the trigger
-        start: "top 80%",          // Animation starts when the top of the heading hits 80% from the top of the viewport
-        end: "top 50%",            // Animation ends/reaches full execution at 50% threshold
-        toggleActions: "play none none reverse", // Plays moving down, reverses moving back up
-        // scrub: true            // Uncomment if you want the animation speed tethered exactly to the scrollbar movement
-      }
-    });
-  }, { scope: containerRef }); // 4. Pass the scope context configuration
-
-
 
   return (
 
@@ -155,10 +164,10 @@ const ProductCard = ({ title, icon: Icon, description }) => {
 
 
       <div className="Section_wrapper">
-         <div ref={containerRef}   className="section_header">
-            <motion.h1  className="page_title"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title scroll-heading">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
-            <div className="scroll-heading flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
+         <div  className="section_header easy">
+            <motion.h1  className="page_title animate-item"  > Web Desing & Development </motion.h1>
+            <h3 className="Section_title animate-item">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
+            <div className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
                       </motion.p>
@@ -186,16 +195,20 @@ const ProductCard = ({ title, icon: Icon, description }) => {
     
     {/*Right CONTENT */}
     <div className="w-full lg:w-[55%] flex flex-col gap-8">
-      <div className="grid lg:grid-cols-1  gap-6 lg:gap-8">
-       {productCards.map((card, index) => (
-        <ProductCard
-          key={index}
-          title={card.title}
-          icon={card.icon}
-          description={card.description}
-        />
-      ))}
-      </div>
+   <div  ref={svgRef}  className="grid easy lg:grid-cols-1 gap-6 lg:gap-8">
+  {productCards.map((card, index) => (
+    <div key={index} className="">
+      <ProductCard
+       index={index}
+        title={card.title}
+        icon={card.icon}
+        description={card.description}
+          scrollProgress={svgScrollProgress}
+      />
+    </div>
+  ))}
+</div>
+
 
     </div>
 

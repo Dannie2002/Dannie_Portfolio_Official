@@ -172,7 +172,7 @@ const LandingPage = () => {
           <motion.div variants={itemVariants}>
             <Scribble className="mb-4" 
               size={20}
-              color="#fffced"
+              color="#635985"
             />
           </motion.div>
            <motion.h1

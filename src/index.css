@@ -47,14 +47,68 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
 }
 
 
 .clip {
   clip-path: url(#myClip);
   -webkit-clip-path: url(#myClip);
+}
+
+.moving-border-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  isolation: isolate;
+}
+
+/* Moving gradient layer */
+.moving-border-card::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    transparent 0deg,
+    #635985 60deg,
+    #978F66 120deg,
+    transparent 180deg
+  );
+
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: opacity 0.3s ease;
+
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Masks the inside so only the border remains visible */
+.moving-border-card::after {
+  content: "";
+  position: absolute;
+  inset: 1.3px;
+  background: #101111;
+  border-radius: inherit;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Animate only the pseudo-element */
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.moving-border-card:hover::before {
+  opacity: 1;
+  animation: rotateBorder 2s linear infinite;
 }
 
 

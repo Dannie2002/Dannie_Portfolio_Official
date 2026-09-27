@@ -107,7 +107,8 @@ export default function MainHeader() {
   };
 
   return (
-    <header
+    
+  <header
       className={`fixed top-0 left-0 z-99 w-full border-b border-[#fffced]/22 transition-all duration-400 ${
         scrolled
           ? "bg-(--secondary-color) shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
@@ -141,7 +142,7 @@ export default function MainHeader() {
                 onMouseLeave={() => setActiveMenu(null)}>
 
                 {/* Main Navigation Button */}
-                <Link to={item.link}   className="flex items-center text-[16.7px] gap-1 cursor-pointer text-[#fffced] archivo transition-all duration-300 relative group" > {item.title}
+                <Link to={item.link}   className="flex items-center text-[16px] gap-1 cursor-pointer text-[#fffced] archivo transition-all duration-300 relative group" > {item.title}
 
                   {item.children && (
                     <ChevronDown size={18} className={`transition duration-300 ${
@@ -373,7 +374,7 @@ export default function MainHeader() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 md:hidden"
+              className="fixed inset-0 bg-(--secondary-color)60 backdrop-blur-xs z-40 md:hidden"
             />
 
             {/* Mobile Menu Drawer */}

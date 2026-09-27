@@ -12,6 +12,8 @@ import Web from '../SVGS/Web.jsx';
 import Energy from '../SVGS/Energy.jsx';
 import ThreeStars from '../SVGS/ThreeStars.jsx';
 import Telecom from "../SVGS/Telecom.jsx";
+import BackgroundLines from "./BackgroundLines.jsx";
+
 
 const WorkExperience = () => {
 
@@ -221,7 +223,7 @@ const toggleAccordion = (index) => {
                 </div> 
         </div>
 
-      <div className="bg-(--primary-color) relative flex flex-col items-start justify-between p-6  lg:col-span-4 h-74 rounded-3xl overflow-hidden">
+      <div className="bg-(--primary-color) relative flex flex-col items-start justify-between p-6 lg:col-span-4 h-74 rounded-3xl overflow-hidden">
           <img src={noise} alt="" className="absolute inset-0   h-full w-full  object-cover  opacity-5  mix-blend-overlay pointer-events-none  "/>
            <h4 className="card_heading  leading-[30px] relative text-[26px] z-10 text-[#fffced]"> Turning ideas into reality.</h4>
            <p className="text_para font-normal text-[#fffced]">Transforming creative ideas into purposeful digital experiences of impact.</p>
@@ -284,14 +286,25 @@ const toggleAccordion = (index) => {
         
     </div>
 
-        <div className="relative overflow-hidden bg-[#101111] border border-(--primary-color) flex items-center justify-center lg:col-span-3 h-44 rounded-3xl">
-      
-          <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-32" />
-     <div className="absolute z-0 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-35" />
+<div className="relative overflow-hidden bg-[#101111] border border-(--primary-color) flex items-center justify-center lg:col-span-3 h-44 rounded-3xl">
 
-          <Graduate size={86} color="#fffced" className="z-10" />
+  <BackgroundLines
+    duration={8}
+    opacity={0.22}
 
-        </div>
+  />
+
+  <div className="absolute z-10 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-32" />
+
+  <div className="absolute z-10 rounded-full size-40 bg-transparent outline-[0.7px] outline-(--primary-color) top-5 -left-35" />
+
+  <Graduate
+    size={86}
+    color="#fffced"
+    className="relative z-20"
+  />
+
+</div>
 
 
         
