@@ -61,9 +61,23 @@ const { scrollYProgress: svgScrollProgress } = useScroll({
 
 
 // --- SVG ANIMATIONS ---
-const rawY = useTransform(svgScrollProgress, [0, 1], [200, 0]);
-const y = useSpring(rawY, { stiffness: 100, damping: 20 });
+const rawScale = useTransform(
+  svgScrollProgress,
+  [0, 1],
+  [1.25, 1]
+);
 
+const scale = useSpring(rawScale, {
+  stiffness: 80,
+  damping: 18,
+});
+
+const rawY = useTransform(svgScrollProgress, [0, 1], [200, 0]);
+
+const y = useSpring(rawY, {
+  stiffness: 100,
+  damping: 20,
+});
 
 
 const productCards = [
@@ -113,10 +127,8 @@ const productCards = [
 
   const ProductCard = ({ title, icon: Icon,  paragraph}) => {
     return (
-      <motion.div
-   
-        variants={itemVariants}
-        className={`hover:rotate-5 transition-rotate duration-500 ease-in-out btn-fill-sweep relativeoverflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]
+      <motion.div variants={itemVariants}
+        className={`hover:-translate-y-5 transition-translate  hover:shadow-[0_6px_22px_rgba(189,166,206,0.4)] duration-500 ease-in-out btn-fill-sweep relativeoverflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]
         `}
     
       >
@@ -127,10 +139,10 @@ const productCards = [
           {/* Icon */}
      
 
-       <div className="flex flex-col items-start gap-3">
-          <div className=" flex items-center justify-center rounded-sm">
-          <Icon color="#ffffff" size={42} />
-        </div>
+       <div className="flex flex-col  items-start gap-3">
+           <motion.div  className="svg_container">
+          <Icon style={{y}} color="#ffffff" size={42} />
+        </motion.div>
           <h4 className=" card_heading"> {title} </h4>
         </div>
         <p className="text_para text-[#fffced]"> {paragraph}</p>
@@ -202,9 +214,9 @@ const productCards = [
 
     {/* IMAGE - Sticky */}
     
-      <div ref={svgRef}   className="lg:h-[520px] bg-(--primary-color) outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
+      <div ref={svgRef}   className="lg:h-[520px] bg-[#a181b1] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
         <motion.img
-          style={{ y }}
+          style={{ scale }}
           src={servicedesk}
           alt="Photography and creative services"
           className="w-full h-full object-cover grayscale"
@@ -214,7 +226,8 @@ const productCards = [
 
     {/* CONTENT */}
     <div className="w-full lg:w-[55%] flex flex-col gap-8">
-      <motion.div        style={{
+      <motion.div      
+        style={{
           y,
       
         }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">

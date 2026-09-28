@@ -161,7 +161,7 @@ const productCards = [
 
       <div className="Section_wrapper mt-12 !py-0">
 
-              <div className="section_header">
+              <div ref={svgRef}  className="section_header">
                                <motion.h1  className="page_title"  > Client Relationship Management </motion.h1>
                                <h3 className="Section_title "> Engaging in <span className="text-(--secondary-color)"> professional</span> customer communication. </h3>
                                     <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-20">
@@ -186,7 +186,7 @@ const productCards = [
 
       </div>
 
-<div ref={svgRef} className="Section_wrapper">
+<div   className="Section_wrapper">
 
   <div className="flex_container">
 

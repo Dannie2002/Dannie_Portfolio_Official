@@ -46,7 +46,7 @@ const MoonBalls = () => {
           from-[#0b0b0d]
           via-[#0b0b0d]
           to-[#BDA6CE]/70
-          opacity-78
+          opacity-48
     
           shadow-[15px_10px_16px_2px_rgba(121,93,173,0.3)]
         "

@@ -56,12 +56,19 @@ const WebsiteDevelopment = () => {
     },
   };
 
+ const cardRef = useRef(null);
+
+const { scrollYProgress: cardScrollProgress } = useScroll({
+  target: cardRef,
+  offset: ["start end", "center center"],
+});
+
 
   /* --- Product Cards---- */
 
 const productCards = [
   {
-    title: "Faster & Secure",
+    title: "Fast & Secure",
     icon: WebPerformance,
     description:
       "Turning your unique vision into high-performing, custom-coded web solutions.",
@@ -89,18 +96,30 @@ const productCards = [
   },
 ];
 
- const svgRef = useRef(null);
 
+const svgRef = useRef(null);
+
+
+// 1. First scroll tracker (for SVG)
 const { scrollYProgress: svgScrollProgress } = useScroll({
   target: svgRef,
   offset: ["start end", "center center"],
 });
 
 
+
+// --- SVG ANIMATIONS ---
+const rawX = useTransform(svgScrollProgress, [0, 1], [700, 0]);
+const rawRotate = useTransform(svgScrollProgress, [0, 1], [180, 0]);
+const x = useSpring(rawX, { stiffness: 100, damping: 15 });
+const rotate = useSpring(rawRotate, { stiffness: 100, damping: 20 });
+
+
   /*Card Component*/
 
-const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) => {
+const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) => {
 
+    // Each card gets its own scroll tracker
     const rawY = useTransform(
     scrollProgress,
     [
@@ -121,28 +140,56 @@ const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) 
     stiffness: 100,
     damping: 20,
   });
+
   return (
     <motion.div
-        ref={svgRef}
+    
+        
       style={{
         y,
        
       }}
-      className="moving-border-card group relative overflow-hidden rounded-sm border border-(--text-color)/60 flex flex-col lg:items-start lg:justify-start p-6 h-auto  "
+
+      className="moving-border-card hover:rotate-5 gap-6 transition-rotate duration-500 ease-in-out  relative overflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]"
     >
       {/* Card Content */}
-      <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6 lg:gap-8" >
+          <div className="flex flex-col items-start gap-6">
+                <motion.div style={{rotate}} className="svg_container">
+          <div className="absolute size-8 rounded-full -bottom-5  blur-xl bg-(--secondary-color) opacity-30 ">
 
-        <div className=" flex items-center lg:items-start lg:justify-start justify-center rounded-sm">
-          <Icon color="#fffced" size={52} />
+          </div>
+             <motion.svg
+  style={{
+    x,
+    rotate,
+  }}
+  className="size-10 text-[#fffced]"
+  viewBox="0 0 48 48"
+  fill="#fffced"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M40.93,14.25,24,24,7.07,14.25"
+    fill="none"
+    stroke="#fffced"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M7.07,14.25l16.93-9.75L40.93,14.25v19.5L24.0007,43.5,7.07,33.75"
+    fill="none"
+    stroke="#fffced"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+              </motion.svg>
+          </motion.div>
+  
+          <h4 className=" card_heading"> {title} </h4>
         </div>
+        <p className="text_para text-[#fffced]"> {description}</p>
+   
 
-        <div className="flex flex-col gap-2 lg:items-start items-center lg:justify-start justify-center">
-          <h4 className=" card_heading"> {title}</h4>
-          <p className="text-[#b8b8b8] text-center lg:text-start"> {description}</p>
-        </div>
-
-      </div>
     </motion.div>
   );
 };
@@ -150,7 +197,8 @@ const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) 
 
   return (
 
-    <section className="bg-[#101011] relative w-full">
+    <section  ref={cardRef}  className="bg-[#101011] relative w-full">
+      <MoonBalls />
 
             <SectionHeader
               title="Website Design & Development"
@@ -163,11 +211,11 @@ const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) 
               />
 
 
-      <div className="Section_wrapper">
-         <div  className="section_header easy">
-            <motion.h1  className="page_title animate-item"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title animate-item">I deliver elite interfaces with <span className="text-(--secondary-color)">100% </span>business efficiency. </h3>
-            <div className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
+      <div  className="Section_wrapper">
+         <div  className="section_header easy z-50">
+            <motion.h1  className="page_title animate-item z-50"  > Web Desing & Development </motion.h1>
+            <h3 className="Section_title animate-item">Build with purpose <span className="text-(--secondary-color)">.<br /> Design </span>to commumicate. </h3>
+            <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
                       </motion.p>
@@ -181,21 +229,15 @@ const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) 
 
 {/*  Main Products Layout-------- */}
 
-<div className="Section_wrapper ">
+<div  className="Section_wrapper ">
 
   <div className="flex_container ">
     {/* IMAGE - Sticky */}
-      <div className="lg:h-[520px] outline outline-2 outline-[#fffced]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
-        <img
-          src={webdev}
-          alt="Photography and creative services"
-          className="w-full h-full object-cover grayscale"
-        />
-      </div>
+   
     
     {/*Right CONTENT */}
-    <div className="w-full lg:w-[55%] flex flex-col gap-8">
-   <div  ref={svgRef}  className="grid easy lg:grid-cols-1 gap-6 lg:gap-8">
+    <div className="w-full  flex flex-col gap-8">
+   <div  className="grid easy lg:grid-cols-4 gap-6 lg:gap-8">
   {productCards.map((card, index) => (
     <div key={index} className="">
       <ProductCard
@@ -203,7 +245,7 @@ const ProductCard = ({  index,title, icon: Icon, description,scrollProgress, }) 
         title={card.title}
         icon={card.icon}
         description={card.description}
-          scrollProgress={svgScrollProgress}
+         scrollProgress={cardScrollProgress}
       />
     </div>
   ))}

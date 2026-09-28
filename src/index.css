@@ -185,32 +185,45 @@ html, body {
 
 .btn-fill-sweep > * {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .btn-fill-sweep::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #BDA6CE, #635985);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 400ms ease;
+  width: 180px;
+  height: 180px;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.5);
+  background: radial-gradient(
+    circle,
+    #BDA6CE 0%,
+    rgb(138, 83, 211) 40%,
+    transparent 75%
+  );
+  filter: blur(40px);
+  opacity: 0;
+  transition:
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 500ms ease;
   z-index: 0;
+  pointer-events: none;
 }
 
 .btn-fill-sweep:hover::before {
-  transform: scaleX(1);
+  transform: translateY(-50%) scale(3);
+  opacity: 0.65;
 }
 
 
 .pointer{
-  background-color: var(--primary-color);
+  background-color: var(--text-color);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-  width: 1.7rem;
+  width: 2.2rem;
   pointer-events: none;
   aspect-ratio: 1;
   border-radius: 100%;
@@ -349,7 +362,7 @@ body:has(.btn:hover) .pointer {
 }
 
 .Section_wrapper{
-  @apply lg:py-12 py-6 mx-auto px-4 rounded-2xl lg:px-18;
+  @apply lg:py-12  py-6 mx-auto px-4 rounded-2xl lg:px-18;
 }
 
 .flex_cols{ 
@@ -358,6 +371,10 @@ body:has(.btn:hover) .pointer {
 
 .Grid_4{
   @apply lg:mt-12 mt-6 grid grid-cols-1 lg:grid-cols-4 gap-8;
+}
+
+.svg_container{
+  @apply relative z-10 shadow-[0_6px_12px_rgba(189,166,206,0.2)] overflow-hidden flex items-center text-[#fffced] rounded-[14px]  size-12 justify-center p-3 bg-[#fffced]/18 border border-[#fffced]/35;
 }
 
 .text_link{

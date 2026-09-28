@@ -184,13 +184,14 @@ const [submitted, setSubmitted] = useState(false);
               <div className="section_header mt-34">
           
                      <motion.h1  className="page_title"  > Start a conversation </motion.h1>
-                    <h3   className="Section_title "> We can build our next projects together.</h3>
+
+                    <h3 className="Section_title "> Let us build our next projects<span className="text-(--secondary-color)"> together.</span> </h3>
           
           
                     <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
-          
+                      <ContactPlane color="#978F66" size={36} className="hidden lg:flex" />
                       <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>
-                      <ContactPlane color="#ca852b" size={36} className="hidden lg:flex" />
+                     
           
                     </div>
           
@@ -267,9 +268,9 @@ const [submitted, setSubmitted] = useState(false);
           type="text"
           name="first-name"
           autoComplete="given-name"
-          placeholder="Eg: Dannie"
+          placeholder="Eg: Danford"
           required
-          className="text_field"
+          className="text_field  "
         />
       </div>
 

@@ -257,7 +257,7 @@ const y = useSpring(rawY, {
       </div>
 
 
-      <div ref={svgRef}  className="Section_wrapper">
+      <div  className="Section_wrapper">
     {/* The grid where the cards are */}
       <div
         

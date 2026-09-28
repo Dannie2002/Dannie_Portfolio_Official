@@ -5,6 +5,7 @@ import banner from "../assets/LivestockHealth.png";
 import digital from "../assets/Livestockapp.jpg";
 import mwapata from "../assets/Mwapataredesign.png";
 
+
 const Projects = () => {
 
   /* --------------------------------
@@ -48,34 +49,43 @@ const Projects = () => {
      Projects
   -------------------------------- */
 
-  const productCards = [
-    {
-      title: "Livestock Health Tracker",
-      image: banner,
-   
-    },
-     {
-      title: "Bike Tech E-commerce",
-      image: mwapata,
- 
-    },
+const productCards = [
+  {
+    title: "Livestock Health Tracker",
+    category: "Web Application",
+    year: "2022",
+    image: banner,
+    description:
+      "A livestock health management system.",
+  },
 
+  {
+    title: "Bike Tech E-commerce",
+    category: "E-commerce",
+    year: "2024",
+    image: mwapata,
+    description:
+      "Content strategy for an architecture publication.",
+  },
 
-    {
-      title: "Electronic Cashbox",
-      image: digital,
-    
-    },
+  {
+    title: "Electronic Cashbox",
+    category: "FinTech",
+    year: "2025",
+    image: digital,
+    description:
+      "A digital cash management solution.",
+  },
 
-    {
-      title: "MwAPATA Website Redesign",
-      image: mwapata,
- 
-    },
-
-
-  ];
-
+  {
+    title: "MwAPATA Website Redesign",
+    category: "Website Redesign",
+    year: "2026",
+    image: mwapata,
+    description:
+      "A modern website redesign focused on communicating MwAPATA's research.",
+  },
+];
 
   /* --------------------------------
      Carousel Reference
@@ -175,24 +185,43 @@ const Projects = () => {
      Project Card
   -------------------------------- */
 
- const ProductCard = ({ title, image, index }) => {
+const ProductCard = ({ title, category, year, image, description, index }) => {
   return (
-    <div className="shrink-0   snap-start mt-12  w-[87%] sm:w-[62%] md:w-[48%] lg:w-[38%]" >
-
-      <div  className=" group relative shadow-[inset_0_0_0_4px_#A29922]  outline-(--primary-color) h-[430px] w-full " >
+    <div className="shrink-0 bg-[#fffced]/4 snap-start mt-12 w-[87%] sm:w-[62%] md:w-[48%] lg:w-[29%]">
       
-        <img
-          src={image}
-          alt={title}
-          loading="eager"
-          className=" absolute inset-0  h-full  w-full object-cover"
-        />
+      <div className="border p-6 border-(--text-color)/60 rounded-sm h-[430px] w-full flex flex-col justify-between">
 
+        {/* Category + Title */}
+        <div className="flex  flex-col items-start gap-3">
+          <div className="svg_container">
+          <div className="absolute size-8 rounded-full -bottom-5  blur-xl bg-(--secondary-color) opacity-100 ">
 
+          </div>
+          <h1 className="text-[22px] geonova">1</h1>
+          </div>
+          <span className="text-[12px] chivo uppercase text-(--text-colour) font-medium">
+            {category}
+          </span>
+
+          <h3 className="text-[28px] geonova font-bold text-[#fffced] zalando">
+            {title}
+          </h3>
+        </div>
+
+        {/* Description + Year */}
+        <div className="flex flex-col items-start gap-3">
+          <p className="text_para leading-relaxed text-(--text-colour) max-w-[90%]">
+            {description}
+          </p>
+              <div className="relative mt-2 overflow-hidden flex items-center text-[#fffced] rounded-sm  justify-center py-1 px-3 bg-transparent border border-(--text-color)/40">
+              <span className="text-sm text-(--text-colour)/50">
+            {year}
+          </span>
+               </div>
+       
+        </div>
 
       </div>
-
-      <h3 className="mt-4 text-[18px] font-bold text-(--text-colour) zalando">{title} </h3>
 
     </div>
   );
@@ -223,7 +252,44 @@ const Projects = () => {
       <div className="Section_wrapper ">
        {/*  Carousel Controls----- */}
 
-        <div className="mb-4 flex justify-end gap-2">
+   
+       
+        <motion.div
+          ref={carouselRef}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          className=" flex  lg:gap-8 gap-6  overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pr-[5%] scrollbar-none
+            [-ms-overflow-style:none]
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+
+         
+          {productCards.map(
+            (card, index) => (
+
+         <ProductCard
+              key={index}
+              title={card.title}
+              category={card.category}
+              year={card.year}
+              image={card.image}
+              description={card.description}
+              index={index}
+            />
+            
+
+            )
+          )}
+
+        </motion.div>
+
+     <div className="mb-4 flex justify-end gap-2">
           {/* Previous */}
 
           <button
@@ -288,38 +354,6 @@ const Projects = () => {
           </button>
 
         </div>
-       
-        <motion.div
-          ref={carouselRef}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{
-            once: true,
-            amount: 0.15,
-          }}
-          className=" flex  lg:gap-8 gap-6  overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pr-[5%] scrollbar-none
-            [-ms-overflow-style:none]
-            [&::-webkit-scrollbar]:hidden
-          "
-        >
-
-         
-          {productCards.map(
-            (card, index) => (
-
-              <ProductCard
-                key={index}
-                title={card.title}
-                image={card.image}
-                index={index}
-              />
-
-            )
-          )}
-
-        </motion.div>
-
 
        
 
