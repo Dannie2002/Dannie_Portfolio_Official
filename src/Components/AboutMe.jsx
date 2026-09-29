@@ -16,7 +16,7 @@ const AboutMe = () => {
 
 
   
-          const bg4 = {
+      const bg4 = {
       backgroundImage: `url(${work}`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -25,12 +25,10 @@ const AboutMe = () => {
     };
   
 const words =[
-  {text : "Resourceful" },
-  {text : "Creative" },
-  {text : "Akatundu"},
-  {text : "Namateture"},
-  {text : "Machine"},
-  {text : "Katakwe"},
+  {text : "Integrity" },
+  {text : "continueos learning" },
+  {text : "Collabolation"},
+
 
 ]
 
@@ -57,9 +55,7 @@ const words =[
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
             <div>
-                    <h4 className="card_heading text-(--primary-color) chivo uppercase">Resorceful.
-                      <span className='slide'>
-                    
+                    <h4 className="card_heading text-(--primary-color) chivo uppercase">I believe in <span className='slide'>
                           <span className='wrapper'>
                             {words.map((word) => (
                            <span key={word.text}>
@@ -95,7 +91,7 @@ const words =[
         </div>
 
         <div className='w-full flex lg:items-start items-center justify-center lg:w-1/4 lg:ml-16'>
-          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-110 lg:mt-22  rounded-full bg-transparent size-10 lg:h-30 lg:w-30 [perspective:1000px]"></div>
+          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-90 lg:mt-22  rounded-full bg-transparent size-10 lg:h-30 lg:w-30 [perspective:1000px]"></div>
 
         </div>
 

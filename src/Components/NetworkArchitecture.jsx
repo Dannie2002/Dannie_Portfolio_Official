@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import banner from "../assets/Good2.jpg";
 import work from "../assets/ServiceDesk3.jpg";
 import fat from "../assets/FAT.jpg";
@@ -83,7 +84,7 @@ const ProductCard = ({ title, description }) => {
       {/* Card Content */}
       <div className="relative z-10 flex flex-col lg:items-start lg:justify-start lg:flex-row  pb-4 gap-6 lg:gap-8" >
 
-        <div className="flex flex-col lg:items-start items-center lg:justify-start justify-center">
+        <div className="flex flex-col gap-4 lg:items-start items-center lg:justify-start justify-center">
           <h4 className=" card_heading"> {title}</h4>
 
           <p className="text-[#b8b8b8] text-center lg:text-start">
@@ -133,9 +134,9 @@ const ProductCard = ({ title, description }) => {
 
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
-            <div className="flex flex-col gap-4">
-                  <h3   className="Section_title text-[#fffced]"> From the internet <span className="text-(--secondary-color)">backbone</span> to the home.</h3>
-                  <h4 className="card_heading uppercase">Gigabit Passive Optic Network (GPON)</h4>
+            <div className="flex flex-col gap-6"> 
+                  <h3   className="Section_title text-[#fffced]"> From the internet <span className="text_gradient">backbone</span> to the home.</h3>
+                  <h4 className="card_heading chivo text-[18px] uppercase">Gigabit Passive Optic Network (GPON)</h4>
             <motion.p className="text_para mt-4 text-[#fffced] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results.</motion.p>
             </div>
            
@@ -167,7 +168,7 @@ const ProductCard = ({ title, description }) => {
       </div>    
         
       </div>
-
+ <Outlet />
     </section>
   );
 };

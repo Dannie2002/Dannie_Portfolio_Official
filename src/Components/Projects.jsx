@@ -162,7 +162,7 @@ const Projects = () => {
               justify-between
               transition-all
               duration-300
-              group-hover:border-(--secondary-color)/70 ">
+              group-hover:border-(--secondary-color)/70">
             {/* Category + Title */}
 
             <div className="flex flex-col items-start gap-3">
@@ -205,8 +205,8 @@ const Projects = () => {
   className="
     pointer-events-none
     absolute
-    inset-0
-    z-40
+    
+    z-99
     flex
     items-center
     justify-center
@@ -221,7 +221,7 @@ const Projects = () => {
     duration-300
 "
 >
-  <div className="w-[85%] overflow-hidden rounded-xl bg-[#101011]/90 shadow-2xl">
+  <div className="w-[95%] overflow-hidden rounded-xl bg-[#101011]/90 shadow-2xl">
 
     <img
       src={image}

@@ -163,7 +163,7 @@ const productCards = [
 
               <div ref={svgRef}  className="section_header">
                                <motion.h1  className="page_title"  > Client Relationship Management </motion.h1>
-                               <h3 className="Section_title "> Engaging in <span className="text-(--secondary-color)"> professional</span> customer communication. </h3>
+                               <h3 className="Section_title "> Engaging in <span className="text_gradient"> professional</span> customer communication. </h3>
                                     <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-20">
                                                       <motion.p
                                                                 className="

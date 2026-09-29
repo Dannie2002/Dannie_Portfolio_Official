@@ -61,7 +61,6 @@ html, body {
   height: 24px;
   overflow: hidden;
   vertical-align: bottom;
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .wrapper {
@@ -79,40 +78,22 @@ html, body {
 
 @keyframes wordSlider {
 
-  /* Resourceful */
+  /* Word 1 */
   0%,
-  12% {
+  30% {
     transform: translateY(0);
   }
 
-  /* Creative */
-  16%,
-  28% {
+  /* Slide to Word 2 */
+  33%,
+  63% {
     transform: translateY(-24px);
   }
 
-  /* Akatundu */
-  32%,
-  44% {
+  /* Slide to Word 3 */
+  66%,
+  96% {
     transform: translateY(-48px);
-  }
-
-  /* Namateture */
-  48%,
-  60% {
-    transform: translateY(-72px);
-  }
-
-  /* Machine */
-  64%,
-  76% {
-    transform: translateY(-96px);
-  }
-
-  /* Katakwe */
-  80%,
-  92% {
-    transform: translateY(-120px);
   }
 
   /* Restart */
@@ -120,8 +101,6 @@ html, body {
     transform: translateY(0);
   }
 }
-
-
 .moving-border-card {
   position: relative;
   overflow: hidden;
@@ -314,7 +293,7 @@ body:has(.btn:hover) .pointer {
 
 .Section_title {
   font-family: var(--font-kasnova);
-  @apply lg:text-[42px] text-[42px] leading-[48px] lg:leading-[44px] mt-2 max-w-[740px] lg:leading-[52px] font-semibold text-[#fffced];
+  @apply lg:text-[42px] text-[42px] leading-[48px] lg:leading-[44px] mt-2 max-w-[740px] lg:leading-[52px] font-semibold text-[#ededed];
 }
 .overlay{
   @apply absolute z-5 inset-0 bg-gradient-to-t from-[#0b0b0d] via-[#201f1f]/60 to-transparent opacity-99 transition-colors duration-450 ease-in-out mix-blend-multiply;
@@ -361,7 +340,7 @@ body:has(.btn:hover) .pointer {
 }
 
 .text_para{
-  color: #fffced;
+  color: #ededed;
   font-family: var(--font-zalando);
   @apply lg:text-[16.4px] font-light tracking-wide lg:leading-[29px]  text-[16px] leading-relaxed;
 }

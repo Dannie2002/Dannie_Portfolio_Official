@@ -22,6 +22,9 @@ export default function MainHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
+  
   const navLinks = [
     {
       title: "Home",
@@ -111,7 +114,7 @@ export default function MainHeader() {
   <header
       className={`fixed top-0 left-0 z-99 w-full border-b border-[#fffced]/22 transition-all duration-400 ${
         scrolled
-          ? "bg-gradient-to-r from-[#101011] border-[#fffced] backdrop-blur-xl via-[#101011] to-[#101011]/80 backdrop  shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
+          ? "bg-gradient-to-r from-[#101011]  via-[#101011] to-[#101011]/90 backdrop border-[#fffced] backdrop-blur-[2px]  shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
           : "bg-transparent "
       }`}
     >
@@ -122,7 +125,7 @@ export default function MainHeader() {
 
         <Link
           to="/"
-          className="flex btn items-center justify-center rounded-full border border-white size-16 relative z-90"
+          className="flex btn items-center justify-center rounded-full border border-white size-14 relative z-90"
         >
           <h2 className="text-white chivo text-2xl tracking-widest">
             DM
@@ -142,7 +145,7 @@ export default function MainHeader() {
                 onMouseLeave={() => setActiveMenu(null)}>
 
                 {/* Main Navigation Button */}
-                <Link to={item.link}   className="flex items-center text-[15px] gap-1 cursor-pointer text-[#fffced]  uppercase chivo transition-all duration-300 relative group" > {item.title}
+                <Link to={item.link}   className="flex items-center text-[14.5px] gap-1 cursor-pointer text-[#fffced]  uppercase chivo transition-all duration-300 relative group" > {item.title}
 
                   {item.children && (
                     <ChevronDown size={18} className={`transition duration-300 ${

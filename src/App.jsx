@@ -17,6 +17,9 @@ import ProgressBar from './Components/ProgressBar.jsx';
 import MyGallery from './Components/MyGallery.jsx'
 import NetworkArchitecture from './Components/NetworkArchitecture.jsx';
 import ScrollToTopButton from './Components/ScrollToTopButton.jsx';
+import Connectivity from './Components/Connectivity.jsx';
+import NetworkOperations from './Components/NetworkOperations.jsx';
+import TechnologyTools from './Components/TechnologyTools.jsx';
 
 
 
@@ -35,8 +38,32 @@ function App() {
     
     <Routes>
       <Route path="/" element={<CoverPages />} />
-      <Route path="/telecommunications" element={<Telecommunications />} />
-      <Route path='/network-architecture' element={<NetworkArchitecture />} />
+<Route path="/telecommunications">
+
+  {/* Main Telecommunications page */}
+  <Route index element={<Telecommunications />} />
+
+  {/* Expertise subsections */}
+  <Route
+    path="network-architecture"
+    element={<NetworkArchitecture />}
+  />
+
+  <Route
+    path="internet-connectivity"
+    element={<Connectivity />}
+  />
+   <Route
+    path="network-operations"
+    element={<NetworkOperations />}
+  />
+
+   <Route
+    path="technology-tools"
+    element={<TechnologyTools />}
+  />
+
+</Route>
       <Route path='/service-desk' element={<ServiceDesk />} />
       <Route path="/client-relationship-management" element={<ClientRelationship />} />
       <Route path="/website-design-development" element = {<WebsiteDevelopment />} />

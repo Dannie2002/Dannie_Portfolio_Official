@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import webbb from "../assets/Webbb.jpg";
 import branding from "../assets/Hero.jpg";
+import bag from "../assets/12.png"
 import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
 import webdev from "../assets/Webdevelopment.jpg"
@@ -195,6 +196,20 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
   return (
 
     <section  ref={cardRef}  className="bg-[#101011] relative w-full">
+
+
+     <img
+        src={noise}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-overlay"
+      />
+        <img
+        src={bag}
+        alt=""
+        className="absolute  inset-0 z-10 h-full w-full object-cover opacity-40 mix-blend-overlay"
+      />
+
+
       <MoonBalls />
 
             <SectionHeader
@@ -208,10 +223,10 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
               />
 
 
-      <div  className="Section_wrapper">
+      <div  className="Section_wrapper z-99">
          <div  className="section_header easy z-50">
             <motion.h1  className="page_title animate-item z-50"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title animate-item">Build with purpose <span className="text_gradient">.<br /> Design </span>to commumicate. </h3>
+            <h3 className="Section_title animate-item z-40">Build with purpose <span className="text_gradient">.<br /> Design </span>to commumicate. </h3>
             <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
@@ -226,7 +241,7 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
 
 {/*  Main Products Layout-------- */}
 
-<div  className="Section_wrapper ">
+<div  className="Section_wrapper z-99">
 
   <div className="flex_container ">
     {/* IMAGE - Sticky */}
@@ -236,7 +251,7 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
     <div className="w-full  flex flex-col gap-8">
    <div  className="grid easy lg:grid-cols-4 gap-6 lg:gap-8">
   {productCards.map((card, index) => (
-    <div key={index} className="">
+    <div key={index} className="z-20">
       <ProductCard
        index={index}
         title={card.title}

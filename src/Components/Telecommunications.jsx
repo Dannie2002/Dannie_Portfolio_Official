@@ -60,6 +60,7 @@ const teleExpertise = [
   {
     title: "Network Architecture & Infrastructure",
     image: banner,
+    link: "network-architecture",
     description:
       "Hands-on experience with ISP network architecture, fibre infrastructure, and access technologies.",
   },
@@ -67,6 +68,7 @@ const teleExpertise = [
   {
     title: "Internet & Connectivity",
     image: fat,
+    link: "internet-connectivity",
     description:
       "Practical experience supporting Internet connectivity, bandwidth performance, and enterprise network services.",
   },
@@ -74,6 +76,7 @@ const teleExpertise = [
   {
     title: "Network Operations",
     image: netoperations,
+    link: "network-operations",
     description:
       "Experience in monitoring network services, responding to faults, and coordinating technical incidents.",
   },
@@ -81,6 +84,7 @@ const teleExpertise = [
   {
     title: "Technologies & Tools",
     image: router,
+    link: "technokogy-tools",
     description:
       "Hands-on exposure to networking and monitoring technologies used in ISP environments.",
   },
@@ -90,6 +94,7 @@ const teleExpertise = [
 const TeleExpertiseCard = ({
   title,
   image,
+  link,
   description,
   index,
   scrollProgress,
@@ -203,7 +208,7 @@ const y = useSpring(rawY, {
 
   return (
 
-    <section className="bg-[#101011] relative w-full">
+    <section className="bg-[#101011] overflow-x-hidden relative w-full">
 
       <SectionHeader
         title="Telecommunications"
@@ -264,7 +269,7 @@ const y = useSpring(rawY, {
          className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
     {teleExpertise.map((card, index) => (
   <Link
-    to="/network-architecture"
+    to={card.link}
     key={card.title}
   >
     <TeleExpertiseCard
