@@ -3,6 +3,7 @@ import AboutMe from "./AboutMe";
 import LandingPage from "./LandingPage";
 import LetsConnect from "./LetsConnect";
 import Projects from "./Projects";
+import WorkExperience from "./WorkExperience";
 
 
 
@@ -13,6 +14,7 @@ const CoverPages = () => {
       <LandingPage />
       <AboutMe />
       <Projects />
+      <WorkExperience className="hidden" />
       <LetsConnect />
    
     </>

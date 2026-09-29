@@ -60,24 +60,20 @@ const { scrollYProgress: svgScrollProgress } = useScroll({
 });
 
 
-// --- SVG ANIMATIONS ---
-const rawScale = useTransform(
-  svgScrollProgress,
-  [0, 1],
-  [1.25, 1]
-);
-
-const scale = useSpring(rawScale, {
-  stiffness: 80,
-  damping: 18,
-});
-
+// --- Picture and c ---
+const rawScale = useTransform(svgScrollProgress,[0, 1], [1.25, 1]);
+const scale = useSpring(rawScale, { stiffness: 80, damping: 18,});
 const rawY = useTransform(svgScrollProgress, [0, 1], [200, 0]);
+const y = useSpring(rawY, {stiffness: 100,damping: 20,});
 
-const y = useSpring(rawY, {
-  stiffness: 100,
-  damping: 20,
-});
+
+// --- SVG ANIMATIONS ---
+const rawX = useTransform(svgScrollProgress, [0, 1], [700, 0]);
+const rawRotate = useTransform(svgScrollProgress, [0, 1], [180, 0]);
+const x = useSpring(rawX, { stiffness: 100, damping: 15 });
+const rotate = useSpring(rawRotate, { stiffness: 100, damping: 20 });
+
+
 
 
 const productCards = [
@@ -125,11 +121,10 @@ const productCards = [
 ];
 
 
-  const ProductCard = ({ title, icon: Icon,  paragraph}) => {
+const ProductCard = ({ title, icon: Icon,  paragraph}) => {
     return (
       <motion.div variants={itemVariants}
-        className={`hover:-translate-y-5 transition-translate  hover:shadow-[0_6px_22px_rgba(189,166,206,0.4)] duration-500 ease-in-out btn-fill-sweep relativeoverflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]
-        `}
+        className={`moving-border-card btn-fill-sweep card_transparent`}
     
       >
 
@@ -139,9 +134,10 @@ const productCards = [
           {/* Icon */}
      
 
-       <div className="flex flex-col  items-start gap-3">
-           <motion.div  className="svg_container">
-          <Icon style={{y}} color="#ffffff" size={42} />
+       <div className="flex flex-col items-start gap-6">
+           <motion.div className="svg_container">
+            <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-70 bg-(--secondary-color)" />
+          <Icon  color="#ffffff" size={42} />
         </motion.div>
           <h4 className=" card_heading"> {title} </h4>
         </div>
@@ -157,9 +153,7 @@ const productCards = [
 
   return (
 
-
-    
-    <section className="bg-[#101011] relative  w-full">
+  <section className="bg-[#101011] relative  w-full">
                        <SectionHeader
   title="Service Desk Engineering"
   bgImage={banner}
@@ -214,7 +208,7 @@ const productCards = [
 
     {/* IMAGE - Sticky */}
     
-      <div ref={svgRef}   className="lg:h-[520px] bg-[#a181b1] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
+      <div ref={svgRef}   className="lg:h-[520px] overflow-hidden bg-[#a181b1] outline outline-2 outline-[#4a4a4a]/60 lg:w-[45%] w-full lg:sticky lg:top-25 h-84 shadow-[6px_6px_18px_rgba(255,255,255,0.2)]">
         <motion.img
           style={{ scale }}
           src={servicedesk}

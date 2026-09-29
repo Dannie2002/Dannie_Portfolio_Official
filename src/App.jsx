@@ -16,6 +16,7 @@ import ContactMe from "./Components/ContactMe.jsx"
 import ProgressBar from './Components/ProgressBar.jsx';
 import MyGallery from './Components/MyGallery.jsx'
 import NetworkArchitecture from './Components/NetworkArchitecture.jsx';
+import ScrollToTopButton from './Components/ScrollToTopButton.jsx';
 
 
 
@@ -48,7 +49,7 @@ function App() {
      
     
 
-
+<ScrollToTopButton />
 <Footer />
 
     </>

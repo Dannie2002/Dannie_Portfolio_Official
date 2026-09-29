@@ -34,6 +34,8 @@ const LandingPage = () => {
     },
   };
 
+
+
   return (
     <section
       className="min-h-[90vh] overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center"
@@ -179,7 +181,7 @@ const LandingPage = () => {
             variants={itemVariants}
             className="text-[14px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
           >
-          Fleelance FrontEnd Developer  
+          To Reign the digital world.  
           </motion.h1>
 
           {/* Heading */}
@@ -188,7 +190,7 @@ const LandingPage = () => {
             className="font-heading geonova !text-[58px] !leading-[68px] !capitalize font-bold leading-[68px] text-(--primary-color)"
           >          
             beyond<br /> business <br />  
-            <span className="text-(--secondary-color)">
+            <span className="text_gradient">
             authenticity.
             </span>
         
@@ -208,22 +210,22 @@ const LandingPage = () => {
           {/* Contact Button */}
           <motion.div
             variants={itemVariants}
-            className="flex gap-5 mt-6"
+            className="flex gap-5  mt-6"
           >
 
-             <motion.div className='flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-[#F2EAE0] hover:bg-(--secondary-color) border-(--primary-color)/40 px-10  py-2 items-center gap-6' >
-                                <div className='relative flex overflow-hidden'>
-                             <h3 className='text_button !text-(--primary-color) group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
-                          View Works
+             <motion.div className=' flex  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-[#F2EAE0] hover:bg-(--secondary-color) border-(--primary-color)/40 px-10  py-2 items-center gap-6' >
+                                <div className='relative  flex overflow-hidden'>
+                             <h3 className='text_button !text-[#101011] group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
+                          View works
                         </h3>
-                        <h3 className='text_button absolute -translate-y-4 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
-                          View Works
+                        <h3 className='absolute -translate-y-4 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
+                          View works
                         </h3>
                      </div>
                      
                                  
-                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
-                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-[#101011]' />
+                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#101011] size-7 p-2'>
+                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
                                       <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
                                    

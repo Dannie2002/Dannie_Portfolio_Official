@@ -111,8 +111,8 @@ export default function MainHeader() {
   <header
       className={`fixed top-0 left-0 z-99 w-full border-b border-[#fffced]/22 transition-all duration-400 ${
         scrolled
-          ? "bg-(--secondary-color) shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
-          : "bg-transparent border-0"
+          ? "bg-gradient-to-r from-[#101011] border-[#fffced] backdrop-blur-xl via-[#101011] to-[#101011]/80 backdrop  shadow-[0_8px_24px_rgba(0,0,0,0.18)]"
+          : "bg-transparent "
       }`}
     >
       {/* Glass Navbar */}
@@ -142,7 +142,7 @@ export default function MainHeader() {
                 onMouseLeave={() => setActiveMenu(null)}>
 
                 {/* Main Navigation Button */}
-                <Link to={item.link}   className="flex items-center text-[16px] gap-1 cursor-pointer text-[#fffced] archivo transition-all duration-300 relative group" > {item.title}
+                <Link to={item.link}   className="flex items-center text-[15px] gap-1 cursor-pointer text-[#fffced]  uppercase chivo transition-all duration-300 relative group" > {item.title}
 
                   {item.children && (
                     <ChevronDown size={18} className={`transition duration-300 ${
@@ -309,8 +309,8 @@ export default function MainHeader() {
   rel="noopener noreferrer"
   className="lg:flex border btn-fill-sweep  btn hidden group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-trasparent hover:bg-(--primary-color)/80 border-[#fffced]/60 px-6 py-2 items-center gap-4 relative z-90"
 >
-  <h3 className="text_button archivo">
-    Download My CV
+  <h3 className="text_button uppercase chivo">
+    Download CV
   </h3>
 
   <div className="flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm justify-center bg-[#fffced] size-7 p-3">

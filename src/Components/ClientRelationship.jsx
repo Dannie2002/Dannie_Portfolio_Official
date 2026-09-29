@@ -4,7 +4,7 @@ import client from "../assets/Handshake.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import SectionHeader from "./SectionHeader.jsx";
-import servicedesk from "../assets/Webbb.jpg"
+import servicedesk from "../assets/ServiceDesk.jpg"
 import CodeMerge from "../SVGS/Management.jsx"
 
 const ClientRelationship = () => {
@@ -112,9 +112,9 @@ const productCards = [
     return (
       <motion.div
   variants={itemVariants}
-    className={`moving-border-card group relative  overflow-hidden  rounded-sm
-    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex border border-(--primary-color)/40  flex-col  items-start   justify-start   px-6   py-8
-    ${index === 0 ? 'bg-(--secondary-color)' : 'bg-transparent'}`}>
+    className={`moving-border-card group relative  overflow-hidden  
+    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex rounded-[8px] outline-[0.5px] outline-[#fffced]/20  flex-col  items-start   justify-start   px-6   py-8
+    ${index === 1 ? '' : ''}`}>
 
     <div >
       <motion.svg

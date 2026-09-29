@@ -137,7 +137,7 @@ html, body {
   background: conic-gradient(
     transparent 0deg,
     #635985 60deg,
-    #978F66 120deg,
+    #BDA6CE 120deg,
     transparent 180deg
   );
 
@@ -156,7 +156,6 @@ html, body {
   inset: 1.3px;
   background: #101111;
   border-radius: inherit;
-
   z-index: -1;
   pointer-events: none;
 }
@@ -198,15 +197,15 @@ html, body {
   transform: translateY(-50%) scale(0.5);
   background: radial-gradient(
     circle,
-    #BDA6CE 0%,
-    rgb(138, 83, 211) 40%,
+    #bfa8f0 0%,
+    rgb(129, 106, 158) 40%,
     transparent 75%
   );
   filter: blur(40px);
   opacity: 0;
   transition:
-    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 500ms ease;
+   transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+  opacity 500ms ease;
   z-index: 0;
   pointer-events: none;
 }
@@ -250,9 +249,15 @@ body:has(.btn:hover) .pointer {
     @apply text-[64px] leading-[58px] mt-2 lg:text-[98px] lg:leading-[84px];
 }
 
+.text_gradient{
+  @apply bg-gradient-to-r from-[#635985] via-[#9b64c2] to-[#BDA6CE] bg-clip-text text-transparent;
+}
+
 .text_button{
   font-weight: 500;
   color: #fffced;
+
+  @apply text-[15px];
 
 }
 .chivo{
@@ -288,6 +293,10 @@ body:has(.btn:hover) .pointer {
 @layer components {
   .btn-primary {
     @apply  font-bold py-2 px-4 rounded;
+  }
+
+  .card_transparent{
+    @apply hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] shadow-[0_6px_12px_rgba(189,166,206,0.2)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-2xl outline-[0.8px] outline-[#fffced]/30 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8;
   }
 
   .text_label{
@@ -339,7 +348,7 @@ body:has(.btn:hover) .pointer {
 
 .page_title{
   font-family: var(--font-agdasima);
-  @apply lg:text-[18px] text-[16.5px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
+  @apply lg:text-[16.5px] text-[16.5px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
 }
 .card_heading{
   font-family: var(--font-archivo);
@@ -376,6 +385,8 @@ body:has(.btn:hover) .pointer {
 .svg_container{
   @apply relative z-10 shadow-[0_6px_12px_rgba(189,166,206,0.2)] overflow-hidden flex items-center text-[#fffced] rounded-[14px]  size-12 justify-center p-3 bg-[#fffced]/18 border border-[#fffced]/35;
 }
+
+
 
 .text_link{
   font-family: var(--font-zalando);

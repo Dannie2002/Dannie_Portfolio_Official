@@ -56,13 +56,12 @@ const WebsiteDevelopment = () => {
     },
   };
 
- const cardRef = useRef(null);
+const cardRef = useRef(null);
 
 const { scrollYProgress: cardScrollProgress } = useScroll({
   target: cardRef,
   offset: ["start end", "center center"],
 });
-
 
   /* --- Product Cards---- */
 
@@ -150,14 +149,12 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
        
       }}
 
-      className="moving-border-card hover:rotate-5 gap-6 transition-rotate duration-500 ease-in-out  relative overflow-hidden rounded-2xl outline outline-[#fffced]/40 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[380px] h-auto bg-[#242222]"
+      className="moving-border-card card_transparent"
     >
       {/* Card Content */}
           <div className="flex flex-col items-start gap-6">
                 <motion.div style={{rotate}} className="svg_container">
-          <div className="absolute size-8 rounded-full -bottom-5  blur-xl bg-(--secondary-color) opacity-30 ">
-
-          </div>
+             <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-90 bg-(--secondary-color)" />
              <motion.svg
   style={{
     x,
@@ -214,7 +211,7 @@ const ProductCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
       <div  className="Section_wrapper">
          <div  className="section_header easy z-50">
             <motion.h1  className="page_title animate-item z-50"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title animate-item">Build with purpose <span className="text-(--secondary-color)">.<br /> Design </span>to commumicate. </h3>
+            <h3 className="Section_title animate-item">Build with purpose <span className="text_gradient">.<br /> Design </span>to commumicate. </h3>
             <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                       <motion.p className=" text_para  max-w-2xl " >
                           I am not just about ideas; I am about making them happen to expand your businesses. I craft digital solutions of impact for my clients.
