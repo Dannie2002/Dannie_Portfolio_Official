@@ -86,7 +86,7 @@ const toggleAccordion = (index) => {
   <div className="Section_wrapper relative z-50">
           <div className="section_header ">
        
-                  <motion.h1  className="page_title"  > Explore more </motion.h1>
+                  <motion.h1  className="page_title"  > Reasons to work with me </motion.h1>
                  <h3   className="Section_title z-99"> I believe in <span className="text_gradient">dedication </span> and hardwork.</h3>
        
        
@@ -112,7 +112,7 @@ const toggleAccordion = (index) => {
         <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative h-auto row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
            <img src={noise} alt="" className="absolute inset-0 z-5   h-full w-full  object-cover  opacity-20  mix-blend-overlay pointer-events-none  "/>
 
-               <h4 className="card_heading relative leading-[30px] text-[25.5px] z-20 text-[#fffced]">Industry Exposure in Telecommunications and ICT support.</h4>
+               <h4 className="card_heading relative leading-[30px] text-[25.5px] z-20 text-[#fffced]">Reasons to work with me.</h4>
 
                 <div className="absolute inset-0 z-0 overflow-hidden rounded-sm size-full">
                   <motion.img
@@ -319,9 +319,9 @@ const toggleAccordion = (index) => {
       <ScrollVelocityRow baseVelocity={6} className='lg:p-0 '>
         <div className='flex px-6 items-center justify-center gap-6 min-w-[200px]' >
         <h4 className='uppercase geonova font-bold text-[#F2EAE0]  text-[28px]'><span className='text-[#b8b8b8]'>React</span></h4>
-    
+    <h2 className='uppercase geonova font-bold text-[#161819]  text-[28px]'><span className='text-[#978F66]'>JavaScript.</span></h2>
         </div>
-            <h2 className='uppercase geonova font-bold text-[#161819]  text-[28px]'><span className='text-[#978F66]'>JavaScript.</span></h2>
+            
     </ScrollVelocityRow>
   
              

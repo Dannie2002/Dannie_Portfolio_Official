@@ -487,7 +487,7 @@ const [submitted, setSubmitted] = useState(false);
           rows={4}
           id="message"
           name="message"
-          placeholder="Tell me a little about your project..."
+          placeholder="Type your message here."
           required
           className="text_field border border-(--text-color)/30"
         />

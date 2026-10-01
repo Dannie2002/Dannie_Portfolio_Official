@@ -353,21 +353,20 @@ const Footer = () => {
 
       <div className="w-full border border-t-(--text-colour)/20 px-6 lg:flex-row lg:mx-auto lg:px-18 flex-col py-4 flex items-center justify-between relative">
 
-        <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50">
-          Privacy Policy
-        </p>
 
-        <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50">
-          ©2026 All rights reserved.
-        </p>
+<div className="flex gap-4">
+ <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50">Privacy Policy </p>
 
-        <div className="bg-orange flex items-center justify-center px-4 py-2 gap-4 border border-[#fffced]/20 rounded-l-full z-20">
+        <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50"> ©2026 All rights reserved.</p>
+</div>
+       
 
-          <h6 className="white text-[12px] lg:text-[14px] text-(--primary-color)">
+       
+
+          <h6 className="white text-[12px] lg:text-[14px] text-(--secondary-color)">
             Design & Built by Dannie Mankhwazi
           </h6>
 
-        </div>
 
       </div>
 

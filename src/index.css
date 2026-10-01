@@ -312,7 +312,7 @@ body:has(.btn:hover) .pointer {
 }
 
 .flex_container {
-  @apply w-full flex mt-12 gap-10 items-start lg:gap-18 flex-col lg:flex-row
+  @apply w-full flex mt-12 gap-10 items-start lg:gap-18 flex-col lg:flex-row;
 }
 
 .image_div{
@@ -342,7 +342,7 @@ body:has(.btn:hover) .pointer {
 .text_para{
   color: #ededed;
   font-family: var(--font-zalando);
-  @apply lg:text-[16.4px] font-light tracking-wide lg:leading-[29px]  text-[16px] leading-relaxed;
+  @apply lg:text-[15.5px] font-light tracking-wide lg:leading-[28px]  text-[16px] leading-relaxed;
 }
 
 .top_margin{
