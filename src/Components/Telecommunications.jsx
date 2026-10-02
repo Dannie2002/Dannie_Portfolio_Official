@@ -84,7 +84,7 @@ const teleExpertise = [
   {
     title: "Technologies & Tools",
     image: router,
-    link: "technokogy-tools",
+    link: "technologies-tools",
     description:
       "Hands-on exposure to networking and monitoring technologies used in ISP environments.",
   },

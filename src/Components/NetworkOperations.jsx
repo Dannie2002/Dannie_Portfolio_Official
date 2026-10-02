@@ -99,7 +99,7 @@ const NetworkOperations = () => {
         ]}
       />
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper ">
 
         <div className="section_header">
 
@@ -114,14 +114,9 @@ const NetworkOperations = () => {
 
       <div className="Section_wrapper">
 
-        <div className="flex_container">
-
+        <div className="flex_container mt-0">
           {/* LEFT */}
-          <div className="lg:w-1/2">
-
-            <div className="relative rounded-full h-80 flex flex-col items-start justify-between">
-
-              <div className="flex flex-col gap-6">
+          <div className="lg:w-1/2 flex flex-col gap-6">
 
                 <h3 className="Section_title text-[#fffced]">
                   Keeping networks{" "}
@@ -129,6 +124,9 @@ const NetworkOperations = () => {
                     visible, reliable, and responsive.
                   </span>
                 </h3>
+
+            <div className="relative  rounded-full flex flex-col items-start justify-between">
+
 
                 <h4 className="card_heading chivo text-[18px] uppercase">
                   Network Operations
@@ -140,7 +138,7 @@ const NetworkOperations = () => {
                   restoration of connectivity when issues arise.
                 </motion.p>
 
-              </div>
+          
 
               <div className="bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex">
               </div>

@@ -104,6 +104,7 @@ const Connectivity = () => {
 
         <div className="section_header">
 
+
           <motion.h1 className="page_title">
             Internet & Connectivity
           </motion.h1>
@@ -120,9 +121,7 @@ const Connectivity = () => {
           {/* LEFT SIDE */}
           <div className="lg:w-1/2">
 
-            <div className="relative rounded-full h-80 flex flex-col items-start justify-between">
-
-              <div className="flex flex-col gap-6">
+            <div className="relative rounded-full  flex flex-col items-start justify-between">
 
                 <h3 className="Section_title text-[#fffced]">
                   Connecting people to the{" "}
@@ -131,6 +130,9 @@ const Connectivity = () => {
                   </span>
                 </h3>
 
+              <div className="flex flex-col gap-6">
+
+          
                 <h4 className="card_heading chivo text-[18px] uppercase">
                   Internet & Connectivity
                 </h4>

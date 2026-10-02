@@ -210,8 +210,8 @@ const Projects = () => {
     flex
     items-center
     justify-center
-    rounded-[22px]
-    bg-(--secondary-color)/35
+    
+    bg-(--secondary-color)/5
     backdrop-blur-[1px]
     opacity-0
     invisible
@@ -221,7 +221,7 @@ const Projects = () => {
     duration-300
 "
 >
-  <div className="w-[85%] overflow-hidden rounded-xl bg-[#101011]/90 shadow-2xl">
+  <div className="w-[85%] overflow-hidden rounded-xl bg-[#101011] ">
 
     <img
       src={image}
@@ -237,7 +237,7 @@ const Projects = () => {
     />
 
     <div className="p-3">
-      <p className="text-sm font-semibold text-[#fffced]">
+      <p className="text-[18px] font-semibold text-[#fffced]">
         {title}
       </p>
 

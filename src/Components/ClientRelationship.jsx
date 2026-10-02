@@ -111,12 +111,12 @@ const productCards = [
   const ProductCard = ({index,paragraph, title}) => {
     return (
       <motion.div
-  variants={itemVariants}
+      variants={itemVariants}
     className={`moving-border-card group relative  overflow-hidden  
-    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex rounded-[8px] outline-[0.5px] outline-[#fffced]/20  flex-col  items-start   justify-start   px-6   py-8
+    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex rounded-[8px] gap-6 outline-[0.5px] outline-[#fffced]/20  flex-col  items-start   justify-start   px-6   py-8
     ${index === 1 ? '' : ''}`}>
 
-    <div >
+    <div className="card_space" >
       <motion.svg
         style={{
           x,
@@ -132,12 +132,14 @@ const productCards = [
           fill="#fffced"
         />
       </motion.svg>
-    </div>
-
-      <div className="relative z-10 flex flex-col gap-4">
+     
          <h4  className=" card_heading"> {title} </h4>
-         <p className="text-[#fffced]">{paragraph}</p>    
+          
       </div>
+  <p className="text-[#fffced]">{paragraph}</p> 
+    
+
+    
 
       </motion.div>
     );

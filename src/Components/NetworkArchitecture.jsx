@@ -111,16 +111,18 @@ const ProductCard = ({ title, description }) => {
         breadcrumbs={[
           { label: "Home", link: "/" },
           { label: "/ Competencies" },
-          { label: "/ Telecommunications" }
+          { label: "/ Telecommunications", link: "/telecommunications" },
+          { label: "/ Network Architecture & Infrastructure" }
         ]}
       />
 
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper ">
 
         <div className="section_header">
 
            <motion.h1  className="page_title"  > Network Architecture & Infrastructure </motion.h1>
+             
         
         </div>
 
@@ -130,27 +132,24 @@ const ProductCard = ({ title, description }) => {
       <div className="Section_wrapper">
 
 
-        <div className='flex_container'>
+        <div className='flex_container mt-0'>
 
-      <div className='lg:w-1/2'>
-          <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
-            <div className="flex flex-col gap-6"> 
-                  <h3   className="Section_title text-[#fffced]"> From the internet <span className="text_gradient">backbone</span> to the home.</h3>
-                  <h4 className="card_heading chivo text-[18px] uppercase">Gigabit Passive Optic Network (GPON)</h4>
+      <div className='lg:w-1/2 flex flex-col gap-6'>
+      <h3   className="Section_title text-[#fffced]"> From the internet <span className="text_gradient">backbone</span> to the home.</h3>
+          <div className="relative  rounded-full flex flex-col items-start justify-between">
+            <div className="flex flex-col gap-6">      
+            <h4 className="card_heading chivo text-[18px] uppercase">Gigabit Passive Optic Network (GPON)</h4>
             <motion.p className="text_para mt-4 text-[#fffced] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results.</motion.p>
-            </div>
+          </div>
            
 
-                 <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex '>
-                
-                  
-                </div> 
+        
           </div>
 
         </div>
 
         <div className='w-full lg:w-1/2'>
-            <div className="grid lg:grid-cols-1  gap-6 lg:gap-8">
+            <div className="grid lg:grid-cols-1 gap-6 lg:gap-8">
        {productCards.map((card, index) => (
      <ProductCard
     key={index}

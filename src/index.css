@@ -101,6 +101,42 @@ html, body {
     transform: translateY(0);
   }
 }
+
+.card-spotlight-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+
+  background: radial-gradient(
+    circle 130px at var(--mouseX) var(--mouseY),
+    #bfa8f0 0%,
+    #978f66 18%,
+    transparent 65%
+  );
+
+  /* Keep only the border */
+  padding: 1px;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+}
+
+.group:hover .card-spotlight-border {
+  opacity: 1;
+}
+
+
 .moving-border-card {
   position: relative;
   overflow: hidden;
@@ -207,9 +243,8 @@ html, body {
   border-radius: 100%;
   transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0) translate(-50%, -50%);
   transition: 0.35s ease-out;
-
- 
 }
+
 body:has(.btn:hover) .pointer { 
   width: 3rem; 
   background-color: transparent; 
@@ -304,7 +339,7 @@ body:has(.btn:hover) .pointer {
   @apply text-[#6f6969] tracking-wider  font-semibold  capitalize text-[14px];
 }
 .noise{
-  @apply absolute rounded-[14px] z-0 inset-0 mix-blend-overlay opacity-30  size-full object-cover;
+  @apply absolute  z-0 size-full inset-0  object-cover opacity-40 mix-blend-overlay;
 }
  
 .Section_bg{
@@ -365,7 +400,9 @@ body:has(.btn:hover) .pointer {
   @apply relative z-10 shadow-[0_6px_12px_rgba(189,166,206,0.2)] overflow-hidden flex items-center text-[#fffced] rounded-[14px]  size-12 justify-center p-3 bg-[#fffced]/18 border border-[#fffced]/35;
 }
 
-
+.card_space{
+  @apply relative flex flex-col items-start gap-6;
+}
 
 .text_link{
   font-family: var(--font-zalando);

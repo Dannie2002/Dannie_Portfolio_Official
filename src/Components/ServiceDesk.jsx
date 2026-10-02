@@ -123,18 +123,9 @@ const productCards = [
 
 const ProductCard = ({ title, icon: Icon,  paragraph}) => {
     return (
-      <motion.div variants={itemVariants}
-        className={`moving-border-card btn-fill-sweep card_transparent`}
-    
-      >
-
-        {/* Card Content */}
-    
-
-          {/* Icon */}
-     
-
-       <div className="flex flex-col items-start gap-6">
+      <motion.div variants={itemVariants}  className={`moving-border-card btn-fill-sweep card_transparent`}>
+        
+       <div className="card_space">
            <motion.div className="svg_container">
             <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-70 bg-(--secondary-color)" />
           <Icon  color="#ffffff" size={42} />
@@ -143,9 +134,6 @@ const ProductCard = ({ title, icon: Icon,  paragraph}) => {
         </div>
         <p className="text_para text-[#fffced]"> {paragraph}</p>
    
-
- 
-
       </motion.div>
     );
   };
@@ -171,7 +159,7 @@ const ProductCard = ({ title, icon: Icon,  paragraph}) => {
           Section Heading
       -------------------------------- */}
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper">
 
       <div className="section_header">
                      <motion.h1  className="page_title"  > Service Desk Engineering </motion.h1>

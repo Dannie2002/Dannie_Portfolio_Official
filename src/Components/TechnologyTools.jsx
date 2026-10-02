@@ -117,18 +117,20 @@ const TechnologyTools = () => {
         <div className="flex_container">
 
           {/* LEFT */}
-          <div className="lg:w-1/2">
+              <div className="lg:w-1/2 flex flex-col gap-6">
 
-            <div className="relative rounded-full h-80 flex flex-col items-start justify-between">
-
-              <div className="flex flex-col gap-6">
-
-                <h3 className="Section_title text-[#fffced]">
+              <h3 className="Section_title text-[#fffced]">
                   Working across the{" "}
                   <span className="text_gradient">
                     infrastructure stack.
                   </span>
                 </h3>
+
+            <div className="relative rounded-fullflex flex-col items-start justify-between">
+
+              <div className="flex flex-col gap-6">
+
+            
 
                 <h4 className="card_heading chivo text-[18px] uppercase">
                   Technologies & Tools

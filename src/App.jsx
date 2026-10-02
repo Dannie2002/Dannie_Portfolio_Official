@@ -59,7 +59,7 @@ function App() {
   />
 
    <Route
-    path="technology-tools"
+    path="technologies-tools"
     element={<TechnologyTools />}
   />
 

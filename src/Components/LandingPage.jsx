@@ -51,7 +51,7 @@ const words =[
   return (
     <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center">
 
-         <div className='bg-transparent backdrop-blur-[12px] absolute bottom-8 right-40 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 flex '>
+         <div className='hidden bg-transparent backdrop-blur-[12px] absolute bottom-8 right-40 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 lg:flex '>
                         <Web fill="#978F66" size={33} />
                         <Energy fill="#978F66" size={30} />
                         <Telecom fill="#978F66" size={33} />
@@ -219,7 +219,7 @@ const words =[
 
             <div className="lg:w-1/2  w-full flex flex-col lg:mt-28 lg:ml-22 mt-0 relative z-30 items-start lg:items-center justify-center ">
       <svg
-  className="absolute -bottom-10 right-40 size-10"
+  className="absolute lg:-bottom-10 -bottom-2 right-30 lg:right-40 size-10"
   viewBox="-2 0 60 60"
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
