@@ -3,7 +3,7 @@ import { motion, useScroll,useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router";
 import { useState } from "react";
-import banner from "../assets/Good2.jpg";
+import banner from "../assets/OLT.jpg";
 import fat from "../assets/FAT.jpg";
 import netoperations from "../assets/NetOperations.jpg";
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
@@ -48,10 +48,10 @@ const Telecommunications = () => {
     },
   };
 
- const svgRef = useRef(null);
+ const cardRef = useRef(null);
 
-const { scrollYProgress: svgScrollProgress } = useScroll({
-  target: svgRef,
+const { scrollYProgress: cardScrollProgress } = useScroll({
+  target: cardRef,
   offset: ["start end", "center center"],
 });
 
@@ -91,15 +91,9 @@ const teleExpertise = [
 ];
 
 
-const TeleExpertiseCard = ({
-  title,
-  image,
-  link,
-  description,
-  index,
-  scrollProgress,
-}) => {
-  const [isHovered, setIsHovered] = useState(false);
+const TeleExpertiseCard = ({title, image,link, description, index,scrollProgress,}) => {
+
+      const [isHovered, setIsHovered] = useState(false);
 
   // Each card gets its own scroll tracker
   const rawY = useTransform(
@@ -124,12 +118,8 @@ const y = useSpring(rawY, {
 });
 
   return (
-    <motion.div
-      ref={svgRef}
-      style={{
-        y,
-       
-      }}
+    <motion.div ref={cardRef}
+      style={{y}}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
@@ -137,13 +127,8 @@ const y = useSpring(rawY, {
       className="group relative overflow-hidden rounded-sm shadow-[3px_6px_28px_rgba(255,255,255,0.2)] flex flex-col items-start justify-end px-6 py-8 lg:min-h-[480px] min-h-[400px] btn"
     >
       {/* IMAGE */}
-      <img
-        src={image}
-        className="absolute inset-0 size-full z-0 object-cover group-hover:scale-110 transition-all duration-2250 grayscale group-hover:grayscale-0"
-      />
-
-      {/* OVERLAY */}
-      <div className="overlay" />
+      <img src={image} className="absolute inset-0 size-full z-0 object-cover group-hover:scale-110 transition-all duration-2250 grayscale group-hover:grayscale-0"/>
+      <div className="overlay"/>
 
       {/* CONTENT */}
       <motion.div
@@ -154,11 +139,9 @@ const y = useSpring(rawY, {
           duration: 0.8,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative z-10 flex flex-col gap-4 w-full"
+        className="card_space z-10"
       >
-        <div className="flex flex-col items-start gap-4 justify-start">
-
-          {/* ICON */}
+        <div className="card_space">
           <svg
             fill="#9B8EC7"
             version="1.1"
@@ -172,9 +155,7 @@ const y = useSpring(rawY, {
           </svg>
 
           {/* TITLE */}
-          <h4 className="bigcard_heading">
-            {title}
-          </h4>
+          <h4 className="bigcard_heading">{title}</h4>
 
           {/* DESCRIPTION */}
           <motion.div
@@ -194,9 +175,7 @@ const y = useSpring(rawY, {
             }}
             className="overflow-hidden w-full"
           >
-            <p className="text_para mt-2 max-w-xl">
-              {description}
-            </p>
+            <p className="text_para">{description}</p>
           </motion.div>
 
         </div>
@@ -238,23 +217,6 @@ const y = useSpring(rawY, {
             and Fibre-to-the-Home (FTTH) installation
             </motion.p>
 
-                <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-transparent border-(--text-colour)/60 px-6  py-2 items-center gap-4' >
-                     <div className='relative flex overflow-hidden'>
-                             <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
-                          Exlpore more
-                        </h3>
-                        <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
-                          Contact Us
-                        </h3>
-                     </div>
-                     
-                        <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
-                          <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--primary-color)' />
-                          <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
-                        </div>
-                       
-                      </motion.div>
-
           </div>
 
         </div>
@@ -262,19 +224,16 @@ const y = useSpring(rawY, {
       </div>
 
 
-      <div  className="Section_wrapper">
-    {/* The grid where the cards are */}
-      <div
-        
-         className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+      <div className="Section_wrapper">
+      {/* The grid where the cards are */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
     {teleExpertise.map((card, index) => (
-  <Link
-    to={card.link}
+  <Link to={card.link}
     key={card.title}
   >
     <TeleExpertiseCard
       index={index}
-      scrollProgress={svgScrollProgress}
+      scrollProgress={cardScrollProgress}
       title={card.title}
       image={card.image}
       description={card.description}

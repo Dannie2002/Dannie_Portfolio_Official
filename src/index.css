@@ -47,6 +47,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   max-width: 100%;
 }
 
@@ -232,7 +233,7 @@ html, body {
 
 
 .pointer{
-  background-color: var(--text-color);
+  background-color: var(--text-colour);
   position: fixed;
   top: 0;
   left: 0;
@@ -246,7 +247,7 @@ html, body {
 }
 
 body:has(.btn:hover) .pointer { 
-  width: 3rem; 
+  width: 3.2rem; 
   background-color: transparent; 
   /* Added border style and width so it's visible */
   border: 1.6px solid #b4a89d; 
@@ -310,7 +311,7 @@ body:has(.btn:hover) .pointer {
   }
 
   .card_transparent{
-    @apply hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] shadow-[0_6px_12px_rgba(189,166,206,0.2)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-2xl outline-[0.8px] outline-[#fffced]/30 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8;
+    @apply hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] shadow-[0_6px_12px_rgba(189,166,206,0.2)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/30 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8;
   }
 
   .text_label{
@@ -339,7 +340,7 @@ body:has(.btn:hover) .pointer {
   @apply text-[#6f6969] tracking-wider  font-semibold  capitalize text-[14px];
 }
 .noise{
-  @apply absolute  z-0 size-full inset-0  object-cover opacity-40 mix-blend-overlay;
+  @apply absolute  z-0 size-full inset-0  object-cover opacity-30 mix-blend-overlay;
 }
  
 .Section_bg{

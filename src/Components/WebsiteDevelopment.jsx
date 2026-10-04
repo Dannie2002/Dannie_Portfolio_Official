@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import webbb from "../assets/Webbb.jpg";
-import branding from "../assets/Hero.jpg";
 import bag from "../assets/12.png"
 import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
@@ -233,6 +232,8 @@ const WebsiteCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
 
 
       <div  className="Section_wrapper z-99">
+
+
          <div  className="section_header easy z-50">
             <motion.h1  className="page_title animate-item z-50"  > Web Desing & Development </motion.h1>
             <h3 className="Section_title animate-item z-40">Modern websites <span className="text_gradient">.<br /> solving  </span> business complications. </h3>
@@ -250,33 +251,33 @@ const WebsiteCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
 
 {/*  Main Products Layout-------- */}
 
-<div  className="Section_wrapper z-99">
+          <div  className="Section_wrapper z-99">
 
-  <div className="flex_container ">
-    {/* IMAGE - Sticky */}
-   
-    
-    {/*Right CONTENT */}
-    <div className="w-full  flex flex-col gap-8">
-   <div  className="grid easy lg:grid-cols-4 gap-6 lg:gap-8">
-  {websiteCards.map((card, index) => (
-    <div key={index} className="z-20">
-      <WebsiteCard
-       index={index}
-        title={card.title}
-        icon={card.icon}
-        description={card.description}
-         scrollProgress={cardScrollProgress}
-      />
-    </div>
-  ))}
-</div>
+            <div className="flex_container ">
+              {/* IMAGE - Sticky */}
+            
+              
+              {/*Right CONTENT */}
+              <div className="w-full  flex flex-col gap-8">
+            <div  className="grid easy lg:grid-cols-4 gap-6 lg:gap-8">
+            {websiteCards.map((card, index) => (
+              <div key={index} className="z-20">
+                <WebsiteCard
+                index={index}
+                  title={card.title}
+                  icon={card.icon}
+                  description={card.description}
+                  scrollProgress={cardScrollProgress}
+                />
+              </div>
+            ))}
+          </div>
 
 
-    </div>
+              </div>
 
-  </div>
-</div>
+            </div>
+          </div>
 
     </section>
   );

@@ -7,9 +7,7 @@ import digital from "../assets/Livestockapp.jpg";
 import mwapata from "../assets/Mwapataredesign.png";
 
 const Projects = () => {
-  /* --------------------------------
-     Animation Variants
-  -------------------------------- */
+  
 
   const containerVariants = {
     hidden: {
@@ -18,16 +16,34 @@ const Projects = () => {
 
     show: {
       opacity: 1,
+
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.18,
+        delayChildren: 0.2,
       },
     },
   };
 
-  /* --------------------------------
-     Projects
-  -------------------------------- */
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+    },
+
+    show: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
+
+
+
 
   const productCards = [
     {
@@ -150,24 +166,21 @@ const Projects = () => {
       <div className="shrink-0 snap-start  w-[87%] sm:w-[62%] md:w-[48%] lg:w-[29%]">
         <div className="relative group">
 
-          {/* --------------------------------
-              Main Project Card
-          -------------------------------- */}
-
+ 
           <div
-            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[430px] w-full bg-(--text-color)/8  overflow-hidden
+            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[430px] w-full bg-(--text-color)/10  overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
               justify-between
               transition-all
               duration-300
-              group-hover:border-(--secondary-color)/70 ">
+              group-hover:border-(--secondary-color)/50 ">
             {/* Category + Title */}
 
-            <div className="flex flex-col items-start gap-3">
+            <div className="card_space">
               <div className="svg_container relative">
-                <div className="absolute size-8 rounded-full -bottom-5 blur-xs opacity-70 bg-(--secondary-color)" />
+                <div className="absolute size-8 rounded-full -bottom-5 blur-xs opacity-60 bg-(--secondary-color)" />
 
                 <h1 className="relative text-[22px] geonova">
                   {String(index + 1).padStart(2, "0")}
@@ -178,14 +191,13 @@ const Projects = () => {
                 {category}
               </span>
 
-              <h3 className="text-[28px] geonova font-bold text-[#fffced] zalando">
+              <h3 className="text-[28px] leading-[30px] geonova font-bold text-[#fffced] zalando">
                 {title}
               </h3>
             </div>
 
-            {/* Description + Year */}
 
-            <div className="flex flex-col items-start gap-3">
+            <div className="card_space">
               <p className="text_para leading-relaxed max-w-[90%]">
                 {description}
               </p>
@@ -198,52 +210,26 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* --------------------------------
-              Hover Project Image
-          -------------------------------- */}
-         <div
-  className="
-    pointer-events-none
-    absolute
-    inset-0
-    z-40
-    flex
-    items-center
-    justify-center
-    
-    bg-(--secondary-color)/5
+       {/*Hover Project Image*/}
+         <div className=" pointer-events-none absolute inset-0 z-40 flex items-center justify-centervbg-(--secondary-color)/5
     backdrop-blur-[1px]
     opacity-0
     invisible
     group-hover:opacity-100
     group-hover:visible
     transition-all
-    duration-300
-"
+    duration-300"
 >
-  <div className="w-[85%] overflow-hidden rounded-xl bg-[#101011] ">
+  <div className="w-full overflow-hidden  bg-[#575770] ">
 
     <img
       src={image}
       alt={title}
-      className="
-        aspect-video
-        w-full
-        object-cover
-        transition-transform
-        duration-500
-        group-hover:scale-105
-      "
-    />
+      className=" aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"/>
 
-    <div className="p-3">
-      <p className="text-[18px] font-semibold text-[#fffced]">
-        {title}
-      </p>
-
-      <p className="mt-1 text-xs leading-relaxed text-[#fffced]/60">
-        {description}
-      </p>
+    <div className="p-4 card_space">
+      <p className="text-[18px] font-semibold text-[#fffced]">{title}</p>
+      <p className="text_para"> {description}</p>
     </div>
 
   </div>
@@ -253,12 +239,11 @@ const Projects = () => {
     );
   };
 
-  /* --------------------------------
-     Render
-  -------------------------------- */
+
+  /* Render */
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-[#101011] py-6">
+    <section id="my-projects" className="relative w-full min-h-screen overflow-hidden bg-[#101011] py-6">
       {/* Section Heading */}
 
       <div className="Section_wrapper">

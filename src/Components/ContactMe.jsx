@@ -167,32 +167,19 @@ const [submitted, setSubmitted] = useState(false);
       <MoonBalls />
 
 
+      {/* Main Products Layout */}
 
-      
-            
-      {/* --------------------------------
-          Section Heading
-      -------------------------------- */}
-
-
-
-{/* --------------------------------
-    Main Products Layout
--------------------------------- */}
-<div className="Section_wrapper z-10">
+        <div className="Section_wrapper z-10">
 
               <div className="section_header mt-34">
           
-                     <motion.h1  className="page_title"  > Start a conversation </motion.h1>
-
-                    <h3 className="Section_title "> Let us build our next projects<span className="text-(--secondary-color)"> together.</span> </h3>
+                    <motion.h1  className="page_title"  > Start a conversation </motion.h1>
+                    <h3 className="Section_title"> Let us build our next projects<span className="text-(--secondary-color)"> together.</span> </h3>
           
           
                     <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
                       <ContactPlane color="#978F66" size={36} className="hidden lg:flex" />
-                      <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>
-                     
-          
+                      <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>         
                     </div>
           
                   </div>

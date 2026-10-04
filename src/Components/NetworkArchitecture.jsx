@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import banner from "../assets/Good2.jpg";
+import banner from "../assets/OLT.jpg";
 import work from "../assets/ServiceDesk3.jpg";
 import fat from "../assets/FAT.jpg";
 import netoperations from "../assets/NetOperations.jpg";

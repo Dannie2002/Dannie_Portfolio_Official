@@ -1,7 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
 import {Link} from "react-router";
-import header from "../assets/Hero.jpg";
 import { House } from "lucide-react";
 import noise from "../assets/Noise.png";
 
@@ -91,11 +90,7 @@ const SectionHeader = ({ title,link ,breadcrumbs = [],bgImage }) => {
     {breadcrumbs.map((item, index) => (
       <li
         key={index}
-        className={`
-          text-[9px]
-          sm:text-[10px]
-          btn
-          text-[#b8b8b8]
+        className={` text-[9px] sm:text-[10px] btn text-[#b8b8b8]
           zalando
           font-medium
           uppercase

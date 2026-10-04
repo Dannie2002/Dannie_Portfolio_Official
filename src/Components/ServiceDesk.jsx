@@ -1,16 +1,16 @@
 import React from "react";
 import { motion, useScroll,useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import bag from "../assets/12.png"
+import noise from "../assets/Noise.png";
 import banner from "../assets/ServiceDesk2.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
-import noise from "../assets/Noise.png";
 import SectionHeader from "./SectionHeader.jsx";
-import servicedesk from "../assets/ServiceDesk3.jpg"
+import ProductCard from "../Constants/Data.js";
 import Communication from "../SVGS/Communication.jsx";
-import Management from "../SVGS/Management.jsx";
-import AnalyticalThinking from "../SVGS/AnalyticalThinking.jsx";
-import Scribble from "./Scribble.jsx";
+import servicedesk from "../assets/ServiceDesk3.jpg"
+import SdCards from "../Constants/Data.js"
 
 const ServiceDesk = () => {
 
@@ -76,54 +76,36 @@ const rotate = useSpring(rawRotate, { stiffness: 100, damping: 20 });
 
 
 
-const productCards = [
-  {
-    title: "Incident Management",
-    paragraph:
-      "Log, categorise incidents and service requests in the ticketing system.",
-      icon: Communication,
-  },
-
-  {
-    title: "Communication & Coordination",
-    paragraph:
-      "From internal coordination, to provide clients incidents and request. ",
-   icon: Communication,
-  },
-
-  {
-    title: "Root Cause Analysis",
-    paragraph:
-      "Investigating underlying cause of incidents using diagostic tools.",
-       icon: Management,
-  },
-
-  {
-    title: "Analytical Thinking",
-    paragraph:
-      "Analyse network data and service alarms to guide effective resolutions.",
-      icon: AnalyticalThinking,
-  },
-
-  {
-    title: "SLA Compliance",
-    paragraph:
-      "Monitor service performance and follow up to maintain SLA commitments.",
-      icon: Management,
-  },
-
-  {
-    title: "Troubleshooting",
-    paragraph:
-      "From troubleshooting issues to ensuring system reliability.",
-      icon: Management,
-  },
-];
 
 
-const ProductCard = ({ title, icon: Icon,  paragraph}) => {
+const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
     return (
-      <motion.div variants={itemVariants}  className={`moving-border-card btn-fill-sweep card_transparent`}>
+      <motion.div variants={itemVariants} 
+         style={{
+    "--mouseX": "50%",
+    "--mouseY": "50%",
+  }}
+
+       onMouseMove={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    e.currentTarget.style.setProperty("--mouseX", `${x}%`);
+    e.currentTarget.style.setProperty("--mouseY", `${y}%`);
+  }}
+      
+      
+      className={`relative group card_transparent`}>
+
+          <div className="pointer-events-none absolute inset-0 z-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    style={{
+      background:
+        "radial-gradient(circle 260px at var(--mouseX) var(--mouseY), rgba(189,166,206,0.28), transparent 70%)",
+      filter: "blur(18px)",
+    }}
+  />
         
        <div className="card_space">
            <motion.div className="svg_container">
@@ -142,6 +124,10 @@ const ProductCard = ({ title, icon: Icon,  paragraph}) => {
   return (
 
   <section className="bg-[#101011] relative  w-full">
+
+
+     <img src={bag} alt=""  className="absolute  inset-0 z-0 h-full w-full object-cover opacity-40 mix-blend-overlay"/>
+
                        <SectionHeader
   title="Service Desk Engineering"
   bgImage={banner}
@@ -161,24 +147,15 @@ const ProductCard = ({ title, icon: Icon,  paragraph}) => {
 
       <div className="Section_wrapper">
 
-      <div className="section_header">
+      <div className="section_header z-99">
                      <motion.h1  className="page_title"  > Service Desk Engineering </motion.h1>
                      <h3 className="Section_title "> Bridging the gap between <span className="text-(--secondary-color)"> business</span> and clients.  </h3>
                      <div className="flex w-full justify-between items-center gap-20">
-                       <motion.p
-                                 className="
-                                   pt-6
-                                   text-[#fffced]
-                                   font-normal
-                                   text-[16.5062px]
-                                   leading-[23.754px]
-                                   max-w-2xl
-                                 "
-                               >
+                       <motion.p className=" pt-6 text-[#fffced] font-normal  text-[16.5062px] leading-[23.754px] max-w-2xl" >
                                 I provide front-line support. From troubleshooting incidents to ensuring system reliability.
                         </motion.p>
                      
-                        <Communication color="#978F66" size={36} className="hidden"/>
+                        <Communication color="#978F66" size={36} className=""/>
                      
                      </div>
                               
@@ -212,9 +189,9 @@ const ProductCard = ({ title, icon: Icon,  paragraph}) => {
         style={{
           y,
       
-        }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-         {productCards.map((card, index) => (
-          <ProductCard
+        }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 z-5">
+         {SdCards.map((card, index) => (
+          <ServiceDeskCard
             key={index}
             title={card.title}
             icon={card.icon}

@@ -5,7 +5,6 @@ import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-reac
 import { ScrollVelocityContainer, ScrollVelocityRow } from '../Components/ScrollVelocity';
 import branding from '../assets/ServiceDesk2.jpg'
 import noise from "../assets/Noise.png";
-import png from "../assets/Letsee.png";
 import ContactPlane from "../SVGS/ContactPlane.jsx";
 import TwoRings from "../SVGS/TwoRings.jsx";
 import Graduate from "../SVGS/Graduate.jsx";

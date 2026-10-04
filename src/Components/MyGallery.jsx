@@ -5,7 +5,7 @@ import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import branding from "../assets/Civo_tower.jpg";
 import noise from "../assets/Noise.png";
-import servicedesk from "../assets/Field3.jpg";
+import wil from "../assets/Wil_presentations.jpg";
 import banner from "../assets/Gallery.jpg";
 import field4 from "../assets/Field4.jpg"
 import fat from "../assets/FAT.jpg";
@@ -65,9 +65,9 @@ const MyGallery = () => {
 
   const galleryImages = [
     {
-      image: servicedesk,
+      image: wil,
       title: "Service Desk Operations",
-      category: "ISP Operations",
+      category: "Website Development",
     },
 
     {
