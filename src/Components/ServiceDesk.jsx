@@ -199,7 +199,7 @@ const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
           />
         ))}
       </motion.div>
-      {/* Add a few more paragraphs if needed so the right side is clearly taller */}
+    
     </div>
 
   </div>

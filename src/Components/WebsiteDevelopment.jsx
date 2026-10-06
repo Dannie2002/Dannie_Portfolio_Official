@@ -56,12 +56,6 @@ const WebsiteDevelopment = () => {
     },
   };
 
-const cardRef = useRef(null);
-
-const { scrollYProgress: cardScrollProgress } = useScroll({
-  target: cardRef,
-  offset: ["start end", "center center"],
-});
 
   /* --- Product Cards---- */
 
@@ -105,8 +99,6 @@ const { scrollYProgress: svgScrollProgress } = useScroll({
   offset: ["start end", "center center"],
 });
 
-
-
 // --- SVG ANIMATIONS ---
 const rawX = useTransform(svgScrollProgress, [0, 1], [700, 0]);
 const rawRotate = useTransform(svgScrollProgress, [0, 1], [180, 0]);
@@ -116,105 +108,81 @@ const rotate = useSpring(rawRotate, { stiffness: 100, damping: 20 });
 
   /*Card Component*/
 
-const WebsiteCard = ({  index,title, icon: Icon, description, scrollProgress,}) => {
+const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
-    // Each card gets its own scroll tracker
-    const rawY = useTransform(
-    scrollProgress,
-    [
-      0,
-      0.15 + index * 0.08,
-      0.55 + index * 0.08,
-      1,
-    ],
-    [
-      140,
-      140,
-      0,
-      0,
-    ]
-  );
-  
-  const y = useSpring(rawY, {
-    stiffness: 100,
-    damping: 20,
-  });
+  return(
+        <motion.div
+      style={{
+        "--mouseX": "50%",
+        "--mouseY": "50%",
+      }}
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
 
-  return (
-    <motion.div
-  style={{
-    y,
-    "--mouseX": "50%",
-    "--mouseY": "50%",
-  }}
-  onMouseMove={(e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
 
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
+        e.currentTarget.style.setProperty("--mouseX", `${x}%`);
+        e.currentTarget.style.setProperty("--mouseY", `${y}%`);
+      }}
+      className="moving-border-card card_transparent group relative overflow-hidden"
+    >
 
-    e.currentTarget.style.setProperty("--mouseX", `${x}%`);
-    e.currentTarget.style.setProperty("--mouseY", `${y}%`);
-  }}
-  className="moving-border-card card_transparent group relative overflow-hidden"
->
-
-   <div className="card-spotlight-border z-10" />
-  {/* Spotlight */}
-  <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-    style={{
-      background:
-        "radial-gradient(circle 160px at var(--mouseX) var(--mouseY), rgba(189,166,206,0.28), transparent 70%)",
-      filter: "blur(18px)",
-    }}
-  />
-
-  {/* Card Content */}
-  <div className="card_space">
-    <motion.div style={{ rotate }} className="svg_container">
-      <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-90 bg-(--secondary-color)" />
-
-      <motion.svg
+      <div className="card-spotlight-border z-10" />
+      {/* Spotlight */}
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          x,
-          rotate,
+          background:
+            "radial-gradient(circle 190px at var(--mouseX) var(--mouseY), rgba(189,166,206,0.28), transparent 70%)",
+          filter: "blur(18px)",
         }}
-        className="size-10 text-[#fffced]"
-        viewBox="0 0 48 48"
-        fill="#fffced"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M40.93,14.25,24,24,7.07,14.25"
-          fill="none"
-          stroke="#fffced"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      />
 
-        <path
-          d="M7.07,14.25l16.93-9.75L40.93,14.25v19.5L24.0007,43.5,7.07,33.75"
-          fill="none"
-          stroke="#fffced"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </motion.svg>
-    </motion.div>
+      {/* Card Content */}
+          <div className="card_space">
+                <motion.div style={{ rotate }} className="svg_container">
+                  <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-90 bg-(--secondary-color)" />
 
-    <h4 className="card_heading">{title}</h4>
-  </div>
+                  <motion.svg
+                    style={{
+                      x,
+                      rotate,
+                    }}
+                    className="size-10 text-[#fffced]"
+                    viewBox="0 0 48 48"
+                    fill="#fffced"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M40.93,14.25,24,24,7.07,14.25"
+                      fill="none"
+                      stroke="#fffced"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
 
-  <p className="text_para ">{description}</p>
-</motion.div>
-  );
-};
+                    <path
+                      d="M7.07,14.25l16.93-9.75L40.93,14.25v19.5L24.0007,43.5,7.07,33.75"
+                      fill="none"
+                      stroke="#fffced"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </motion.svg>
+                </motion.div>
+
+                <h4 className="card_heading">{title}</h4>
+          </div>
+
+        <p className="text_para z-5">{description}</p>
+       </motion.div>
+      );
+    };
 
 
   return (
 
-    <section  ref={cardRef}  className="bg-[#101011] relative w-full">
-
+    <section className="bg-[#101011] relative w-full">
 
      <img src={noise} alt=""  className="noise"/>
      <img src={bag} alt=""  className="absolute  inset-0 z-5 h-full w-full object-cover opacity-40 mix-blend-overlay"/>
@@ -230,52 +198,35 @@ const WebsiteCard = ({  index,title, icon: Icon, description, scrollProgress,}) 
               ]}
               />
 
-
-      <div  className="Section_wrapper z-99">
-
-
-         <div  className="section_header easy z-50">
-            <motion.h1  className="page_title animate-item z-50"  > Web Desing & Development </motion.h1>
-            <h3 className="Section_title animate-item z-40">Modern websites <span className="text_gradient">.<br /> solving  </span> business complications. </h3>
-            <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
-                      <motion.p className=" text_para  max-w-2xl " >
-                          Say goodbye to basic designs. I design modern websites based on what your brand needs. Develop to solve real business problems and to make your business standout.
-                      </motion.p>
-                                                    
-                       <CodeMerge color="#978F66" size={36} className="hidden lg:flex"/>
-                                                    
+          <div  className="Section_wrapper z-10">
+            <div  className="section_header  z-5">
+                <motion.h1  className="page_title z-50" > Web Desing & Development </motion.h1>
+                <h3 className="Section_title z-40">Modern websites <span className="text_gradient">.<br /> solving  </span> business complications. </h3>
+                <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
+                          <motion.p className=" text_para  max-w-2xl " >
+                              Say goodbye to basic designs. I design modern websites based on what your brand needs. Develop to solve real business problems and to make your business standout.
+                          </motion.p>
+                                                        
+                          <CodeMerge color="#978F66" size={36} className="hidden lg:flex"/>
+                                                        
+                </div>
             </div>
-        </div>
-      </div>
+         </div>
 
-
-{/*  Main Products Layout-------- */}
-
-          <div  className="Section_wrapper z-99">
-
+          <div className="Section_wrapper z-10">
             <div className="flex_container ">
-              {/* IMAGE - Sticky */}
-            
-              
-              {/*Right CONTENT */}
-              <div className="w-full  flex flex-col gap-8">
-            <div  className="grid easy lg:grid-cols-4 gap-6 lg:gap-8">
-            {websiteCards.map((card, index) => (
-              <div key={index} className="z-20">
-                <WebsiteCard
-                index={index}
-                  title={card.title}
-                  icon={card.icon}
-                  description={card.description}
-                  scrollProgress={cardScrollProgress}
-                />
-              </div>
-            ))}
-          </div>
-
-
-              </div>
-
+                <div className="Grid_4">
+                {websiteCards.map((card, index) => (
+                  <div key={index} className="z-20">
+                    <WebsiteCard
+                      index={index}
+                      title={card.title}
+                      icon={card.icon}
+                      description={card.description}
+                    />
+                  </div>
+                ))}
+                </div>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 import digital from "../assets/DigitalMarketing.jpg";
 import photography from "../assets/WorkExp.jpg";
 import noise from "../assets/Noise.png";
@@ -156,13 +157,31 @@ const [submitted, setSubmitted] = useState(false);
   };
 
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_jyv0emn', 'template_zwc8fh7', form.current, {
+        publicKey: 'poNSNgMhKoJyGYoUc',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
 
   return (
 
 
     
-    <section className="bg-[#101011] min:h-screen flex flex-col lg:items-start lg:justify-center relative  w-full">
+    <section className="bg-[#101011] min:h-screen  w-full">
 
       <MoonBalls />
 
@@ -171,33 +190,35 @@ const [submitted, setSubmitted] = useState(false);
 
         <div className="Section_wrapper z-10">
 
-              <div className="section_header mt-34">
+          <div className="section_header mt-34">
           
                     <motion.h1  className="page_title"  > Start a conversation </motion.h1>
                     <h3 className="Section_title"> Let us build our next projects<span className="text-(--secondary-color)"> together.</span> </h3>
           
           
-                    <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
-                      <ContactPlane color="#978F66" size={36} className="hidden lg:flex" />
-                      <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>         
+                    <div className="flex lg:flex-row flex-col items-center justify-between gap-20">                    
+                      <motion.p className="text_para text-[#fffced] " >Share your vision by writing to me through the form and will update you shortly. </motion.p>    
+                       <ContactPlane color="#978F66" size={36} className="hidden lg:flex" />     
                     </div>
           
-                  </div>
-
-
+          </div>
+      </div>
   
 
-    <div className="flex_container ">
-      
-<div className="lg:w-[45%] flex flex-col gap-4">
 
-  <div className="flex  gap-2 lg:gap-4 flex-row">
+  <div className="Section_wrapper">
+
+     <div className="flex_container">
+      
+<div className="lg:w-[50%] card_space">
+
+  <div className="flex gap-2 lg:gap-4 flex-row">
    <div className="size-10 lg:size-12 shrink-0 flex items-center justify-center rounded-full bg-(--secondary-color) p-3 text-[#fffced] chivo">
-  DM
-</div>
+     DM
+    </div>
    <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-4 gap-4 flex-row justify-end items-start ">
 <motion.p className="text_para text-(--text-colour)">
-    <span className="text-[#fffced] mb-2">Good day,</span><br />
+    <span className="text-[#fffced] mb-2">Hi,</span><br />
     I came across your portfolio and I'm interested in your skills.
     What exactly do you specialize in?
   </motion.p>
@@ -205,13 +226,18 @@ const [submitted, setSubmitted] = useState(false);
    </div>
   </div>
 
-   <div className="flex  flex-end  justify-end "><h3 className="flex items-end gap-4 text-(--text-colour) bg-(--primary-color)/40 p-1 rounded-sm"> Write to me through the form and will update you shortly. <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-check"><path  d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg></span></h3></div>
+   <div className="flex  flex-end  justify-end ">
+    <h3 className="flex items-end gap-4 text-(--text-colour) bg-(--primary-color)/40 p-2 rounded-sm">
+     Write to me through the form and will update you shortly. 
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-check"><path  d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg></span>
+    </h3>
+    </div>
 
   <div className="flex  gap-2 lg:gap-4 flex-row">
    <div className="size-10 lg:size-12 shrink-0 flex items-center justify-center rounded-full bg-(--secondary-color) p-3 text-[#fffced] chivo">
   DM
 </div>
-   <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-4 gap-4 flex-row justify-end items-start ">
+   <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-2 gap-4 flex-row justify-end items-start ">
 <motion.p className="text_para text-(--text-colour)">
   Ok sure.
   </motion.p>
@@ -227,14 +253,14 @@ const [submitted, setSubmitted] = useState(false);
 
        
 
-           <form
+      <form
+      ref={form}
       name="contact"
       method="POST"
-      netlify="true"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-  className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4"
->
+  
+      onSubmit={sendEmail}
+       className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4"
+       >
   {/* Required by Netlify for React-rendered forms */}
     <input type="hidden" name="form-name" value="contact" />
 
@@ -313,7 +339,7 @@ const [submitted, setSubmitted] = useState(false);
         <input
           id="email"
           type="email"
-          name="email"
+          name="user_email"
           autoComplete="email"
           placeholder="Eg: danniemankhwazi@gmail.com"
           required
@@ -496,6 +522,7 @@ const [submitted, setSubmitted] = useState(false);
 
   <motion.button
   type="submit"
+  value="Send"
   whileTap={{ scale: 0.94 }}
   animate={{
     scale: submitted ? 1 : 1,
@@ -562,13 +589,12 @@ const [submitted, setSubmitted] = useState(false);
 
     </div>
 
-    
+  </div>
 
-    
- 
+   
 
 
-</div>
+
 
 
 

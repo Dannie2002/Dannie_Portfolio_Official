@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
 import banner from "../assets/LivestockHealth.png";
 import digital from "../assets/Livestockapp.jpg";
 import mwapata from "../assets/Mwapataredesign.png";
@@ -42,9 +41,6 @@ const Projects = () => {
   };
 
 
-
-
-
   const productCards = [
     {
       title: "Livestock Health Tracker",
@@ -80,9 +76,7 @@ const Projects = () => {
     },
   ];
 
-  /* --------------------------------
-     Carousel Reference
-  -------------------------------- */
+  /* ----- Carousel Reference*/
 
   const carouselRef = useRef(null);
 
@@ -98,7 +92,7 @@ const Projects = () => {
 
     if (!carousel) return;
 
-    setCanScrollLeft(carousel.scrollLeft > 40);
+    setCanScrollLeft(carousel.scrollLeft > 90);
 
     setCanScrollRight(
       carousel.scrollLeft <
@@ -106,9 +100,7 @@ const Projects = () => {
     );
   };
 
-  /* --------------------------------
-     Initialize Carousel
-  -------------------------------- */
+  /* Initialize Carousel */
 
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -126,9 +118,7 @@ const Projects = () => {
     };
   }, []);
 
-  /* --------------------------------
-     Scroll Carousel
-  -------------------------------- */
+  /*  Scroll Carousel */
 
   const scrollCarousel = (direction) => {
     const carousel = carouselRef.current;
@@ -211,27 +201,66 @@ const Projects = () => {
           </div>
 
        {/*Hover Project Image*/}
-         <div className=" pointer-events-none absolute inset-0 z-40 flex items-center justify-centervbg-(--secondary-color)/5
-    backdrop-blur-[1px]
+<div
+  className="
+    pointer-events-none
+    absolute
+    left-1/2
+    top-1/2
+    z-[99]
+    w-[120%]
+    h-[120%]
+    -translate-x-1/2
+    -translate-y-1/2
+    flex items-center justify-center
+    bg-(--secondary-color)/5
+    backdrop-blur-[2px]
     opacity-0
     invisible
+    scale-90
     group-hover:opacity-100
     group-hover:visible
+    group-hover:scale-100
     transition-all
-    duration-300"
+    duration-500
+  "
 >
-  <div className="w-full overflow-hidden  bg-[#575770] ">
+  <div
+    className="
+      w-full
+      h-full
+      overflow-hidden
+      rounded-2xl
+      bg-[#575770]
+      border border-[#fffced]/15
+      shadow-[0_25px_80px_rgba(0,0,0,0.55)]
+    "
+  >
+    <div className="relative h-[55%] w-full overflow-hidden">
+      <img
+        src={image}
+        alt={title}
+        className="
+          size-full
+          object-cover
+          transition-transform
+          duration-700
+          group-hover:scale-105
+        "
+      />
 
-    <img
-      src={image}
-      alt={title}
-      className=" aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105"/>
-
-    <div className="p-4 card_space">
-      <p className="text-[18px] font-semibold text-[#fffced]">{title}</p>
-      <p className="text_para"> {description}</p>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#575770] via-transparent to-transparent" />
     </div>
 
+    <div className="h-[45%] p-5 card_space">
+      <p className="text-[18px] font-semibold text-[#fffced]">
+        {title}
+      </p>
+
+      <p className="text_para mt-2">
+        {description}
+      </p>
+    </div>
   </div>
 </div>
         </div>
@@ -249,15 +278,10 @@ const Projects = () => {
       <div className="Section_wrapper">
         <div className="section_header">
           <motion.h1 className="page_title">
-            My Projects
+            View Selected Projects
           </motion.h1>
 
-          <h3 className="Section_title">
-            <span>
-              Built with purpose,
-            </span>{" "}
-            works of impact.
-          </h3>
+          <h3 className="Section_title">Built with purpose, works of impact.</h3>
         </div>
       </div>
 
