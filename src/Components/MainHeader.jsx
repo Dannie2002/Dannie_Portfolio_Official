@@ -404,7 +404,7 @@ export default function MainHeader() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-(--secondary-color)/60 backdrop-blur-xs z-40 md:hidden"
+              className="fixed inset-0 bg-(--secondary-color)/15 backdrop-blur-xs z-40 md:hidden"
             />
 
             {/* Mobile Menu Drawer */}
@@ -414,17 +414,30 @@ export default function MainHeader() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-(--secondary-color)   relative z-999 border-t border-white/10"
+              className="md:hidden bg-[#101011]  relative z-999 border-t border-white/10"
             >
-              <nav className="flex flex-col px-6 py-6 mx-auto gap-4">
+                <div
+        className="
+          absolute z-0 top-40 right-5
+          size-30 rounded-full
+          shadow-[15px_10px_16px_2px_rgba(224,222,218,0.1)]
+          bg-gradient-to-l
+          from-[#0b0b0d]
+          via-[#0b0b0d]
+          to-[#b8b8b8]/40
+          opacity-78
+        "
+      />
+
+              <nav className="flex flex-col px-6 py-6 mx-auto gap-4 z-50">
 
                 {navLinks.map((item, index) => (
-                  <div key={index}>
+                  <div key={index} className="z-50">
 
                     <Link
                     to={item.link}
                       onClick={() => toggleMobileItem(index)}
-                      className="flex items-center justify-between w-full text-[18px] py-3 text-[#fffced] archivo font-medium transition-colors duration-300"
+                      className="flex items-center justify-between w-full text-[16px] py-3 text-[#fffced] uppercase chivo font-medium transition-colors duration-300"
                     >
                       <span className="flex items-center gap-3">
                         {getIconForLink(item.title)}
@@ -538,7 +551,7 @@ export default function MainHeader() {
                 ))}
 
               </nav>
-              <div className="flex flex-col px-6 py-6 mx-auto gap-4">
+              <div className="card_space px-6 py-6 mx-auto ">
                   <motion.a
   href={cv}
   target="_blank"

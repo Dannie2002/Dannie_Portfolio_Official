@@ -20,6 +20,7 @@ import ScrollToTopButton from './Components/ScrollToTopButton.jsx';
 import Connectivity from './Components/Connectivity.jsx';
 import NetworkOperations from './Components/NetworkOperations.jsx';
 import TechnologyTools from './Components/TechnologyTools.jsx';
+import ProjectDetails from "./Components/ProjectDetails.jsx";
 
 
 
@@ -38,15 +39,15 @@ function App() {
     
     <Routes>
       <Route path="/" element={<CoverPages />} />
-<Route path="/telecommunications">
+      <Route path="/telecommunications">
 
   {/* Main Telecommunications page */}
-  <Route index element={<Telecommunications />} />
+    <Route index element={<Telecommunications />} />
 
   {/* Expertise subsections */}
-  <Route
-    path="network-architecture"
-    element={<NetworkArchitecture />}
+     <Route
+       path="network-architecture"
+      element={<NetworkArchitecture />}
   />
 
   <Route
@@ -70,6 +71,7 @@ function App() {
       <Route path="/who-is-dan?" element = {<Whoisdan />} />
       <Route path='/contact-me' element ={<ContactMe />} />
       <Route path='/my-gallery' element = {<MyGallery />} />
+      <Route path="/projects/:slug" element={<ProjectDetails />}/>
     </Routes>
 
     
