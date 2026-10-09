@@ -202,8 +202,8 @@ const productCards = [
                 <span className="text-[10px] hidden text-(--text-colour)">
                   {year}
                 </span>
-                 <Link>
-            to={`/projects/${slug}`}
+                 <Link
+            to={`/projects/${slug}`}>
                 <svg
             fill="#9B8EC7"
             version="1.1"

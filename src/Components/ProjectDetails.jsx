@@ -33,10 +33,10 @@ const projects = [
       "The MwAPATA Institute website redesign was focused on creating a clearer, more engaging digital experience for communicating research and development work. The new structure places greater emphasis on research publications, events, resources, and the organisation's wider impact.",
 
     challenge:
-      "The challenge was to create a website structure that could communicate a large amount of research-oriented information without making the experience feel overwhelming. The interface needed to remain professional while also making important content easier to discover.",
+"The interface needed to remain professional while also making important content easier to discover.",
 
     approach:
-      "The redesign focused on improving information hierarchy, visual storytelling, navigation, content presentation, and responsive behaviour. The interface was structured around clear sections and reusable components so that the experience could remain consistent throughout the website.",
+      "The interface was structured around clear sections and reusable components so that the experience could remain consistent throughout the website.",
 
     contribution:
       "I contributed to the website redesign, frontend development, component structure, responsive layouts, visual presentation, and overall interaction design.",
@@ -282,13 +282,18 @@ const ProjectDetails = () => {
 
         <div className="pt-16 lg:pt-24">
 
-          <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-20 items-start">
+          <div className="flex_container gap-12 lg:gap-20 items-start">
 
             {/* ---------------------------------
                 LEFT
             ---------------------------------- */}
 
-            <motion.div
+
+
+
+
+<div className="lg:w-[60%] lg:sticky lg:top-25 w-full">
+        <motion.div
               initial={{
                 opacity: 0,
                 y: 30,
@@ -303,17 +308,12 @@ const ProjectDetails = () => {
               }}
             >
 
-              <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm">
+              <p className="page_title">
                 {project.category} · {project.year}
               </p>
 
               <h1 className="
-                mt-5
-                text-4xl
-                lg:text-6xl
-                font-semibold
-                leading-[1.05]
-                tracking-tight
+                Section_title
               ">
                 {project.title}
               </h1>
@@ -331,11 +331,7 @@ const ProjectDetails = () => {
 
             </motion.div>
 
-            {/* ---------------------------------
-                RIGHT — PROJECT META
-            ---------------------------------- */}
-
-            <motion.div
+             <motion.div
               initial={{
                 opacity: 0,
                 y: 30,
@@ -353,6 +349,8 @@ const ProjectDetails = () => {
                 border-t
                 border-[#fffced]/15
                 pt-5
+                mt-12
+                
               "
             >
 
@@ -414,6 +412,86 @@ const ProjectDetails = () => {
 
             </motion.div>
 
+</div>
+      
+
+            {/* ---------------------------------
+                RIGHT — PROJECT META
+            ---------------------------------- */}
+
+             <div className="
+    w-full
+    lg:w-1/2
+    flex
+    flex-col
+    gap-6
+  
+        ">
+
+       <div className="card_space">
+ 
+   <div>
+  {/* 1. Tag showing the overview text */}
+
+
+  {/* 2. Structured Content */}
+  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
+    01
+  </p>
+
+  <h2 className="mt-3 card_heading">
+    Overview
+  </h2>
+  
+  <p className="text_para">
+    {project.overview}
+  </p>
+</div>
+
+   <div>
+  {/* 1. Tag showing the overview text */}
+
+
+  {/* 2. Structured Content */}
+  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
+    02
+  </p>
+
+  <h2 className="mt-3 card_heading">
+    Challenge
+  </h2>
+  
+  <p className="text_para">
+    {project.challenge}
+  </p>
+</div>
+
+  <div>
+  {/* 1. Tag showing the overview text */}
+
+
+  {/* 2. Structured Content */}
+  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
+    03
+  </p>
+
+  <h2 className="mt-3 card_heading">
+    Approach
+  </h2>
+  
+  <p className="text_para">
+    {project.approach}
+  </p>
+</div>
+
+
+</div>
+
+     
+
+    
+
+        </div>
           </div>
 
         </div>
@@ -473,128 +551,7 @@ const ProjectDetails = () => {
 
       </section>
 
-      {/* =========================================
-          PROJECT OVERVIEW
-      ========================================== */}
 
-      <section className="Section_wrapper">
-
-        <div className="
-          grid
-          lg:grid-cols-[0.35fr_1fr]
-          gap-10
-          lg:gap-20
-          py-20
-          lg:py-32
-          border-b
-          border-[#fffced]/10
-        ">
-
-          <div>
-            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm">
-              01
-            </p>
-
-            <h2 className="mt-3 text-2xl lg:text-3xl font-semibold">
-              Overview
-            </h2>
-          </div>
-
-          <p className="
-            max-w-3xl
-            text-[#fffced]/65
-            text-[16px]
-            lg:text-[18px]
-            leading-[1.8]
-          ">
-            {project.overview}
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* =========================================
-          THE CHALLENGE
-      ========================================== */}
-
-      <section className="Section_wrapper">
-
-        <div className="
-          grid
-          lg:grid-cols-[0.35fr_1fr]
-          gap-10
-          lg:gap-20
-          py-20
-          lg:py-32
-          border-b
-          border-[#fffced]/10
-        ">
-
-          <div>
-            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm">
-              02
-            </p>
-
-            <h2 className="mt-3 text-2xl lg:text-3xl font-semibold">
-              The Challenge
-            </h2>
-          </div>
-
-          <p className="
-            max-w-3xl
-            text-[#fffced]/65
-            text-[16px]
-            lg:text-[18px]
-            leading-[1.8]
-          ">
-            {project.challenge}
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* =========================================
-          APPROACH
-      ========================================== */}
-
-      <section className="Section_wrapper">
-
-        <div className="
-          grid
-          lg:grid-cols-[0.35fr_1fr]
-          gap-10
-          lg:gap-20
-          py-20
-          lg:py-32
-          border-b
-          border-[#fffced]/10
-        ">
-
-          <div>
-            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm">
-              03
-            </p>
-
-            <h2 className="mt-3 text-2xl lg:text-3xl font-semibold">
-              The Approach
-            </h2>
-          </div>
-
-          <p className="
-            max-w-3xl
-            text-[#fffced]/65
-            text-[16px]
-            lg:text-[18px]
-            leading-[1.8]
-          ">
-            {project.approach}
-          </p>
-
-        </div>
-
-      </section>
 
       {/* =========================================
           PROJECT GALLERY
@@ -679,44 +636,6 @@ const ProjectDetails = () => {
           CONTRIBUTION
       ========================================== */}
 
-      <section className="Section_wrapper">
-
-        <div className="
-          grid
-          lg:grid-cols-[0.35fr_1fr]
-          gap-10
-          lg:gap-20
-          py-20
-          lg:py-32
-          border-t
-          border-[#fffced]/10
-        ">
-
-          <div>
-
-            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm">
-              05
-            </p>
-
-            <h2 className="mt-3 text-2xl lg:text-3xl font-semibold">
-              My Contribution
-            </h2>
-
-          </div>
-
-          <p className="
-            max-w-3xl
-            text-[#fffced]/65
-            text-[16px]
-            lg:text-[18px]
-            leading-[1.8]
-          ">
-            {project.contribution}
-          </p>
-
-        </div>
-
-      </section>
 
       {/* =========================================
           PROJECT LINKS
