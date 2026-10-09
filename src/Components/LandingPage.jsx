@@ -61,33 +61,37 @@ const innovationQuotes = [
   "Optimized For Human Experience."
 ];
 
-const projectImages = [
-  webbb,         // First image
-  banner,    // Second image
-  work,  // Third image
-  fat    // Fourth image
+const cmsPosts = [
+  { id: 1, title: "The art of creative direction" },
+  { id: 2, title: "Designing calmer interfaces for focus" },
+  { id: 3, title: "Organic shapes and natural layouts" },
+  { id: 4, title: "Earthy color palettes that convert" },
+  { id: 5, title: "Designing with growth: how to scale" },
+  { id: 6, title: "Optimizing layout rendering threads" },
+  { id: 7, title: "The physics of fluid spring micro-gestures" }
 ];
 
-  const [quoteIndex, setQuoteIndex] = useState(0);
+ const [quoteIndex, setQuoteIndex] = useState(0);
   const [showNotification, setShowNotification] = useState(true);
 
+  // Independent Random Notification Loop Engine
   useEffect(() => {
-    // Notification life cycle: drop down, stay visible, slide out, change content, repeat
-    const cycle = setInterval(() => {
-      // 1. First slide the current notification out
+    const notificationCycle = setInterval(() => {
       setShowNotification(false);
-
-      // 2. Wait for the exit animation to finish before updating content and showing the next one
       setTimeout(() => {
-        setQuoteIndex((prevIndex) => (prevIndex + 1) % innovationQuotes.length);
+        setQuoteIndex((prev) => {
+          let next = Math.floor(Math.random() * innovationQuotes.length);
+          while (next === prev) next = Math.floor(Math.random() * innovationQuotes.length);
+          return next;
+        });
         setShowNotification(true);
-      }, 500); // Matches the exit transition time
+      }, 5500);
+    }, 7500); 
 
-    }, 5000); // Total display interval per quote (5 seconds)
-
-    return () => clearInterval(cycle);
+    return () => clearInterval(notificationCycle);
   }, []);
 
+  
   return (
     <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center">
 
@@ -248,46 +252,80 @@ const projectImages = [
 
 
             <div className="lg:w-1/2  p-6 w-full flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
-   <div className="border border-[#fffced]/10 rounded-3xl h-[420px] border-(--text-colour)/70 card_transparent w-[255px] flex flex-col items-center justify-between relative overflow-hidden group">
+ <div className="border! border-[#fffced]/10 rounded-2xl h-[420px] border-(--text-colour)/10! card_transparent w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
       
       {/* =========================================================
-          EXISTING LAYER: Full-Device Seamless Loop Canvas
-          (Now beautifully mapping all 4 of your project images)
+          INNOVATION LAYER: Coded Live CMS Dashboard Viewport
+          (Replaces the static picture template with clean semantic markup)
          ========================================================= */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden rounded-[22px]">
-        <motion.div
-          className="w-full flex flex-col"
-          // Animates smoothly from 0% to -50% because the array sequence is doubled below
-          animate={{ y: ["0%", "-50%"] }}
-          transition={{
-            duration: 54, // Control the speed of the scroll (higher = slower, smoother)
-            ease: "linear",
-            repeat: Infinity
-          }}
-        >
-          {/* Loop Cycle 1: First instance of all 4 images */}
-          {projectImages.map((src, index) => (
-            <img 
-              key={`cycle1-${index}`}
-              src={src} 
-              className="object-cover h-[420px] w-full brightness-[0.85]" 
-              alt={`Project display frame ${index + 1}`} 
-            />
-          ))}
-
-          {/* Loop Cycle 2: Duplicate instance acting as a seamless animation seam connector */}
-          {projectImages.map((src, index) => (
-            <img 
-              key={`cycle2-${index}`}
-              src={src} 
-              className="object-cover h-[420px] w-full brightness-[0.85]" 
-              alt={`Project display bridge ${index + 1}`} 
-            />
-          ))}
-        </motion.div>
+      <div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex text-zinc-400 font-sans select-none overflow-hidden pt-6">
         
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/40 via-transparent to-zinc-950/70 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60 pointer-events-none" />
+        {/* DASHBOARD COMPONENT A: Sidebar Navigation Panel */}
+        <div className="w-[85px] h-full border-r border-zinc-900 bg-[#0E0E0E] flex flex-col p-1.5 gap-2 text-[8px]">
+          <div className="flex items-center gap-1 font-bold text-zinc-100 bg-zinc-900/60 p-1 rounded-md mb-1 border border-zinc-800/30">
+            <span className="text-[6px]">☰</span> About Dannie
+          </div>
+          <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
+            <div className="text-zinc-500 font-semibold uppercase text-[6px] tracking-wider mb-0.5">Content</div>
+            <div className="flex items-center gap-1 text-purple-400/90 font-medium bg-purple-500/5 px-1 py-0.5 rounded border border-purple-500/10"><span className="text-[6px]"><Energy fill="#978F66" size={23} /></span> Blog</div>
+            <div className="flex items-center justify-between pl-2 text-zinc-200 font-semibold"><span className="flex items-center gap-1"><span>•</span> Posts</span><span className="text-[6px] text-zinc-500 bg-zinc-900 px-1 rounded-sm">320</span></div>
+            <div className="flex items-center justify-between pl-2 text-zinc-400"><span className="flex items-center gap-1"><span>•</span> Authors</span><span className="text-[6px] text-zinc-500">24</span></div>
+            <div className="flex items-center justify-between pl-2 text-zinc-400"><span className="flex items-center gap-1"><span>•</span> Tags</span><span className="text-[6px] text-zinc-500">96</span></div>
+            <div className="flex items-center gap-1 mt-1"><span className="text-[6px]"><Telecom fill="#978F66" size={18} /></span> Media</div>
+            <div className="flex items-center gap-1"><span className="text-[6px]"><Web fill="#978F66" size={18} /></span> Shop</div>
+          </div>
+        </div>
+
+        {/* DASHBOARD COMPONENT B: Interactive Main Document Table Canvas */}
+        <div className="flex-1 h-full bg-[#0A0A0A] flex flex-col relative">
+          {/* Fixed Quick-Actions Sub-Toolbar Panel Header */}
+          <div className="w-full p-2 border-b border-zinc-900/80 flex items-center justify-between text-[8px] bg-[#0A0A0A] z-10 text-zinc-500">
+            <div className="flex gap-2 font-medium"><span className="text-zinc-300 font-bold border-b border-zinc-400 pb-0.5">Content</span><span>Fields</span></div>
+            <div className="flex gap-1.5 text-[7px] text-zinc-400"><span>＋</span><span>⇅</span><span>🔍</span></div>
+          </div>
+
+          {/* Micro-Human Fluid Stepped Incremental Scrolling Feed Wrapper */}
+          <div className="flex-1 w-full overflow-hidden">
+            <motion.div
+              className="w-full flex flex-col"
+              animate={{ 
+                y: [
+                  "0px",       // Top Position: Post 1-4 active view
+                  "0px",       // PAUSE
+                  "-45px",     // Step Scroll slightly downward
+                  "-45px",     // PAUSE
+                  "-95px",     // Push deeper to expose hidden index modules
+                  "-95px",     // PAUSE
+                  "-140px",    // Reach bottom element threshold
+                  "-140px",    // PAUSE
+                  "-185px"     // Flawless looping clip bridge reset track
+                ] 
+              }}
+              transition={{
+                duration: 22,
+                ease: "easeInOut",
+                repeat: Infinity,
+                times: [0, 0.15, 0.25, 0.45, 0.55, 0.75, 0.85, 0.94, 1]
+              }}
+            >
+              {/* Core Repeating List Elements Rendering Loop */}
+              {[...cmsPosts, ...cmsPosts.slice(0, 4)].map((post, idx) => (
+                <div 
+                  key={`${post.id}-${idx}`}
+                  className="w-full px-2 py-2 border-b border-zinc-900/40 flex items-center gap-1.5 text-[7px] text-zinc-300 hover:bg-zinc-900/30 transition-colors"
+                >
+                  <div className="w-2 h-2 rounded border border-zinc-800 bg-zinc-950 flex-shrink-0" />
+                  <p className="truncate pr-1 leading-normal font-medium tracking-wide">
+                    {post.title}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Ambient lighting layout vignettes */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/20 via-transparent to-zinc-950/40 pointer-events-none z-10" />
       </div>
 
       {/* =========================================================
@@ -298,8 +336,7 @@ const projectImages = [
       </div>
 
       {/* =========================================================
-          INNOVATION LAYER: Real Phone Push Notification Banner
-          (Positions right under the speaker pill with physics-based entry)
+          EXISTING LAYER: Phone Push Notification Banner
          ========================================================= */}
       <div className="absolute top-5 left-3 right-3 flex flex-col items-center pointer-events-none z-30">
         <AnimatePresence mode="wait">
@@ -317,7 +354,6 @@ const projectImages = [
               className="w-full px-3 py-2 rounded-xl bg-zinc-950/85 backdrop-blur-md border border-[#fffced]/10 shadow-[0_8px_24px_rgba(0,0,0,0.6)] flex items-start gap-2"
             >
               <div className="mt-[2px] w-2 h-2 rounded-full bg-[#978F66] flex-shrink-0 animate-pulse" />
-              
               <div className="flex flex-col gap-[1px]">
                 <span className="text-[7px] uppercase tracking-widest text-zinc-500 font-mono font-bold">System Core</span>
                 <p className="text-[9px] text-[#978F66] font-sans leading-tight">
@@ -374,7 +410,7 @@ const projectImages = [
       {/* =========================================================
           EXISTING LAYER: Glassmorphism Navigation Bar
          ========================================================= */}
-      <div className='hidden bg-transparent backdrop-blur-[12px] absolute bottom-6 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 lg:flex z-20'>
+      <div className='bg-transparent backdrop-blur-[12px] absolute bottom-4 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 flex z-20'>
         <Web fill="#978F66" size={23} />
         <Energy fill="#978F66" size={20} />
         <Telecom fill="#978F66" size={23} />
