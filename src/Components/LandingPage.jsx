@@ -86,7 +86,7 @@ const cmsPosts = [
         });
         setShowNotification(true);
       }, 5500);
-    }, 1600); 
+    }, 2600); 
 
     return () => clearInterval(notificationCycle);
   }, []);
@@ -182,7 +182,7 @@ const cmsPosts = [
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col lg:w-1/2 lg:mt-22 mt-15 relative z-30 items-start justify-center"
+          className="flex flex-col lg:w-[40%] lg:mt-22 mt-15 relative z-30 items-start justify-center"
         >
 
 
@@ -195,13 +195,13 @@ const cmsPosts = [
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[14px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
+            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
           > To Reign the digital world.</motion.h1>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading geonova !text-[48px] !leading-[58px] !capitalize font-bold leading-[68px] text-[#ededed]"
+            className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#ededed]"
           >          
             building<br /> business <br />  
             <span className="text_gradient">
@@ -254,7 +254,7 @@ const cmsPosts = [
         <div className="absolute z-50 bottom-0 h-66 bg-gradient-to-t from-[#101011] via-[#101011] to-[#101011] to-[#101011] to-transparent opacity-100 transition-colors duration-450 ease-in-out "/>  
            
 
- <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
+ <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
         
       {/* =========================================================
           INNOVATION LAYER: Coded Live CMS Dashboard Viewport
@@ -395,7 +395,7 @@ const cmsPosts = [
 
       <div>
 
-        <p className="text-[7px] uppercase chivo tracking-[0.18em] text-zinc-500">
+        <p className="text-[10px] uppercase chivo tracking-[0.18em] text-[#fffced]">
           Workspace
         </p>
 
@@ -471,11 +471,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[6px] uppercase chivo text-zinc-500">
+            <p className="text-[11px] uppercase chivo text-zinc-500">
               Projects
             </p>
 
-            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
               04
             </p>
 
@@ -490,11 +490,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[6px] uppercase chivo text-zinc-500">
+            <p className="text-[11px] uppercase chivo text-zinc-500">
               Systems
             </p>
 
-            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
               08
             </p>
 
@@ -509,11 +509,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[6px] uppercase chivo text-zinc-500">
+            <p className="text-[11px] uppercase chivo text-zinc-500">
               Services
             </p>
 
-            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
               05
             </p>
 
@@ -536,7 +536,7 @@ const cmsPosts = [
 
             <div>
 
-              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+                <p className="text-[10px] uppercase font-semibold chivo tracking-wider text-[#fffced]">
                 Analytics
               </p>
 
@@ -546,7 +546,7 @@ const cmsPosts = [
 
             </div>
 
-            <span className="text-[7px] text-(--secondary-color)">
+            <span className="text-[10px] text-(--secondary-color)">
               +24.8%
             </span>
 
@@ -723,7 +723,7 @@ const cmsPosts = [
 
           <div className="px-2.5 py-2 border-b border-zinc-900">
 
-            <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+            <p className="text-[10px] uppercase chivo tracking-wider text-zinc-500">
               Portfolio
             </p>
 
@@ -759,13 +759,13 @@ const cmsPosts = [
                       }`}
                     />
 
-                    <span className="truncate text-[7px] text-zinc-300">
+                    <span className="truncate text-[11px] chivo text-zinc-300">
                       {project}
                     </span>
 
                   </div>
 
-                  <span className="text-[6px] text-zinc-500">
+                  <span className="text-[10px] text-zinc-500">
                     {progress}
                   </span>
 
@@ -1003,7 +1003,7 @@ const cmsPosts = [
       {/* =========================================================
           EXISTING LAYER: Glassmorphism Navigation Bar
          ========================================================= */}
-      <div className='bg-transparent backdrop-blur-[12px] absolute bottom-4 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 flex z-20'>
+      <div className='hidden bg-transparent backdrop-blur-[12px] absolute bottom-4 py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 flex z-20'>
         <Web fill="#978F66" size={23} />
         <Energy fill="#978F66" size={20} />
         <Telecom fill="#978F66" size={23} />
