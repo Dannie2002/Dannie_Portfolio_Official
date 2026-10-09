@@ -86,7 +86,7 @@ const cmsPosts = [
         });
         setShowNotification(true);
       }, 5500);
-    }, 7500); 
+    }, 1600); 
 
     return () => clearInterval(notificationCycle);
   }, []);
@@ -216,7 +216,7 @@ const cmsPosts = [
             variants={itemVariants}
             className="pt-6 text_para max-w-lg"
           >
-            I design and build modern digital products<span className="">  enabling your business to grow effortlessly, access new markets and deliver reliable digital solutions.</span>
+            I design and build modern digital products<span className="">  enabling your business to grow effortlessly.</span>
            
           </motion.p>
 
@@ -226,7 +226,7 @@ const cmsPosts = [
             className="flex gap-5 btn mt-6"
           >
 
-             <motion.div className=' flex   border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-transparent hover:bg-(--secondary-colour) border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
+             <motion.div className=' flex   border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-[6px] bg-transparent hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
              <div className='relative  flex overflow-hidden'>
                              <h3 className='text_button text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
@@ -238,7 +238,7 @@ const cmsPosts = [
                      
                                  
                                     <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center group-hover:bg-[#fffced] bg-[#101011] size-7 p-2'>
-                                      <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
+                                      <ArrowRight className='size-6 absolute group-hover:rotate-15  ease-in-out  size-8 transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
                                       <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
                                    
@@ -249,83 +249,677 @@ const cmsPosts = [
                 </motion.div>
 
 
-            <div className="lg:w-1/2   w-full flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
- <div className="border! border-[#fffced]/10 rounded-2xl h-[420px] border-(--text-colour)/10! card_transparent w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
-      
+            <div className="lg:w-1/2 relative w-full p-12 flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
+
+        <div className="absolute z-50 bottom-0 h-66 bg-gradient-to-t from-[#101011] via-[#101011] to-[#101011] to-[#101011] to-transparent opacity-100 transition-colors duration-450 ease-in-out "/>  
+           
+
+ <div className=" rounded-2xl h-[420px]  hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
+        
       {/* =========================================================
           INNOVATION LAYER: Coded Live CMS Dashboard Viewport
           (Replaces the static picture template with clean semantic markup)
          ========================================================= */}
-      <div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex text-zinc-400 font-sans select-none overflow-hidden pt-6">
-        
-        {/* DASHBOARD COMPONENT A: Sidebar Navigation Panel */}
-        <div className="w-[85px] h-full border-r border-zinc-900 bg-[#0E0E0E] flex flex-col p-1.5 gap-2 text-[8px]">
-          <div className="flex items-center gap-1 font-bold text-zinc-100 bg-zinc-900/60 p-1 rounded-md mb-1 border border-zinc-800/30"
-          >
-            <span className="text-[6px]">☰</span> About Dannie
-          </div>
-          <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
-            <div className="text-zinc-500 font-semibold uppercase text-[6px] tracking-wider mb-0.5">Content</div>
-            <div className="flex items-center gap-1 text-purple-400/90 font-medium bg-purple-500/5 px-1 py-0.5 rounded border border-purple-500/10"><span className="text-[6px]"><Energy fill="#978F66" size={23} /></span> Blog</div>
-            <div className="flex items-center justify-between pl-2 text-zinc-200 font-semibold"><span className="flex items-center gap-1"><span>•</span> Posts</span><span className="text-[6px] text-zinc-500 bg-zinc-900 px-1 rounded-sm">320</span></div>
-            <div className="flex items-center justify-between pl-2 text-zinc-400"><span className="flex items-center gap-1"><span>•</span> Authors</span><span className="text-[6px] text-zinc-500">24</span></div>
-            <div className="flex items-center justify-between pl-2 text-zinc-400"><span className="flex items-center gap-1"><span>•</span> Tags</span><span className="text-[6px] text-zinc-500">96</span></div>
-            <div className="flex items-center gap-1 mt-1"><span className="text-[6px]"><Telecom fill="#978F66" size={18} /></span> Media</div>
-            <div className="flex items-center gap-1"><span className="text-[6px]"><Web fill="#978F66" size={18} /></span> Shop</div>
-          </div>
-        </div>
+   {/* =========================================================
+    INNOVATION LAYER: DIGITAL OPERATIONS TABLET
+========================================================= */}
 
-        {/* DASHBOARD COMPONENT B: Interactive Main Document Table Canvas */}
-        <div className="flex-1 h-full bg-[#0A0A0A] flex flex-col relative">
-          {/* Fixed Quick-Actions Sub-Toolbar Panel Header */}
-          <div className="w-full p-2 border-b border-zinc-900/80 flex items-center justify-between text-[8px] bg-[#0A0A0A] z-10 text-zinc-500">
-            <div className="flex gap-2 font-medium"><span className="text-zinc-300 font-bold border-b border-zinc-400 pb-0.5">Content</span><span>Fields</span></div>
-            <div className="flex gap-1.5 text-[7px] text-zinc-400"><span>＋</span><span>⇅</span><span>🔍</span></div>
-          </div>
+<div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex text-zinc-400 select-none overflow-hidden pt-6">
 
-          {/* Micro-Human Fluid Stepped Incremental Scrolling Feed Wrapper */}
-          <div className="flex-1 w-full overflow-hidden">
-            <motion.div
-              className="w-full flex flex-col"
-              animate={{ 
-                y: [
-                  "0px",       // Top Position: Post 1-4 active view
-                  "0px",       // PAUSE
-                  "-45px",     // Step Scroll slightly downward
-                  "-45px",     // PAUSE
-                  "-95px",     // Push deeper to expose hidden index modules
-                  "-95px",     // PAUSE
-                  "-140px",    // Reach bottom element threshold
-                  "-140px",    // PAUSE
-                  "-185px"     // Flawless looping clip bridge reset track
-                ] 
-              }}
-              transition={{
-                duration: 22,
-                ease: "easeInOut",
-                repeat: Infinity,
-                times: [0, 0.15, 0.25, 0.45, 0.55, 0.75, 0.85, 0.94, 1]
-              }}
-            >
-              {/* Core Repeating List Elements Rendering Loop */}
-              {[...cmsPosts, ...cmsPosts.slice(0, 4)].map((post, idx) => (
-                <div 
-                  key={`${post.id}-${idx}`}
-                  className="w-full px-2 py-2 border-b border-zinc-900/40 flex items-center gap-1.5 text-[7px] text-zinc-300 hover:bg-zinc-900/30 transition-colors"
-                >
-                  <div className="w-2 h-2 rounded border border-zinc-800 bg-zinc-950 flex-shrink-0" />
-                  <p className="truncate pr-1 leading-normal font-medium tracking-wide">
-                    {post.title}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+  {/* =====================================================
+      TABLET SIDEBAR
+  ===================================================== */}
 
-        {/* Ambient lighting layout vignettes */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/20 via-transparent to-zinc-950/40 pointer-events-none z-10" />
+  <div className="w-[150px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col p-3 gap-2 text-[10px]">
+
+    {/* Identity */}
+
+  <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
+        <Web fill="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Dannie.com
+        </h4>
       </div>
+
+
+    {/* Navigation */}
+
+    <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
+
+      <div className="flex items-center justify-between pl-2 text-(--text-color)">
+        <h2 className="text-(--text-colour) font-semibold text-[10px] uppercase chivo tracking-wider mb-0.5">
+          Workspace
+        </h2>
+      </div>
+
+
+      {/* Overview */}
+
+      <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
+        <Energy fill="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Overview
+        </h4>
+      </div>
+
+
+      {/* Projects */}
+
+      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
+        <Web fill="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Projects
+        </h4>
+      </div>
+
+
+      {/* Analytics */}
+
+      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
+        <ThreeStars color="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Analytics
+        </h4>
+      </div>
+
+
+      {/* Network */}
+
+      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
+        <Telecom fill="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Network
+        </h4>
+      </div>
+
+
+      {/* Services */}
+
+      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
+        <ContactPlane fill="#978F66" size={17} />
+
+        <h4 className="chivo text-[10px]">
+          Services
+        </h4>
+      </div>
+
+    </div>
+
+
+    {/* Technology block */}
+
+    <div className="mt-auto border-t border-zinc-900/70 pt-3">
+
+      <h2 className="text-[8px] uppercase chivo tracking-wider text-zinc-500 mb-2">
+        Technology
+      </h2>
+
+      <div className="flex flex-wrap gap-1">
+
+        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+          WEB
+        </span>
+
+        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+          DATA
+        </span>
+
+        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+          NETWORK
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* =====================================================
+      MAIN DASHBOARD
+  ===================================================== */}
+
+  <div className="flex-1 h-full bg-[#0A0A0A] flex flex-col relative">
+
+
+    {/* ===================================================
+        DASHBOARD HEADER
+    =================================================== */}
+
+    <div className="w-full px-3 py-2 border-b border-zinc-900/80 flex items-center justify-between z-10">
+
+      <div>
+
+        <p className="text-[7px] uppercase chivo tracking-[0.18em] text-zinc-500">
+          Workspace
+        </p>
+
+        <h1 className="text-[11px] font-bold chivo uppercase text-[#fffced]">
+          Digital Operations
+        </h1>
+
+      </div>
+
+
+      <div className="flex items-center gap-1.5">
+
+        <span className="size-1.5 rounded-full bg-[#978F66] animate-pulse" />
+
+        <span className="text-[7px] uppercase chivo text-zinc-500">
+          Online
+        </span>
+
+      </div>
+
+    </div>
+
+
+    {/* ===================================================
+        SCROLLING DASHBOARD CONTENT
+    =================================================== */}
+
+    <div className="flex-1 w-full overflow-hidden">
+
+      <motion.div
+        className="w-full flex flex-col gap-3 p-3"
+
+        animate={{
+          y: [
+            "0px",
+            "0px",
+            "-35px",
+            "-35px",
+            "-72px",
+            "-72px",
+            "-108px",
+            "-108px",
+            "0px",
+          ],
+        }}
+
+        transition={{
+          duration: 24,
+          ease: "easeInOut",
+          repeat: Infinity,
+          times: [
+            0,
+            0.15,
+            0.27,
+            0.40,
+            0.52,
+            0.65,
+            0.77,
+            0.90,
+            1,
+          ],
+        }}
+      >
+
+
+        {/* =================================================
+            OVERVIEW METRICS
+        ================================================= */}
+
+        <div className="grid grid-cols-3 gap-1.5">
+
+          {/* Projects */}
+
+          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+
+            <p className="text-[6px] uppercase chivo text-zinc-500">
+              Projects
+            </p>
+
+            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+              04
+            </p>
+
+            <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
+              <div className="h-full w-[82%] bg-(--secondary-color)" />
+            </div>
+
+          </div>
+
+
+          {/* Systems */}
+
+          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+
+            <p className="text-[6px] uppercase chivo text-zinc-500">
+              Systems
+            </p>
+
+            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+              08
+            </p>
+
+            <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
+              <div className="h-full w-[74%] bg-(--secondary-color)" />
+            </div>
+
+          </div>
+
+
+          {/* Services */}
+
+          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+
+            <p className="text-[6px] uppercase chivo text-zinc-500">
+              Services
+            </p>
+
+            <p className="text-[17px] leading-none geonova text-[#fffced] font-bold mt-1">
+              05
+            </p>
+
+            <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
+              <div className="h-full w-[91%] bg-(--secondary-color)" />
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* =================================================
+            ANALYTICS
+        ================================================= */}
+
+        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 overflow-hidden">
+
+          <div className="px-2.5 py-2 border-b border-zinc-900 flex items-center justify-between">
+
+            <div>
+
+              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+                Analytics
+              </p>
+
+              <p className="text-[12px] geonova font-semibold text-[#fffced]">
+                Project Activity
+              </p>
+
+            </div>
+
+            <span className="text-[7px] text-(--secondary-color)">
+              +24.8%
+            </span>
+
+          </div>
+
+
+          {/* Graph */}
+
+         <div className="relative h-[75px] px-2 pt-2 pb-1">
+
+  {/* =====================================================
+      SKILL GRAPH
+  ===================================================== */}
+
+  {/* Grid */}
+
+  <div className="absolute inset-x-2 top-3 bottom-5 flex flex-col justify-between">
+
+    <span className="border-t border-zinc-900/70" />
+    <span className="border-t border-zinc-900/70" />
+    <span className="border-t border-zinc-900/70" />
+    <span className="border-t border-zinc-900/70" />
+
+  </div>
+
+
+  {/* Graph */}
+
+{/* Graph line */}
+
+<svg
+  viewBox="0 0 300 70"
+  preserveAspectRatio="none"
+  className="absolute inset-x-2 top-2 w-[calc(100%-16px)] h-[58px]"
+>
+
+  <defs>
+
+    <linearGradient
+      id="tabletSkillGradient"
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="1"
+    >
+      <stop
+        offset="0%"
+        stopColor="#978F66"
+        stopOpacity="0.25"
+      />
+
+      <stop
+        offset="100%"
+        stopColor="#978F66"
+        stopOpacity="0"
+      />
+    </linearGradient>
+
+  </defs>
+
+
+  {/* Filled area underneath the graph */}
+
+  <polygon
+    points="
+      8,38
+      78,22
+      148,30
+      218,14
+      292,7
+      292,62
+      8,62
+    "
+    fill="url(#tabletSkillGradient)"
+  />
+
+
+  {/* Straight skill graph */}
+
+  <polyline
+    points="
+      8,38
+      78,22
+      148,30
+      218,14
+      292,7
+    "
+    fill="none"
+    stroke="#978F66"
+    strokeWidth="1.5"
+    strokeLinejoin="round"
+    strokeLinecap="round"
+  />
+
+
+  {/* Skill points */}
+
+  <circle
+    cx="8"
+    cy="38"
+    r="2.5"
+    fill="#978F66"
+  />
+
+  <circle
+    cx="78"
+    cy="22"
+    r="2.5"
+    fill="#978F66"
+  />
+
+  <circle
+    cx="148"
+    cy="30"
+    r="2.5"
+    fill="#978F66"
+  />
+
+  <circle
+    cx="218"
+    cy="14"
+    r="2.5"
+    fill="#978F66"
+  />
+
+  <circle
+    cx="292"
+    cy="7"
+    r="2.5"
+    fill="#978F66"
+  />
+
+</svg>
+
+
+  {/* =====================================================
+      Skill Labels
+  ===================================================== */}
+
+  <div className="absolute bottom-0 left-2 right-2 flex justify-between text-[5px] uppercase chivo text-zinc-600">
+
+    <span>
+      Communication
+    </span>
+
+    <span>
+      Networking
+    </span>
+
+    <span>
+      Web
+    </span>
+
+    <span>
+      Data
+    </span>
+
+    <span>
+      Problem Solving
+    </span>
+
+  </div>
+
+</div>
+
+        </div>
+
+
+        {/* =================================================
+            ACTIVE PROJECTS
+        ================================================= */}
+
+        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 overflow-hidden">
+
+          <div className="px-2.5 py-2 border-b border-zinc-900">
+
+            <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+              Portfolio
+            </p>
+
+            <p className="text-[12px] font-semibold text-[#fffced]">
+              Active Projects
+            </p>
+
+          </div>
+
+
+          <div className="flex flex-col">
+
+            {[
+              ["MwAPATA Website Redesign", "92%"],
+              ["Livestock Health Tracker", "84%"],
+              ["Digital Cashbox", "76%"],
+            ].map(([project, progress], index) => (
+
+              <div
+                key={project}
+                className="px-2.5 py-2 border-b border-zinc-900/60 last:border-b-0"
+              >
+
+                <div className="flex items-center justify-between gap-2">
+
+                  <div className="flex items-center gap-1.5 min-w-0">
+
+                    <span
+                      className={`size-1.5 rounded-full ${
+                        index === 0
+                          ? "bg-(--secondary-color)"
+                          : "bg-zinc-700"
+                      }`}
+                    />
+
+                    <span className="truncate text-[7px] text-zinc-300">
+                      {project}
+                    </span>
+
+                  </div>
+
+                  <span className="text-[6px] text-zinc-500">
+                    {progress}
+                  </span>
+
+                </div>
+
+
+                <div className="mt-1.5 h-[2px] bg-zinc-900 rounded-full overflow-hidden">
+
+                  <div
+                    className="h-full bg-(--secondary-color)"
+                    style={{
+                      width: progress,
+                    }}
+                  />
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+
+        {/* =================================================
+            SYSTEM STATUS
+        ================================================= */}
+
+        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 p-2.5">
+
+          <div className="flex items-center justify-between mb-2">
+
+            <div>
+
+              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+                Infrastructure
+              </p>
+
+              <p className="text-[9px] font-semibold text-[#fffced]">
+                System Status
+              </p>
+
+            </div>
+
+            <span className="text-[6px] text-(--secondary-color) uppercase">
+              Stable
+            </span>
+
+          </div>
+
+
+          <div className="grid grid-cols-4 gap-1">
+
+            {[
+              ["WEB", Web],
+              ["DATA", ThreeStars],
+              ["NET", Telecom],
+              ["OPS", Energy],
+            ].map(([label, Icon]) => (
+
+              <div
+                key={label}
+                className="border border-zinc-900 rounded-md py-2 flex flex-col items-center gap-1 bg-[#0A0A0A]"
+              >
+
+                <Icon
+                  fill="#978F66"
+                  color="#978F66"
+                  size={14}
+                />
+
+                <span className="text-[5px] uppercase chivo text-zinc-500">
+                  {label}
+                </span>
+
+                <span className="size-1 rounded-full bg-[#978F66]" />
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+
+        {/* =================================================
+            TECHNOLOGY
+        ================================================= */}
+
+        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 p-2.5">
+
+          <div className="flex items-center justify-between mb-2">
+
+            <div>
+
+              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+                Stack
+              </p>
+
+              <p className="text-[9px] font-semibold text-[#fffced]">
+                Technology
+              </p>
+
+            </div>
+
+            <span className="text-[6px] text-zinc-600">
+              CORE
+            </span>
+
+          </div>
+
+
+          <div className="flex flex-wrap gap-1">
+
+            {[
+              "REACT",
+              "PYTHON",
+              "SQL",
+              "NETWORK",
+              "DATA",
+              "SYSTEMS",
+            ].map((technology) => (
+
+              <span
+                key={technology}
+                className="px-1.5 py-1 rounded bg-zinc-900 border border-zinc-800/70 text-[6px] uppercase chivo text-zinc-400"
+              >
+                {technology}
+              </span>
+
+            ))}
+
+          </div>
+
+        </div>
+
+
+      </motion.div>
+
+    </div>
+
+
+    {/* ===================================================
+        AMBIENT LIGHTING
+    =================================================== */}
+
+    <div className="absolute inset-0 bg-gradient-to-t from-(--secondary-color)/20 via-transparent to-transparent pointer-events-none z-10" />
+
+  </div>
+
+</div>
 
       {/* =========================================================
           EXISTING LAYER: Hardware Speaker Notch Pill
@@ -350,12 +944,12 @@ const cmsPosts = [
                 stiffness: 120, 
                 damping: 14 
               }}
-              className="w-full px-3 py-2 rounded-xl bg-zinc-950/85 backdrop-blur-md border border-[#fffced]/10 shadow-[0_8px_24px_rgba(0,0,0,0.6)] flex items-start gap-2"
+              className="w-full px-3 py-2 rounded-sm bg-(--text-color)/15 backdrop-blur-md border border-[#fffced]/15 shadow-[0_8px_24px_rgba(0,0,0,0.6)] flex items-start gap-2"
             >
               <div className="mt-[2px] w-2 h-2 rounded-full bg-[#978F66] flex-shrink-0 animate-pulse" />
               <div className="flex flex-col gap-[1px]">
-                <span className="text-[7px] uppercase tracking-widest text-zinc-500 font-mono font-bold">System Core</span>
-                <p className="text-[9px] text-[#978F66] font-sans leading-tight">
+                <h4 className="text-[12px] uppercase  text-(--secondary-color)  font-bold">System Core</h4>
+                <p className="text-[10px] text-[#fffced] font-sans leading-tight">
                   {innovationQuotes[quoteIndex]}
                 </p>
               </div>

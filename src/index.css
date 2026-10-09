@@ -23,7 +23,7 @@
 
 :root {
   --primary-color: #978F66;
-  --secondary-color: #635985;
+  --secondary-color: rgb(99, 89, 133);
   --background-color: #ddd4c5;
   --black-color: #101111;
   --text-color: #4a4a4a;
@@ -363,7 +363,7 @@ body:has(.btn:hover) .pointer {
 
 .page_title{
   font-family: var(--font-agdasima);
-  @apply lg:text-[16px] text-[16.5px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
+  @apply lg:text-[16px] text-[15.5px] tracking-[2.3px] mb-4 uppercase font-semibold text-[#b8b8b8];
 }
 .card_heading{
   font-family: var(--font-archivo);
