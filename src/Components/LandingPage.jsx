@@ -249,12 +249,12 @@ const cmsPosts = [
                 </motion.div>
 
 
-            <div className="lg:w-1/2 relative w-full p-12 flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
+            <div className="lg:w-1/2 relative w-full  flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
 
         <div className="absolute z-50 bottom-0 h-66 bg-gradient-to-t from-[#101011] via-[#101011] to-[#101011] to-[#101011] to-transparent opacity-100 transition-colors duration-450 ease-in-out "/>  
            
 
- <div className=" rounded-2xl h-[420px]  hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
+ <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
         
       {/* =========================================================
           INNOVATION LAYER: Coded Live CMS Dashboard Viewport
@@ -264,7 +264,7 @@ const cmsPosts = [
     INNOVATION LAYER: DIGITAL OPERATIONS TABLET
 ========================================================= */}
 
-<div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex text-zinc-400 select-none overflow-hidden pt-6">
+<div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex  select-none overflow-hidden pt-6">
 
   {/* =====================================================
       TABLET SIDEBAR
