@@ -196,9 +196,7 @@ const cmsPosts = [
            <motion.h1
             variants={itemVariants}
             className="text-[14px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
-          >
-          To Reign the digital world.  
-          </motion.h1>
+          > To Reign the digital world.</motion.h1>
 
           {/* Heading */}
           <motion.h1
@@ -229,7 +227,7 @@ const cmsPosts = [
           >
 
              <motion.div className=' flex   border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-transparent hover:bg-(--secondary-colour) border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
-                                <div className='relative  flex overflow-hidden'>
+             <div className='relative  flex overflow-hidden'>
                              <h3 className='text_button text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
                         </h3>
@@ -251,7 +249,7 @@ const cmsPosts = [
                 </motion.div>
 
 
-            <div className="lg:w-1/2  p-6 w-full flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
+            <div className="lg:w-1/2   w-full flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
  <div className="border! border-[#fffced]/10 rounded-2xl h-[420px] border-(--text-colour)/10! card_transparent w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
       
       {/* =========================================================
@@ -262,7 +260,8 @@ const cmsPosts = [
         
         {/* DASHBOARD COMPONENT A: Sidebar Navigation Panel */}
         <div className="w-[85px] h-full border-r border-zinc-900 bg-[#0E0E0E] flex flex-col p-1.5 gap-2 text-[8px]">
-          <div className="flex items-center gap-1 font-bold text-zinc-100 bg-zinc-900/60 p-1 rounded-md mb-1 border border-zinc-800/30">
+          <div className="flex items-center gap-1 font-bold text-zinc-100 bg-zinc-900/60 p-1 rounded-md mb-1 border border-zinc-800/30"
+          >
             <span className="text-[6px]">☰</span> About Dannie
           </div>
           <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
