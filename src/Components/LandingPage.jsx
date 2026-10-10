@@ -270,11 +270,11 @@ const cmsPosts = [
       TABLET SIDEBAR
   ===================================================== */}
 
-  <div className="w-[150px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col p-3 gap-2 text-[10px]">
+  <div className="lg:w-[150px] w-[120px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col p-3 gap-2 text-[10px]">
 
     {/* Identity */}
 
-  <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
+  <div className="flex items-center gap-1 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
         <Web fill="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
@@ -395,11 +395,11 @@ const cmsPosts = [
 
       <div>
 
-        <p className="text-[10px] uppercase chivo tracking-[0.18em] text-[#fffced]">
+        <p className="lg:text-[10px] text-[8px] uppercase chivo tracking-[0.18em] text-[#fffced]">
           Workspace
         </p>
 
-        <h1 className="text-[11px] font-bold chivo uppercase text-[#fffced]">
+        <h1 className="lg:text-[11px] text-[9px] font-bold chivo uppercase text-[#fffced]">
           Digital Operations
         </h1>
 
@@ -410,7 +410,7 @@ const cmsPosts = [
 
         <span className="size-1.5 rounded-full bg-[#978F66] animate-pulse" />
 
-        <span className="text-[7px] uppercase chivo text-zinc-500">
+        <span className="lg:text-[7px] text-[6px] uppercase chivo text-zinc-500">
           Online
         </span>
 
@@ -471,11 +471,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[11px] uppercase chivo text-zinc-500">
+            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Projects
             </p>
 
-            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               04
             </p>
 
@@ -490,11 +490,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[11px] uppercase chivo text-zinc-500">
+            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Systems
             </p>
 
-            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               08
             </p>
 
@@ -509,11 +509,11 @@ const cmsPosts = [
 
           <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
 
-            <p className="text-[11px] uppercase chivo text-zinc-500">
+            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Services
             </p>
 
-            <p className="text-[34px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               05
             </p>
 
@@ -534,13 +534,13 @@ const cmsPosts = [
 
           <div className="px-2.5 py-2 border-b border-zinc-900 flex items-center justify-between">
 
-            <div>
+            <div className="flex flex-col gap-2">
 
-                <p className="text-[10px] uppercase font-semibold chivo tracking-wider text-[#fffced]">
+                <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-[#fffced]">
                 Analytics
               </p>
 
-              <p className="text-[12px] geonova font-semibold text-[#fffced]">
+              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
                 Project Activity
               </p>
 
