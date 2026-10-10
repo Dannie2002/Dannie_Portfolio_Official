@@ -85,15 +85,15 @@ const cmsPosts = [
           return next;
         });
         setShowNotification(true);
-      }, 7900);
-    }, 7900); 
+      }, 9900);
+    }, 9900); 
 
     return () => clearInterval(notificationCycle);
   }, []);
 
   
   return (
-    <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-[#1d201d] flex items-center">
+    <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-[#0b0b0d] flex items-center">
 
       
 
@@ -101,7 +101,7 @@ const cmsPosts = [
       <img
         src={noise}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-overlay"
+        className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-overlay"
       />
         <img
         src={bag}
@@ -109,7 +109,7 @@ const cmsPosts = [
         className="absolute  inset-0 z-10 h-full w-full object-cover opacity-60 mix-blend-overlay"
       />
       {/* Overlay */}
-      <div className="absolute z-0 top-40 right-5 size-30 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l opacity-78 from-[#0b0b0d] via-[#0b0b0d] to-[#b8b8b8]/40" />
+      <div className="hidden z-0 top-40 right-5 size-30 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l opacity-78 from-[#0b0b0d] via-[#0b0b0d] to-(--secondary-color)/40" />
 
        <motion.div
         className="
@@ -226,20 +226,20 @@ const cmsPosts = [
             className="flex gap-5 btn mt-6"
           >
 
-             <motion.div className=' flex   border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-[6px] bg-transparent hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
-             <div className='relative  flex overflow-hidden'>
+             <motion.div className=' flex btn  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-[6px] bg-transparent hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
+             <div className='relative flex overflow-hidden'>
                              <h3 className='text_button text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
                         </h3>
-                        <h3 className='absolute -translate-y-4 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
-                         See more
+                          <h3 className='text_button absolute text-[#fffced]! group-hover:translate-y-0 -translate-y-4 group-hover:opacity-100 opacity-0 ease-out transition-transform duration-590 out'>
+                          View works
                         </h3>
                      </div>
                      
                                  
-                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center group-hover:bg-[#fffced] bg-[#101011] size-7 p-2'>
-                                      <ArrowRight className='size-6 absolute group-hover:rotate-15  ease-in-out  size-8 transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
-                                      <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
+                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center group-hover:bg-[#fffced] bg-[#101011] size-6 p-2'>
+                                      <ArrowRight className='size-6 absolute group-hover:rotate-15  ease-in-out   transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
+                                      <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-6 transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
                                    
                                   </motion.div>
@@ -251,7 +251,7 @@ const cmsPosts = [
 
             <div className="lg:w-1/2 relative w-full  flex flex-col lg:mt-28 lg:ml-12 mt-0 relative z-30 items-start lg:items-center justify-center ">
 
-        <div className="absolute z-50 bottom-0 h-66 bg-gradient-to-t from-[#101011] via-[#101011] to-[#101011] to-[#101011] to-transparent opacity-100 transition-colors duration-450 ease-in-out "/>  
+         
            
 
  <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.5px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6 py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
@@ -275,7 +275,7 @@ const cmsPosts = [
     {/* Identity */}
 
   <div className="flex items-center gap-1 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
-        <Web fill="#978F66" size={10} />
+        <Web fill="#978F66" size={18} />
 
         <h4 className="chivo text-[10px]">
           Dannie.com
@@ -539,7 +539,7 @@ const cmsPosts = [
 
             <div className="flex flex-col gap-2">
 
-                <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-[#fffced]">
+                <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-(--text-colour)">
                 Analytics
               </p>
 
@@ -724,13 +724,13 @@ const cmsPosts = [
 
         <div className="border border-zinc-900 rounded-md bg-zinc-950/50 overflow-hidden">
 
-          <div className="px-2.5 py-2 border-b border-zinc-900">
+          <div className="px-2.5 flex flex-col gap-2 py-2 border-b border-zinc-900">
 
-            <p className="text-[10px] uppercase chivo tracking-wider text-zinc-500">
+              <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-(--text-colour)">
               Portfolio
             </p>
 
-            <p className="text-[12px] font-semibold text-[#fffced]">
+           <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
               Active Projects
             </p>
 
@@ -803,13 +803,13 @@ const cmsPosts = [
 
           <div className="flex items-center justify-between mb-2">
 
-            <div>
+            <div className="flex flex-col gap-2">
 
               <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
                 Infrastructure
               </p>
 
-              <p className="text-[9px] font-semibold text-[#fffced]">
+              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
                 System Status
               </p>
 
@@ -822,37 +822,13 @@ const cmsPosts = [
           </div>
 
 
-          <div className="grid grid-cols-4 gap-1">
-
-            {[
-              ["WEB", Web],
-              ["DATA", ThreeStars],
-              ["NET", Telecom],
-              ["OPS", Energy],
-            ].map(([label, Icon]) => (
-
-              <div
-                key={label}
-                className="border border-zinc-900 rounded-md py-2 flex flex-col items-center gap-1 bg-[#0A0A0A]"
-              >
-
-                <Icon
-                  fill="#978F66"
-                  color="#978F66"
-                  size={14}
-                />
-
-                <span className="text-[5px] uppercase chivo text-zinc-500">
-                  {label}
-                </span>
-
-                <span className="size-1 rounded-full bg-[#978F66]" />
-
-              </div>
-
-            ))}
-
-          </div>
+          <div className='bg-transparent backdrop-blur-[12px]  py-2 gap-2 outline-[1.2px] outline-[#978F66]/60 items-center rounded-full px-6 flex z-20'>
+        <Web fill="#978F66" size={23} />
+        <Energy fill="#978F66" size={20} />
+        <Telecom fill="#978F66" size={23} />
+        <ContactPlane fill="#978F66" size={20} />
+        <ThreeStars color="#978F66" size={23} />
+      </div> 
 
         </div>
 
@@ -871,7 +847,7 @@ const cmsPosts = [
                 Stack
               </p>
 
-              <p className="text-[9px] font-semibold text-[#fffced]">
+              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
                 Technology
               </p>
 
