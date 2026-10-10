@@ -85,8 +85,8 @@ const cmsPosts = [
           return next;
         });
         setShowNotification(true);
-      }, 5500);
-    }, 2600); 
+      }, 7900);
+    }, 7900); 
 
     return () => clearInterval(notificationCycle);
   }, []);
@@ -254,7 +254,7 @@ const cmsPosts = [
         <div className="absolute z-50 bottom-0 h-66 bg-gradient-to-t from-[#101011] via-[#101011] to-[#101011] to-[#101011] to-transparent opacity-100 transition-colors duration-450 ease-in-out "/>  
            
 
- <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
+ <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.5px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6 py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
         
       {/* =========================================================
           INNOVATION LAYER: Coded Live CMS Dashboard Viewport
@@ -270,12 +270,12 @@ const cmsPosts = [
       TABLET SIDEBAR
   ===================================================== */}
 
-  <div className="lg:w-[150px] w-[120px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col p-3 gap-2 text-[10px]">
+  <div className="lg:w-[150px] w-[80px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col lg:p-3 p-2 gap-2 text-[10px]">
 
     {/* Identity */}
 
   <div className="flex items-center gap-1 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
-        <Web fill="#978F66" size={17} />
+        <Web fill="#978F66" size={10} />
 
         <h4 className="chivo text-[10px]">
           Dannie.com
@@ -288,7 +288,7 @@ const cmsPosts = [
     <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
 
       <div className="flex items-center justify-between pl-2 text-(--text-color)">
-        <h2 className="text-(--text-colour) font-semibold text-[10px] uppercase chivo tracking-wider mb-0.5">
+        <h2 className="text-(--text-colour) font-semibold lg:text-[10px] text-[8px] uppercase chivo tracking-wider mb-0.5">
           Workspace
         </h2>
       </div>
@@ -296,8 +296,8 @@ const cmsPosts = [
 
       {/* Overview */}
 
-      <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
-        <Energy fill="#978F66" size={17} />
+      <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-(--text-color)/60">
+        <Energy className="hidden lg:flex"  fill="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
           Overview
@@ -308,7 +308,7 @@ const cmsPosts = [
       {/* Projects */}
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <Web fill="#978F66" size={17} />
+        <Web className="hidden lg:flex"  fill="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
           Projects
@@ -319,7 +319,7 @@ const cmsPosts = [
       {/* Analytics */}
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <ThreeStars color="#978F66" size={17} />
+        <ThreeStars className="hidden lg:flex" color="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
           Analytics
@@ -330,7 +330,7 @@ const cmsPosts = [
       {/* Network */}
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <Telecom fill="#978F66" size={17} />
+        <Telecom className="hidden lg:flex"  fill="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
           Network
@@ -341,7 +341,7 @@ const cmsPosts = [
       {/* Services */}
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <ContactPlane fill="#978F66" size={17} />
+        <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
 
         <h4 className="chivo text-[10px]">
           Services
@@ -437,7 +437,10 @@ const cmsPosts = [
             "-72px",
             "-72px",
             "-108px",
-            "-108px",
+            "-128px",
+            "-138px",
+            "-248px",
+             "-300px",
             "0px",
           ],
         }}
@@ -475,7 +478,7 @@ const cmsPosts = [
               Projects
             </p>
 
-            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               04
             </p>
 
@@ -494,7 +497,7 @@ const cmsPosts = [
               Systems
             </p>
 
-            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               08
             </p>
 
@@ -513,7 +516,7 @@ const cmsPosts = [
               Services
             </p>
 
-            <p className="lg:text-[34px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
+            <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
               05
             </p>
 
