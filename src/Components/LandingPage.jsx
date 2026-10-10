@@ -539,7 +539,7 @@ const cmsPosts = [
 
             <div className="flex flex-col gap-2">
 
-                <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-(--text-colour)">
+                <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
                 Analytics
               </p>
 
@@ -726,7 +726,7 @@ const cmsPosts = [
 
           <div className="px-2.5 flex flex-col gap-2 py-2 border-b border-zinc-900">
 
-              <p className="lg:text-[10px] text-[8px] uppercase font-semibold chivo tracking-wider text-(--text-colour)">
+              <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
               Portfolio
             </p>
 
@@ -799,13 +799,13 @@ const cmsPosts = [
             SYSTEM STATUS
         ================================================= */}
 
-        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 p-2.5">
+        <div className="border flex flex-col gap-2 border-zinc-900 rounded-md bg-zinc-950/50 p-2.5">
 
           <div className="flex items-center justify-between mb-2">
 
             <div className="flex flex-col gap-2">
 
-              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+             <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
                 Infrastructure
               </p>
 
@@ -841,9 +841,9 @@ const cmsPosts = [
 
           <div className="flex items-center justify-between mb-2">
 
-            <div>
+           <div className="px-2.5 flex flex-col gap-2 py-2 border-b border-zinc-900">
 
-              <p className="text-[6px] uppercase chivo tracking-wider text-zinc-500">
+              <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
                 Stack
               </p>
 
