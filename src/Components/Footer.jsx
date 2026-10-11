@@ -164,26 +164,26 @@ const Footer = () => {
 
 
   return (
-    <footer className="min-h-[40vh] overflow-x-clip relative border border-t-(--text-colour)/40 bg-[#0d0e0e]">
+    <footer className="min-h-[40vh] overflow-x-clip  relative border border-t-(--text-colour)/40 bg-[#0d0e0e]">
 
       
 
-      <div className="Section_wrapper z-20">
+      <div className="Section_wrapper z-20" >
        
 
-        <div className="Grid_4  z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 gap-2 z-20">
 
           {footerLinks.map((section, index) => (
 
             <nav
               key={index}
-              className={`flex flex-col z-20 gap-2   ${index === 3 ? '' : ' '}`}
+              className={`flex flex-col z-20 lg:gap-3 gap-0   ${index === 3 ? '' : ' '}`}
             >
 
               <div className="flex items-center justify-between z-20">
 
                 <h6
-                  className={`card_heading ${
+                  className={`uppercase text-[14px] lg:text-[18px] card_heading ${
                     section.links
                       ? "cursor-pointer lg:cursor-default"
                       : ""
@@ -199,7 +199,7 @@ const Footer = () => {
   <button
     type="button"
     onClick={() => handleToggle(index)}
-    className="relative flex lg:hidden w-6 h-6 items-center justify-center"
+    className="relative flex lg:hidden w-4 h-4 items-center justify-center"
   >
     <span className="absolute w-5 h-[1.5px] bg-[#fffced]" />
 
@@ -216,22 +216,7 @@ const Footer = () => {
               </div>
 
 
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 80,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 1.99,
-                  ease: "easeInOut",
-                }}
-                className="w-full relative h-[1.5px] mb-2 mt-2 lg:hidden bg-green"
-              />
-
+          
 
               {section.links && (
                 <>
@@ -239,7 +224,7 @@ const Footer = () => {
                   {/* Desktop view: always visible */}
 
                   <motion.div
-                    className="hidden lg:flex flex-col gap-3"
+                    className="hidden lg:flex flex-col gap-2"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
@@ -290,7 +275,7 @@ const Footer = () => {
                           duration: 0.45,
                           ease: "easeInOut",
                         }}
-                        className="flex lg:hidden flex-col gap-3 overflow-hidden"
+                        className="flex lg:hidden flex-col gap-1 overflow-hidden"
                       >
 
                         {section.links.map((item, i) => (

@@ -85,8 +85,8 @@ const cmsPosts = [
           return next;
         });
         setShowNotification(true);
-      }, 9900);
-    }, 9900); 
+      }, 109900);
+    }, 10900); 
 
     return () => clearInterval(notificationCycle);
   }, []);
@@ -111,67 +111,6 @@ const cmsPosts = [
       {/* Overlay */}
       <div className="hidden z-0 top-40 right-5 size-30 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l opacity-78 from-[#0b0b0d] via-[#0b0b0d] to-(--secondary-color)/40" />
 
-       <motion.div
-        className="
-          absolute z-0 top-15 left-10
-          size-10 rounded-full
-          shadow-[15px_10px_16px_2px_rgba(99,89,133,0.2)]
-          bg-gradient-to-r
-         from-[#191933] via-[#1a1a20] to-[#b8b8b8]/40
-          opacity-88
-        "
-        animate={{
-          scale: [
-            1,        // resting
-            1.08,     // tiny inhale
-            1.32,     // heartbeat
-            1.12,     // recoil
-            1.42,     // big pop
-            1.05,     // shrink
-            1,        // rest
-      
-            1,        // DELAY
-      
-            1.18,     // second pulse
-            1.38,
-            1.08,
-            1,        // shrink
-      
-            1,        // LONG DELAY
-      
-            1.55,     // sudden balloon pop
-            1.08,
-            1,
-          ],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-          times: [
-            0,
-            0.08,
-            0.15,
-            0.20,
-            0.27,
-            0.36,
-            0.44,
-      
-            0.58,
-      
-            0.64,
-            0.70,
-            0.76,
-            0.82,
-      
-            0.91,
-      
-            0.96,
-            0.98,
-            1,
-          ],
-        }}/>
-
 
       {/* Content */}
       <div className="relative Section_wrapper z-30 w-full">
@@ -195,7 +134,7 @@ const cmsPosts = [
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-semibold text-[#b8b8b8]"
+            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-bold text-[#b8b8b8]"
           > To Reign the digital world.</motion.h1>
 
           {/* Heading */}
@@ -226,7 +165,7 @@ const cmsPosts = [
             className="flex gap-5 btn mt-6"
           >
 
-             <motion.div className=' flex btn  border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-[6px] bg-transparent hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10  py-2 items-center gap-6' >
+             <motion.div className=' flex btn  mt-6 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-gradient-to-r from-[#4a4a4a] via-(--text-color) to-[#8f9193] hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-3 items-center gap-6' >
              <div className='relative flex overflow-hidden'>
                              <h3 className='text_button text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
@@ -237,7 +176,7 @@ const cmsPosts = [
                      </div>
                      
                                  
-                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center group-hover:bg-[#fffced] bg-[#101011] size-6 p-2'>
+                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-full  justify-center group-hover:bg-[#fffced] bg-[#101011] group-hover:bg-gradient-to-r from-[#75797c] via-[#7a7e80] to-[#7a7e80] size-6 p-3'>
                                       <ArrowRight className='size-6 absolute group-hover:rotate-15  ease-in-out   transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
                                       <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-6 transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
@@ -254,52 +193,35 @@ const cmsPosts = [
          
            
 
- <div className=" rounded-2xl h-[420px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.5px] outline-[#fffced]/10 flex flex-col items-start justify-between px-6 py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8 w-full flex flex-col items-center justify-between relative overflow-hidden group bg-[#0A0A0A]">
+ <div className="bg-[#101011] rounded-2xl lg:h-[420px] h-[440px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-(--text-colour)/30 flex flex-col items-start justify-between    group bg-[#0A0A0A]">
         
-      {/* =========================================================
-          INNOVATION LAYER: Coded Live CMS Dashboard Viewport
-          (Replaces the static picture template with clean semantic markup)
-         ========================================================= */}
-   {/* =========================================================
-    INNOVATION LAYER: DIGITAL OPERATIONS TABLET
-========================================================= */}
 
-<div className="absolute inset-0 w-full h-full z-0 rounded-[22px] flex  select-none overflow-hidden pt-6">
+<div className=" w-full h-full z-0 border border-(--text-color)/30 rounded-[2px] flex  select-none overflow-hidden pt-6">
 
   {/* =====================================================
       TABLET SIDEBAR
   ===================================================== */}
 
-  <div className="lg:w-[150px] w-[80px] h-full border-r border-r-(--text-colour)/15 border-r-[0.2px] flex flex-col lg:p-3 p-2 gap-2 text-[10px]">
+  <div className="lg:w-[150px] bg-[#101011] w-[80px] h-full border-r border-r-(--text-color)/35 border-r-[0.2px] flex flex-col lg:p-3 p-2 gap-2 ">
 
     {/* Identity */}
 
-  <div className="flex items-center gap-1 text-[#fffced] font-medium px-1 py-1 rounded bg-zinc-900/60">
-        <Web fill="#978F66" size={18} />
-
-        <h4 className="chivo text-[10px]">
-          Dannie.com
-        </h4>
+      <div className="flex-center gap-2 text-[#fffced] font-medium px-2 py-1 mb-2 rounded bg-(--secondary-color)">
+        <Web className="hidden lg:flex"  fill="#fffced" size={18} />
+        <h4 className="chivo uppercase text-[10px]"> Dannie.com </h4>
       </div>
 
 
     {/* Navigation */}
 
-    <div className="flex flex-col gap-1.5 opacity-80 pl-0.5">
-
-      <div className="flex items-center justify-between pl-2 text-(--text-color)">
-        <h2 className="text-(--text-colour) font-semibold lg:text-[10px] text-[8px] uppercase chivo tracking-wider mb-0.5">
-          Workspace
-        </h2>
-      </div>
-
+    <div className="flex flex-col gap-2  pl-0.5">
 
       {/* Overview */}
 
       <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-(--text-color)/60">
         <Energy className="hidden lg:flex"  fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px]">
+        <h4 className="chivo text-[10px] text-[#fffced]">
           Overview
         </h4>
       </div>
@@ -310,7 +232,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <Web className="hidden lg:flex"  fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px]">
+          <h4 className="chivo text-[10px] text-[#7a7e80]">
           Projects
         </h4>
       </div>
@@ -321,7 +243,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ThreeStars className="hidden lg:flex" color="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px]">
+          <h4 className="chivo text-[10px] text-[#7a7e80]">
           Analytics
         </h4>
       </div>
@@ -332,7 +254,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <Telecom className="hidden lg:flex"  fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px]">
+        <h4 className="chivo text-[10px] text-[#7a7e80]">
           Network
         </h4>
       </div>
@@ -343,7 +265,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px]">
+          <h4 className="chivo text-[10px] text-[#7a7e80]">
           Services
         </h4>
       </div>
@@ -353,7 +275,7 @@ const cmsPosts = [
 
     {/* Technology block */}
 
-    <div className="mt-auto border-t border-zinc-900/70 pt-3">
+    <div className="mt-auto border-t border-(--text-color) pt-3">
 
       <h2 className="text-[8px] uppercase chivo tracking-wider text-zinc-500 mb-2">
         Technology
@@ -361,15 +283,15 @@ const cmsPosts = [
 
       <div className="flex flex-wrap gap-1">
 
-        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+        <span className="px-1.5 py-1 chivo rounded bg-zinc-900 text-[7px] text-zinc-400">
           WEB
         </span>
 
-        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+        <span className="px-1.5 py-1 chivo rounded bg-zinc-900 text-[7px] text-zinc-400">
           DATA
         </span>
 
-        <span className="px-1.5 py-1 rounded bg-zinc-900 text-[7px] text-zinc-400">
+        <span className="px-1.5 py-1 chivo rounded bg-zinc-900 text-[7px] text-zinc-400">
           NETWORK
         </span>
 
@@ -384,7 +306,7 @@ const cmsPosts = [
       MAIN DASHBOARD
   ===================================================== */}
 
-  <div className="flex-1 h-full bg-[#0A0A0A] flex flex-col relative">
+  <div className="flex-1 h-full bg-[#101011] flex flex-col relative">
 
 
     {/* ===================================================
@@ -393,9 +315,9 @@ const cmsPosts = [
 
     <div className="w-full px-3 py-2 border-b border-zinc-900/80 flex items-center justify-between z-10">
 
-      <div>
+      <div className="card_space gap-2">
 
-        <p className="lg:text-[10px] text-[8px] uppercase chivo tracking-[0.18em] text-[#fffced]">
+        <p className="lg:text-[10px] text-[8px] uppercase font-bold chivo tracking-[0.18em] text-[#fffced]">
           Workspace
         </p>
 
@@ -410,7 +332,7 @@ const cmsPosts = [
 
         <span className="size-1.5 rounded-full bg-[#978F66] animate-pulse" />
 
-        <span className="lg:text-[7px] text-[6px] uppercase chivo text-zinc-500">
+        <span className="lg:text-[7px] text-[6px] uppercase chivo text-[#fffced]">
           Online
         </span>
 
@@ -440,7 +362,7 @@ const cmsPosts = [
             "-128px",
             "-138px",
             "-248px",
-             "-300px",
+             "-360px",
             "0px",
           ],
         }}
@@ -539,11 +461,11 @@ const cmsPosts = [
 
             <div className="flex flex-col gap-2">
 
-                <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
+                <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
                 Analytics
               </p>
 
-              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
+              <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
                 Project Activity
               </p>
 
@@ -726,11 +648,11 @@ const cmsPosts = [
 
           <div className="px-2.5 flex flex-col gap-2 py-2 border-b border-zinc-900">
 
-              <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
+              <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
               Portfolio
             </p>
 
-           <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
+             <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
               Active Projects
             </p>
 
@@ -740,9 +662,10 @@ const cmsPosts = [
           <div className="flex flex-col">
 
             {[
-              ["MwAPATA Website Redesign", "92%"],
-              ["Livestock Health Tracker", "84%"],
-              ["Digital Cashbox", "76%"],
+              ["MwAPATA website redesign", "92%"],
+              ["Livestock health tracker", "84%"],
+              ["Digital cashbox", "76%"],
+               ["Network Installation", "84%"],
             ].map(([project, progress], index) => (
 
               <div
@@ -762,7 +685,7 @@ const cmsPosts = [
                       }`}
                     />
 
-                    <span className="truncate text-[11px] chivo text-zinc-300">
+                    <span className="truncate text-[10px] zalando text-[#7a7e80]">
                       {project}
                     </span>
 
@@ -805,11 +728,11 @@ const cmsPosts = [
 
             <div className="flex flex-col gap-2">
 
-             <p className="lg:text-[10px] text-[6px] uppercase font-bold chivo tracking-wider text-(--text-color)">
+             <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
                 Infrastructure
               </p>
 
-              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
+                  <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
                 System Status
               </p>
 
@@ -847,7 +770,7 @@ const cmsPosts = [
                 Stack
               </p>
 
-              <p className="lg:text-[12px] text-[10px] geonova font-semibold text-[#fffced]">
+               <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
                 Technology
               </p>
 
@@ -893,9 +816,6 @@ const cmsPosts = [
     {/* ===================================================
         AMBIENT LIGHTING
     =================================================== */}
-
-    <div className="absolute inset-0 bg-gradient-to-t from-(--secondary-color)/20 via-transparent to-transparent pointer-events-none z-10" />
-
   </div>
 
 </div>
@@ -917,18 +837,18 @@ const cmsPosts = [
               key={quoteIndex}
               initial={{ opacity: 0, y: -50, scale: 0.93 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              exit={{ opacity: 0, y: 20, scale: 0.5 }}
               transition={{ 
                 type: "spring", 
                 stiffness: 120, 
                 damping: 14 
               }}
-              className="w-full px-3 py-2 rounded-sm bg-(--text-color)/15 backdrop-blur-md border border-[#fffced]/15 shadow-[0_8px_24px_rgba(0,0,0,0.6)] flex items-start gap-2"
+              className="w-full px-3 py-2 rounded-sm bg-(--text-color)/45 backdrop-blur-lg border border-[#fffced]/10 shadow-[0_8px_24px_rgba(0,0,0,0.6)] flex items-start gap-2"
             >
-              <div className="mt-[2px] w-2 h-2 rounded-full bg-[#978F66] flex-shrink-0 animate-pulse" />
-              <div className="flex flex-col gap-[1px]">
-                <h4 className="text-[12px] uppercase  text-(--secondary-color)  font-bold">System Core</h4>
-                <p className="text-[10px] text-[#fffced] font-sans leading-tight">
+              <div className="mt-[2px] w-2 h-2 rounded-full bg-(--secondary-color) flex-shrink-0 animate-pulse" />
+              <div className="flex flex-col gap-2">
+                <h4 className="text-[12px] uppercase geonova text-[#fffced]  font-bold">System Core</h4>
+                <p className="text-[10px] text-[#fffced] leading-tight">
                   {innovationQuotes[quoteIndex]}
                 </p>
               </div>

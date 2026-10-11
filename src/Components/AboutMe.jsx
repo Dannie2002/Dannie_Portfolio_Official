@@ -9,6 +9,7 @@ import Energy from '../SVGS/Energy.jsx';
 import ContactPlane from '../SVGS/ContactPlane.jsx'
 import ThreeStars from '../SVGS/ThreeStars.jsx';
 import Telecom from "../SVGS/Telecom.jsx"
+import noise from "../assets/Noise.png"
 
 
 
@@ -35,13 +36,19 @@ const words =[
 
   return (
     <section className="h-min-screen relative bg-(--background-color)">
+      <MoonBalls />
+        <img
+              src={noise}
+              alt=""
+              className="absolute z-0 inset-0 h-full w-full object-cover opacity-20 mix-blend-overlay"
+            />
 
 
         <div className='Section_wrapper'>
 
-          <div className="section_header">
-                <motion.h1   className="page_title text-[#201f1f] font-semibold"> About Me </motion.h1>
-                <h3 className="Section_title text-[#201f1f]"> Defined by credibility, <br /> I define creativity.<span className='text-(--primary-color)'> </span> </h3>
+          <div className="section_header relative z-10">
+                <motion.h1   className="page_title font-semibold flex gap-1"> <span><Energy fill="#909090" size={20} /></span>About Me </motion.h1>
+                <h3 className="Section_title z-20"> Defined by credibility, <br /> I define <span className='text_gradient'>creativity. </span> </h3>
 
          
           
@@ -54,9 +61,9 @@ const words =[
 
       <div className='lg:w-1/2'>
           <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
-            <div>
-                    <h4 className="card_heading text-(--primary-color) chivo uppercase">I believe in <span className='slide'>
-                          <span className='wrapper'>
+            <div className="card_space">
+                    <h4 className="card_heading text-[#909090] chivo uppercase">I believe in <span className='slide'>
+                          <span className='wrapper text-[#fffced]'>
                             {words.map((word) => (
                            <span key={word.text}>
                             <span>{word.text}</span>
@@ -67,16 +74,16 @@ const words =[
                  
                       </span>
                     </h4>
-            <motion.p className="text_para text-[#101011] mt-3 font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients.</motion.p>
+            <motion.p className="text_para mt-3 font-normal " >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients.</motion.p>
             </div>
            
 
-                 <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex '>
-                  <Web fill="#101111" size={33} />
-                  <Energy fill="#101111" size={30} />
-                  <Telecom fill="#101111" size={33} />
-                  <ContactPlane fill="#101111" size={30} />
-                  <ThreeStars color="#101111" size={33} />
+                 <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-(--secondary-color) items-center rounded-full px-6 flex '>
+                  <Web fill="#635985" size={33} />
+                  <Energy fill="#635985" size={30} />
+                  <Telecom fill="#635985" size={33} />
+                  <ContactPlane fill="#635985" size={30} />
+                  <ThreeStars color="#635985" size={33} />
                   
                 </div> 
           </div>
@@ -84,15 +91,15 @@ const words =[
         </div>
 
         <div className='w-full lg:w-1/4'>
-          <div className="relative outline-12 outline-(--primary-color) h-80 lg:w-60 w-full [perspective:1000px]">
+          <div className="relative outline-6 outline-(--text-color) h-90 lg:w-80 w-full [perspective:1000px]">
           <img src={work} className='size-full grayscale object-cover' />            
         </div>
 
         </div>
 
-        <div className='w-full flex lg:items-start items-center justify-center lg:w-1/4 lg:ml-16'>
-          <div className="relative outline  outline-[#4A4A4A] outline-20 lg:outline-90 lg:mt-22  rounded-full bg-transparent size-10 lg:h-30 lg:w-30 [perspective:1000px]"></div>
-
+        <div className='w-full flex Grid_4 lg:items-center items-center justify-center lg:w-1/4 '>
+          <div className="relative outline  outline-[#909090] outline-20 lg:outline-3  rounded-[22px] bg-transparent h-[360px] w-full [perspective:1000px]"></div>
+           <div className="relative outline  outline-[#909090] outline-20 lg:outline-3  rounded-[22px] bg-transparent h-[360px] w-full [perspective:1000px]"></div>
         </div>
 
 

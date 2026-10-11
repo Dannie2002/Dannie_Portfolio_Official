@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import banner from "../assets/Good.jpg";
+import banner from "../assets/Connectivity.jpg";
 import SectionHeader from "./SectionHeader.jsx";
+import map from "../assets/Map.png";
 
 const Connectivity = () => {
 
@@ -87,7 +88,7 @@ const Connectivity = () => {
 
   return (
 
-    <section className="bg-[#101011] relative w-full">
+    <section className="bg-[#0b0b0d] relative w-full">
 
       <SectionHeader
         title="Connectivity"
@@ -121,7 +122,7 @@ const Connectivity = () => {
           {/* LEFT SIDE */}
           <div className="lg:w-1/2">
 
-            <div className="relative rounded-full  flex flex-col items-start justify-between">
+            <div className="relative  flex flex-col items-start justify-between">
 
                 <h3 className="Section_title text-[#fffced]">
                   Connecting people to the{" "}
@@ -137,7 +138,7 @@ const Connectivity = () => {
                   Internet & Connectivity
                 </h4>
 
-                <motion.p className="text_para mt-4 text-[#fffced] font-normal max-w-sm">
+                <motion.p className="text_para mt-4 text-[#fffced] font-normal ">
                   Supporting the technologies and services that keep
                   customers connected, from wireless and fiber networks
                   to the provisioning of internet services.
@@ -145,7 +146,8 @@ const Connectivity = () => {
 
               </div>
 
-              <div className="bg-transparent py-2 gap-2 outline-[1.2px] outline-[#101111] items-center rounded-full px-6 flex">
+              <div className="size-[350px] mt-12">
+                <img src={map}  className="size-full object-cover " alt="" />
               </div>
 
             </div>
