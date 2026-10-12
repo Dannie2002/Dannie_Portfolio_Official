@@ -209,7 +209,7 @@ const ProjectDetails = () => {
 
   if (!project) {
     return (
-      <section className="min-h-screen bg-[#101011] text-[#fffced] flex items-center justify-center px-6">
+      <section className="min-h-screen bg-(--background-color) text-[#fffced] flex items-center justify-center px-6">
 
         <div className="text-center">
 
@@ -250,7 +250,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <main className="bg-[#101011] min-h-screen text-[#fffced]">
+    <section className="bg-(--background-color) min-h-screen ">
 
       {/* =========================================
           PROJECT HEADER
@@ -278,11 +278,11 @@ const ProjectDetails = () => {
           PROJECT INTRODUCTION
       ========================================== */}
 
-      <section className="Section_wrapper">
+      <div className="Section_wrapper">
 
-        <div className="pt-16 lg:pt-24">
+        
 
-          <div className="flex_container gap-12 lg:gap-20 items-start">
+          <div className=" flex_container gap-12 lg:gap-20 items-start">
 
             {/* ---------------------------------
                 LEFT
@@ -292,7 +292,7 @@ const ProjectDetails = () => {
 
 
 
-<div className="lg:w-[60%] lg:sticky lg:top-25 w-full">
+      <div className="lg:w-[60%] lg:sticky lg:top-25 w-full">
         <motion.div
               initial={{
                 opacity: 0,
@@ -306,28 +306,14 @@ const ProjectDetails = () => {
                 duration: 0.8,
                 ease: [0.22, 1, 0.36, 1],
               }}
+              className="section_header mt-0"
             >
 
-              <p className="page_title">
-                {project.category} · {project.year}
-              </p>
+              <p className="page_title"> {project.category} · {project.year}  </p>
 
-              <h1 className="
-                Section_title
-              ">
-                {project.title}
-              </h1>
+              <h1 className=" Section_title ">{project.title}</h1>
 
-              <p className="
-                mt-7
-                max-w-2xl
-                text-[16px]
-                lg:text-[18px]
-                leading-relaxed
-                text-[#fffced]/65
-              ">
-                {project.shortDescription}
-              </p>
+              <p className="mt-7 max-w-2xl text-[16px] lg:text-[18px] leading-relaxed text-[#fffced]/65"> {project.shortDescription}</p>
 
             </motion.div>
 
@@ -345,35 +331,23 @@ const ProjectDetails = () => {
                 delay: 0.15,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="
-                border-t
-                border-[#fffced]/15
-                pt-5
-                mt-12
-                
-              "
-            >
+              className=" border-t border-[#909090]/15 pt-5 mt-12">
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-3 gap-6">
 
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#fffced]/40">
-                    Category
-                  </p>
-
-                  <p className="mt-2 text-sm text-[#fffced]">
-                    {project.category}
-                  </p>
+                   <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">  Category </p>
+                   <p className="mt-2 text-sm text-[#fffced]"> {project.category} </p>
                 </div>
 
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-[#fffced]/40">
-                    Year
-                  </p>
+                   <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Year </p>
+                  <p className="mt-2 text-sm text-[#fffced]">{project.year} </p>
+                </div>
 
-                  <p className="mt-2 text-sm text-[#fffced]">
-                    {project.year}
-                  </p>
+                <div>
+                   <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Sector </p>
+                   <p className="mt-2 text-sm text-[#fffced]">{project.client} </p>
                 </div>
 
               </div>
@@ -411,7 +385,6 @@ const ProjectDetails = () => {
               </div>
 
             </motion.div>
-
 </div>
       
 
@@ -419,52 +392,45 @@ const ProjectDetails = () => {
                 RIGHT — PROJECT META
             ---------------------------------- */}
 
-             <div className="
-    w-full
-    lg:w-1/2
-    flex
-    flex-col
-    gap-6
-  
-        ">
+             <div className="w-full lg:w-1/2 flex flex-col gap-6">
 
        <div className="card_space">
  
-   <div>
-  {/* 1. Tag showing the overview text */}
+          <div>
+          {/* 1. Tag showing the overview text */}
 
 
-  {/* 2. Structured Content */}
-  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
-    01
-  </p>
+          {/* 2. Structured Content */}
+          <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
+            01
+          </p>
 
-  <h2 className="mt-3 card_heading">
-    Overview
-  </h2>
-  
-  <p className="text_para">
-    {project.overview}
-  </p>
-</div>
+          <h2 className="mt-3 card_heading">
+            Overview
+          </h2>
+          
+          <p className="text_para">
+            {project.overview}
+          </p>
+          </div>
 
-   <div>
-  {/* 1. Tag showing the overview text */}
+            <div>
+            {/* 1. Tag showing the overview text */}
 
 
-  {/* 2. Structured Content */}
-  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
-    02
-  </p>
+            {/* 2. Structured Content */}
+            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
+              02
+            </p>
 
-  <h2 className="mt-3 card_heading">
-    Challenge
-  </h2>
-  
-  <p className="text_para">
-    {project.challenge}
-  </p>
-</div>
+            <h2 className="mt-3 card_heading">
+              Challenge
+            </h2>
+            
+            <p className="text_para">
+              {project.challenge}
+            </p>
+            </div>
 
   <div>
   {/* 1. Tag showing the overview text */}
@@ -494,15 +460,13 @@ const ProjectDetails = () => {
         </div>
           </div>
 
-        </div>
+      
 
-      </section>
+      </div>
 
-      {/* =========================================
-          HERO PROJECT IMAGE
-      ========================================== */}
+    {/*HERO PROJECT IMAGE */}
 
-      <section className="Section_wrapper">
+      <div className="Section_wrapper">
 
         <motion.div
           initial={{
@@ -549,7 +513,7 @@ const ProjectDetails = () => {
 
         </motion.div>
 
-      </section>
+      </div>
 
 
 
@@ -557,7 +521,7 @@ const ProjectDetails = () => {
           PROJECT GALLERY
       ========================================== */}
 
-      <section className="Section_wrapper">
+      <div className="hidden Section_wrapper">
 
         <div className="py-20 lg:py-32">
 
@@ -630,119 +594,16 @@ const ProjectDetails = () => {
 
         </div>
 
-      </section>
-
-      {/* =========================================
-          CONTRIBUTION
-      ========================================== */}
+      </div>
 
 
-      {/* =========================================
-          PROJECT LINKS
-      ========================================== */}
+   {/* ===== PROJECT LINKS== */}
 
-      <section className="Section_wrapper">
+      {/*  PROJECT NAVIGATION */}
 
-        <div className="
-          flex
-          flex-col
-          sm:flex-row
-          gap-4
-          py-12
-          border-t
-          border-[#fffced]/10
-        ">
+      <div className="Section_wrapper">
 
-          {project.liveUrl && project.liveUrl !== "#" && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                group
-                inline-flex
-                items-center
-                justify-center
-                gap-2
-                rounded-full
-                bg-[#fffced]
-                px-6
-                py-3
-                text-sm
-                font-semibold
-                text-[#101011]
-                transition-all
-                duration-300
-                hover:scale-[1.02]
-              "
-            >
-
-              Visit Live Project
-
-              <ArrowUpRight
-                size={17}
-                className="
-                  transition-transform
-                  duration-300
-                  group-hover:translate-x-1
-                  group-hover:-translate-y-1
-                "
-              />
-
-            </a>
-          )}
-
-          {project.githubUrl && project.githubUrl !== "#" && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                inline-flex
-                items-center
-                justify-center
-                gap-2
-                rounded-full
-                border
-                border-[#fffced]/15
-                px-6
-                py-3
-                text-sm
-                text-[#fffced]
-                transition-all
-                duration-300
-                hover:bg-[#fffced]/5
-              "
-            >
-
-              <ArrowUpRight size={17} />
-
-              View Source
-
-              <ExternalLink size={15} />
-
-            </a>
-          )}
-
-        </div>
-
-      </section>
-
-      {/* =========================================
-          PROJECT NAVIGATION
-      ========================================== */}
-
-      <section className="Section_wrapper">
-
-        <div className="
-          grid
-          grid-cols-2
-          gap-4
-          border-t
-          border-[#fffced]/10
-          py-12
-          lg:py-20
-        ">
+        <div className="grid grid-cols-2  gap-4 border-t  border-[#fffced]/10 py-12 lg:py-20 ">
 
           <div>
 
@@ -794,9 +655,9 @@ const ProjectDetails = () => {
 
         </div>
 
-      </section>
+      </div>
 
-    </main>
+    </section>
   );
 };
 

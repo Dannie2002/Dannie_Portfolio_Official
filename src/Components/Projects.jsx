@@ -298,7 +298,7 @@ const productCards = [
   /* Render */
 
   return (
-    <section id="my-projects" className="relative w-full min-h-screen overflow-hidden bg-[#101011] py-6">
+    <section id="my-projects" className="relative w-full min-h-screen overflow-hidden bg-(--background-color) py-6">
       {/* Section Heading */}
 
       <div className="Section_wrapper">

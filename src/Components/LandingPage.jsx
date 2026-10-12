@@ -93,7 +93,7 @@ const cmsPosts = [
 
   
   return (
-    <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-[#0b0b0d] flex items-center">
+    <section className="min-h-screen overflow-hidden lg:h-[95vh] w-full relative bg-(--background-color) flex items-center">
 
       
 
@@ -165,7 +165,7 @@ const cmsPosts = [
             className="flex gap-5 btn mt-6"
           >
 
-             <motion.div className=' flex btn  mt-6 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-gradient-to-r from-[#4a4a4a] via-(--text-color) to-[#8f9193] hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-3 items-center gap-6' >
+             <motion.div className=' flex btn  mt-6 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-gradient-to-r from-[#909090] via-[#909090] to-[#8f9193] hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-3 items-center gap-6' >
              <div className='relative flex overflow-hidden'>
                              <h3 className='text_button text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
@@ -264,10 +264,11 @@ const cmsPosts = [
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
-
-          <h4 className="chivo text-[10px] text-[#7a7e80]">
-          Services
-        </h4>
+        <h4 className="chivo text-[10px] text-[#7a7e80]">Services</h4>
+      </div>
+       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
+        <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
+        <h4 className="chivo text-[10px] text-[#7a7e80]">Tools</h4>
       </div>
 
     </div>
@@ -363,6 +364,7 @@ const cmsPosts = [
             "-138px",
             "-248px",
              "-360px",
+             "-410px",
             "0px",
           ],
         }}

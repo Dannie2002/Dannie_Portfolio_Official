@@ -47,7 +47,7 @@ const words =[
         <div className='Section_wrapper'>
 
           <div className="section_header relative z-10">
-                <motion.h1   className="page_title font-semibold flex gap-1"> <span><Energy fill="#909090" size={20} /></span>About Me </motion.h1>
+                <motion.h1   className="page_title font-semibold flex items-center justify-centergap-1"> <span><Energy fill="#909090" size={20} /></span>About Me </motion.h1>
                 <h3 className="Section_title z-20"> Defined by credibility, <br /> I define <span className='text_gradient'>creativity. </span> </h3>
 
          
@@ -74,7 +74,7 @@ const words =[
                  
                       </span>
                     </h4>
-            <motion.p className="text_para mt-3 font-normal " >I design modern digital products that dont just look great but bring meaningful results. Exposed to cutting-edge technologies in telecommunications. Engage in professional communication to local and international clients.</motion.p>
+            <motion.p className="text_para mt-3 font-normal " >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
             </div>
            
 
