@@ -161,7 +161,7 @@ const productCards = [
 
 
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper ">
 
               <div ref={svgRef}  className="section_header">
                                <motion.h1  className="page_title"  > Client Relationship Management </motion.h1>

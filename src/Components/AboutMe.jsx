@@ -60,7 +60,7 @@ const words =[
       <div className='flex_container'>
 
       <div className='lg:w-1/2'>
-          <div className="relative  rounded-full h-80 flex flex-col items-start justify-between">
+          <div className="relative  rounded-full h-[360px] flex flex-col items-start justify-between">
             <div className="card_space">
                     <h4 className="card_heading text-[#909090] chivo uppercase">I believe in <span className='slide'>
                           <span className='wrapper text-[#fffced]'>
@@ -74,7 +74,7 @@ const words =[
                  
                       </span>
                     </h4>
-            <motion.p className="text_para mt-3 font-normal " >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
+            <motion.p className="text_para  font-normal " >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
             </div>
            
 

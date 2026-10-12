@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import banner from "../assets/Connectivity.jpg";
 import SectionHeader from "./SectionHeader.jsx";
-import map from "../assets/Map.png";
+import map from "../assets/MAP.png";
 
 const Connectivity = () => {
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
-import branding from '../assets/ServiceDesk3.jpg'
+import branding from '../assets/ServiceDesk2.jpg'
 import noise from "../assets/Noise.png";
 import border from "../assets/12.png";
 import ThreeStars from "../SVGS/ThreeStars";
@@ -37,7 +37,7 @@ const LetsConnect = () => {
     backgroundImage: `url(${branding})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
     
   };
 
@@ -45,7 +45,7 @@ const LetsConnect = () => {
 
   return (
 
-    <section className="min-h-[90vh] bg-[#f5fafa] px-4 lg:px-12 lg:py-16 py-8 flex overflow-x-hidden" >
+    <section className="lg:min-h-[90vh] h-[70vh] bg-(--background-color) px-4 lg:px-12 lg:py-16 py-8 flex overflow-x-hidden" >
 
 
 
@@ -67,7 +67,7 @@ const LetsConnect = () => {
 
 
       <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
-         <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-98 from-(--secondary-color) via-(--secondary-color)/70 to-(--secondary-color)/45" />
+         <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-98 from-(--secondary-color) via-(--secondary-color)/99 to-(--secondary-color)/45" />
    
        
       
@@ -76,7 +76,7 @@ const LetsConnect = () => {
                 
                     <div className="flex z-10  p-6 lg:gap-6 flex-col items-center justify-center ">
                                           
-                    <h4 className="text-[#fffced] font-bold text-center text-[46px] geonova white leading-[40px]">Have an idea? Feel free to reach out.</h4>
+                    <h4 className="text-[#fffced] font-bold text-center text-[46px] geonova white leading-[46px]">Have an idea? Feel free to reach out.</h4>
 
                      <div className="flex mt-3 gap-4">
                         

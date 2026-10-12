@@ -155,7 +155,7 @@ const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
                                 I provide front-line support. From troubleshooting incidents to ensuring system reliability.
                         </motion.p>
                      
-                        <Communication color="#978F66" size={36} className=""/>
+                        <Communication color="#978F66" size={36} className="hidden lg:flex"/>
                      
                      </div>
                               
@@ -199,7 +199,6 @@ const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
           />
         ))}
       </motion.div>
-    
     </div>
 
   </div>

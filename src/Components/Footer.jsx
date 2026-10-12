@@ -183,7 +183,7 @@ const Footer = () => {
               <div className="flex items-center justify-between z-20">
 
                 <h6
-                  className={`uppercase text-[14px] lg:text-[18px] card_heading ${
+                  className={`uppercase text-[16px] lg:text-[18px] card_heading ${
                     section.links
                       ? "cursor-pointer lg:cursor-default"
                       : ""
@@ -283,7 +283,7 @@ const Footer = () => {
                           <Link
                             key={i}
                             to={item.link}
-                            className="link cursor-pointer lg:text-[16.5px] text-(--text-colour) link-hover"
+                            className="link cursor-pointer lg:text-[16.5px] text-[#909090] link-hover"
                           >
                             {item.label}
                           </Link>
@@ -304,7 +304,7 @@ const Footer = () => {
 
               {section.socials && (
 
-                <div className="flex mt-4 lg:mt-0 gap-6">
+                <div className="flex mt-6 lg:mt-0 gap-6">
 
                   {section.socials.map((social, i) => (
 
@@ -314,7 +314,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="cursor-pointer transition-transform duration-460 ease-in-out hover:-translate-y-2 hover:shadow-[4px_8px_12px_rgba(221,115,10,0.6)] rounded-[4px] bg-(--primary-color) p-3 text-green hover:bg-green"
+                      className="cursor-pointer transition-transform duration-460 ease-in-out hover:-translate-y-2 hover:shadow-[4px_8px_12px_rgba(221,115,10,0.6)] rounded-[4px] bg-(--primary-color) p-1.5 text-green hover:bg-green"
                     >
                       {social.icon}
                     </a>
@@ -340,9 +340,9 @@ const Footer = () => {
 
 
 <div className="flex gap-4">
- <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50">Privacy Policy </p>
+ <p className="white text-[12px] text-[#909090] lg:text-[14px] z-50">Privacy Policy </p>
 
-        <p className="white text-[12px] text-(--primary-color) lg:text-[14px] z-50"> ©2026 All rights reserved.</p>
+        <p className="white text-[12px] text-[#909090] lg:text-[14px] z-50"> ©2026 All rights reserved.</p>
 </div>
        
 
