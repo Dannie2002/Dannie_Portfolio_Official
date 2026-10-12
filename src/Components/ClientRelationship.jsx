@@ -114,7 +114,7 @@ const productCards = [
       variants={itemVariants}
     className={`moving-border-card group relative  overflow-hidden  
     card_transparent
-    ${index === 1 ? '' : ''}`}>
+    ${index === 0 ? 'bg-(--secondary-color)' : ''}`}>
 
     <div className="card_space" >
       <motion.svg
@@ -136,7 +136,7 @@ const productCards = [
          <h4  className=" card_heading"> {title} </h4>
           
       </div>
-  <p className="text-[#fffced]">{paragraph}</p> 
+  <p className="text-[#90909f]">{paragraph}</p> 
     
 
     
@@ -180,7 +180,7 @@ const productCards = [
                                                               As a service desk engineer, i have developed the skills to manage multiple stakeholders, prioritize tasks, and deliver quality results within tight deadlines. I engage in bridging between your business and clients.
                                                        </motion.p>
                                                     
-                                                       <CodeMerge color="#978F66" size={36}/>
+                                                       <CodeMerge className="hidden lg:flex" color="#978F66" size={36}/>
                                                     
                                                     </div>
                         </div>

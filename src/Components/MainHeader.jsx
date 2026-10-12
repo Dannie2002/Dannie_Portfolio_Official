@@ -119,7 +119,7 @@ export default function MainHeader() {
       }`}
     >
       {/* Glass Navbar */}
-      <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-22 relative z-90">
+      <div className="flex items-center justify-between px-2 py-4 md:px-12 lg:px-22 relative z-90">
 
         {/* Logo */}
 

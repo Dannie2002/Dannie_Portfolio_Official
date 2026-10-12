@@ -134,12 +134,12 @@ const ProductCard = ({ title, description }) => {
 
         <div className='flex_container mt-0'>
 
-      <div className='lg:w-1/2 flex flex-col gap-6'>
+      <div className='lg:w-1/2 card_space'>
       <h3   className="Section_title text-[#fffced]"> From the internet <span className="text_gradient">backbone</span> to the home.</h3>
           <div className="relative  rounded-full flex flex-col items-start justify-between">
             <div className="flex flex-col gap-6">      
             <h4 className="card_heading chivo text-[18px] uppercase">Gigabit Passive Optic Network (GPON)</h4>
-            <motion.p className="text_para mt-4 text-[#fffced] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results.</motion.p>
+            <motion.p className="text_para mt-4 archivo text-[#fffced] font-normal max-w-sm" >I design modern digital products that dont just look great but bring meaningful results.</motion.p>
           </div>
            
 

@@ -86,7 +86,7 @@ const NetworkOperations = () => {
 
   return (
 
-    <section className="bg-[#101011] relative w-full">
+    <section className="bg-(--background-color) relative w-full">
 
       <SectionHeader
         title="Network Operations"

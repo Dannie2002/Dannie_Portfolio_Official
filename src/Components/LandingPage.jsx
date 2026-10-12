@@ -134,7 +134,7 @@ const cmsPosts = [
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-bold text-[#b8b8b8]"
+            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-medium text-[#909090]"
           > To Reign the digital world.</motion.h1>
 
           {/* Heading */}
@@ -165,9 +165,9 @@ const cmsPosts = [
             className="flex gap-5 btn mt-6"
           >
 
-             <motion.div className=' flex btn  mt-6 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-gradient-to-r from-[#909090] via-[#909090] to-[#8f9193] hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-2.5 items-center gap-6' >
+             <motion.div className=' flex btn  mt-8 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-(--secondary-color) hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-2.5 items-center gap-6' >
              <div className='relative flex overflow-hidden'>
-                             <h3 className='text_button chivo !text-[18px] text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
+                             <h3 className='text_button  !text-[18px] text-[#fffced]! group-hover:translate-y-6 ease-in transition-transform duration-490 out'>
                           View works
                         </h3>
                           <h3 className='text_button absolute text-[#fffced]! group-hover:translate-y-0 -translate-y-4 group-hover:opacity-100 opacity-0 ease-out transition-transform duration-590 out'>

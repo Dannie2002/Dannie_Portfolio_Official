@@ -311,7 +311,7 @@ body:has(.btn:hover) .pointer {
   }
 
   .card_transparent{
-    @apply hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] shadow-[0_6px_12px_rgba(189,166,206,0.2)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/30 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[260px]  bg-(--text-color)/8;
+    @apply hover:rotate-5 gap-6 hover:shadow-[6px_12px_22px_rgba(189,166,206,0.3)] shadow-[0_6px_12px_rgba(189,166,206,0.2)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-[#fffced]/30 flex flex-col items-start justify-between px-6  py-8 lg:min-h-[390px] min-h-[330px]  bg-(--text-color)/8;
   }
 
   .text_label{
@@ -367,7 +367,7 @@ body:has(.btn:hover) .pointer {
 }
 .card_heading{
   font-family: var(--font-chivo);
-  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[20px] text-[#fffced] mb-2 lg:mb-2;
+  @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[24px] lg:leading-[25.5px] text-[#fffced] mb-2 lg:mb-2;
 }
 
 .bigcard_heading{

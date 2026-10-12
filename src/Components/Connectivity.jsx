@@ -101,7 +101,7 @@ const Connectivity = () => {
         ]}
       />
 
-      <div className="Section_wrapper mt-12 !py-0">
+      <div className="Section_wrapper ">
 
         <div className="section_header">
 
@@ -112,17 +112,17 @@ const Connectivity = () => {
 
         </div>
 
-      </div>
+    
 
 
-      <div className="Section_wrapper">
+      
 
-        <div className="flex_container">
+        <div className="flex_container ">
 
           {/* LEFT SIDE */}
           <div className="lg:w-1/2">
 
-            <div className="relative  flex flex-col items-start justify-between">
+            <div className="relative card_space">
 
                 <h3 className="Section_title text-[#fffced]">
                   Connecting people to the{" "}
@@ -180,8 +180,8 @@ const Connectivity = () => {
 
         </div>
 
-      </div>
-
+     
+  </div>
     </section>
   );
 };
