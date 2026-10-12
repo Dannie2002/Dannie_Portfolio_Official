@@ -113,7 +113,7 @@ const productCards = [
       <motion.div
       variants={itemVariants}
     className={`moving-border-card group relative  overflow-hidden  
-    shadow-[3px_6px_28px_rgba(255,255,255,0.1)]  flex rounded-[8px] gap-6 outline-[0.5px] outline-[#fffced]/20  flex-col  items-start   justify-start   px-6   py-8
+    card_transparent
     ${index === 1 ? '' : ''}`}>
 
     <div className="card_space" >
@@ -149,7 +149,7 @@ const productCards = [
   return (
 
 
-    <section className="bg-[#101011] relative  w-full">
+    <section className="bg-(--background-color) relative  w-full">
         <SectionHeader
           title="Client Relationship Management"
           bgImage={client}
@@ -177,7 +177,7 @@ const productCards = [
                                                                   max-w-2xl
                                                                 "
                                                               >
-                                                              Clients are the biggest part of the businesses. I engage in bridging between your business and clients.
+                                                              As a service desk engineer, i have developed the skills to manage multiple stakeholders, prioritize tasks, and deliver quality results within tight deadlines. I engage in bridging between your business and clients.
                                                        </motion.p>
                                                     
                                                        <CodeMerge color="#978F66" size={36}/>
@@ -195,7 +195,7 @@ const productCards = [
 
       {/* CONTENT */}
     <div className="w-full  lg:w-[55%] flex flex-col gap-8">
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
        {productCards.map((card, index) => (
   <ProductCard
     key={index}

@@ -335,17 +335,17 @@ const ProjectDetails = () => {
 
               <div className="grid grid-cols-3 gap-6">
 
-                <div>
+                <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">  Category </p>
                    <p className="mt-2 text-sm text-[#fffced]"> {project.category} </p>
                 </div>
 
-                <div>
+              <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Year </p>
                   <p className="mt-2 text-sm text-[#fffced]">{project.year} </p>
                 </div>
 
-                <div>
+               <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Sector </p>
                    <p className="mt-2 text-sm text-[#fffced]">{project.client} </p>
                 </div>
@@ -354,9 +354,9 @@ const ProjectDetails = () => {
 
               {/* Technologies */}
 
-              <div className="mt-8">
+              <div className="mt-12">
 
-                <p className="text-xs uppercase tracking-widest text-[#fffced]/40">
+                <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
                   Technologies
                 </p>
 
@@ -379,6 +379,22 @@ const ProjectDetails = () => {
                       {technology}
                     </span>
                   ))}
+
+                </div>
+
+              </div>
+
+                <div className="mt-8">
+
+       
+
+                <div className="flex  mt-4">
+
+                
+                    <span className="  border  border-[#fffced]/10  bg-[#fffced]/5  px-6  py-2 text-button text-[#fffced]/70 ">
+                      Visit the project
+                    </span>
+               
 
                 </div>
 

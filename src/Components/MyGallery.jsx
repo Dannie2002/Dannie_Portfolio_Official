@@ -157,7 +157,7 @@ const MyGallery = () => {
   ];
 
   return (
-    <section className="bg-[#101011] min-h-screen flex flex-col relative w-full overflow-hidden">
+    <section className="bg-(--background-color) min-h-screen flex flex-col relative w-full overflow-hidden">
       <MoonBalls />
 
       {/* --------------------------------
@@ -182,7 +182,7 @@ const MyGallery = () => {
         <div className="section_header">
 
           <motion.h1
-            className="page_title autoShow ]"
+            className="page_title autoShow text-[#909090] ]"
           >
             Welcome to Dannie's Gallery
           </motion.h1>

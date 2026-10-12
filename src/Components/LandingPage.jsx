@@ -457,9 +457,9 @@ const cmsPosts = [
             ANALYTICS
         ================================================= */}
 
-        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 overflow-hidden">
+        <div className="border border-[#909090]/20 rounded-md bg-[#101011] overflow-hidden">
 
-          <div className="px-2.5 py-2 border-b border-zinc-900 flex items-center justify-between">
+          <div className="px-3 py-2.5 border-b border-zinc-900 flex items-center justify-between">
 
             <div className="flex flex-col gap-2">
 
