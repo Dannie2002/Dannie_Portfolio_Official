@@ -36,6 +36,7 @@ const words =[
 
   return (
     <section className="h-min-screen relative bg-(--background-color)">
+        <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/80  to-(--secondary-color)/40" />
       <MoonBalls />
         <img
               src={noise}

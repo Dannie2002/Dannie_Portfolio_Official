@@ -14,6 +14,7 @@ import webbb from "../assets/Webbb.jpg";
 import banner from "../assets/OLT.jpg";
 import work from "../assets/ServiceDesk3.jpg";
 import fat from "../assets/FAT.jpg";
+import { ScrollVelocityContainer, ScrollVelocityRow } from '../Components/ScrollVelocity';
 
 const LandingPage = () => {
 
@@ -126,34 +127,85 @@ const cmsPosts = [
 
 
           {/* Scribble */}
-          <motion.div variants={itemVariants}>
+          <motion.div className="flex gap-5 items-center" variants={itemVariants}>
             <Scribble className="mb-4" 
-              size={20}
-              color="#635985"
+              size={22}
+              color="#d4dac4"
             />
-          </motion.div>
-           <motion.h1
+             <motion.h1
             variants={itemVariants}
-            className="text-[12px] hidden tracking-[3px] mb-4 uppercase chivo font-medium text-[#909090]"
-          > To Reign the digital world.</motion.h1>
+            className="text-[12px] hidden tracking-[3px] mb-4 uppercase zolando font-medium text-[#909090]"
+          > Reign.
+          </motion.h1>
+          </motion.div>
+          
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#ededed]"
+            className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#909095]"
           >          
-            building<br /> business <br />  
-            <span className="text_gradient">
-            authenticity.
-            </span>
-        
+            building
           </motion.h1>
+
+<div className=" border-t my-2 w-full  border-t-[#4a4a4a]/40">
+
+
+      
+            <motion.h1
+            variants={itemVariants}
+            className="font-heading  geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+          >          
+            business
+            </motion.h1>
+   
+
+ 
+</div>
+
+          
+           
+<div className=" border-t border-b  lg:w-86 w-full border-b-[#484a4a]/40 border-t-[#4a4a4a]/40">
+<motion.h1
+            variants={itemVariants}
+            className="font-heading mx-0  text_gradient geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+          >          
+            brands.
+          </motion.h1>
+
+   <ScrollVelocityContainer className='hidden z-90 w-full'>
+              
+    
+    <ScrollVelocityRow baseVelocity={-13} className='lg:p-0 '>
+            <div className='flex px-6 items-center justify-center gap-6 min-w-[200px]' >
+    <motion.h1
+            variants={itemVariants}
+            className="font-heading mx-0  text_gradient geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+          >          
+            brands.
+          </motion.h1>
+
+             <motion.h1
+            variants={itemVariants}
+            className="font-heading mx-0  text-[#4a4a4a] geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+          >          
+            Trust.
+          </motion.h1>
+            </div>
+        
+    </ScrollVelocityRow>
+    </ScrollVelocityContainer>
+  
+</div>
+     
+       
+        
 
 
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="pt-6 text_para max-w-lg"
+            className="pt-6 mt-12  tracking-[1.1px] text-[18px] text_para max-w-[500px]"
           >
             I design and build modern digital products<span className="">  enabling your business to grow effortlessly.</span>
            
@@ -193,7 +245,7 @@ const cmsPosts = [
          
            
 
- <div className="bg-(--background-color) rounded-2xl lg:h-[420px] h-[440px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] mt-6 lg:mt-0 outline-[0.8px] outline-(--text-colour)/30 flex flex-col items-start justify-between    group bg-[#0A0A0A]">
+ <div className="bg-(--background-color) rounded-[12px] lg:h-[420px] h-[440px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[4px] mt-6 lg:mt-0 outline-[0.8px] outline-(--text-colour)/30 flex flex-col items-start justify-between    group bg-[#0A0A0A]">
         
 
 <div className=" w-full h-full z-0 border border-(--text-color)/30 rounded-[2px] flex  select-none overflow-hidden pt-6">
@@ -221,7 +273,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-(--text-color)/60">
         <Energy className="hidden lg:flex"  fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px] text-[#fffced]">
+        <h4 className="geonova text-[10px] text-[#fffced]">
           Overview
         </h4>
       </div>
@@ -232,7 +284,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <Web className="hidden lg:flex"  fill="#978F66" size={17} />
 
-          <h4 className="chivo text-[10px] text-[#7a7e80]">
+          <h4 className="geonova text-[10px] text-[#7a7e80]">
           Projects
         </h4>
       </div>
@@ -243,7 +295,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ThreeStars className="hidden lg:flex" color="#978F66" size={17} />
 
-          <h4 className="chivo text-[10px] text-[#7a7e80]">
+          <h4 className="geonova text-[10px] text-[#7a7e80]">
           Analytics
         </h4>
       </div>
@@ -254,7 +306,7 @@ const cmsPosts = [
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <Telecom className="hidden lg:flex"  fill="#978F66" size={17} />
 
-        <h4 className="chivo text-[10px] text-[#7a7e80]">
+        <h4 className="geonova text-[10px] text-[#7a7e80]">
           Network
         </h4>
       </div>
@@ -264,11 +316,11 @@ const cmsPosts = [
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
-        <h4 className="chivo text-[10px] text-[#7a7e80]">Services</h4>
+        <h4 className="geonova text-[10px] text-[#7a7e80]">Services</h4>
       </div>
        <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
         <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
-        <h4 className="chivo text-[10px] text-[#7a7e80]">Tools</h4>
+        <h4 className="geonova text-[10px] text-[#7a7e80]">Tools</h4>
       </div>
 
     </div>
@@ -396,7 +448,7 @@ const cmsPosts = [
 
           {/* Projects */}
 
-          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+          <div className=" rounded-md bg-(--secondary-color)/70 p-2">
 
             <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Projects
@@ -415,7 +467,7 @@ const cmsPosts = [
 
           {/* Systems */}
 
-          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+          <div className=" rounded-md bg-(--text-color)/70 p-2">
 
             <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Systems
@@ -434,7 +486,7 @@ const cmsPosts = [
 
           {/* Services */}
 
-          <div className="border border-zinc-900 rounded-md bg-zinc-950/70 p-2">
+          <div className="border border-zinc-900 rounded-md bg-[#909090]/20 p-2">
 
             <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
               Services
@@ -457,7 +509,7 @@ const cmsPosts = [
             ANALYTICS
         ================================================= */}
 
-        <div className="border border-[#909090]/20 rounded-md bg-[#101011] overflow-hidden">
+        <div className="outline outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-[#101011] overflow-hidden">
 
           <div className="px-3 py-2.5 border-b border-zinc-900 flex items-center justify-between">
 
@@ -646,9 +698,9 @@ const cmsPosts = [
             ACTIVE PROJECTS
         ================================================= */}
 
-        <div className="border border-zinc-900 rounded-md bg-zinc-950/50 overflow-hidden">
+        <div className="outline mt-4 outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-(--background-color) overflow-hidden">
 
-          <div className="px-2.5 flex flex-col gap-2 py-2 border-b border-zinc-900">
+          <div className=" flex flex-col gap-2 py-2 border-b border-zinc-900">
 
               <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
               Portfolio
@@ -661,61 +713,7 @@ const cmsPosts = [
           </div>
 
 
-          <div className="flex flex-col">
-
-            {[
-              ["MwAPATA website redesign", "92%"],
-              ["Livestock health tracker", "84%"],
-              ["Digital cashbox", "76%"],
-               ["Network Installation", "84%"],
-            ].map(([project, progress], index) => (
-
-              <div
-                key={project}
-                className="px-2.5 py-2 border-b border-zinc-900/60 last:border-b-0"
-              >
-
-                <div className="flex items-center justify-between gap-2">
-
-                  <div className="flex items-center gap-1.5 min-w-0">
-
-                    <span
-                      className={`size-1.5 rounded-full ${
-                        index === 0
-                          ? "bg-(--secondary-color)"
-                          : "bg-zinc-700"
-                      }`}
-                    />
-
-                    <span className="truncate text-[10px] zalando text-[#7a7e80]">
-                      {project}
-                    </span>
-
-                  </div>
-
-                  <span className="text-[10px] text-zinc-500">
-                    {progress}
-                  </span>
-
-                </div>
-
-
-                <div className="mt-1.5 h-[2px] bg-zinc-900 rounded-full overflow-hidden">
-
-                  <div
-                    className="h-full bg-(--secondary-color)"
-                    style={{
-                      width: progress,
-                    }}
-                  />
-
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
+       <img src={banner} className="grayscale"/>
 
         </div>
 

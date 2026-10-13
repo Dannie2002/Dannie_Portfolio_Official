@@ -185,7 +185,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
     <section className="bg-[#101011] relative w-full">
 
      <img src={noise} alt=""  className="noise"/>
-     <img src={bag} alt=""  className="absolute  inset-0 z-5 h-full w-full object-cover opacity-40 mix-blend-overlay"/>
+  
       <MoonBalls />
 
             <SectionHeader

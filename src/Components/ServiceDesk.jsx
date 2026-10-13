@@ -123,10 +123,10 @@ const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
 
   return (
 
-  <section className="bg-[#101011] relative  w-full">
+  <section className="bg-[#121214] relative  w-full">
 
 
-     <img src={bag} alt=""  className="absolute  inset-0 z-0 h-full w-full object-cover opacity-40 mix-blend-overlay"/>
+
 
                        <SectionHeader
   title="Service Desk Engineering"

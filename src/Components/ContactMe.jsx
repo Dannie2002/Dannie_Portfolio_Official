@@ -499,7 +499,7 @@ const ContactMe = () => {
             onSubmit={handleSubmit}
             className="relative mt-6 lg:mt-0 border-[1.4px] backdrop-blur-md bg-[#201f1f] rounded-2xl  border-(--text-colour)/45 p-6 lg:w-1/2 w-full"
           >
-             <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l opacity-78 from-(--tertiary-color)/60 via-[#101011]/40 to-(--secondary-color)/40" />
+             <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/30  to-(--secondary-color)/40" />
 
             {/* Required by Netlify for React-rendered forms */}
             <input
