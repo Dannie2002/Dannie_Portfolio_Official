@@ -134,7 +134,7 @@ const cmsPosts = [
           </motion.div>
            <motion.h1
             variants={itemVariants}
-            className="text-[12px] tracking-[3px] mb-4 uppercase chivo font-medium text-[#909090]"
+            className="text-[12px] hidden tracking-[3px] mb-4 uppercase chivo font-medium text-[#909090]"
           > To Reign the digital world.</motion.h1>
 
           {/* Heading */}
@@ -162,7 +162,7 @@ const cmsPosts = [
           {/* Contact Button */}
           <motion.div
             variants={itemVariants}
-            className="flex gap-5 btn mt-6"
+            className="flex gap-5 w-full btn lg:mt-6 mt-8"
           >
 
              <motion.div className=' flex btn  mt-8 group lg:w-fit w-full transition-all duration-500 cursor-pointer rounded-[2px]  bg-(--secondary-color) hover:bg-[#9681e6] hover:bg-(--text-colour)/10 border-(--primary-color)/60 px-10 lg:py-2  py-2.5 items-center gap-6' >
@@ -193,7 +193,7 @@ const cmsPosts = [
          
            
 
- <div className="bg-[#101011] rounded-2xl lg:h-[420px] h-[440px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] outline-[0.8px] outline-(--text-colour)/30 flex flex-col items-start justify-between    group bg-[#0A0A0A]">
+ <div className="bg-(--background-color) rounded-2xl lg:h-[420px] h-[440px] w-full  hover:rotate-5 gap-6 shadow-[6px_12px_22px_rgba(189,166,206,0.3)] transition-transform duration-560 ease-in-out  relative overflow-hidden rounded-[14px] mt-6 lg:mt-0 outline-[0.8px] outline-(--text-colour)/30 flex flex-col items-start justify-between    group bg-[#0A0A0A]">
         
 
 <div className=" w-full h-full z-0 border border-(--text-color)/30 rounded-[2px] flex  select-none overflow-hidden pt-6">

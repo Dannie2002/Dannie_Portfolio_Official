@@ -371,7 +371,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="bg-[#101011] min-h-screen w-full">
+    <section className="bg-(--background-color) min-h-screen w-full">
       <MoonBalls />
 
       {/* Main Products Layout */}
@@ -497,8 +497,9 @@ const ContactMe = () => {
             name="contact"
             method="POST"
             onSubmit={handleSubmit}
-            className="mt-6 lg:mt-0 border-[1.4px] bg-[#201f1f] rounded-2xl backdrop-blur-[3px] z-50 border-(--text-colour)/45 p-4 lg:w-1/2 w-full"
+            className="relative mt-6 lg:mt-0 border-[1.4px] backdrop-blur-md bg-[#201f1f] rounded-2xl  border-(--text-colour)/45 p-6 lg:w-1/2 w-full"
           >
+             <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l opacity-78 from-(--tertiary-color)/60 via-[#101011]/40 to-(--secondary-color)/40" />
 
             {/* Required by Netlify for React-rendered forms */}
             <input
@@ -507,7 +508,7 @@ const ContactMe = () => {
               value="contact"
             />
 
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 z-5">
 
               {/* FIRST NAME */}
 
@@ -544,7 +545,7 @@ const ContactMe = () => {
 
               {/* LAST NAME */}
 
-              <div>
+              <div className="z-5">
 
                 <label
                   htmlFor="last-name"
@@ -577,7 +578,7 @@ const ContactMe = () => {
 
               {/* EMAIL */}
 
-              <div className="sm:col-span-2">
+              <div className="sm:col-span-2 z-5">
 
                 <label
                   htmlFor="email"
@@ -722,6 +723,7 @@ const ContactMe = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
+                className="z-5"
               >
 
                 <label

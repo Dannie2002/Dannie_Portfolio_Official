@@ -1,5 +1,6 @@
 import React from 'react'
-import {Routes, Route, Router } from "react-router";
+import {Routes, Route, Router ,useLocation} from "react-router";
+import {AnimatePresence} from "framer-motion";    
 import MainHeader from './Components/MainHeader.jsx'
 import Footer from './Components/Footer.jsx'
 import Telecommunications from './Components/Telecommunications.jsx'
@@ -26,7 +27,7 @@ import ProjectDetails from "./Components/ProjectDetails.jsx";
 
 function App() {
 
-
+const  location = useLocation();
   return (
  
     <>
@@ -36,9 +37,9 @@ function App() {
     <ProgressBar />
 
     <MainHeader />
-    
-    <Routes>
-      <Route path="/" element={<CoverPages />} />
+    <AnimatePresence mode='wait'>
+    <Routes location={location} key={location.pathname}>
+      <Route index element={<CoverPages />} />
       <Route path="/telecommunications">
 
   {/* Main Telecommunications page */}
@@ -73,6 +74,7 @@ function App() {
       <Route path='/my-gallery' element = {<MyGallery />} />
       <Route path="/projects/:slug" element={<ProjectDetails />}/>
     </Routes>
+    </AnimatePresence>
 
     
      

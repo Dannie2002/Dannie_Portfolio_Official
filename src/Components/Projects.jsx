@@ -159,12 +159,12 @@ const productCards = [
     slug
   }) => {
     return (
-      <div className="shrink-0 snap-start  w-[87%] sm:w-[62%] md:w-[48%] lg:w-[29%]">
-        <div className="relative group">
+      <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[31%]">
+        <div className="relative group ">
 
  
           <div
-            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[430px] w-full bg-(--text-color)/10  overflow-hidden
+            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[430px] w-full bg-[#909090]/10 overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
@@ -233,7 +233,7 @@ const productCards = [
     -translate-x-1/2
     -translate-y-1/2
     flex items-center justify-center
-    backdrop-blur-[2px]
+   
     opacity-0
     invisible
     scale-90
@@ -242,6 +242,7 @@ const productCards = [
     group-hover:scale-100
     transition-all
     duration-500
+    z-10
   "
 >
   <div
@@ -252,11 +253,11 @@ const productCards = [
       
       rounded-2xl
     
-      bg-gradient-to-b from-[#575770] via-[#101011] to-[#101011]
+      bg-[#909090]/40
       
     "
   >
-    <div className="relative h-[55%]  w-full overflow-hidden">
+    <div className="relative h-[55%]  w-full p-6 overflow-hidden">
       <img
         src={image}
         alt={title}
@@ -281,7 +282,8 @@ const productCards = [
         {year}
       </p>
           <Link
-            to={`/projects/${slug}`}
+            to={`/projects/${slug}`} viewTransition
+            
             className="text-[#9B8EC7] btn hover:text-[#fffced] transition-colors duration-300"
           >
             View Project

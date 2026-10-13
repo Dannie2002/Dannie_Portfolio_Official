@@ -292,7 +292,7 @@ const ProjectDetails = () => {
 
 
 
-      <div className="lg:w-[60%] lg:sticky lg:top-25 w-full">
+      <div className="lg:w-[50%] lg:sticky lg:top-25 w-full">
         <motion.div
               initial={{
                 opacity: 0,
@@ -410,9 +410,25 @@ const ProjectDetails = () => {
 
              <div className="w-full lg:w-1/2 flex flex-col gap-6">
 
-       <div className="card_space">
+
+        <div className="lg:h-[550px] w-full" >
+          <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-2xl" />
+
+        </div>
+
+        </div>
+          </div>
+
+      
+
+      </div>
+
+    {/*HERO PROJECT IMAGE */}
+
+     <div className="Section_wrapper flex flex-col items-center justify-center">
+ <div className=" card_space mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
  
-          <div>
+          <div className="card_space bg-(--text-color)/60 p-6 rounded-[22px]">
           {/* 1. Tag showing the overview text */}
 
 
@@ -430,7 +446,7 @@ const ProjectDetails = () => {
           </p>
           </div>
 
-            <div>
+            <div className="card_space">
             {/* 1. Tag showing the overview text */}
 
 
@@ -448,7 +464,7 @@ const ProjectDetails = () => {
             </p>
             </div>
 
-  <div>
+ <div className="card_space">
   {/* 1. Tag showing the overview text */}
 
 
@@ -467,20 +483,11 @@ const ProjectDetails = () => {
 </div>
 
 
-</div>
-
-     
-
-    
-
         </div>
-          </div>
+    </div>
+         
 
-      
 
-      </div>
-
-    {/*HERO PROJECT IMAGE */}
 
       <div className="Section_wrapper">
 
@@ -531,6 +538,7 @@ const ProjectDetails = () => {
 
       </div>
 
+        
 
 
       {/* =========================================

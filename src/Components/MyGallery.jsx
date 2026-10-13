@@ -22,6 +22,7 @@ import roundedrouter from "../assets/RoundRouter.jpeg"
 import SectionHeader from "./SectionHeader.jsx";
 import MoonBalls from "./MoonBalls.jsx";
 
+
 const MyGallery = () => {
   /* --------------------------------
      Animation Variants
@@ -272,7 +273,6 @@ const GalleryCard = ({ item, variants }) => {
         mb-5
         break-inside-avoid
         overflow-hidden
-       
         group
         cursor-pointer
         bg-[#201f1f]

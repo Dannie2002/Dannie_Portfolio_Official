@@ -67,7 +67,7 @@ const LetsConnect = () => {
 
 
       <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
-         <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-98 from-(--secondary-color) via-(--secondary-color)/99 to-(--secondary-color)/45" />
+         <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-100 from-(--secondary-color) via-(--secondary-color)/99 to-(--secondary-color)/45" />
    
        
       
@@ -84,12 +84,12 @@ const LetsConnect = () => {
                       </div>
                                    <div className="mt-0 flex flex-row  gap-6">
                     
-                     <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-500 cursor-pointer rounded-sm bg-(--primary-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+                     <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-200 cursor-pointer rounded-sm bg-(--background-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
                      <div className='relative flex overflow-hidden'>
-                             <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-490 out'>
+                             <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-290 out'>
                           Contact Us
                         </h3>
-                        <h3 className='text_button absolute -translate-y-4 ease-in group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-600'>
+                        <h3 className='text_button absolute -translate-y-4  group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-290'>
                           Contact Us
                         </h3>
                      </div>
