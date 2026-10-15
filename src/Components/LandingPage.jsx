@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import bag from "../assets/12.png"
 import noise from "../assets/Noise.png";
+import webd from "../assets/dESIGN-WEB.png";
 import Scribble from "../Components/Scribble.jsx";
 import Web from '../SVGS/Web.jsx';
 import Energy from '../SVGS/Energy.jsx';
@@ -420,6 +421,10 @@ const cmsPosts = [
             "-248px",
              "-360px",
              "-410px",
+             "-510px",
+              "-610px",
+             "-710px",
+             "-810px",
             "0px",
           ],
         }}
@@ -451,8 +456,8 @@ const cmsPosts = [
 
           {/* Projects */}
 
-          <div className=" rounded-md bg-(--secondary-color)/70 p-2">
-            <Web className="hidden size-12 lg:flex"  fill="#ededed" size={27} />
+          <div className=" rounded-md bg-(--secondary-color)/70 p-4">
+            <Web className="hidden size-12 lg:flex" fill="#ededed" size={27} />
 
              <p className="lg:text-[11px] text-[9px] uppercase chivo text-[#fffced]">
               Years of experience
@@ -480,7 +485,7 @@ const cmsPosts = [
    
 <div className="outline mt-4 outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-(--background-color) overflow-hidden">
 
-          <div className=" flex flex-col gap-2 py-2 border-b border-zinc-900">
+          <div className=" flex flex-col gap-2 py-3">
 
               <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
               Exposure to the industry.
@@ -492,8 +497,10 @@ const cmsPosts = [
 
           </div>
 
-
-       <img src={banner} className="grayscale"/>
+<div className="max-h-[340px] w-full mt-2">
+<img src={banner} className="grayscale h-full"/>
+</div>
+       
 
         </div>
 
@@ -516,7 +523,7 @@ const cmsPosts = [
           </div>
 
 
-       <img src={banner} className="grayscale"/>
+       <img src={webd} className=""/>
 
         </div>
 

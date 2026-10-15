@@ -15,7 +15,7 @@ import {
 
 import examples from "libphonenumber-js/examples.mobile.json";
 
-import digital from "../assets/DigitalMarketing.jpg";
+import banner from "../assets/DigitalMarketing.jpg";
 
 import photography from "../assets/WorkExp.jpg";
 
@@ -28,6 +28,7 @@ import servicedesk from "../assets/ServiceDesk.jpg";
 import ContactPlane from "../SVGS/ContactPlane.jsx";
 
 import MoonBalls from "./MoonBalls.jsx";
+
 
 const ContactMe = () => {
   /* --------------------------------
@@ -371,12 +372,24 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="bg-(--background-color) min-h-screen w-full">
+    <section className="bg-(--background-color) relative min-h-screen w-full">
       <MoonBalls />
+         <SectionHeader
+        title="Network Operations"
+        bgImage={banner}
+        breadcrumbs={[
+          { label: "Home", link: "/" },
+          { label: "/ Competencies" },
+          { label: "/ Telecommunications" },
+          { label: "/ Network Operations" }
+        ]}
+      />
+
+
 
       {/* Main Products Layout */}
-      <div className="Section_wrapper z-10">
-        <div className="section_header mt-34 z-50">
+      <div className="Section_wrapper  z-10">
+        <div className="section_header  z-50">
 
           <motion.h1 className="page_title z-50">
             Start a conversation
@@ -390,7 +403,7 @@ const ContactMe = () => {
             </span>
           </h3>
 
-          <div className="flex lg:flex-row flex-col items-center justify-between gap-20">
+          <div className="hidden lg:flex-row flex-col items-center justify-between gap-20">
 
             <motion.p className="text_para text-[#fffced]">
               Share your vision by writing to me through the form and
@@ -440,9 +453,9 @@ const ContactMe = () => {
 
             </div>
 
-            <div className="flex flex-end justify-end">
+            <div className="flex items-center  justify-end bg-(--primary-color)/40 p-2 rounded-sm">
 
-              <h3 className="flex items-end gap-4 text-(--text-colour) bg-(--primary-color)/40 p-2 rounded-sm">
+              <h3 className="flex items-end gap-4 text-(--text-colour) ">
 
                 Write to me through the form and will update you shortly.
 
@@ -484,6 +497,11 @@ const ContactMe = () => {
 
               </div>
 
+            </div>
+
+            <div className="mt-12 flex flex-row items-center gap-12">
+              <h4 className="text_para">Whatsapp</h4>
+                  <h4 className="text_para">Whatsapp</h4>
             </div>
 
           </div>

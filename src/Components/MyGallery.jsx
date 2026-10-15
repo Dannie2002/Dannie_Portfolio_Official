@@ -21,6 +21,7 @@ import fat2 from "../assets/FAT2.jpg"
 import roundedrouter from "../assets/RoundRouter.jpeg"
 import SectionHeader from "./SectionHeader.jsx";
 import MoonBalls from "./MoonBalls.jsx";
+import customerservice from "../assets/dESIGN-WEB.png"
 
 
 const MyGallery = () => {
@@ -152,6 +153,12 @@ const MyGallery = () => {
 
     {
       image: roundedrouter,
+      title: "Internet Service Provider",
+      category: "ISP Operations",
+    },
+
+        {
+      image: customerservice,
       title: "Internet Service Provider",
       category: "ISP Operations",
     },

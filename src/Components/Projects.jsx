@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link} from "react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import banner from "../assets/LivestockHealth.png";
-import digital from "../assets/Livestockapp.jpg";
+import digital from "../assets/projects-mockup.png";
 import mwapata from "../assets/Mwapataredesign.png";
 
 const Projects = () => {
@@ -58,7 +58,7 @@ const productCards = [
     category: "E-commerce",
     year: "2024",
     image: digital,
-    description: "An e-commerce platform for a modern cycling business.",
+    description: "An e-commerce platform for a modern.",
   },
 
   {
@@ -66,7 +66,7 @@ const productCards = [
     title: "Electronic Cashbox",
     category: "FinTech",
     year: "2025",
-    image: digital,
+    image: banner,
     description: "A digital cash management solution.",
   },
 
@@ -165,7 +165,7 @@ const productCards = [
 
  
           <div
-            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[480px] w-full bg-[#909090]/10 overflow-hidden
+            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[490px] w-full bg-[#909090]/10 overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]

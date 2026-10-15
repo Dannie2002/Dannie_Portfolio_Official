@@ -21,6 +21,11 @@
   src: url('./assets/Fonts/Outrun.ttf');
 }
 
+@font-face {
+  font-family: 'Horixa';
+  src: url('./assets/Fonts/Horixa.otf');
+}
+
 :root {
   --primary-color: #978F66;
   --secondary-color: #635985;
@@ -41,6 +46,7 @@
     --font-kasnova:'kasnova';
     --font-geonova:"geonova";
     --font-Outrun: "Outrun";
+    --font-horixa:"Horixa";
 }
 
 html, body {

@@ -12,7 +12,9 @@ import SectionHeader from "./SectionHeader.jsx";
 import mwapata from "../assets/Mwapataredesign.png";
 import banner from "../assets/Good.jpg";
 import digital from "../assets/DigitalMarketing.jpg";
-import photography from "../assets/WorkExp.jpg";
+import photography from "../assets/Webbb.jpg";
+import electronic from "../assets/Webbb.jpg"
+import mockup from "../assets/projects-mockup.png"
 
 const projects = [
   {
@@ -92,6 +94,8 @@ const projects = [
       "React",
       "JavaScript",
       "Tailwind CSS",
+      "Lalavel",
+      "Next.js",
     ],
 
     gallery: [
@@ -114,7 +118,7 @@ const projects = [
 
     year: "2025",
 
-    image: digital,
+    image: electronic,
 
     shortDescription:
       "A digital cash management concept designed to improve the organisation of financial transactions.",
@@ -157,7 +161,7 @@ const projects = [
 
     year: "2024",
 
-    image: photography,
+    image: mockup,
 
     shortDescription:
       "An e-commerce interface concept designed around presenting products through a clean digital shopping experience.",
@@ -354,7 +358,7 @@ const ProjectDetails = () => {
 
               {/* Technologies */}
 
-              <div className="mt-12">
+              <div className="lg:mt-18 mt-6">
 
                 <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
                   Technologies
@@ -383,21 +387,20 @@ const ProjectDetails = () => {
 
               </div>
 
-                <div className="mt-12">
+               
 
        
 
-                <div className="flex  mt-4">
+                <div className="flex justify-start items-center flex-row gap-3 mt-12">
 
                 
-                    <span className="  border  border-[#fffced]/10  bg-[#fffced]/5  px-6  py-2 text-button text-[#fffced]/70 ">
-                      Visit the project
-                    </span>
-               
+                    <h4 className="  text-[18px]   py-2 text-button text-[#fffced]/70 "> Visit the project</h4>
+                  
+               <svg className="size-6" fill="#ededee" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M196,64V168a4,4,0,0,1-8,0V73.65625L66.82812,194.82812a3.99957,3.99957,0,0,1-5.65625-5.65625L182.34375,68H88a4,4,0,0,1,0-8H192A4.0002,4.0002,0,0,1,196,64Z"></path> </g></svg>
 
                 </div>
 
-              </div>
+          
 
             </motion.div>
 </div>
@@ -427,23 +430,25 @@ const ProjectDetails = () => {
      <div className="Section_wrapper mt-12 flex flex-col items-center justify-center">
  <div className=" card_space mx-auto grid grid-cols-1 lg:grid-cols-1 gap-12 lg:gap-20 items-start">
  
-          <div className="  border-b border-b-(--text-color)/60 pt-6">
+          <div className="  border-b border-b-(--text-color)/60 py-8">
           {/* 1. Tag showing the overview text */}
 
-      <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-4xl mt-4">
+      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
             01
           </p>
-<div className="flex gap-12 items-center">
 
 
-          <h2 className="mt-3 geonova text-7xl card_heading">
+      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
+          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
             Overview
           </h2>
-               <p className="text_para text-[#909090]">
+               <p className="text_para ml-12 text-[#ededed]">
             {project.overview}
           </p>
-
-          <svg className="size-40" fill="#ededed" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+<div className="flex items-start justify-end">
+ <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+</div>
+         
 
 </div>
           {/* 2. Structured Content */}
@@ -453,23 +458,25 @@ const ProjectDetails = () => {
           </div>
 
 
-<div className="  border-b border-b-(--text-color)/60 pt-6">
+   <div className="  border-b border-b-(--text-color)/60 py-8">
           {/* 1. Tag showing the overview text */}
 
-      <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-4xl mt-4">
+      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
             02
           </p>
-<div className="flex gap-12 items-center">
 
 
-          <h2 className="mt-3 geonova text-7xl card_heading">
+      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
+          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
             Challenge
           </h2>
-              <p className="text_para text-[#909090]">
+               <p className="text_para ml-12 text-[#ededed]">
             {project.challenge}
           </p>
-
-          <svg className="size-40" fill="#ededed" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+<div className="flex items-start justify-end">
+ <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+</div>
+         
 
 </div>
           {/* 2. Structured Content */}
@@ -479,23 +486,25 @@ const ProjectDetails = () => {
           </div>
 
 
-<div className="  border-b border-b-(--text-color)/60 pt-6">
+         <div className="  border-b border-b-(--text-color)/60 py-8">
           {/* 1. Tag showing the overview text */}
 
-      <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-4xl mt-4">
+      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
             03
           </p>
-<div className="flex gap-12 items-center">
 
 
-          <h2 className="mt-3 geonova text-7xl card_heading">
+      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
+          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
             Approach
           </h2>
-                <p className="text_para text-[#909090]">
+               <p className="text_para ml-12 text-[#ededed]">
             {project.approach}
           </p>
-
-          <svg className="size-40" fill="#ededed" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+<div className="flex items-start justify-end">
+ <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+</div>
+         
 
 </div>
           {/* 2. Structured Content */}
@@ -503,6 +512,7 @@ const ProjectDetails = () => {
           
     
           </div>
+
 
         </div>
     </div>
