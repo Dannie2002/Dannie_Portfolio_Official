@@ -278,7 +278,7 @@ const ProjectDetails = () => {
           PROJECT INTRODUCTION
       ========================================== */}
 
-      <div className="Section_wrapper">
+      <div className="Section_wrapper mt-12">
 
         
 
@@ -439,7 +439,7 @@ const ProjectDetails = () => {
           <h2 className="mt-3 geonova text-7xl card_heading">
             Overview
           </h2>
-                <p className="text_para">
+               <p className="text_para text-[#909090]">
             {project.overview}
           </p>
 
@@ -452,42 +452,57 @@ const ProjectDetails = () => {
     
           </div>
 
-            <div className="card_space">
-            {/* 1. Tag showing the overview text */}
+
+<div className="  border-b border-b-(--text-color)/60 pt-6">
+          {/* 1. Tag showing the overview text */}
+
+      <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-4xl mt-4">
+            02
+          </p>
+<div className="flex gap-12 items-center">
 
 
-            {/* 2. Structured Content */}
-            <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
-              02
-            </p>
+          <h2 className="mt-3 geonova text-7xl card_heading">
+            Challenge
+          </h2>
+              <p className="text_para text-[#909090]">
+            {project.challenge}
+          </p>
 
-            <h2 className="mt-3 card_heading">
-              Challenge
-            </h2>
-            
-            <p className="text_para">
-              {project.challenge}
-            </p>
-            </div>
+          <svg className="size-40" fill="#ededed" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
 
- <div className="card_space">
-  {/* 1. Tag showing the overview text */}
-
-
-  {/* 2. Structured Content */}
-  <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-sm mt-4">
-    03
-  </p>
-
-  <h2 className="mt-3 card_heading">
-    Approach
-  </h2>
-  
-  <p className="text_para">
-    {project.approach}
-  </p>
 </div>
+          {/* 2. Structured Content */}
+      
+          
+    
+          </div>
 
+
+<div className="  border-b border-b-(--text-color)/60 pt-6">
+          {/* 1. Tag showing the overview text */}
+
+      <p className="text-[#9B8EC7] uppercase tracking-[0.2em] text-4xl mt-4">
+            03
+          </p>
+<div className="flex gap-12 items-center">
+
+
+          <h2 className="mt-3 geonova text-7xl card_heading">
+            Approach
+          </h2>
+                <p className="text_para text-[#909090]">
+            {project.approach}
+          </p>
+
+          <svg className="size-40" fill="#ededed" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+
+</div>
+          {/* 2. Structured Content */}
+      
+          
+    
+          </div>
 
         </div>
     </div>
@@ -526,7 +541,7 @@ const ProjectDetails = () => {
             alt={project.title}
             className="
               w-full
-              aspect-[16/9]
+              aspect-[8/3]
               object-cover
             "
           />
@@ -599,6 +614,7 @@ const ProjectDetails = () => {
                   overflow-hidden
                   rounded-xl
                   bg-[#201f1f]
+                  h-[40px]
                 "
               >
 
@@ -608,7 +624,7 @@ const ProjectDetails = () => {
                   className="
                     block
                     w-full
-                    h-auto
+                    h-full
                     object-cover
                     transition-transform
                     duration-700

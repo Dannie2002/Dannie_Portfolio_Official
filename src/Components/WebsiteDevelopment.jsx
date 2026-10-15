@@ -182,7 +182,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
   return (
 
-    <section className="bg-[#101011] relative w-full">
+    <section className="bg-(--background-color) relative w-full">
 
      <img src={noise} alt=""  className="noise"/>
   
