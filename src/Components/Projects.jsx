@@ -77,7 +77,7 @@ const productCards = [
     year: "2026",
     image: mwapata,
     description:
-      "A modern website redesign focused on communicating MwAPATA's research.",
+      "A modern website redesign.",
   },
 ];
 
@@ -161,61 +161,83 @@ const productCards = [
     return (
       <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[31%]">
         <div className="relative group ">
+            <div className="absolute blur-3xl bottom-0 right-5 size-40 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/80  to-(--secondary-color)/40" />
 
  
           <div
-            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[430px] w-full bg-[#909090]/10 overflow-hidden
+            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[480px] w-full bg-[#909090]/10 overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
-              justify-between
               transition-all
               duration-300
               group-hover:border-(--secondary-color)/50 ">
             {/* Category + Title */}
 
             <div className="card_space">
-              <div className="svg_container relative">
+              <div className="hidden  svg_container relative">
                 <div className="absolute size-8 rounded-full -bottom-5 blur-xs opacity-60 bg-(--secondary-color)" />
 
-                <h1 className="relative text-[22px] geonova">
+                <h1 className="text-[22px] geonova">
                   {String(index + 1).padStart(2, "0")}
                 </h1>
               </div>
-
-              <span className="text-[12px] chivo uppercase text-(--text-colour) font-medium">
+<div className="">
+    <span className="text-[12px] chivo uppercase text-(--text-colour) font-medium">
                 {category}
               </span>
+</div>
+          
 
-              <h3 className="text-[28px] leading-[30px] geonova font-bold text-[#fffced] zalando">
-                {title}
-              </h3>
+           
             </div>
 
+            <div className="min-h-44 w-full relative overflow-hidden mt-6">
+              <div className="absolute bg-() hidden z-60 size-full bottom-5  outline-1 outline-[#fffced] top-5 "/>
+                   <img src={image} alt={title}  className="grayscale h-full w-full aspect-2/6  object-cover transition-transform  duration-700 group-hover:scale-105" />
+            </div>
+<div className="flex mt-8 items-center justify-between">
+    <h3 className="text-[18px] leading-[27px] geonova font-bold text-[#ededed] ">
+                {title}
+              </h3>
+              <div className="bg-(--secondary-color) p-2">
 
-            <div className="card_space">
-              <p className="text_para leading-relaxed max-w-[90%]">
+                    <Link
+            to={`/projects/${slug}`}>
+     <svg
+  className="size-6  group-hover:scale-135 transition-transform duration-300 ease-in-out"
+  fill="#ededed"
+  viewBox="0 0 32 32"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Arrow pointing up and right"
+  role="img"
+>
+  <title>Arrow up right</title>
+  <polygon
+    points="10 6 10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6"
+  />
+  <rect
+    width="32"
+    height="32"
+    fill="none"
+  />
+</svg>
+            </Link>
+
+              </div>
+          
+</div>
+ 
+            <div className="card_space mt-6">
+              <p className="text_para text-[14px] leading-relaxed max-w-[90%]">
                 {description}
               </p>
 
               <div className="relative mt-2 overflow-hidden flex items-center text-[#fffced] justify-center py-1 px-3 bg-transparent ">
-                <span className="text-[10px] hidden text-(--text-colour)">
+                <span className="text-[10px]  text-(--text-colour)">
                   {year}
                 </span>
-                 <Link
-            to={`/projects/${slug}`}>
-                <svg
-            fill="#9B8EC7"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 72 72"
-            className="size-8"
-          >
-            <g>
-              <path d="M23.748,2.747c2.271,0,4.405,0.884,6.011,2.489l24.506,24.506c1.646,1.645,2.546,3.921,2.479,6.255c0.068,2.337-0.833,4.614-2.479,6.261L29.758,66.764c-1.605,1.605-3.739,2.489-6.01,2.489c-2.271,0-4.405-0.884-6.01-2.489c-3.314-3.314-3.314-8.707,0-12.021L36.481,36L17.738,17.258c-3.314-3.314-3.314-8.707,0-12.021C19.344,3.631,21.478,2.747,23.748,2.747z M23.748,65.253c1.202,0,2.332-0.468,3.182-1.317L50.963,39.43c0.891-0.893,0.833-2.084-0.833-3.355c0-0.051,0-0.101,0-0.151c0-1.271,0.058-2.461,0.833-3.353L26.693,8.064c-0.85-0.85-1.862-1.317-3.063-1.317c-1.203,0-2.273,0.468-3.123,1.317c-1.755,1.755-1.725,4.61,0.03,6.365l20.172,20.156c0.781,0.781,0.788,2.047,0.007,2.828L20.563,57.57c-1.754,1.755-1.753,4.61,0.001,6.365C21.413,64.785,22.546,65.253,23.748,65.253z" />
-            </g>
-          </svg>
-            </Link>
+     
               </div>
             </div>
           </div>
@@ -224,7 +246,7 @@ const productCards = [
 <div
   className="
     
-    absolute
+    hidden
     left-1/2
     top-1/2
     z-10

@@ -99,8 +99,11 @@ const words =[
         </div>
 
         <div className='w-full flex Grid_4 lg:items-center items-center justify-center lg:w-1/4 '>
+         <div className="relative flex-center outline  outline-[#909090] outline-20 lg:outline-3  rounded-[22px] bg-transparent h-[360px] w-full [perspective:1000px]">
+          
+         </div>
           <div className="relative outline  outline-[#909090] outline-20 lg:outline-3  rounded-[22px] bg-transparent h-[360px] w-full [perspective:1000px]"></div>
-           <div className="relative outline  outline-[#909090] outline-20 lg:outline-3  rounded-[22px] bg-transparent h-[360px] w-full [perspective:1000px]"></div>
+        
         </div>
 
 

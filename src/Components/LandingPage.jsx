@@ -128,10 +128,7 @@ const cmsPosts = [
 
           {/* Scribble */}
           <motion.div className="flex gap-5 items-center" variants={itemVariants}>
-            <Scribble className="mb-4" 
-              size={22}
-              color="#d4dac4"
-            />
+        
              <motion.h1
             variants={itemVariants}
             className="text-[12px] hidden tracking-[3px] mb-4 uppercase zolando font-medium text-[#909090]"
@@ -143,12 +140,12 @@ const cmsPosts = [
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#909095]"
+            className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
           >          
             building
           </motion.h1>
 
-<div className=" border-t my-2 w-full  border-t-[#4a4a4a]/40">
+<div className=" my-2 w-full  ">
 
 
       
@@ -165,10 +162,15 @@ const cmsPosts = [
 
           
            
-<div className=" border-t border-b  lg:w-86 w-full border-b-[#484a4a]/40 border-t-[#4a4a4a]/40">
+<div className="relative border-t border-b  lg:w-86 w-full border-b-[#484a4a]/40 border-t-[#4a4a4a]/40">
+    <Scribble className="absolute -top-7 right-0"  
+              size={32}
+              color="#909095"
+            />
+<svg className="absolute size-8 right-0" fill="#90afd0" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M50.5,15.615c-0.441,0-0.846-0.294-0.965-0.741c-0.144-0.533,0.173-1.082,0.707-1.225l2.292-0.614 c0.532-0.145,1.081,0.173,1.225,0.707c0.143,0.533-0.174,1.082-0.707,1.225l-2.292,0.614 C50.673,15.604,50.586,15.615,50.5,15.615z"></path> </g> <g> <path d="M29.6,21.214c-0.441,0-0.846-0.294-0.965-0.741c-0.144-0.533,0.173-1.082,0.707-1.225L45.91,14.81 c0.536-0.146,1.081,0.173,1.225,0.707c0.143,0.533-0.174,1.082-0.707,1.225L29.86,21.18C29.773,21.204,29.686,21.214,29.6,21.214 z"></path> </g> </g> <g> <path d="M16.683,68.555c-1.294,0-2.514-0.591-3.729-1.808l-7.662-7.662c-3.796-3.795-0.944-6.646,0.426-8.016 c9.247-8.834,13.635-13.021,15.726-15.013l-8.48-5.464c-2.923-1.584-4.451-4.418-4.092-7.599c0.437-3.862,3.607-7.229,7.889-8.376 L56.639,3.934c4.353-1.169,8.198-0.206,10.292,2.523c1.707,2.225,2.124,5.401,1.175,8.943L57.42,55.278 c-1.375,5.136-5.925,7.476-9.57,7.476l0,0c-2.984,0-5.461-1.468-6.489-3.837l-4.345-8.334c-2.166,2.132-6.655,6.537-16.01,15.703 C19.958,67.334,18.504,68.555,16.683,68.555z M7.388,55.326c0.008,0,0.095,0.294,0.731,0.931l7.662,7.662 c0.629,0.629,0.898,0.636,0.901,0.636c0.041,0,0.429-0.031,1.508-1.111c4.799-4.701,17.277-16.933,17.89-17.555 c0.427-0.455,1.042-0.686,1.67-0.619c0.665,0.071,1.251,0.471,1.561,1.063l5.632,10.804c0.026,0.052,0.051,0.104,0.073,0.158 c0.563,1.354,2.311,1.459,2.833,1.459c2.167,0,4.877-1.411,5.706-4.511l10.687-39.877c0.62-2.314,0.448-4.258-0.484-5.474 c-0.927-1.207-2.438-1.46-3.544-1.46c-0.781,0-1.636,0.123-2.54,0.365L17.795,18.481c-3.127,0.838-4.739,3.097-4.95,4.963 c-0.176,1.558,0.559,2.856,2.068,3.656c0.051,0.026,0.1,0.056,0.147,0.086l10.687,6.885c0.533,0.344,0.872,0.92,0.913,1.554 c0.04,0.633-0.222,1.249-0.707,1.658C25.576,37.633,13.232,49.421,8.512,53.93C7.568,54.875,7.411,55.221,7.388,55.326 L7.388,55.326z"></path> </g> </g> </g></svg>
 <motion.h1
             variants={itemVariants}
-            className="font-heading mx-0  text_gradient geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+            className="font-heading mx-0  text_gradient geonova !text-[66px] !leading-[64px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
           >          
             brands.
           </motion.h1>
@@ -177,7 +179,7 @@ const cmsPosts = [
               
     
     <ScrollVelocityRow baseVelocity={-13} className='lg:p-0 '>
-            <div className='flex px-6 items-center justify-center gap-6 min-w-[200px]' >
+            <div className='flex  items-center justify-center gap-6 min-w-[200px]' >
     <motion.h1
             variants={itemVariants}
             className="font-heading mx-0  text_gradient geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
@@ -205,7 +207,7 @@ const cmsPosts = [
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="pt-6 mt-12  tracking-[1.1px] text-[18px] text_para max-w-[500px]"
+            className="pt-6 mt-12  text-[18px] text_para max-w-[500px]"
           >
             I design and build modern digital products<span className="">  enabling your business to grow effortlessly.</span>
            
@@ -228,7 +230,7 @@ const cmsPosts = [
                      </div>
                      
                                  
-                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-full  justify-center group-hover:bg-[#fffced] bg-[#101011] group-hover:bg-gradient-to-r from-[#75797c] via-[#7a7e80] to-[#7a7e80] size-6 p-3'>
+                                    <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-full  justify-center group-hover:bg-[#fffced] bg-transparent hover:bg-[#101011] group-hover:bg-gradient-to-r from-[#75797c] via-[#7a7e80] to-[#7a7e80] size-6 p-3'>
                                       <ArrowRight className='size-6 absolute group-hover:rotate-15  ease-in-out   transform  transition-all duration-490  group-hover:translate-x-10 text-[#fffced]' />
                                       <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-6 transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                                     </div>
@@ -259,7 +261,7 @@ const cmsPosts = [
     {/* Identity */}
 
       <div className="flex-center gap-2 text-[#fffced] font-medium px-2 py-1 mb-2 rounded bg-(--secondary-color)">
-        <Web className="hidden lg:flex"  fill="#fffced" size={18} />
+           <svg className="size-4" fill="#fffced" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M60.5,21h-27c-4.687,0-8.5-3.813-8.5-8.5S28.813,4,33.5,4h27c4.687,0,8.5,3.813,8.5,8.5S65.187,21,60.5,21z M33.5,8 c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5h27c2.481,0,4.5-2.019,4.5-4.5S62.981,8,60.5,8H33.5z"></path> </g> <g> <path d="M60.5,68h-27c-4.687,0-8.5-3.813-8.5-8.5s3.813-8.5,8.5-8.5h27c4.687,0,8.5,3.813,8.5,8.5S65.187,68,60.5,68z M33.5,55 c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5h27c2.481,0,4.5-2.019,4.5-4.5S62.981,55,60.5,55H33.5z"></path> </g> <g> <path d="M60.5,45h-27c-4.687,0-8.5-3.813-8.5-8.5s3.813-8.5,8.5-8.5h27c4.687,0,8.5,3.813,8.5,8.5S65.187,45,60.5,45z M33.5,32 c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5h27c2.481,0,4.5-2.019,4.5-4.5S62.981,32,60.5,32H33.5z"></path> </g> </g> <g> <g> <path d="M12.5,21h-1C6.813,21,3,17.187,3,12.5S6.813,4,11.5,4h1c4.687,0,8.5,3.813,8.5,8.5S17.187,21,12.5,21z M11.5,8 C9.019,8,7,10.019,7,12.5S9.019,17,11.5,17h1c2.481,0,4.5-2.019,4.5-4.5S14.981,8,12.5,8H11.5z"></path> </g> <g> <path d="M12.5,68h-1C6.813,68,3,64.187,3,59.5S6.813,51,11.5,51h1c4.687,0,8.5,3.813,8.5,8.5S17.187,68,12.5,68z M11.5,55 C9.019,55,7,57.019,7,59.5S9.019,64,11.5,64h1c2.481,0,4.5-2.019,4.5-4.5S14.981,55,12.5,55H11.5z"></path> </g> <g> <path d="M12.5,45h-1C6.813,45,3,41.187,3,36.5S6.813,28,11.5,28h1c4.687,0,8.5,3.813,8.5,8.5S17.187,45,12.5,45z M11.5,32 C9.019,32,7,34.019,7,36.5S9.019,41,11.5,41h1c2.481,0,4.5-2.019,4.5-4.5S14.981,32,12.5,32H11.5z"></path> </g> </g> </g> </g></svg>
         <h4 className="chivo uppercase text-[10px]"> Dannie.com </h4>
       </div>
 
@@ -271,7 +273,7 @@ const cmsPosts = [
       {/* Overview */}
 
       <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-(--text-color)/60">
-        <Energy className="hidden lg:flex"  fill="#978F66" size={17} />
+        <svg className="size-4" viewBox="0 -0.5 25 25" fill="#978F66" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.5 7.75C15.0858 7.75 14.75 8.08579 14.75 8.5C14.75 8.91421 15.0858 9.25 15.5 9.25V7.75ZM19.5 9.25C19.9142 9.25 20.25 8.91421 20.25 8.5C20.25 8.08579 19.9142 7.75 19.5 7.75V9.25ZM20.25 8.5C20.25 8.08579 19.9142 7.75 19.5 7.75C19.0858 7.75 18.75 8.08579 18.75 8.5H20.25ZM18.75 12.5C18.75 12.9142 19.0858 13.25 19.5 13.25C19.9142 13.25 20.25 12.9142 20.25 12.5H18.75ZM20.0303 9.03033C20.3232 8.73744 20.3232 8.26256 20.0303 7.96967C19.7374 7.67678 19.2626 7.67678 18.9697 7.96967L20.0303 9.03033ZM12.5 15.5L11.9697 16.0303C12.2626 16.3232 12.7374 16.3232 13.0303 16.0303L12.5 15.5ZM9.5 12.5L10.0303 11.9697C9.73744 11.6768 9.26256 11.6768 8.96967 11.9697L9.5 12.5ZM4.96967 15.9697C4.67678 16.2626 4.67678 16.7374 4.96967 17.0303C5.26256 17.3232 5.73744 17.3232 6.03033 17.0303L4.96967 15.9697ZM15.5 9.25H19.5V7.75H15.5V9.25ZM18.75 8.5V12.5H20.25V8.5H18.75ZM18.9697 7.96967L11.9697 14.9697L13.0303 16.0303L20.0303 9.03033L18.9697 7.96967ZM13.0303 14.9697L10.0303 11.9697L8.96967 13.0303L11.9697 16.0303L13.0303 14.9697ZM8.96967 11.9697L4.96967 15.9697L6.03033 17.0303L10.0303 13.0303L8.96967 11.9697Z" fill="#978F66"></path> </g></svg>
 
         <h4 className="geonova text-[10px] text-[#fffced]">
           Overview
@@ -282,7 +284,8 @@ const cmsPosts = [
       {/* Projects */}
 
       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <Web className="hidden lg:flex"  fill="#978F66" size={17} />
+    
+       <svg className=" size-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#978F66"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.122a1 1 0 00.741.966l7 1.876A1 1 0 0011 14.998V14h2a1 1 0 001-1V3a1 1 0 00-1-1h-2v-.994A1 1 0 009.741.04l-7 1.876A1 1 0 002 2.882v10.24zM9 2.31v11.384l-5-1.34V3.65l5-1.34zM11 12V4h1v8h-1z" fill="#978F66"></path> </g></svg>
 
           <h4 className="geonova text-[10px] text-[#7a7e80]">
           Projects
@@ -319,7 +322,7 @@ const cmsPosts = [
         <h4 className="geonova text-[10px] text-[#7a7e80]">Services</h4>
       </div>
        <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <ContactPlane  className="hidden lg:flex" fill="#978F66" size={17} />
+       <svg className="size-4" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#978F66"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#978F66" d="M317.056 128 128 344.064V896h768V344.064L706.944 128H317.056zm-14.528-64h418.944a32 32 0 0 1 24.064 10.88l206.528 236.096A32 32 0 0 1 960 332.032V928a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V332.032a32 32 0 0 1 7.936-21.12L278.4 75.008A32 32 0 0 1 302.528 64z"></path><path fill="#978F66" d="M64 320h896v64H64z"></path><path fill="#978F66" d="M448 327.872V640h128V327.872L526.08 128h-28.16L448 327.872zM448 64h128l64 256v352a32 32 0 0 1-32 32H416a32 32 0 0 1-32-32V320l64-256z"></path></g></svg>
         <h4 className="geonova text-[10px] text-[#7a7e80]">Tools</h4>
       </div>
 
@@ -444,14 +447,15 @@ const cmsPosts = [
             OVERVIEW METRICS
         ================================================= */}
 
-        <div className="grid grid-cols-3 gap-1.5">
+        <div className="grid grid-cols-1 gap-1.5">
 
           {/* Projects */}
 
           <div className=" rounded-md bg-(--secondary-color)/70 p-2">
+            <Web className="hidden size-12 lg:flex"  fill="#ededed" size={27} />
 
-            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
-              Projects
+             <p className="lg:text-[11px] text-[9px] uppercase chivo text-[#fffced]">
+              Years of experience
             </p>
 
             <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
@@ -459,48 +463,12 @@ const cmsPosts = [
             </p>
 
             <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
-              <div className="h-full w-[82%] bg-(--secondary-color)" />
+              <div className="h-full w-[82%] bg-(--text-colour)" />
             </div>
 
           </div>
 
 
-          {/* Systems */}
-
-          <div className=" rounded-md bg-(--text-color)/70 p-2">
-
-            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
-              Systems
-            </p>
-
-            <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
-              08
-            </p>
-
-            <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
-              <div className="h-full w-[74%] bg-(--secondary-color)" />
-            </div>
-
-          </div>
-
-
-          {/* Services */}
-
-          <div className="border border-zinc-900 rounded-md bg-[#909090]/20 p-2">
-
-            <p className="lg:text-[11px] text-[9px] uppercase chivo text-zinc-500">
-              Services
-            </p>
-
-            <p className="lg:text-[28px] text-[24px] leading-none geonova text-[#fffced] font-bold mt-1">
-              05
-            </p>
-
-            <div className="mt-2 h-[2px] bg-zinc-900 overflow-hidden rounded-full">
-              <div className="h-full w-[91%] bg-(--secondary-color)" />
-            </div>
-
-          </div>
 
         </div>
 
@@ -509,190 +477,25 @@ const cmsPosts = [
             ANALYTICS
         ================================================= */}
 
-        <div className="outline outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-[#101011] overflow-hidden">
+   
+<div className="outline mt-4 outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-(--background-color) overflow-hidden">
 
-          <div className="px-3 py-2.5 border-b border-zinc-900 flex items-center justify-between">
+          <div className=" flex flex-col gap-2 py-2 border-b border-zinc-900">
 
-            <div className="flex flex-col gap-2">
+              <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
+              Exposure to the industry.
+            </p>
 
-                <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
-                Analytics
-              </p>
-
-              <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
-                Project Activity
-              </p>
-
-            </div>
-
-            <span className="text-[10px] text-(--secondary-color)">
-              +24.8%
-            </span>
+             <p className="lg:text-[14px] text-[12px] geonova font-semibold text-[#fffced]">
+              My Gallery
+            </p>
 
           </div>
 
 
-          {/* Graph */}
-
-         <div className="relative h-[75px] px-2 pt-2 pb-1">
-
-  {/* =====================================================
-      SKILL GRAPH
-  ===================================================== */}
-
-  {/* Grid */}
-
-  <div className="absolute inset-x-2 top-3 bottom-5 flex flex-col justify-between">
-
-    <span className="border-t border-zinc-900/70" />
-    <span className="border-t border-zinc-900/70" />
-    <span className="border-t border-zinc-900/70" />
-    <span className="border-t border-zinc-900/70" />
-
-  </div>
-
-
-  {/* Graph */}
-
-{/* Graph line */}
-
-<svg
-  viewBox="0 0 300 70"
-  preserveAspectRatio="none"
-  className="absolute inset-x-2 top-2 w-[calc(100%-16px)] h-[58px]"
->
-
-  <defs>
-
-    <linearGradient
-      id="tabletSkillGradient"
-      x1="0"
-      y1="0"
-      x2="0"
-      y2="1"
-    >
-      <stop
-        offset="0%"
-        stopColor="#978F66"
-        stopOpacity="0.25"
-      />
-
-      <stop
-        offset="100%"
-        stopColor="#978F66"
-        stopOpacity="0"
-      />
-    </linearGradient>
-
-  </defs>
-
-
-  {/* Filled area underneath the graph */}
-
-  <polygon
-    points="
-      8,38
-      78,22
-      148,30
-      218,14
-      292,7
-      292,62
-      8,62
-    "
-    fill="url(#tabletSkillGradient)"
-  />
-
-
-  {/* Straight skill graph */}
-
-  <polyline
-    points="
-      8,38
-      78,22
-      148,30
-      218,14
-      292,7
-    "
-    fill="none"
-    stroke="#978F66"
-    strokeWidth="1.5"
-    strokeLinejoin="round"
-    strokeLinecap="round"
-  />
-
-
-  {/* Skill points */}
-
-  <circle
-    cx="8"
-    cy="38"
-    r="2.5"
-    fill="#978F66"
-  />
-
-  <circle
-    cx="78"
-    cy="22"
-    r="2.5"
-    fill="#978F66"
-  />
-
-  <circle
-    cx="148"
-    cy="30"
-    r="2.5"
-    fill="#978F66"
-  />
-
-  <circle
-    cx="218"
-    cy="14"
-    r="2.5"
-    fill="#978F66"
-  />
-
-  <circle
-    cx="292"
-    cy="7"
-    r="2.5"
-    fill="#978F66"
-  />
-
-</svg>
-
-
-  {/* =====================================================
-      Skill Labels
-  ===================================================== */}
-
-  <div className="absolute bottom-0 left-2 right-2 flex justify-between text-[5px] uppercase chivo text-zinc-600">
-
-    <span>
-      Communication
-    </span>
-
-    <span>
-      Networking
-    </span>
-
-    <span>
-      Web
-    </span>
-
-    <span>
-      Data
-    </span>
-
-    <span>
-      Problem Solving
-    </span>
-
-  </div>
-
-</div>
+       <img src={banner} className="grayscale"/>
 
         </div>
-
 
         {/* =================================================
             ACTIVE PROJECTS
