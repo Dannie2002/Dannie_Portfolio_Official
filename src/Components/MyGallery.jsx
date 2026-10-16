@@ -11,6 +11,7 @@ import field4 from "../assets/Field4.jpg"
 import fat from "../assets/FAT.jpg";
 import fiberh from "../assets/Fiberh.jpg"
 import netoperations from "../assets/Field2.jpg";
+import reign from "../assets/Reign.png"
 import router from "../assets/Field1.jpg";
 import meatcivo from "../assets/MeatCivo.jpg"
 import graduation from "../assets/Graduation.jpg"
@@ -161,7 +162,14 @@ const MyGallery = () => {
       image: customerservice,
       title: "Internet Service Provider",
       category: "ISP Operations",
+
+      
     },
+
+       {
+      image: reign,
+      title: "Internet Service Provider",
+      category: "ISP Operations",}
   ];
 
   return (

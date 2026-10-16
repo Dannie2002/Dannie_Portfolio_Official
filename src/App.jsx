@@ -37,7 +37,7 @@ const  location = useLocation();
     <ProgressBar />
 
     <MainHeader />
-    <AnimatePresence mode='wait'>
+ 
     <Routes location={location} key={location.pathname}>
       <Route index element={<CoverPages />} />
       <Route path="/telecommunications">
@@ -74,7 +74,7 @@ const  location = useLocation();
       <Route path='/my-gallery' element = {<MyGallery />} />
       <Route path="/projects/:slug" element={<ProjectDetails />}/>
     </Routes>
-    </AnimatePresence>
+  
 
     
      

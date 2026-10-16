@@ -163,9 +163,9 @@ const productCards = [
         <div className="relative group ">
             
 
- 
+ <Link to={`/projects/${slug}`}>
           <div
-            className="btn border px-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[22px] lg:h-[470px] w-full bg-[#909090]/10 overflow-hidden
+            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[22px] h-[400px] lg:h-[470px] w-full bg-[#909090]/5 overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
@@ -193,7 +193,7 @@ const productCards = [
            
             </div>
 
-            <div className="lg:h-44 h-33 w-full relative rounded-[12px] overflow-hidden mt-6">
+            <div className="lg:h-44 h-38 w-full relative rounded-[12px] overflow-hidden mt-6">
         
                    <img src={image} alt={title}  className="grayscale h-full w-full aspect-2/6  object-cover transition-transform  duration-700 group-hover:scale-125" />
             </div>
@@ -238,7 +238,7 @@ const productCards = [
               </div>
             </div>
           </div>
-
+</Link>
        {/*Hover Project Image*/}
 <div
   className="

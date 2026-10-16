@@ -1,5 +1,6 @@
 import React from 'react';
-import work from "../assets/ServiceDesk3.jpg";
+import work from "../assets/Reign.png";
+import work2 from "../assets/ServiceDesk2.jpg";
 import Scribble from '../Components/Scribble'
 import { motion } from 'framer-motion';
 import { Link } from "react-router";
@@ -61,7 +62,7 @@ const words =[
       <div className='flex_container'>
 
       <div className='lg:w-1/2'>
-          <div className="relative  rounded-full h-[360px] flex flex-col items-start justify-between">
+          <div className="relative  rounded-full  flex flex-col items-start justify-between">
             <div className="card_space">
                     <h4 className="card_heading text-[#909090] chivo uppercase">I believe in <span className='slide'>
                           <span className='wrapper text-[#fffced]'>
@@ -75,11 +76,11 @@ const words =[
                  
                       </span>
                     </h4>
-            <motion.p className="text_para  font-normal " >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
+            <motion.p className="text_para w-xl font-normal mt-12" >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
             </div>
            
 
-                 <div className='bg-transparent py-2 gap-2 outline-[1.2px] outline-(--secondary-color) items-center rounded-full px-6 flex '>
+                 <div className='bg-transparent mt-12 py-2 gap-2 outline-[1.2px] outline-(--secondary-color) items-center rounded-full px-6 flex '>
                   <Web fill="#635985" size={33} />
                   <Energy fill="#635985" size={30} />
                   <Telecom fill="#635985" size={33} />
@@ -91,20 +92,22 @@ const words =[
 
         </div>
 
-        <div className='w-full lg:w-1/6'>
-          <div className="relative outline-6 outline-(--text-color) h-90 lg:w-80 w-full [perspective:1000px]">
-          <img src={work} className='size-full grayscale object-cover' />            
+        <div className='w-full lg:w-[20%]'>
+          <div className="relative outline-6 outline-(--text-color) h-full  w-full [perspective:1000px]">
+          <img src={work} className='size-full  object-cover' />            
         </div>
 
         </div>
 
-        <div className='w-full flex Grid_4 lg:items-center items-center justify-center lg:w-1/4'>
-         <div className="relative flex-center outline  outline-(--primary-color) outline-20 lg:outline-5   bg-transparent h-[360px] w-full [perspective:1000px]">
-          
-         </div>
-       
-        
+            <div className='w-full  lg:w-[30%]'>
+          <div className="relative outline-6 outline-(--text-color) lg:h-[365px]  w-full [perspective:1000px]">
+          <img src={work2} className='size-full  object-cover' />            
         </div>
+
+        </div>
+
+
+      
 
 
       </div>    

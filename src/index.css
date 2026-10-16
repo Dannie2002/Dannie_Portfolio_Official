@@ -254,10 +254,10 @@ html, body {
 }
 
 body:has(.btn:hover) .pointer { 
-  width: 3.2rem; 
+  width: 3.6rem; 
   background-color: transparent; 
   /* Added border style and width so it's visible */
-  border: 1.8px solid #ededed; 
+  border: 1.3px solid #ededed; 
 }
 
 .slide-in{
