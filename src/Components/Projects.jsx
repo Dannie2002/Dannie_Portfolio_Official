@@ -161,20 +161,21 @@ const productCards = [
     return (
       <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[31%]">
         <div className="relative group ">
-            <div className="absolute blur-3xl bottom-0 right-5 size-40 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/80  to-(--secondary-color)/40" />
+            
 
  
           <div
-            className=" border p-6 border-(--text-color)/70 rounded-[22px] h-[490px] w-full bg-[#909090]/10 overflow-hidden
+            className="btn border px-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[22px] lg:h-[470px] w-full bg-[#909090]/10 overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
               transition-all
               duration-300
-              group-hover:border-(--secondary-color)/50 ">
+              group-hover:border-(--secondary-color)/4,0 ">
             {/* Category + Title */}
 
             <div className="card_space">
+
               <div className="hidden  svg_container relative">
                 <div className="absolute size-8 rounded-full -bottom-5 blur-xs opacity-60 bg-(--secondary-color)" />
 
@@ -192,30 +193,26 @@ const productCards = [
            
             </div>
 
-            <div className="min-h-44 w-full relative overflow-hidden mt-6">
-              <div className="absolute bg-() hidden z-60 size-full bottom-5  outline-1 outline-[#fffced] top-5 "/>
-                   <img src={image} alt={title}  className="grayscale h-full w-full aspect-2/6  object-cover transition-transform  duration-700 group-hover:scale-105" />
+            <div className="lg:h-44 h-33 w-full relative rounded-[12px] overflow-hidden mt-6">
+        
+                   <img src={image} alt={title}  className="grayscale h-full w-full aspect-2/6  object-cover transition-transform  duration-700 group-hover:scale-125" />
             </div>
 <div className="flex mt-8 items-center justify-between">
-    <h3 className="text-[18px] leading-[27px] geonova font-bold text-[#ededed] ">
-                {title}
-              </h3>
-              <div className="bg-(--secondary-color) p-2">
+    <h3 className="text-[18px] leading-[27px] geonova font-bold text-[#ededed] "> {title} </h3>
+
+              <div className="bg-(--secondary-color) group-hover:rotate-45 transition-transform duration-450 ease-in-out p-2">
 
                     <Link
             to={`/projects/${slug}`}>
-     <svg
-  className="size-6  group-hover:scale-135 transition-transform duration-300 ease-in-out"
-  fill="#ededed"
-  viewBox="0 0 32 32"
-  xmlns="http://www.w3.org/2000/svg"
-  aria-label="Arrow pointing up and right"
-  role="img"
->
+              <svg className="size-6  group-hover:scale-135 transition-transform duration-450 ease-in-out"
+            fill="#ededed"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Arrow pointing up and right"
+            role="img"
+          >
   <title>Arrow up right</title>
-  <polygon
-    points="10 6 10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6"
-  />
+  <polygon points="10 6 10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6" />
   <rect
     width="32"
     height="32"
@@ -228,12 +225,12 @@ const productCards = [
           
 </div>
  
-            <div className="card_space mt-6">
+            <div className="card_space mt-8">
               <p className="text_para text-[14px] leading-relaxed max-w-[90%]">
                 {description}
               </p>
 
-              <div className="relative mt-2 overflow-hidden flex items-center text-[#fffced] justify-center py-1 px-3 bg-transparent ">
+              <div className="hidden relative mt-2 overflow-hidden flex items-center text-[#fffced] justify-center py-1 px-3 bg-transparent ">
                 <span className="text-[10px]  text-(--text-colour)">
                   {year}
                 </span>

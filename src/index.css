@@ -257,7 +257,7 @@ body:has(.btn:hover) .pointer {
   width: 3.2rem; 
   background-color: transparent; 
   /* Added border style and width so it's visible */
-  border: 1.6px solid #b4a89d; 
+  border: 1.8px solid #ededed; 
 }
 
 .slide-in{

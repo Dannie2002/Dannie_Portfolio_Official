@@ -337,7 +337,7 @@ const ProjectDetails = () => {
               }}
               className=" border-t border-[#909090]/15 pt-5 mt-12">
 
-              <div className="grid grid-cols-3 gap-6 mt-6">
+              <div className="grid grid-cols-2 gap-6 mt-6">
 
                 <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">  Category </p>
@@ -413,7 +413,7 @@ const ProjectDetails = () => {
              <div className="w-full lg:w-1/2 flex flex-col gap-6">
 
 
-        <div className="lg:h-[550px] w-full" >
+        <div className="lg:h-[550px] h-[420px] w-full" >
           <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-2xl" />
 
         </div>
@@ -438,15 +438,15 @@ const ProjectDetails = () => {
           </p>
 
 
-      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
-          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
+      <div className="flex_container">
+          <h2 className="lg:mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
             Overview
           </h2>
-               <p className="text_para ml-12 text-[#ededed]">
+               <p className="text_para lg:ml-12 text-[#ededed]">
             {project.overview}
           </p>
 <div className="flex items-start justify-end">
- <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+ <svg className="lg:size-25 lg:ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
 </div>
          
 
@@ -466,15 +466,13 @@ const ProjectDetails = () => {
           </p>
 
 
-      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
-          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
+      <div className="flex_container">
+          <h2 className="lg:mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
             Challenge
           </h2>
-               <p className="text_para ml-12 text-[#ededed]">
-            {project.challenge}
-          </p>
+               <p className="text_para lg:ml-12 text-[#ededed]"> {project.challenge}  </p>
 <div className="flex items-start justify-end">
- <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+ <svg className="lg:size-25 lg:ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
 </div>
          
 
@@ -486,23 +484,20 @@ const ProjectDetails = () => {
           </div>
 
 
-         <div className="  border-b border-b-(--text-color)/60 py-8">
-          {/* 1. Tag showing the overview text */}
+         <div className="  border-b border-b-(--text-colour)/60 py-8">
+  
 
-      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
-            03
-          </p>
+      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">  03  </p>
 
 
-      <div className="flex mt-6 lg:flex-row flex-col  grid grid-cols-3 gap-12 items-start lg:items-center">
-          <h2 className="mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">
-            Approach
-          </h2>
-               <p className="text_para ml-12 text-[#ededed]">
-            {project.approach}
-          </p>
+      <div className="flex_container">
+          <h2 className="lg:mt-3 geonova text-(--secondary-color) text-2xl lg:text-8xl card_heading">  Approach  </h2>
+          <div className="flex flex-items-center justify-center">
+              <p className="text_para lg:ml-12 text-[#ededed]"> {project.approach}</p>
+            </div>
+           
 <div className="flex items-start justify-end">
- <svg className="lg:size-25 ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
+ <svg className="lg:size-25 lg:ml-12 size-10" fill="#909090" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 362.667 362.667" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M352,341.333H36.373l323.2-323.093c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0 l-323.2,323.093V10.667C21.333,4.8,16.533,0,10.667,0C4.8,0,0,4.8,0,10.667V352c0,5.867,4.8,10.667,10.667,10.667H352 c5.867,0,10.667-4.8,10.667-10.667C362.667,346.133,357.867,341.333,352,341.333z"></path> </g> </g> </g></svg>
 </div>
          
 
