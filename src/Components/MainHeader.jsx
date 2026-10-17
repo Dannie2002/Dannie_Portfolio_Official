@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import cv from "../assets/Dannie_Mankhwazi_CV_SEPTEMBER.pdf";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight, Home, Info, Download, Briefcase, Palette,  Phone,} from "lucide-react";
-import { title } from "motion/react-client";
+import { ChevronDown, Home, Info, Download, Briefcase, Palette, Phone } from "lucide-react";
 
 export default function MainHeader() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -22,14 +21,8 @@ export default function MainHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-const navigate = useNavigate();
-
-const handleMobileNavigation = (link) => {
+const handleMobileNavigation = () => {
   setIsOpen(false);
-
-  setTimeout(() => {
-    navigate(link);
-  }, 300);
 };
 
   
@@ -263,6 +256,7 @@ const handleMobileNavigation = (link) => {
                             >
                               <Link
                                 to={child.link}
+                                onClick={() => setActiveMenu(null)}
                                 className="block text_link btn"
                               >
                                 {child.title}
@@ -299,6 +293,7 @@ const handleMobileNavigation = (link) => {
                                 >
                                   <Link
                                     to={child.link}
+                                    onClick={() => setActiveMenu(null)}
                                     className="group flex items-center py-2 border-b border-white/5 text-(--text-color) hover:text-(--secondary-color) transition"
                                   >
                                     <span className="opacity-0 h-0.5 bg-amber-300 w-2 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition"></span>
@@ -396,8 +391,7 @@ const handleMobileNavigation = (link) => {
                       e.preventDefault();
                       toggleMobileItem(index);
                     } else {
-                      e.preventDefault();
-                      handleMobileNavigation(item.link);
+                      handleMobileNavigation();
                     }
                   }}
                   className="flex items-center justify-between w-full text-[16px] py-3 text-[#fffced] uppercase chivo font-medium transition-colors duration-300"
@@ -434,10 +428,7 @@ const handleMobileNavigation = (link) => {
                               <Link
                                 to={child.link}
                                 className="block py-2 text-[16px] text-(--primary-color) hover:text-[#b98815] transition-colors duration-300"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handleMobileNavigation(child.link);
-                                }}
+                                onClick={() => handleMobileNavigation()}
                               >
                                 {child.title}
                               </Link>
@@ -456,12 +447,7 @@ const handleMobileNavigation = (link) => {
                                       <Link
                                         to={grandchild.link}
                                         className="block py-1.5 text-xs text-[#fffced]/60 hover:text-[#b98815] transition-colors duration-300"
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          handleMobileNavigation(
-                                            grandchild.link
-                                          );
-                                        }}
+                                        onClick={() => handleMobileNavigation()}
                                       >
                                         {grandchild.title}
                                       </Link>

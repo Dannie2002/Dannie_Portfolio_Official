@@ -1,12 +1,8 @@
-import React from 'react'
-import {Routes, Route, Router ,useLocation} from "react-router";
-import {AnimatePresence} from "framer-motion";    
+import { useEffect, useRef } from 'react'
+import {Routes, Route, useLocation, useNavigate} from "react-router";
 import MainHeader from './Components/MainHeader.jsx'
 import Footer from './Components/Footer.jsx'
 import Telecommunications from './Components/Telecommunications.jsx'
-import SectionHeader from './Components/SectionHeader.jsx'
-import WorkExperience from './Components/WorkExperience.jsx'
-import ScrollWords from './Components/ScrollWords.jsx'
 import ServiceDesk from './Components/ServiceDesk.jsx';
 import ClientRelationship from './Components/ClientRelationship.jsx';
 import WebsiteDevelopment from "./Components/WebsiteDevelopment.jsx";
@@ -22,17 +18,80 @@ import Connectivity from './Components/Connectivity.jsx';
 import NetworkOperations from './Components/NetworkOperations.jsx';
 import TechnologyTools from './Components/TechnologyTools.jsx';
 import ProjectDetails from "./Components/ProjectDetails.jsx";
+import Transition from './Components/Transition.jsx';
 
 
 
 function App() {
 
-const  location = useLocation();
+const location = useLocation();
+const navigate = useNavigate();
+const transitionRef = useRef(null);
+const transitionPending = useRef(false);
+
+useEffect(() => {
+  const handleClick = async (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return;
+    }
+
+    const anchor =
+      event.target instanceof Element
+        ? event.target.closest("a[data-discover]")
+        : null;
+
+    if (
+      !anchor ||
+      anchor.hasAttribute("download") ||
+      (anchor.target && anchor.target.toLowerCase() !== "_self")
+    ) {
+      return;
+    }
+
+    const destination = new URL(anchor.href, window.location.href);
+
+    if (
+      destination.origin !== window.location.origin ||
+      (destination.pathname === location.pathname &&
+        destination.search === location.search)
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (transitionPending.current) {
+      return;
+    }
+
+    transitionPending.current = true;
+
+    try {
+      await transitionRef.current.animateOut();
+      navigate(`${destination.pathname}${destination.search}${destination.hash}`);
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      await transitionRef.current.animateIn();
+    } finally {
+      transitionPending.current = false;
+    }
+  };
+
+  document.addEventListener("click", handleClick, true);
+  return () => document.removeEventListener("click", handleClick, true);
+}, [location.pathname, location.search, navigate]);
+
   return (
  
     <>
 
-    
+    <Transition ref={transitionRef} />
     <MouseDiv />
     <ProgressBar />
 

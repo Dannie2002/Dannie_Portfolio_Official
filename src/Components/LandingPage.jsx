@@ -132,8 +132,8 @@ const cmsPosts = [
         
              <motion.h1
             variants={itemVariants}
-            className="text-[12px] hidden tracking-[3px] mb-4 uppercase zolando font-medium text-[#909090]"
-          > Reign.
+            className="text-[14px] hidden tracking-[3px] mb-4 uppercase chivo font-medium text-[#909090]"
+          > Fleelancer .
           </motion.h1>
           </motion.div>
           
@@ -143,10 +143,10 @@ const cmsPosts = [
             variants={itemVariants}
             className="font-heading geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
           >          
-            building
+            Product
           </motion.h1>
 
-<div className=" my-2 w-full  ">
+<div className="  w-full  ">
 
 
       
@@ -154,7 +154,7 @@ const cmsPosts = [
             variants={itemVariants}
             className="font-heading  geonova !text-[46px] !leading-[54px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
           >          
-            business
+            brand
             </motion.h1>
    
 
@@ -163,7 +163,7 @@ const cmsPosts = [
 
           
            
-<div className="relative border-t border-b  lg:w-86 w-full border-b-[#484a4a]/40 border-t-[#4a4a4a]/40">
+<div className="relative border-t border-b pb-2 lg:w-86 w-full border-b-[#484a4a]/40 border-t-[#4a4a4a]/40">
     <Scribble className="absolute -top-7 right-0"  
               size={32}
               color="#909095"
@@ -171,9 +171,9 @@ const cmsPosts = [
 <svg className="absolute size-8 right-0" fill="#90afd0" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M50.5,15.615c-0.441,0-0.846-0.294-0.965-0.741c-0.144-0.533,0.173-1.082,0.707-1.225l2.292-0.614 c0.532-0.145,1.081,0.173,1.225,0.707c0.143,0.533-0.174,1.082-0.707,1.225l-2.292,0.614 C50.673,15.604,50.586,15.615,50.5,15.615z"></path> </g> <g> <path d="M29.6,21.214c-0.441,0-0.846-0.294-0.965-0.741c-0.144-0.533,0.173-1.082,0.707-1.225L45.91,14.81 c0.536-0.146,1.081,0.173,1.225,0.707c0.143,0.533-0.174,1.082-0.707,1.225L29.86,21.18C29.773,21.204,29.686,21.214,29.6,21.214 z"></path> </g> </g> <g> <path d="M16.683,68.555c-1.294,0-2.514-0.591-3.729-1.808l-7.662-7.662c-3.796-3.795-0.944-6.646,0.426-8.016 c9.247-8.834,13.635-13.021,15.726-15.013l-8.48-5.464c-2.923-1.584-4.451-4.418-4.092-7.599c0.437-3.862,3.607-7.229,7.889-8.376 L56.639,3.934c4.353-1.169,8.198-0.206,10.292,2.523c1.707,2.225,2.124,5.401,1.175,8.943L57.42,55.278 c-1.375,5.136-5.925,7.476-9.57,7.476l0,0c-2.984,0-5.461-1.468-6.489-3.837l-4.345-8.334c-2.166,2.132-6.655,6.537-16.01,15.703 C19.958,67.334,18.504,68.555,16.683,68.555z M7.388,55.326c0.008,0,0.095,0.294,0.731,0.931l7.662,7.662 c0.629,0.629,0.898,0.636,0.901,0.636c0.041,0,0.429-0.031,1.508-1.111c4.799-4.701,17.277-16.933,17.89-17.555 c0.427-0.455,1.042-0.686,1.67-0.619c0.665,0.071,1.251,0.471,1.561,1.063l5.632,10.804c0.026,0.052,0.051,0.104,0.073,0.158 c0.563,1.354,2.311,1.459,2.833,1.459c2.167,0,4.877-1.411,5.706-4.511l10.687-39.877c0.62-2.314,0.448-4.258-0.484-5.474 c-0.927-1.207-2.438-1.46-3.544-1.46c-0.781,0-1.636,0.123-2.54,0.365L17.795,18.481c-3.127,0.838-4.739,3.097-4.95,4.963 c-0.176,1.558,0.559,2.856,2.068,3.656c0.051,0.026,0.1,0.056,0.147,0.086l10.687,6.885c0.533,0.344,0.872,0.92,0.913,1.554 c0.04,0.633-0.222,1.249-0.707,1.658C25.576,37.633,13.232,49.421,8.512,53.93C7.568,54.875,7.411,55.221,7.388,55.326 L7.388,55.326z"></path> </g> </g> </g></svg>
 <motion.h1
             variants={itemVariants}
-            className="font-heading mx-0  text_gradient geonova !text-[66px] !leading-[64px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
+            className="font-heading mx-0  text_gradient geonova !text-[60px] !leading-[66px] !capitalize font-bold leading-[68px] text-[#d4dac4]"
           >          
-            brands.
+            Designer.
           </motion.h1>
 
    <ScrollVelocityContainer className='hidden z-90 w-full'>
@@ -208,7 +208,7 @@ const cmsPosts = [
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="pt-6 mt-12  text-[18px] text_para max-w-[500px]"
+            className="pt-12  text-[16px] text_para max-w-[500px]"
           >
             I design and build modern digital products<span className="">  enabling your business to grow effortlessly.</span>
            
@@ -409,23 +409,7 @@ const cmsPosts = [
 
         animate={{
           y: [
-            "0px",
-            "0px",
-            "-35px",
-            "-35px",
-            "-72px",
-            "-72px",
-            "-108px",
-            "-128px",
-            "-138px",
-            "-248px",
-             "-360px",
-             "-410px",
-             "-510px",
-              "-610px",
-             "-710px",
-             "-810px",
-            "0px",
+          
           ],
         }}
 
@@ -456,7 +440,7 @@ const cmsPosts = [
 
           {/* Projects */}
 
-          <div className=" rounded-md bg-(--secondary-color)/70 p-4">
+          <div className=" hidden rounded-md bg-(--secondary-color)/70 p-4">
             <Web className="hidden size-12 lg:flex" fill="#ededed" size={27} />
 
              <p className="lg:text-[11px] text-[9px] uppercase chivo text-[#fffced]">
@@ -483,7 +467,7 @@ const cmsPosts = [
         ================================================= */}
 
    
-<div className="outline mt-4 outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-(--background-color) overflow-hidden">
+<div className="outline mt-0 outline-4 outline-[#4a4a4a]/40 p-4 rounded-md bg-(--background-color) overflow-hidden">
 
           <div className=" flex flex-col gap-2 py-3">
 

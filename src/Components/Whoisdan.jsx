@@ -6,7 +6,6 @@ import {
   useTransform,
   useScroll,
 } from "framer-motion";
-import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import digital from "../assets/DigitalMarketing.jpg";
@@ -30,6 +29,23 @@ import ContactPlane from "../SVGS/ContactPlane.jsx";
 import ArrowDown from "../SVGS/ArrowDown.jsx";
 import Github from "../SVGS/Github.jsx";
 import Web from "../SVGS/Web.jsx";
+
+const ResponsibilityMarker = () => (
+  <svg
+    className="size-5 shrink-0"
+    viewBox="0 0 15 15"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M7.49991 0.877045C3.84222 0.877045 0.877075 3.84219 0.877075 7.49988C0.877075 11.1575 3.84222 14.1227 7.49991 14.1227C11.1576 14.1227 14.1227 11.1575 14.1227 7.49988C14.1227 3.84219 11.1576 0.877045 7.49991 0.877045ZM1.82708 7.49988C1.82708 4.36686 4.36689 1.82704 7.49991 1.82704C10.6329 1.82704 13.1727 4.36686 13.1727 7.49988C13.1727 10.6329 10.6329 13.1727 7.49991 13.1727C4.36689 13.1727 1.82708 10.6329 1.82708 7.49988ZM10.1589 5.53774C10.3178 5.31191 10.2636 5.00001 10.0378 4.84109C9.81194 4.68217 9.50004 4.73642 9.34112 4.96225L6.51977 8.97154L5.35681 7.78706C5.16334 7.59002 4.84677 7.58711 4.64973 7.78058C4.45268 7.97404 4.44978 8.29061 4.64325 8.48765L6.22658 10.1003C6.33054 10.2062 6.47617 10.2604 6.62407 10.2483C6.77197 10.2363 6.90686 10.1591 6.99226 10.0377L10.1589 5.53774Z"
+      fill="#ededed"
+    />
+  </svg>
+);
 
 const Whoisdan = () => {
   /* --------------------------------
@@ -75,9 +91,11 @@ const Whoisdan = () => {
   const productCards = [
     {
       title: "Service Desk Engineer",
+      company: "inq. digital Ltd.",
+      duration: "Feb 2026 — Present",
       image: banner,
       description:
-        "Supporting ISP operations by monitoring network services, troubleshooting connectivity issues, managing incidents, and coordinating with NOC and field teams to maintain reliable customer connectivity.",
+        "I serve as the first point of customer for clients and partners.",
       responsibilities: [
         "Monitor and troubleshoot client connectivity and network incidents",
         "Handle and track service desk tickets and customer requests",
@@ -85,11 +103,16 @@ const Whoisdan = () => {
         "Coordinate escalations with NOC and field technical teams",
         "Monitor SLA compliance and follow up on service restoration",
         "Prepare incident updates and RFOs for network outages",
+         "Coordinate escalations with NOC and field technical teams",
+        "Monitor SLA compliance and follow up on service restoration",
+        "Prepare incident updates and RFOs for network outages",
       ],
     },
 
     {
       title: "ICT Support Officer",
+      company: "Balaka District Council",
+      duration: "Sept 2025 — Jan 2026",
       image: digital,
       description:
         "Provided ICT support across hardware, software, networking and field operations while assisting users and project teams with technology-related requirements.",
@@ -104,6 +127,8 @@ const Whoisdan = () => {
 
     {
       title: "Technical Trainer",
+      company: "Various Partners",
+      duration: "2024 — 2025",
       image: digital,
       description:
         "Provided ICT support across hardware, software, networking and field operations while assisting users and project teams with technology-related requirements.",
@@ -162,104 +187,157 @@ const Whoisdan = () => {
 
   const ProductCard = ({
     title,
-    image,
+    company,
+    duration,
     description,
     responsibilities,
+    index,
   }) => {
+    const [expanded, setExpanded] = useState(false);
+    const collapseTimer = useRef(null);
+
+    const openResponsibilities = () => {
+      if (collapseTimer.current) {
+        clearTimeout(collapseTimer.current);
+        collapseTimer.current = null;
+      }
+
+      setExpanded(true);
+    };
+
+    const closeResponsibilities = () => {
+      if (collapseTimer.current) {
+        clearTimeout(collapseTimer.current);
+      }
+
+      // Small delay prevents the hover area from flickering while
+      // the row changes height during the animation.
+      collapseTimer.current = setTimeout(() => {
+        setExpanded(false);
+        collapseTimer.current = null;
+      }, 180);
+    };
+
+    useEffect(() => {
+      return () => {
+        if (collapseTimer.current) {
+          clearTimeout(collapseTimer.current);
+        }
+      };
+    }, []);
+
     return (
       <motion.div
+        layout
         variants={itemVariants}
-        className="
-          group
-          relative
-          overflow-hidden
-          rounded-sm
-          shadow-[3px_6px_28px_rgba(255,255,255,0.2)]
-          flex
-          flex-col
-          items-start
-          justify-start
-          px-6
-          py-8
-          h-auto
-        "
+        transition={{
+          layout: {
+            type: "spring",
+            stiffness: 520,
+            damping: 42,
+            mass: 0.65,
+          },
+        }}
+        className="w-full border-b border-(--text-color)/60 py-8"
       >
-        {/* Dark Gradient */}
+        <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
+          {String(index + 1).padStart(2, "0")}
+        </p>
 
-        <div className="absolute flex z-0 inset-0 bg-gradient-to-l from-[#060607] via-[#060607] to-[#070708]/70 opacity-90" />
+        <div className="flex_container !items-stretch">
+          {/* LEFT: number, title (position), duration */}
+          <div className="lg:w-1/4 w-full card_space">
+            <h2 className="lg:mt-3 geonova text-[42px] leading-[42.7px] card_heading">
+              {title}
+            </h2>
 
-        {/* Card Content */}
+            <p className="mt-2 text-[#fffced]/70">{company}</p>
+            <p className="mt-1 text-[#fffced]/70">{duration}</p>
+          </div>
 
-        <div className="relative z-10 flex flex-col gap-4">
+          {/* MIDDLE: short description */}
+          <div className="lg:w-1/4 w-full">
+            <p className="text_para text-[#fffced]">{description}</p>
+          </div>
 
-          {/* Icon */}
-
+          {/* RIGHT: responsibilities preview and expandable list */}
           <div
-            className="
-              hidden
-              w-fit
-              items-center
-              justify-center
-              rounded-sm
-              border
-              border-[#8BBB92]/20
-              bg-white/5
-              p-2
-              backdrop-blur-md
-            "
+            onMouseEnter={openResponsibilities}
+            onMouseLeave={closeResponsibilities}
+            onTouchStart={openResponsibilities}
+            className="group lg:w-1/2 w-full"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="#FFBF00"
-              stroke="#8BBB92"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="16" y="16" width="6" height="6" rx="1" />
-              <rect x="2" y="16" width="6" height="6" rx="1" />
-              <rect x="9" y="2" width="6" height="6" rx="1" />
-              <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
-              <path d="M12 12V8" />
-            </svg>
-          </div>
+            <div className="relative w-full">
+              <h4 className="zalando card_heading text-[14px]">
+                Key responsibilities:
+              </h4>
 
-          {/* Title */}
-
-          <h4 className="card_heading uppercase text-[#fffced] leading-tight">
-            {title}
-          </h4>
-
-          <h3 className="text-[#ffced2]">Employer:</h3>
-
-          <h3 className="text-[#ffced2]">Duration:</h3>
-
-          <p className="text-[#fffced] leading-relaxed">
-            {description}
-          </p>
-
-          <div className="flex flex-col gap-3 mt-2">
-            {responsibilities.map((responsibility, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-3 text-[#fffced]"
+              <ul
+                id={`responsibilities-${index}`}
+                className="mt-4 flex flex-col gap-2"
               >
-                <Check
-                  size={17}
-                  strokeWidth={2}
-                  className="mt-0.5 shrink-0 text-[#FFBF00]"
-                />
+                {responsibilities.slice(0, 3).map((responsibility, i) => (
+                  <li
+                    key={i}
+                    className="text_para flex gap-1 text-[#fffced]/70"
+                  >
+                    <span className="mr-2 shrink-0">
+                      <ResponsibilityMarker />
+                    </span>
+                    {responsibility}
+                  </li>
+                ))}
 
-                <span className="leading-relaxed">
-                  {responsibility}
-                </span>
-              </div>
-            ))}
+                <AnimatePresence initial={false}>
+                  {expanded &&
+                    responsibilities.slice(3).map((responsibility, i) => (
+                      <motion.li
+                        key={`extra-${index}-${i}`}
+                        initial={{
+                          height: 0,
+                          opacity: 0,
+                          y: -8,
+                        }}
+                        animate={{
+                          height: "auto",
+                          opacity: 1,
+                          y: 0,
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                          y: -8,
+                        }}
+                        transition={{
+                          height: {
+                            type: "spring",
+                            stiffness: 520,
+                            damping: 42,
+                            mass: 0.55,
+                          },
+                          y: {
+                            type: "spring",
+                            stiffness: 520,
+                            damping: 38,
+                            mass: 0.55,
+                          },
+                          opacity: {
+                            duration: 0.16,
+                            ease: "easeOut",
+                          },
+                        }}
+                        className="text_para flex gap-1 overflow-hidden text-[#fffced]/90"
+                      >
+                        <span className="mr-2 shrink-0">
+                          <ResponsibilityMarker />
+                        </span>
+                        <span>{responsibility}</span>
+                      </motion.li>
+                    ))}
+                </AnimatePresence>
+              </ul>
+            </div>
           </div>
-
         </div>
       </motion.div>
     );
@@ -413,7 +491,7 @@ const Whoisdan = () => {
   -------------------------------- */
 
   return (
-    <section className="bg-[#101011] min:h-screen flex flex-col lg:items-start lg:justify-center relative w-full">
+    <section className="bg-(--background-color) min:h-screen flex flex-col lg:items-start lg:justify-center relative w-full">
 
       <MoonBalls />
 
@@ -496,7 +574,7 @@ const Whoisdan = () => {
               Icons
           -------------------------------- */}
 
-          <div className="flex flex-color lg:flex-col gap-4">
+          <div className="flex hidden flex-color lg:flex-col gap-4">
 
             <motion.div
               className="z-50"
@@ -684,7 +762,7 @@ const Whoisdan = () => {
                   <div
                     className="
                       left-5
-                      hidden
+                      
                       rotate-270
                       bottom-16
                       z-20
@@ -755,6 +833,7 @@ const Whoisdan = () => {
         <div
           ref={professionalWorkRef}
           className="
+          
             relative
             w-full
             mt-12
@@ -767,130 +846,6 @@ const Whoisdan = () => {
           "
         >
 
-          {/* --------------------------------
-              STICKY LEFT PANEL
-          -------------------------------- */}
-
-          <div
-            className="
-              lg:h-[520px]
-              outline
-              outline-2
-              gap-6
-              z-10
-              flex
-              flex-col
-              p-6
-              rounded-r-sm
-              bg-[#0b0b0d]
-              outline-[#4a4a4a]/60
-              lg:w-[45%]
-              w-full
-              sticky
-              top-25
-              h-84
-              shadow-[6px_6px_18px_rgba(255,255,255,0.2)]
-            "
-          >
-
-            <motion.h2
-              animate={{
-                opacity:
-                  scrollExperience === 0
-                    ? 1
-                    : 0.35,
-
-                x:
-                  scrollExperience === 0
-                    ? 0
-                    : -10,
-
-                fontSize:
-                  scrollExperience === 0
-                    ? "36px"
-                    : "24px",
-
-                color:
-                  scrollExperience === 0
-                    ? "#978F66"
-                    : "#b8b8b8",
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              className="card_heading leading-[38.6px]"
-            >
-              1. Service Desk Engineer
-            </motion.h2>
-
-            <motion.h2
-              animate={{
-                opacity:
-                  scrollExperience === 1
-                    ? 1
-                    : 0.35,
-
-                x:
-                  scrollExperience === 1
-                    ? 0
-                    : -10,
-
-                fontSize:
-                  scrollExperience === 1
-                    ? "36px"
-                    : "24px",
-
-                color:
-                  scrollExperience === 1
-                    ? "#978F66"
-                    : "#b8b8b8",
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              className="card_heading leading-[38.6px]"
-            >
-              2. ICT Support Officer
-            </motion.h2>
-
-            <motion.h2
-              animate={{
-                opacity:
-                  scrollExperience === 2
-                    ? 1
-                    : 0.35,
-
-                x:
-                  scrollExperience === 2
-                    ? 0
-                    : -10,
-
-                fontSize:
-                  scrollExperience === 2
-                    ? "36px"
-                    : "24px",
-
-                color:
-                  scrollExperience === 2
-                    ? "#978F66"
-                    : "#b8b8b8",
-              }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
-              className="card_heading leading-[38.6px]"
-            >
-              3. Trainer Technical
-            </motion.h2>
-
-          </div>
-
-          {/* --------------------------------
-              TRACING BEAM
-          -------------------------------- */}
 
           <div
             className="
@@ -1027,7 +982,7 @@ const Whoisdan = () => {
             ref={beamContentRef}
             className="
               w-full
-              lg:w-[55%]
+              lg:w-[100%]
               z-0
               flex
               flex-col
@@ -1057,12 +1012,12 @@ const Whoisdan = () => {
                     data-experience={index}
                   >
                     <ProductCard
+                      index={index}
                       title={card.title}
-                      image={card.image}
+                      company={card.company}
+                      duration={card.duration}
                       description={card.description}
-                      responsibilities={
-                        card.responsibilities
-                      }
+                      responsibilities={card.responsibilities}
                     />
                   </div>
                 )

@@ -66,6 +66,7 @@ const ScrollToTopButton = () => {
       `}
     >
       <ArrowUp size={20} strokeWidth={2.5} />
+      
     </button>
   );
 };

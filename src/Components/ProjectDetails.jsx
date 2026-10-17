@@ -163,6 +163,8 @@ const projects = [
 
     image: mockup,
 
+    service: "Web design & development",
+
     shortDescription:
       "An e-commerce interface concept designed around presenting products through a clean digital shopping experience.",
 
@@ -341,17 +343,17 @@ const ProjectDetails = () => {
 
                 <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">  Category </p>
-                   <p className="mt-2 text-sm text-[#fffced]"> {project.category} </p>
+                   <p className="mt-2 text-sm text-[#909090]"> {project.category} </p>
                 </div>
 
               <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-color)/60">
                    <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Year </p>
-                  <p className="mt-2 text-sm text-[#fffced]">{project.year} </p>
+                  <p className="mt-2 text-sm text-[#909090]">{project.year} </p>
                 </div>
 
                <div className="flex flex-col p-3 rounded-[4px] gap-2 bg-(--text-colour)/20">
-                   <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Sector </p>
-                   <p className="mt-2 text-sm text-[#909090]">{project.client} </p>
+                   <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)"> Service </p>
+                   <p className="mt-2 text-sm text-[#909090]">{project.service} </p>
                 </div>
 
               </div>
@@ -360,7 +362,7 @@ const ProjectDetails = () => {
 
               <div className="lg:mt-18 mt-6">
 
-                <p className="lg:text-[10px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
+                <p className="lg:text-[12px] text-[7px] uppercase font-bold chivo tracking-wider text-(--text-colour)">
                   Technologies
                 </p>
 
@@ -391,14 +393,7 @@ const ProjectDetails = () => {
 
        
 
-                <div className="flex justify-start items-center flex-row gap-3 mt-12">
-
                 
-                    <h4 className="  text-[18px]   py-2 text-button text-[#fffced]/70 "> Visit the project</h4>
-                  
-               <svg className="size-6" fill="#ededee" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M196,64V168a4,4,0,0,1-8,0V73.65625L66.82812,194.82812a3.99957,3.99957,0,0,1-5.65625-5.65625L182.34375,68H88a4,4,0,0,1,0-8H192A4.0002,4.0002,0,0,1,196,64Z"></path> </g></svg>
-
-                </div>
 
           
 
@@ -410,14 +405,18 @@ const ProjectDetails = () => {
                 RIGHT — PROJECT META
             ---------------------------------- */}
 
-             <div className="w-full lg:w-1/2 flex flex-col gap-6">
+             <div className="relative w-full lg:w-1/2 flex flex-col gap-6">
+             <div className="absolute flex justify-center items-center flex-col size-30 -bottom-15 -left-15 rounded-full bg-(--secondary-color)"><div className="flex justify-center items-center flex-col gap-3 ">
 
+                
+                    <h4 className="  text-[16px] font-medium  text-button text-[#fffced]/70 "> Live Site</h4>
+                  
+               <svg className="size-8" fill="#ededee" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M196,64V168a4,4,0,0,1-8,0V73.65625L66.82812,194.82812a3.99957,3.99957,0,0,1-5.65625-5.65625L182.34375,68H88a4,4,0,0,1,0-8H192A4.0002,4.0002,0,0,1,196,64Z"></path> </g></svg>
 
-        <div className="lg:h-[550px] h-[420px] w-full" >
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-2xl" />
-
-        </div>
-
+                </div></div>
+                <div className="lg:h-[550px] h-[420px] w-full" >
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-2xl" />
+                </div>
         </div>
           </div>
 

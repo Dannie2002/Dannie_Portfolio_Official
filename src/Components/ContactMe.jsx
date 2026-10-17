@@ -403,20 +403,7 @@ const ContactMe = () => {
             </span>
           </h3>
 
-          <div className="hidden lg:flex-row flex-col items-center justify-between gap-20">
-
-            <motion.p className="text_para text-[#fffced]">
-              Share your vision by writing to me through the form and
-              will update you shortly.
-            </motion.p>
-
-            <ContactPlane
-              color="#978F66"
-              size={36}
-              className="hidden lg:flex"
-            />
-
-          </div>
+       
 
         </div>
       </div>
@@ -453,35 +440,6 @@ const ContactMe = () => {
 
             </div>
 
-            <div className="flex items-center  justify-end bg-(--primary-color)/40 p-2 rounded-sm">
-
-              <h3 className="flex items-end gap-4 text-(--text-colour) ">
-
-                Write to me through the form and will update you shortly.
-
-                <span>
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill=""
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-check-check"
-                  >
-                    <path d="M18 6 7 17l-5-5" />
-                    <path d="m22 10-7.5 7.5L13 16" />
-                  </svg>
-
-                </span>
-
-              </h3>
-
-            </div>
 
             <div className="flex gap-2 lg:gap-4 flex-row">
 
@@ -500,8 +458,13 @@ const ContactMe = () => {
             </div>
 
             <div className="mt-12 flex flex-row items-center gap-12">
-              <h4 className="text_para">Whatsapp</h4>
-                  <h4 className="text_para">Whatsapp</h4>
+              <div className="text_field p-4 " >
+                  <h4 className="text_para">danniemankhwazi@gmail.com</h4>
+              </div>
+             
+                   <div className="text_field p-4" >
+                  <h4 className="text_para">+265 993 41 31 91</h4>
+              </div>
             </div>
 
           </div>
@@ -510,12 +473,12 @@ const ContactMe = () => {
               CONTACT FORM
           -------------------------------- */}
 
-          <form
+          <form 
             ref={form}
             name="contact"
             method="POST"
             onSubmit={handleSubmit}
-            className="relative mt-6 lg:mt-0 border-[1.4px] backdrop-blur-md bg-[#201f1f] rounded-2xl  border-(--text-colour)/45 p-6 lg:w-1/2 w-full"
+            className="relative mt-6 lg:mt-0 border-[1.2px] backdrop-blur-md bg-[#201f1f] rounded-2xl  border-(--text-colour)/25 p-6 lg:w-1/2 w-full"
           >
              <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/30  to-(--secondary-color)/40" />
 

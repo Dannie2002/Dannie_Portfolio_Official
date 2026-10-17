@@ -5,6 +5,8 @@ const Transition = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     animateOut() {
       return new Promise((resolve) => {
+        gsap.killTweensOf(".Transition .block");
+
         const tl = gsap.timeline({
           onComplete: resolve,
         });
@@ -17,7 +19,7 @@ const Transition = forwardRef((props, ref) => {
 
         tl.to(".Transition .first-row .block", {
           scaleY: 1,
-          duration: 0.8,
+          duration: 0.5,
           stagger: {
             each: 0.08,
             from: "end",
@@ -31,7 +33,7 @@ const Transition = forwardRef((props, ref) => {
           ".Transition .second-row .block",
           {
             scaleY: 1,
-            duration: 0.8,
+            duration: 0.5,
             stagger: {
               each: 0.08,
               from: "end",
@@ -47,6 +49,8 @@ const Transition = forwardRef((props, ref) => {
 
     animateIn() {
       return new Promise((resolve) => {
+        gsap.killTweensOf(".Transition .block");
+
         const tl = gsap.timeline({
           onComplete: resolve,
         });

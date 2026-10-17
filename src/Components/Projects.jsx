@@ -328,7 +328,7 @@ const productCards = [
             View Selected Projects
           </motion.h1>
 
-          <h3 className="Section_title">Built with purpose, works of impact.</h3>
+          <h3 className="Section_title">I deliver cutting-edge <span className="text_gradient">digital</span>  products.</h3>
         </div>
       </div>
 
