@@ -100,11 +100,7 @@ const cmsPosts = [
       
 
       {/* Noise */}
-      <img
-        src={noise}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-overlay"
-      />
+     
         <img
         src={bag}
         alt=""

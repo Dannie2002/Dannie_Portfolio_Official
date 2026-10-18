@@ -379,9 +379,7 @@ const ContactMe = () => {
         bgImage={banner}
         breadcrumbs={[
           { label: "Home", link: "/" },
-          { label: "/ Competencies" },
-          { label: "/ Telecommunications" },
-          { label: "/ Network Operations" }
+          { label: "/ Contact me" }
         ]}
       />
 
@@ -422,7 +420,7 @@ const ContactMe = () => {
 
               <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-4 gap-4 flex-row justify-end items-start">
 
-                <motion.p className="text_para text-[13px] text-(--text-colour)">
+                <motion.p className="text_para text-[15px] text-(--text-colour)">
 
                   <span className="text-[#fffced] mb-2">
                     Hi,
@@ -449,7 +447,7 @@ const ContactMe = () => {
 
               <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-2 gap-4 flex-row justify-end items-start">
 
-                <motion.p className="text_para text-[13px] text-(--text-colour)">
+                <motion.p className="text_para text-[15px] text-(--text-colour)">
                   Ok sure.
                 </motion.p>
 
@@ -480,7 +478,7 @@ const ContactMe = () => {
             onSubmit={handleSubmit}
             className="relative mt-6 lg:mt-0 border-[1.2px] backdrop-blur-md bg-[#201f1f] rounded-2xl  border-(--text-colour)/25 p-6 lg:w-1/2 w-full"
           >
-             <div className="absolute blur-3xl bottom-0 right-5 size-80 rounded-full shadow-[15px_10px_16px_2px_rgba(99,89,133,0.1)] z-0 bg-gradient-to-l  from-(--secondary-color)/30  to-(--secondary-color)/40" />
+          
 
             {/* Required by Netlify for React-rendered forms */}
             <input
@@ -771,12 +769,12 @@ const ContactMe = () => {
 
                 <label
                   htmlFor="message"
-                  className="text_label"
+                  className="text_label z-90"
                 >
                   Message:
                 </label>
 
-                <div className="mt-2">
+                <div className="mt-2 z-90">
 
                   <textarea
                     rows={4}
@@ -784,7 +782,7 @@ const ContactMe = () => {
                     name="message"
                     placeholder="Type your message here."
                     required
-                    className="text_field border border-(--text-color)/30"
+                    className="text_field border z-90 border-(--text-color)/30"
                   />
 
                 </div>
