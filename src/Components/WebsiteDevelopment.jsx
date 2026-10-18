@@ -238,7 +238,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
             </div>
  
 
-            <div className="Grid_4 mt-12">
+            <div className="Grid_4 lg:grid-cols-3 mt-12">
   <div className="card_space">
     <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4">
       01

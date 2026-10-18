@@ -246,17 +246,17 @@ const Whoisdan = () => {
 
         <div className="flex_container !items-stretch">
           {/* LEFT: number, title (position), duration */}
-          <div className="lg:w-1/4 w-full card_space">
-            <h2 className="lg:mt-3 geonova text-[42px] leading-[42.7px] card_heading">
+          <div className="lg:w-[40%] w-full card_space">
+            <h2 className="lg:mt-3  text-[32px]  card_heading">
               {title}
             </h2>
 
-            <p className="mt-2 text-[#fffced]/70">{company}</p>
+            <p className="mt-2 text_para text-[#fffced]/70">{company}</p>
             <p className="mt-1 text-[#fffced]/70">{duration}</p>
           </div>
 
           {/* MIDDLE: short description */}
-          <div className="lg:w-1/4 w-full">
+          <div className="hidden lg:w-1/4 w-full">
             <p className="text_para text-[#fffced]">{description}</p>
           </div>
 
@@ -265,7 +265,7 @@ const Whoisdan = () => {
             onMouseEnter={openResponsibilities}
             onMouseLeave={closeResponsibilities}
             onTouchStart={openResponsibilities}
-            className="group lg:w-1/2 w-full"
+            className="group lg:w-[60%] w-full"
           >
             <div className="relative w-full">
               <h4 className="zalando card_heading text-[14px]">
@@ -574,7 +574,7 @@ const Whoisdan = () => {
               Icons
           -------------------------------- */}
 
-          <div className="flex hidden flex-color lg:flex-col gap-4">
+          <div className="flex lg:w-[10%] flex-color lg:flex-col gap-4">
 
             <motion.div
               className="z-50"

@@ -395,7 +395,7 @@ const ContactMe = () => {
 
           <h3 className="Section_title">
             Let us build our next projects
-            <span className="text-(--secondary-color)">
+            <span className="text_gradient">
               {" "}
               together.
             </span>

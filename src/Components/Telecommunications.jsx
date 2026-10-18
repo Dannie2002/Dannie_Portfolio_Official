@@ -146,7 +146,7 @@ const y = useSpring(rawY, {
 
 
           {/* TITLE */}
-          <h4 className="bigcard_heading zalando">{title}</h4>
+          <h4 className="card_heading zalando">{title}</h4>
 
           {/* DESCRIPTION */}
           <motion.div
