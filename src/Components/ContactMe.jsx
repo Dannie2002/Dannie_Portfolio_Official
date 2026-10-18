@@ -456,11 +456,11 @@ const ContactMe = () => {
             </div>
 
             <div className="mt-12 flex flex-wrap items-center gap-6 lg:gap-12">
-              <div className="text_field p-4 " >
+              <div className="text_field p-6 " >
                   <h4 className="text_para">danniemankhwazi@gmail.com</h4>
               </div>
              
-                   <div className="text_field p-4 bg-(--secondary-color)" >
+                   <div className="text_field p-6 bg-(--secondary-color)" >
                   <h4 className="text_para">+265 993 41 31 91</h4>
               </div>
             </div>

@@ -229,6 +229,85 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
             </div>
           </div>
 
+
+   <section>
+        <div className="Section_wrapper">
+
+           <div className="card_space">
+              <h4 className="Section_title">I go through</h4>
+            </div>
+ 
+
+            <div className="Grid_4 mt-12">
+  <div className="card_space">
+    <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4">
+      01
+    </p>
+
+    <h3 className="card_heading">
+      Research Strategy
+    </h3>
+
+    <p className="text-[#fffced]/70 text_para mt-1">
+      I start by understanding the project, its audience, goals, and
+      technical requirements. 
+    </p>
+  </div>
+
+  <div className="card_space">
+    <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4">
+      02
+    </p>
+
+    <h3 className="card_heading">
+      Structure Content
+    </h3>
+
+    <p className="text-[#fffced]/70 text_para mt-1">
+      I organize the content, pages, and user journeys into a clear
+      structure.
+    </p>
+  </div>
+
+  <div className="card_space">
+    <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4">
+      03
+    </p>
+
+    <h3 className="card_heading">
+      Design
+    </h3>
+
+    <p className="text-[#fffced]/70 text_para mt-1">
+      I translate the strategy into a visual system that balances identity,
+      usability, and interaction.
+    </p>
+  </div>
+
+  <div className="card_space">
+    <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4">
+      04
+    </p>
+
+    <h3 className="card_heading">
+      Development
+    </h3>
+
+    <p className="text-[#fffced]/70 text_para mt-1">
+      I bring the design to life with clean, responsive, and maintainable
+      code. 
+    </p>
+  </div>
+</div>
+
+        </div>
+           
+
+    </section>
+          
+
+          
+
     </section>
   );
 };
