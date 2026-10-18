@@ -165,7 +165,7 @@ const productCards = [
 
  <Link to={`/projects/${slug}`}>
           <div
-            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[3px]  h-[400px] lg:h-[470px] w-full bg-[#313131] overflow-hidden
+            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[3px]  h-[400px] lg:h-[470px] w-full bg-[#83837d] overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]

@@ -51,22 +51,27 @@ const LetsConnect = () => {
 
 
       <svg width="0" height="0">
-        <clipPath id="myClip" clipPathUnits="objectBoundingBox">
-          <path d="M0,0
-                  L0 0
-                  L 0.7 0
-                  L 1 0.10
-                  L 1 0.9
-                  L 1 0.9
-                  L 1 1
-                  L 0 1
-                  " />
-        </clipPath>
-      </svg>
+  <clipPath id="projectClip" clipPathUnits="objectBoundingBox">
+    <path
+      d="
+        M 0 0
+        L 0.84 0
+        L 1 0.14
+        L 0.94 0.28
+        L 1 0.50
+        L 0.94 0.72
+        L 1 0.86
+        L 0.84 1
+        L 0 1
+        Z
+      "
+    />
+  </clipPath>
+</svg>
  
 
 
-      <div className="w-full relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
+      <div className="w-full clip relative overflow-hidden rounded-3xl flex items-center justify-center"  style={bg6}>
          <div className="absolute z-5 inset-0 bg-gradient-to-r opacity-100 from-(--secondary-color) via-(--secondary-color)/99 to-(--secondary-color)/45" />
    
        
@@ -84,18 +89,18 @@ const LetsConnect = () => {
                       </div>
                                    <div className="mt-0 flex flex-row  gap-6">
                     
-                     <motion.div className='flex btn border  mt-6 group w-fit transition-all duration-200 cursor-pointer rounded-sm bg-(--background-color) border-(--primary-color)/40 px-6  py-2 items-center gap-4' >
+                     <motion.div className='flex btn  mt-6 group w-full transition-all duration-200 cursor-pointer rounded-sm bg-(--background-color)  px-6  py-2 items-center gap-4' >
                      <div className='relative flex overflow-hidden'>
                              <h3 className='text_button group-hover:translate-y-6 ease-in-out transition-transform duration-290 out'>
-                          Contact Us
+                          Contact me
                         </h3>
                         <h3 className='text_button absolute -translate-y-4  group-hover:opacity-100 group-hover:translate-y-0 opacity-0  transform transition-all duration-290'>
-                          Contact Us
+                          Contact me
                         </h3>
                      </div>
                      
                         <div className='flex relative group-hover:rotate-45 transition-transform duration-450 ease-in-out group items-center overflow-hidden rounded-sm  justify-center bg-[#fffced] size-7 p-2'>
-                          <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--primary-color)' />
+                          <ArrowRight className='absolute group-hover:rotate-15  ease-in-out  size-full transform  transition-all duration-490  group-hover:translate-x-10 text-(--background-color)' />
                           <ArrowRight className='absolute group-hover:-rotate-45  ease-in-out  size-full transform -translate-x-10 opacity-0  transition-all duration-600 group-hover:opacity-100  group-hover:translate-x-0 text-[#272626]' />
                         </div>
                        

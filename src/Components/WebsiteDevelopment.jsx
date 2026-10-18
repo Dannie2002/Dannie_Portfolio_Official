@@ -16,8 +16,40 @@ import Scribble from "./Scribble.jsx";
 import CodeMerge from "../SVGS/CodeMeerge.jsx";
 import MoonBalls from "./MoonBalls.jsx"
 
+import SplitText from "gsap/SplitText";
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
+
 
 const WebsiteDevelopment = () => {
+  const processHeadingRef = useRef(null);
+
+  useGSAP(() => {
+    const heading = processHeadingRef.current;
+    if (!heading) return;
+
+    const heroSplit = new SplitText(heading, {
+      type: "lines, words, chars",
+      mask: "chars",
+    });
+
+    gsap.from(heroSplit.chars, {
+      opacity: 0,
+      yPercent: 120,
+      ease: "expo.out",
+      duration: 0.75,
+      stagger: {
+        each: 0.045,
+        from: "start",
+      },
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 80%",
+        once: true,
+      },
+    });
+
+    return () => heroSplit.revert();
+  }, { scope: processHeadingRef });
 
   /* --------------------------------
      Animation Variants
@@ -234,7 +266,9 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
         <div className="Section_wrapper">
 
            <div className="card_space">
-              <h4 className="Section_title">I go through</h4>
+              <h4 ref={processHeadingRef} className="Section_title head">
+                I go through
+              </h4>
             </div>
  
 
