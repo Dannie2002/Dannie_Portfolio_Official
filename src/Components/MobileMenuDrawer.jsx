@@ -181,6 +181,14 @@ export default function MobileMenuDrawer({
                   <Download className="absolute group-hover:-rotate-45 ease-in-out size-6 transform -translate-x-10 opacity-0 transition-all duration-600 group-hover:opacity-100 group-hover:translate-x-0 text-[#272626]" />
                 </div>
               </motion.a>
+              <div className="flex mt-2 flex-col gap-2">
+                <h4 className="card_heading chivo uppercase ">Socials</h4>
+                <div className="flex gap-3">
+                  <h4 className="text_para font-medium text-[12px] uppercase">Instagram</h4>
+                  <h4 className="text_para font-medium text-[12px] uppercase">Facebook</h4>
+                  <h4 className="text_para font-medium text-[12px] uppercase">Hithub</h4>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

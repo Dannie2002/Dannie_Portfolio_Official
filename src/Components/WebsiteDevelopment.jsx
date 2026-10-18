@@ -36,7 +36,7 @@ const WebsiteDevelopment = () => {
       opacity: 0,
       yPercent: 120,
       ease: "expo.out",
-      duration: 0.75,
+      duration: 0.6,
       stagger: {
         each: 0.045,
         from: "start",
@@ -232,7 +232,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
             
             <div  className="section_header  z-5">
                 <motion.h1  className="page_title z-50" > Web Desing & Development </motion.h1>
-                <h3 className="Section_title z-40">Modern websites<span className="text_gradient"><br /> solving  </span> business complications. </h3>
+                <h3 className="Section_title z-40 ">Modern websites<span className="text_gradient"><br /> solving  </span> business complications. </h3>
                 <div ref={svgRef} className="animate-item flex lg:flex-row flex-col mt-3 items-center justify-between gap-20">
                           <motion.p className=" text_para  max-w-2xl " >
                               Say goodbye to basic designs. I design modern websites based on what your brand needs. Develop to solve real business problems and to make your business standout.
