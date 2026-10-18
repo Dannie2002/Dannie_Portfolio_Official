@@ -124,7 +124,7 @@ const y = useSpring(rawY, {
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
       onTouchEnd={() => setIsHovered(false)}
-      className="group relative overflow-hidden rounded-sm shadow-[3px_6px_28px_rgba(255,255,255,0.2)] flex flex-col items-start justify-end px-6 py-8 lg:min-h-[480px] min-h-[400px] btn"
+      className="group relative overflow-hidden rounded-sm shadow-[3px_6px_28px_rgba(255,255,255,0.2)] flex flex-col items-start justify-end px-6 py-8 lg:min-h-[420px] min-h-[400px] btn"
     >
       {/* IMAGE */}
       <img src={image} className="absolute inset-0 size-full z-0 object-cover group-hover:scale-110 transition-all duration-2250 grayscale group-hover:grayscale-0"/>
@@ -142,20 +142,11 @@ const y = useSpring(rawY, {
         className="card_space z-10"
       >
         <div className="card_space">
-          <svg
-            fill="#9B8EC7"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 72 72"
-            className="size-10"
-          >
-            <g>
-              <path d="M23.748,2.747c2.271,0,4.405,0.884,6.011,2.489l24.506,24.506c1.646,1.645,2.546,3.921,2.479,6.255c0.068,2.337-0.833,4.614-2.479,6.261L29.758,66.764c-1.605,1.605-3.739,2.489-6.01,2.489c-2.271,0-4.405-0.884-6.01-2.489c-3.314-3.314-3.314-8.707,0-12.021L36.481,36L17.738,17.258c-3.314-3.314-3.314-8.707,0-12.021C19.344,3.631,21.478,2.747,23.748,2.747z M23.748,65.253c1.202,0,2.332-0.468,3.182-1.317L50.963,39.43c0.891-0.893,0.833-2.084-0.833-3.355c0-0.051,0-0.101,0-0.151c0-1.271,0.058-2.461,0.833-3.353L26.693,8.064c-0.85-0.85-1.862-1.317-3.063-1.317c-1.203,0-2.273,0.468-3.123,1.317c-1.755,1.755-1.725,4.61,0.03,6.365l20.172,20.156c0.781,0.781,0.788,2.047,0.007,2.828L20.563,57.57c-1.754,1.755-1.753,4.61,0.001,6.365C21.413,64.785,22.546,65.253,23.748,65.253z" />
-            </g>
-          </svg>
+         <svg className="size-8" fill="#ededee" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="4"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M196,64V168a4,4,0,0,1-8,0V73.65625L66.82812,194.82812a3.99957,3.99957,0,0,1-5.65625-5.65625L182.34375,68H88a4,4,0,0,1,0-8H192A4.0002,4.0002,0,0,1,196,64Z"></path> </g></svg>
+
 
           {/* TITLE */}
-          <h4 className="bigcard_heading">{title}</h4>
+          <h4 className="bigcard_heading zalando">{title}</h4>
 
           {/* DESCRIPTION */}
           <motion.div

@@ -422,7 +422,7 @@ const ContactMe = () => {
 
               <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-4 gap-4 flex-row justify-end items-start">
 
-                <motion.p className="text_para text-(--text-colour)">
+                <motion.p className="text_para text-[13px] text-(--text-colour)">
 
                   <span className="text-[#fffced] mb-2">
                     Hi,
@@ -449,7 +449,7 @@ const ContactMe = () => {
 
               <div className="flex bg-[#464640]/40 rounded-2xl backdrop-blur-[4px] p-2 gap-4 flex-row justify-end items-start">
 
-                <motion.p className="text_para text-(--text-colour)">
+                <motion.p className="text_para text-[13px] text-(--text-colour)">
                   Ok sure.
                 </motion.p>
 
@@ -457,12 +457,12 @@ const ContactMe = () => {
 
             </div>
 
-            <div className="mt-12 flex flex-row items-center gap-12">
+            <div className="mt-12 flex flex-wrap items-center gap-6 lg:gap-12">
               <div className="text_field p-4 " >
                   <h4 className="text_para">danniemankhwazi@gmail.com</h4>
               </div>
              
-                   <div className="text_field p-4" >
+                   <div className="text_field p-4 bg-(--secondary-color)" >
                   <h4 className="text_para">+265 993 41 31 91</h4>
               </div>
             </div>

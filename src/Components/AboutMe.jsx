@@ -76,7 +76,7 @@ const words =[
                  
                       </span>
                     </h4>
-            <motion.p className="text_para w-xl font-normal mt-6" >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
+            <motion.p className="text_para lg:w-xl w-full font-normal mt-6" >I am a dedicated and passionate professional committed to making a positive impact through effective communication. I design modern interfaces that communicate effectively. Engage in professional communication with stakeholders and clients.</motion.p>
             </div>
            
            <div>

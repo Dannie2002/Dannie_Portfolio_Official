@@ -17,6 +17,11 @@
 }
 
 @font-face {
+  font-family: 'Brigends Expanded';
+  src: url('./assets/Fonts/Brigends Expanded.otf');
+}
+
+@font-face {
   font-family: 'Outrun';
   src: url('./assets/Fonts/Outrun.ttf');
 }
@@ -47,6 +52,7 @@
     --font-geonova:"geonova";
     --font-Outrun: "Outrun";
     --font-horixa:"Horixa";
+    --font-Brigends:"BrigendsExpanded";
 }
 
 html, body {
@@ -357,7 +363,7 @@ transform-origin: top;
 
 .Section_title {
   font-family: var(--font-kasnova);
-  @apply lg:text-[52px] text-[42px] leading-[48px] lg:leading-[44px] mt-4 max-w-[740px] lg:leading-[56px] font-semibold text-[#ededed];
+  @apply lg:text-[48px] text-[38px] leading-[48px] lg:leading-[44px] mt-4 max-w-[740px] lg:leading-[56px] font-semibold text-[#ededed];
 }
 .overlay{
   @apply absolute z-5 inset-0 bg-gradient-to-t from-[#0b0b0d] via-[#201f1f]/60 to-transparent opacity-99 transition-colors duration-450 ease-in-out mix-blend-multiply;
@@ -394,7 +400,7 @@ transform-origin: top;
   @apply lg:text-[16px] text-[15.5px] tracking-[2.3px] mb-2 uppercase font-semibold text-[#909090];
 }
 .card_heading{
-  font-family: var(--font-chivo);
+  font-family: var(--font-zalando);
   @apply font-medium capitalize  leading-[26px] text-[22px] lg:text-[24px] lg:leading-[25.5px] text-[#fffced] mb-2 lg:mb-2;
 }
 
@@ -406,7 +412,7 @@ transform-origin: top;
 .text_para{
   color: #ededed;
   font-family: var(--font-zalando);
-  @apply lg:text-[15.5px] font-light tracking-wide lg:leading-[28px]  text-[16px] leading-relaxed;
+  @apply lg:text-[15.5px] font-light tracking-wide lg:leading-[28px]  text-[14.5px] leading-relaxed;
 }
 
 .top_margin{

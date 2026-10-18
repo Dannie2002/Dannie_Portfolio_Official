@@ -184,8 +184,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
     <section className="bg-(--background-color) relative w-full">
 
-     <img src={noise} alt=""  className="noise"/>
-  
+      <img src={noise} alt=""  className="noise"/>
       <MoonBalls />
 
             <SectionHeader
@@ -195,10 +194,10 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
                 { label: "Home", link: "/" },
                 { label: "/ Competencies" },
                 { label: "/ Website design & development" }
-              ]}
-              />
+              ]}/>
 
           <div  className="Section_wrapper z-10">
+            
             <div  className="section_header  z-5">
                 <motion.h1  className="page_title z-50" > Web Desing & Development </motion.h1>
                 <h3 className="Section_title z-40">Modern websites<span className="text_gradient"><br /> solving  </span> business complications. </h3>

@@ -3,158 +3,153 @@ import gsap from "gsap";
 
 const Transition = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
-    animateOut() {
-      return new Promise((resolve) => {
-        gsap.killTweensOf(".Transition .block");
+animateOut() {
+  return new Promise((resolve) => {
+    gsap.killTweensOf(".Transition .block");
 
-        const tl = gsap.timeline({
-          onComplete: resolve,
-        });
+    const tl = gsap.timeline({
+      onComplete: resolve,
+    });
 
-        gsap.set(".Transition .block", {
-          visibility: "visible",
-          scaleY: 0,
-          transformOrigin: "bottom",
-        });
+    gsap.set(".Transition .block", {
+      visibility: "visible",
+    });
 
-        tl.to(".Transition .first-row .block", {
-          scaleY: 1,
-          duration: 0.5,
-          stagger: {
-            each: 0.08,
-            from: "end",
-            grid: [1, 5],
-            axis: "x",
-          },
-          ease: "expo.out",
-        });
+    // PHASE 1 — controlled movement
+    tl.to(".Transition .left-block", {
+      x: "-45%",
+      duration: 0.35,
+      ease: "power2.out",
+    });
 
-        tl.to(
-          ".Transition .second-row .block",
-          {
-            scaleY: 1,
-            duration: 0.5,
-            stagger: {
-              each: 0.08,
-              from: "end",
-              grid: [1, 5],
-              axis: "x",
-            },
-            ease: "expo.out",
-          },
-          0
-        );
-      });
-    },
+    tl.to(
+      ".Transition .right-block",
+      {
+        x: "45%",
+        duration: 0.35,
+        ease: "power2.out",
+      },
+      0
+    );
 
-    animateIn() {
-      return new Promise((resolve) => {
-        gsap.killTweensOf(".Transition .block");
+    // PHASE 2 — magnetic snap toward center
+    tl.to(".Transition .left-block", {
+      x: "0%",
+      duration: 0.45,
+      ease: "power4.in",
+    });
 
-        const tl = gsap.timeline({
-          onComplete: resolve,
-        });
+    tl.to(
+      ".Transition .right-block",
+      {
+        x: "0%",
+        duration: 0.45,
+        ease: "power4.in",
+      },
+      "<"
+    );
+  });
+},
 
-        gsap.set(".Transition .block", {
-          visibility: "visible",
-          scaleY: 1,
-          transformOrigin: "top",
-        });
+animateIn() {
+  return new Promise((resolve) => {
+    gsap.killTweensOf(".Transition .block");
 
-        tl.to(".Transition .first-row .block", {
-          scaleY: 0,
-          duration: 0.8,
-          delay: 0.1,
-          stagger: {
-            each: 0.08,
-            from: "start",
-            grid: [1, 5],
-            axis: "x",
-          },
-          ease: "expo.inOut",
-        });
+    const tl = gsap.timeline({
+      onComplete: resolve,
+    });
 
-        tl.to(
-          ".Transition .second-row .block",
-          {
-            scaleY: 0,
-            duration: 0.8,
-            stagger: {
-              each: 0.08,
-              from: "start",
-              grid: [1, 5],
-              axis: "x",
-            },
-            ease: "expo.inOut",
-          },
-          0
-        );
-      });
-    },
+    // PHASE 1 — aggressive magnetic release
+    tl.to(".Transition .left-block", {
+      x: "-45%",
+      duration: 0.45,
+      ease: "power4.out",
+    });
+
+    tl.to(
+      ".Transition .right-block",
+      {
+        x: "45%",
+        duration: 0.45,
+        ease: "power4.out",
+      },
+      "<"
+    );
+
+    // PHASE 2 — glide away
+    tl.to(".Transition .left-block", {
+      x: "-100%",
+      duration: 0.35,
+      ease: "power2.inOut",
+    });
+
+    tl.to(
+      ".Transition .right-block",
+      {
+        x: "100%",
+        duration: 0.35,
+        ease: "power2.inOut",
+      },
+      "<"
+    );
+  });
+},
+
+
+
+   
   }));
 
   useEffect(() => {
     const blocks = document.querySelectorAll(".Transition .block");
 
-    gsap.set(blocks, {
+    // Initial state:
+    // Left curtain is outside the screen to the left.
+    // Right curtain is outside the screen to the right.
+    gsap.set(".Transition .left-block", {
+      x: "-100%",
       visibility: "visible",
-      scaleY: 1,
-      transformOrigin: "top",
     });
 
-    const tl = gsap.timeline();
-
-    tl.to(".Transition .first-row .block", {
-      scaleY: 0,
-      duration: 0.8,
-      delay: 0.1,
-      stagger: {
-        each: 0.08,
-        from: "start",
-        grid: [1, 5],
-        axis: "x",
-      },
-      ease: "expo.inOut",
+    gsap.set(".Transition .right-block", {
+      x: "100%",
+      visibility: "visible",
     });
-
-    tl.to(
-      ".Transition .second-row .block",
-      {
-        scaleY: 0,
-        duration: 0.8,
-        stagger: {
-          each: 0.08,
-          from: "start",
-          grid: [1, 5],
-          axis: "x",
-        },
-        ease: "expo.inOut",
-      },
-      0
-    );
 
     return () => {
-      tl.kill();
+      gsap.killTweensOf(blocks);
     };
   }, []);
 
   return (
-    <div className="Transition fixed inset-0 w-full h-full flex flex-col z-[9999] pointer-events-none">
-      <div className="transition-row first-row flex flex-1">
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-      </div>
+    <div className="Transition fixed inset-0 z-[9999] pointer-events-none flex items-center">
+      {/* LEFT CURTAIN */}
+      <div
+        className="
+          block
+          left-block
+          absolute
+          left-0
+          top-0
+          h-full
+          w-1/2
+          bg-[#131313]
+        "
+      />
 
-      <div className="transition-row second-row flex flex-1">
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-        <div className="block flex-1 bg-[#0b0b0d]"></div>
-      </div>
+      {/* RIGHT CURTAIN */}
+      <div
+        className="
+          block
+          right-block
+          absolute
+          right-0
+          top-0
+          h-full
+          w-1/2
+          bg-(--secondary-color)
+        "
+      />
     </div>
   );
 });
