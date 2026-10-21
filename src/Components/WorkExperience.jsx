@@ -117,7 +117,7 @@ const [isHovered, setIsHovered] = useState(false);
        
                </div>
 
-  <div className="mt-16  ">
+  <div className="mt-16 hidden ">
 
       <div className="hidden w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
 
@@ -347,7 +347,7 @@ const [isHovered, setIsHovered] = useState(false);
       </div>
     </div>
 
-<div className="flex  items-center justify-center">
+<div className="flex hidden items-center justify-center">
   <div className="border border-[#909090] rounded-full flex gap-62 py-2 px-10 items-center">
       <div className="size-12">
     <img className="size-full object-contain" src={logo} />
@@ -363,9 +363,9 @@ const [isHovered, setIsHovered] = useState(false);
   
 </div>
  
-<section className=" mt-18 h-screen">
+<section className="hidden mt-18 h-screen">
 
-         <div className="w-full mt-4 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
+         <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
        
              <div className="h-[420px] col-span-6 bg-(--primary-color)">
       <img src={branding} className="size-full object-cover" />
@@ -428,16 +428,16 @@ const [isHovered, setIsHovered] = useState(false);
 
     <section className=" mt-34 min-h-screen">
 
-           <div className="w-full mt-4 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+           <div className="w-full px-3 lg:mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
 
-       <div className="lg:col-span-3 flex flex-col start-start justify-start">
+       <div className="lg:col-span-3  w-full flex flex-col start-start justify-start">
         <div className="flex flex-col gap-1">
           <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[24px]">Our</h2>
                 
         <h2 className="dmsans leading-10 uppercase text-(--secondary-color) font-black text-[42px]">Team</h2>
         </div>
 
-        <p></p>
+       
        </div>
        
 
@@ -445,9 +445,9 @@ const [isHovered, setIsHovered] = useState(false);
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className=" lg:col-span-3  card_space">
+      onTouchEnd={() => setIsHovered(false)} className=" lg:col-span-3 w-full p-0 card_space">
                  <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={worker} className="size-full grayscale object-cover" />
+                <img src={worker2} className="size-full grayscale object-cover" />
                 <motion.div
                            animate={{
               height: isHovered ? "auto" : 0,
@@ -485,7 +485,7 @@ const [isHovered, setIsHovered] = useState(false);
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="col-span-3  card_space">
+      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
                  <div className="relative h-[400px] w-full  bg-(--primary-color)">
                 <img src={worker2} className="size-full grayscale object-cover" />
                 <motion.div
@@ -535,7 +535,7 @@ const [isHovered, setIsHovered] = useState(false);
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="lg:col-span-3  card_space">
+      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
                  <div className="relative h-[400px] w-full  bg-(--primary-color)">
                 <img src={branding} className="size-full grayscale object-cover" />
                 <motion.div
@@ -571,19 +571,126 @@ const [isHovered, setIsHovered] = useState(false);
   
        </div>
 
-      
-              <div className="h-[420px] col-span-3 bg-(--primary-color)">
-      <img src={brand} className="size-full object-cover" />
-       </div>
- 
+              <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={branding} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
 
-                <div className="h-[420px] col-span-3 bg-(--primary-color)">
-      <img src={brand} className="size-full object-cover" />
+
+                </motion.div>
+
+       </div>
+       <div className="flex mt-1 flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
        </div>
 
-                   <div className="h-[420px] col-span-3 bg-(--primary-color)">
-      <img src={brand} className="size-full object-cover" />
+          <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={worker} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
+
+
+                </motion.div>
+
        </div>
+       <div className="flex mt-1 flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
+       </div>
+
+          <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={Worker} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
+
+
+                </motion.div>
+
+       </div>
+       <div className="flex mt-1 flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
+       </div>
+
 
 
 
