@@ -133,8 +133,8 @@ const ServiceDeskCard = ({ title, icon: Icon,  paragraph}) => {
   bgImage={banner}
   breadcrumbs={[
     { label: "Home", link: "/" },
-    { label: "/ Publication" },
-    { label: "/ Reports" }
+    { label: "/ Expertise" },
+    { label: "/ Customer Service" }
   ]}
 />
 

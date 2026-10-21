@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import {motion, AnimatePresence, backInOut} from 'framer-motion'
 import { ArrowRight,ArrowUpRight, SplinePointer, ChevronDown } from 'lucide-react'
 import { ScrollVelocityContainer, ScrollVelocityRow } from '../Components/ScrollVelocity';
-import branding from '../assets/ServiceDesk2.jpg'
+import branding from '../assets/Webbb.jpg'
+import brand from '../assets/ServiceDesk.jpg'
 import noise from "../assets/Noise.png";
 import ContactPlane from "../SVGS/ContactPlane.jsx";
 import TwoRings from "../SVGS/TwoRings.jsx";
@@ -13,9 +14,21 @@ import Energy from '../SVGS/Energy.jsx';
 import ThreeStars from '../SVGS/ThreeStars.jsx';
 import Telecom from "../SVGS/Telecom.jsx";
 import BackgroundLines from "./BackgroundLines.jsx";
+import logo from "../assets/LOGO.png"
+import worker from "../assets/WorkExp.jpg"
+import worker2 from "../assets/Worker2.jpg"
 
 
 const WorkExperience = () => {
+
+    
+const words =[
+  {text : "Us" },
+  {text : "Do" },
+  {text : "The"},
+
+
+]
 
 
     const containerVariants = {
@@ -75,7 +88,7 @@ const toggleAccordion = (index) => {
 };
 
 
-
+const [isHovered, setIsHovered] = useState(false);
 
   return (
        <section className="h-min-screen relative bg-(--black-color)">
@@ -83,7 +96,7 @@ const toggleAccordion = (index) => {
   {/* Section Heading */}
 
   <div className="Section_wrapper relative z-50">
-          <div className="section_header ">
+          <div className="hidden section_header ">
        
                   <motion.h1  className="page_title"  > Reasons to work with me </motion.h1>
                  <h3   className="Section_title z-99"> I believe in <span className="text_gradient">dedication </span> and hardwork.</h3>
@@ -106,7 +119,7 @@ const toggleAccordion = (index) => {
 
   <div className="mt-16  ">
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+      <div className="hidden w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
 
         <div className="bg-(--primary-color)  flex flex-col items-start justify-between relative h-auto row-span-2 lg:col-span-4 p-6 rounded-3xl overflow-hidden">
            <img src={noise} alt="" className="absolute inset-0 z-5   h-full w-full  object-cover  opacity-20  mix-blend-overlay pointer-events-none  "/>
@@ -333,6 +346,251 @@ const toggleAccordion = (index) => {
 
       </div>
     </div>
+
+<div className="flex  items-center justify-center">
+  <div className="border border-[#909090] rounded-full flex gap-62 py-2 px-10 items-center">
+      <div className="size-12">
+    <img className="size-full object-contain" src={logo} />
+  </div>
+
+  <div className="flex">
+    <h4 className="text-[#ededed]">Menu</h4>
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Add_Plus"> <path id="Vector" d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+  </div>
+
+  </div>
+
+  
+</div>
+ 
+<section className=" mt-18 h-screen">
+
+         <div className="w-full mt-4 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
+       
+             <div className="h-[420px] col-span-6 bg-(--primary-color)">
+      <img src={branding} className="size-full object-cover" />
+       </div>
+
+      
+              <div className="h-[420px] col-span-3 bg-(--primary-color)">
+      <img src={brand} className="size-full object-cover" />
+       </div>
+            <div className="col-span-3 flex flex-col start-center justify-end">
+        <div className="flex flex-col gap-1">
+          <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[18px]">Do the</h2>
+                
+        <h2 className="dmsans uppercase text-(--secondary-color) font-bold text-[42px]">Deciding</h2>
+        </div>
+
+        <p></p>
+       </div>     
+        <div className="col-span-3 flex flex-col start-center justify-start">
+        <div className="flex flex-col gap-3">
+     <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
+        <p></p>
+       </div>
+
+
+
+    </div>
+
+        <div className="w-full mt-12 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+   
+       <div className="col-span-12">
+        <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[28px]">Let us do the</h2>
+
+         <ScrollVelocityContainer className='z-90'>
+                      
+            
+            <ScrollVelocityRow baseVelocity={-2} className='lg:p-0 '>
+                <div className='flex px-6 items-center justify-center gap-6 min-w-[620px]' >
+            <h2 className="dmsans leading-normal uppercase text-[#ededed] font-black text-[96px]">Designing</h2>
+
+     
+            
+                </div>
+                       <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+                     
+            </ScrollVelocityRow>
+          
+                     
+         </ScrollVelocityContainer> 
+     
+       </div>
+
+    </div>
+
+</section>
+
+    <section className=" mt-34 min-h-screen">
+
+           <div className="w-full mt-4 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+
+       <div className="lg:col-span-3 flex flex-col start-start justify-start">
+        <div className="flex flex-col gap-1">
+          <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[24px]">Our</h2>
+                
+        <h2 className="dmsans leading-10 uppercase text-(--secondary-color) font-black text-[42px]">Team</h2>
+        </div>
+
+        <p></p>
+       </div>
+       
+
+       <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className=" lg:col-span-3  card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={worker} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
+
+
+                </motion.div>
+
+       </div>
+       <div className="flex flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
+       </div>
+
+        <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className="col-span-3  card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={worker2} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
+
+
+                </motion.div>
+
+       </div>
+       <div className="flex mt-1 flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
+       </div>
+    
+
+                   
+        <div className="lg:col-span-3 flex flex-col items-end justify-end">
+        <div className="flex flex-col gap-3">
+     <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
+        <p></p>
+       </div>
+
+             <div  
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)} className="lg:col-span-3  card_space">
+                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={branding} className="size-full grayscale object-cover" />
+                <motion.div
+                           animate={{
+              height: isHovered ? "auto" : 0,
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              },
+              opacity: {
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+                
+                
+                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
+                      <h2>Facebook</h2>
+                      <h2>Instagram</h2>
+                      <h2>Linkdin</h2>
+
+
+                </motion.div>
+
+       </div>
+       <div className="flex mt-1 flex-col gap-2">
+       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+       </div>
+  
+       </div>
+
+      
+              <div className="h-[420px] col-span-3 bg-(--primary-color)">
+      <img src={brand} className="size-full object-cover" />
+       </div>
+ 
+
+                <div className="h-[420px] col-span-3 bg-(--primary-color)">
+      <img src={brand} className="size-full object-cover" />
+       </div>
+
+                   <div className="h-[420px] col-span-3 bg-(--primary-color)">
+      <img src={brand} className="size-full object-cover" />
+       </div>
+
+
+
+    </div>
+
+    </section>
+  
 
 
   </div>

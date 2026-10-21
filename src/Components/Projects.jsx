@@ -159,13 +159,13 @@ const productCards = [
     slug
   }) => {
     return (
-      <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[31%]">
+      <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[36%]">
         <div className="relative group ">
             
 
  <Link to={`/projects/${slug}`}>
           <div
-            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[3px]  h-[400px] lg:h-[470px] w-full bg-[#83837d] overflow-hidden
+            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[3px]  h-[400px] lg:h-[470px] w-full bg-[#797975] overflow-hidden
               flex
               flex-col
               hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]

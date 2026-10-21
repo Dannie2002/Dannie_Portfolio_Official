@@ -267,7 +267,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
            <div className="card_space">
               <h4 ref={processHeadingRef} className="Section_title head">
-                I go through
+                How i work
               </h4>
             </div>
  

@@ -3,101 +3,45 @@ import gsap from "gsap";
 
 const Transition = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
-animateOut() {
-  return new Promise((resolve) => {
-    gsap.killTweensOf(".Transition .block");
+    animateOut() {
+      return new Promise((resolve) => {
+        gsap.killTweensOf(".Transition .block");
 
-    const tl = gsap.timeline({
-      onComplete: resolve,
-    });
+        const tl = gsap.timeline({ onComplete: resolve });
 
-    gsap.set(".Transition .block", {
-      visibility: "visible",
-    });
+        gsap.set(".Transition .block", { visibility: "visible" });
 
-    // PHASE 1 — controlled movement
-    tl.to(".Transition .left-block", {
-      x: "-45%",
-      duration: 0.35,
-      ease: "power2.out",
-    });
+        tl.to(
+          ".Transition .left-block",
+          { xPercent: 0, duration: 0.8, ease: "power2.inOut" },
+          0
+        );
+        tl.to(
+          ".Transition .right-block",
+          { xPercent: 0, duration: 0.8, ease: "power2.inOut" },
+          0
+        );
+      });
+    },
 
-    tl.to(
-      ".Transition .right-block",
-      {
-        x: "45%",
-        duration: 0.35,
-        ease: "power2.out",
-      },
-      0
-    );
+    animateIn() {
+      return new Promise((resolve) => {
+        gsap.killTweensOf(".Transition .block");
 
-    // PHASE 2 — magnetic snap toward center
-    tl.to(".Transition .left-block", {
-      x: "0%",
-      duration: 0.45,
-      ease: "power4.in",
-    });
+        const tl = gsap.timeline({ onComplete: resolve });
 
-    tl.to(
-      ".Transition .right-block",
-      {
-        x: "0%",
-        duration: 0.45,
-        ease: "power4.in",
-      },
-      "<"
-    );
-  });
-},
-
-animateIn() {
-  return new Promise((resolve) => {
-    gsap.killTweensOf(".Transition .block");
-
-    const tl = gsap.timeline({
-      onComplete: resolve,
-    });
-
-    // PHASE 1 — aggressive magnetic release
-    tl.to(".Transition .left-block", {
-      x: "-45%",
-      duration: 0.45,
-      ease: "power4.out",
-    });
-
-    tl.to(
-      ".Transition .right-block",
-      {
-        x: "45%",
-        duration: 0.45,
-        ease: "power4.out",
-      },
-      "<"
-    );
-
-    // PHASE 2 — glide away
-    tl.to(".Transition .left-block", {
-      x: "-100%",
-      duration: 0.35,
-      ease: "power2.inOut",
-    });
-
-    tl.to(
-      ".Transition .right-block",
-      {
-        x: "100%",
-        duration: 0.35,
-        ease: "power2.inOut",
-      },
-      "<"
-    );
-  });
-},
-
-
-
-   
+        tl.to(
+          ".Transition .left-block",
+          { xPercent: -100, duration: 0.8, ease: "power2.inOut" },
+          0
+        );
+        tl.to(
+          ".Transition .right-block",
+          { xPercent: 100, duration: 0.8, ease: "power2.inOut" },
+          0
+        );
+      });
+    },
   }));
 
   useEffect(() => {
@@ -107,12 +51,12 @@ animateIn() {
     // Left curtain is outside the screen to the left.
     // Right curtain is outside the screen to the right.
     gsap.set(".Transition .left-block", {
-      x: "-100%",
+      xPercent: -100,
       visibility: "visible",
     });
 
     gsap.set(".Transition .right-block", {
-      x: "100%",
+      xPercent: 100,
       visibility: "visible",
     });
 
@@ -133,6 +77,7 @@ animateIn() {
           top-0
           h-full
           w-1/2
+          will-change-transform
           bg-[#131313]
         "
       />
@@ -147,6 +92,7 @@ animateIn() {
           top-0
           h-full
           w-1/2
+          will-change-transform
           bg-(--secondary-color)
         "
       />

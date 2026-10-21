@@ -317,6 +317,10 @@ transform-origin: top;
   font-family: var(--font-Outrun);
 }
 
+.dmsans{
+  font-family: var(--font-dmsans);
+}
+
 .archivo{
   font-family: var(--font-archivo);
 }
