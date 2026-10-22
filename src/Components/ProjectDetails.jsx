@@ -432,7 +432,7 @@ const ProjectDetails = () => {
           <div className="  border-b border-b-(--text-color)/60 py-8">
           {/* 1. Tag showing the overview text */}
 
-      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4"> 01
+      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4"> 01
           </p>
 
 
@@ -459,7 +459,7 @@ const ProjectDetails = () => {
    <div className="  border-b border-b-(--text-color)/60 py-8">
           {/* 1. Tag showing the overview text */}
 
-      <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-4xl mt-4">
+       <p className="text-[#909090] geonova uppercase tracking-[0.2em] text-[18px] mt-4"> 
             02
           </p>
 
