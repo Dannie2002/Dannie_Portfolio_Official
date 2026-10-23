@@ -18,6 +18,7 @@ import logo from "../assets/LOGO.png"
 import worker from "../assets/WorkExp.jpg"
 import worker2 from "../assets/Worker2.jpg"
 import mockup from "../assets/Mock-up.jpg"
+import Scribble from '../Components/Scribble'
 
 
 const WorkExperience = () => {
@@ -364,7 +365,7 @@ const [isHovered, setIsHovered] = useState(false);
   
 </div>
  
-<section className="hidden mt-18 h-screen">
+<section className=" mt-18 h-screen">
 
          <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
        
@@ -373,9 +374,7 @@ const [isHovered, setIsHovered] = useState(false);
        </div>
 
       
-              <div className="h-[420px] col-span-3 bg-(--primary-color)">
-      <img src={brand} className="size-full object-cover" />
-       </div>
+    
             <div className="col-span-3 flex flex-col start-center justify-end">
         <div className="flex flex-col gap-1">
           <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[18px]">Do the</h2>
@@ -384,14 +383,17 @@ const [isHovered, setIsHovered] = useState(false);
         </div>
 
         <p></p>
-       </div>     
-        <div className="col-span-3 flex flex-col start-center justify-start">
+       </div>  
+
+
+                <div className="col-span-3 flex flex-row gap-4 items-center justify-start">
         <div className="flex flex-col gap-3">
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </div>
 
-        <p></p>
-       </div>
+        <p className="text_para dmsans tracking-wide">We turn imaginations into real digital products tailored for business.  </p>
+       </div>   
+       
 
 
 
@@ -400,14 +402,14 @@ const [isHovered, setIsHovered] = useState(false);
         <div className="w-full mt-12 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
    
        <div className="col-span-12">
-        <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[28px]">Let us do the</h2>
+        <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[28px]">Let us do </h2>
 
          <ScrollVelocityContainer className='z-90'>
                       
             
             <ScrollVelocityRow baseVelocity={-2} className='lg:p-0 '>
                 <div className='flex px-6 items-center justify-center gap-6 min-w-[620px]' >
-            <h2 className="dmsans leading-normal uppercase text-[#ededed] font-black text-[96px]">Designing</h2>
+            <h2 className="dmsans leading-normal uppercase text-[#ededed] font-black text-[96px]"> the Designing</h2>
 
      
             
@@ -714,7 +716,7 @@ const [isHovered, setIsHovered] = useState(false);
      </div>
      
        <div className="w-full px-3 lg:mt-14 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
-        <div className="lg:col-span-3  w-full flex flex-col start-start justify-start">
+        <div className="lg:col-span-1  w-full flex flex-col items-sart justify-center">
            <div className="flex flex-col gap-3">
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </div>
@@ -727,7 +729,7 @@ const [isHovered, setIsHovered] = useState(false);
 
     {/* Identity */}
 
-      <div className="flex items-center  gap-2 text-[#fffced] font-medium px-2 py-1 mb-2 rounded bg-[#1c3e7c]">
+      <div className="flex items-center  gap-2 text-[#fffced] font-medium px-2 py-1 mb-2 rounded bg-[#5a4c87]">
         <svg className="size-6" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.132 9.71395C10.139 11.2496 10.3328 13.2665 11.6 14.585C12.8468 15.885 14.8527 16.0883 16.335 15.065C16.6466 14.8505 16.9244 14.5906 17.159 14.294C17.3897 14.0023 17.5773 13.679 17.716 13.334C18.0006 12.6253 18.0742 11.8495 17.928 11.1C17.7841 10.3573 17.4268 9.67277 16.9 9.12995C16.3811 8.59347 15.7128 8.22552 14.982 8.07395C14.2541 7.92522 13.4982 8.00197 12.815 8.29395C12.1254 8.58951 11.5394 9.08388 11.132 9.71395Z" stroke="#909090" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.5986 13.6868C17.2639 13.4428 16.7947 13.5165 16.5508 13.8513C16.3069 14.1861 16.3806 14.6552 16.7154 14.8991L17.5986 13.6868ZM19.0584 16.6061C19.3931 16.85 19.8623 16.7764 20.1062 16.4416C20.3501 16.1068 20.2764 15.6377 19.9416 15.3938L19.0584 16.6061ZM7.5 12.7499C7.91421 12.7499 8.25 12.4142 8.25 11.9999C8.25 11.5857 7.91421 11.2499 7.5 11.2499V12.7499ZM5.5 11.2499C5.08579 11.2499 4.75 11.5857 4.75 11.9999C4.75 12.4142 5.08579 12.7499 5.5 12.7499V11.2499ZM7.5 15.7499C7.91421 15.7499 8.25 15.4142 8.25 14.9999C8.25 14.5857 7.91421 14.2499 7.5 14.2499V15.7499ZM5.5 14.2499C5.08579 14.2499 4.75 14.5857 4.75 14.9999C4.75 15.4142 5.08579 15.7499 5.5 15.7499V14.2499ZM8.5 9.74994C8.91421 9.74994 9.25 9.41415 9.25 8.99994C9.25 8.58573 8.91421 8.24994 8.5 8.24994V9.74994ZM5.5 8.24994C5.08579 8.24994 4.75 8.58573 4.75 8.99994C4.75 9.41415 5.08579 9.74994 5.5 9.74994V8.24994ZM16.7154 14.8991L19.0584 16.6061L19.9416 15.3938L17.5986 13.6868L16.7154 14.8991ZM7.5 11.2499H5.5V12.7499H7.5V11.2499ZM7.5 14.2499H5.5V15.7499H7.5V14.2499ZM8.5 8.24994H5.5V9.74994H8.5V8.24994Z" fill="#0b0b0d"></path> </g></svg>
         <h4 className="dmsans  text-[12px]"> Search a project. </h4>
       </div>
@@ -841,7 +843,7 @@ const [isHovered, setIsHovered] = useState(false);
        
        </div>
   <div  
-      className="w-full lg:col-span-6 card_space">
+      className="w-full lg:col-span-4 card_space">
       <div className="relative h-[400px] w-full  bg-(--primary-color)">
                 <img src={mockup} className="size-full grayscale object-cover" />
                  <div className="absolute bottom-0 p-3 flex left-0 gap-2">
@@ -919,10 +921,307 @@ const [isHovered, setIsHovered] = useState(false);
        </div>
   
        </div>
+
+        <div  
+      className="w-full lg:col-span-4 card_space">
+      <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={mockup} className="size-full grayscale object-cover" />
+                 <div className="absolute bottom-0 p-3 flex left-0 gap-2">
+                  {/* Previous */}
+        
+                 <h4 className="text_para font-normal text-[14px]">2/3</h4>
+        
+               
+                </div>
+                 <div className="absolute bottom-0 p-3 flex right-0 gap-2">
+                  {/* Previous */}
+        
+                  <button
+                    type="button"
+                   
+                    className="
+                      flex
+                      h-6
+                      w-6
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#fffced]/20
+                      bg-[#fffced]
+                      text-[var(--primary-color)]
+                      transition-all
+                      duration-300
+                      hover:scale-105
+                      disabled:cursor-not-allowed
+                      disabled:opacity-30
+                      disabled:hover:scale-100
+                    "
+                  >
+                    <ArrowLeft color="#0b0b0d" size={20} />
+                  </button>
+        
+                  {/* Next */}
+        
+                  <button
+                    type="button"
+                  
+                    className="
+                      flex
+                       h-6
+                      w-6
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#fffced]/20
+                      bg-[#fffced]
+                      text-[var(--primary-color)]
+                      transition-all
+                      duration-300
+                      hover:scale-105
+                      disabled:cursor-not-allowed
+                      disabled:opacity-30
+                      disabled:hover:scale-100
+                    "
+                  >
+                    <ArrowRight color="#0b0b0d" size={20} />
+                  </button>
+                </div>
+
+       </div>
+
+       <div className="">
+        <div className="flex mt-3 flex-col gap-3">
+              <h4 className="dmsans card_heading leading-0 text-[32px]"> Konnes Tech Systems</h4>
+            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
+        </div>
+        
+     
+       </div>
+  
+       </div>
+
      </div>
 
      
   </section>
+
+  <section className=" mt-18 h-screen">
+
+         <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
+       
+        
+
+      
+    
+            <div className="col-span-6 flex flex-col start-center justify-end">
+        <div className="flex flex-col gap-1">
+          <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[18px]">Our </h2>
+                
+        <h2 className="dmsans uppercase text-(--secondary-color) font-bold text-[42px]">Clients</h2>
+        </div>
+
+        <p></p>
+       </div>  
+
+
+                <div className="col-span-6 flex flex-row gap-4 items-center justify-start">
+        <div className="flex flex-col gap-3">
+     <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
+        <p className="text_para tracking-wide">We approach each client with dedication at the core of every engagement, achieving great successes and building lasting relationships.</p>
+       </div>   
+       
+
+
+
+    </div>
+
+        <div className="w-full mt-22 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+   
+       <div className="col-span-12">
+        <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[18px]">Clients trusting our effort </h2>
+
+         <ScrollVelocityContainer className='z-90'>
+                      
+            
+            <ScrollVelocityRow baseVelocity={-2} className='lg:p-0 mt-6'>
+                <div className='flex px-6 items-center justify-center gap-6 min-w-[420px]' >
+                      <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+
+                         <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+                         <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+     
+            
+                </div>
+                       <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+                     
+            </ScrollVelocityRow>
+
+         <ScrollVelocityRow baseVelocity={4} className='lg:p-0 mt-6'>
+                <div className='flex px-6 items-center justify-center gap-6 min-w-[420px]' >
+                      <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+
+                         <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+                         <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+     
+            
+                </div>
+                       <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
+                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
+                     
+            </ScrollVelocityRow>
+          
+                     
+         </ScrollVelocityContainer> 
+     
+       </div>
+
+    </div>
+
+</section>
+
+  <section className=" mt-18 h-screen">
+
+         <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
+       
+        
+
+      
+    
+            <div className="col-span-8 flex flex-col start-center justify-end">
+        <div className="flex flex-col gap-1">
+          <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[18px]">Our </h2>
+                
+        <h2 className="dmsans uppercase text-(--secondary-color) font-bold text-[42px]">Services</h2>
+        </div>
+
+        <p></p>
+       </div>  
+
+
+                <div className="col-span-4 flex flex-row gap-4 items-center justify-start">
+        <div className="flex flex-col gap-3">
+     <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
+        <p className="text_para tracking-wide">We offer a full suite of creative and strategic communications services. Our work is sharply focused on driving the greatest impact possible for our clients and their audiences.</p>
+       </div>   
+       
+
+
+
+    </div>
+
+        <div className="w-full mt-22 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+   
+       <div className=" col-span-4">
+        <div className="flex flex-col items-start ]">
+           <Web size={44} color="#5a4c87" />
+        <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[32px]">Branding and graphic designing. </h2>
+          </div>
+       
+       </div>
+
+        <div className="col-span-6">
+        <div className="relative h-[400px] w-full  bg-(--primary-color)">
+                <img src={mockup} className="size-full grayscale object-cover" />
+                 <div className="absolute bottom-0 p-3 flex left-0 gap-2">
+                  {/* Previous */}
+        
+                 <h4 className="text_para font-normal text-[14px]">2/3</h4>
+        
+               
+                </div>
+                 <div className="absolute bottom-0 p-3 flex right-0 gap-2">
+                  {/* Previous */}
+        
+                  <button
+                    type="button"
+                   
+                    className="
+                      flex
+                      h-6
+                      w-6
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#fffced]/20
+                      bg-[#fffced]
+                      text-[var(--primary-color)]
+                      transition-all
+                      duration-300
+                      hover:scale-105
+                      disabled:cursor-not-allowed
+                      disabled:opacity-30
+                      disabled:hover:scale-100
+                    "
+                  >
+                    <ArrowLeft color="#0b0b0d" size={20} />
+                  </button>
+        
+                  {/* Next */}
+        
+                  <button
+                    type="button"
+                  
+                    className="
+                      flex
+                       h-6
+                      w-6
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#fffced]/20
+                      bg-[#fffced]
+                      text-[var(--primary-color)]
+                      transition-all
+                      duration-300
+                      hover:scale-105
+                      disabled:cursor-not-allowed
+                      disabled:opacity-30
+                      disabled:hover:scale-100
+                    "
+                  >
+                    <ArrowRight color="#0b0b0d" size={20} />
+                  </button>
+                </div>
+
+       </div>
+  
+       
+       </div>
+
+       <div className="col-span-2 flex flex-col items-end justify-end">
+        
+           <h4 className="text-[#909090]">Story telling.</h4>
+           <h4 className="text-[#909090]">Website design</h4>
+           <h4 className="text-[#909090]">Website development.</h4>
+        
+       </div>
+
+    </div>
+
+</section>
 
 
   </div>

@@ -36,7 +36,7 @@ const WebsiteDevelopment = () => {
       opacity: 0,
       yPercent: 120,
       ease: "expo.out",
-      duration: 0.6,
+      duration: 0.2,
       stagger: {
         each: 0.045,
         from: "start",
@@ -267,7 +267,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
            <div className="card_space">
               <h4 ref={processHeadingRef} className="Section_title head">
-                How i work
+                Turning imaginations into real products in few steps.
               </h4>
             </div>
  

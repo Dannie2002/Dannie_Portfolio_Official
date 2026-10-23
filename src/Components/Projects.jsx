@@ -64,7 +64,7 @@ const productCards = [
   {
     slug: "electronic-cashbox",
     title: "Electronic Cashbox",
-    category: "FinTech",
+    category: "banner",
     year: "2025",
     image: banner,
     description: "A digital cash management solution.",
@@ -159,48 +159,32 @@ const productCards = [
     slug
   }) => {
     return (
-      <div className="shrink-0 snap-start   w-[87%] sm:w-[62%] md:w-[48%] lg:w-[36%]">
+      <div className="shrink-0 snap-start w-[87%] sm:w-[62%] md:w-[48%] lg:w-[36%]">
         <div className="relative group ">
             
 
  <Link to={`/projects/${slug}`}>
           <div
-            className="btn border p-4 lg:py-8 lg:px-6 border-(--text-color)/70 rounded-[3px]  h-[400px] lg:h-[470px] w-full bg-[#797975] overflow-hidden
+            className="btn rounded-[3px] h-[400px] lg:h-[470px] w-full bg-transparent overflow-hidden
               flex
               flex-col
-              hover:shadow-[0_6px_12px_rgba(189,166,206,0.2)]
+           
               transition-all
               duration-300
-              group-hover:border-(--secondary-color)/4,0 ">
+              ">
             {/* Category + Title */}
 
-            <div className="card_space">
-
-              <div className="hidden  svg_container relative">
-                <div className="absolute size-8 rounded-full -bottom-5 blur-xs opacity-60 bg-(--secondary-color)" />
-
-                <h1 className="text-[22px] geonova">
-                  {String(index + 1).padStart(2, "0")}
-                </h1>
-              </div>
-<div className="">
-    <span className="text-[12px] chivo uppercase text-(--text-colour) font-medium">
-                {category}
-              </span>
-</div>
-          
-
            
-            </div>
 
-            <div className="lg:h-50 md:h-40 h-38 w-full relative rounded-[2px] overflow-hidden mt-6">
+            <div className="h-full w-full relative rounded-[2px] overflow-hidden">
         
                    <img src={image} alt={title}  className="grayscale h-full w-full aspect-2/6  object-cover transition-transform  duration-700 group-hover:scale-125" />
             </div>
-<div className="flex mt-8 items-center justify-between">
-    <h3 className="text-[18px] leading-[27px] geonova font-bold text-[#ededed] "> {title} </h3>
+   <div className="flex mt-6 items-center justify-between">
+    <h3 className="text-[20px] tracking-wide leading-[27px] geonova font-bold text-[#ededed]"> {title} </h3>
+ 
 
-              <div className="bg-(--secondary-color) group-hover:rotate-45 transition-transform duration-450 ease-in-out p-2">
+              <div className=" group-hover:rotate-45 transition-transform duration-450 ease-in-out p-2">
 
                     <Link
             to={`/projects/${slug}`}>
@@ -225,7 +209,7 @@ const productCards = [
           
 </div>
  
-            <div className="card_space mt-8">
+            <div className="card_space p-0 mt-2">
               <p className="text_para text-[14px] leading-relaxed max-w-[90%]">
                 {description}
               </p>
