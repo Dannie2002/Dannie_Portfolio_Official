@@ -21,9 +21,24 @@ import mockup from "../assets/Mock-up.jpg"
 import Scribble from '../Components/Scribble'
 import ScrollReactiveImage from "./ScrollReactiveImage.jsx";
 import ServiceItem, { servicesInfo } from "./ServiceItem.jsx";
-
+import audio from "../assets/Audioprod.jpg"
+import PortfolioCard from "./PortfolioCard.jsx";
+import PortfolioFilter from "./PortfolioFilter.jsx";
 
 const WorkExperience = () => {
+  const [selectedCategories, setSelectedCategories] = useState([]);
+   const portfolioRef = useRef(null);
+
+  const handleCategoryChange = (categories) => {
+    setSelectedCategories(categories);
+
+    requestAnimationFrame(() => {
+      portfolioRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
    const [openService, setOpenService] = useState(
     servicesInfo[0]?.id ?? null
   );
@@ -709,9 +724,11 @@ const [isHovered, setIsHovered] = useState(false);
 
     </section>
   
-  <section className=" mt-34 min-h-screen">
+  <section ref={portfolioRef}
+      className="scroll-mt-24 mt-22 min-h-screen ">
 
      <div className="w-full px-3 lg:mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
+
         <div className="lg:col-span-3  w-full flex flex-col start-start justify-start">
         <div className="flex flex-col gap-1">
           <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[24px]">Our</h2>
@@ -723,299 +740,42 @@ const [isHovered, setIsHovered] = useState(false);
        </div>
      </div>
      
-       <div className="w-full px-3 lg:mt-14 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
-        <div className="lg:col-span-1  w-full flex flex-col items-sart justify-center">
-           <div className="flex flex-col gap-3">
+       <div className="flex_container gap-8">
+
+        <div className="lg:w-[10%] lg:sticky lg:top-22  w-full flex flex-col items-sart justify-center">
+           <div className="flex flex-row gap-3">
+           
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </div>
 
        
        </div>
 
-             <div className="lg:col-span-3  w-full flex flex-col start-start justify-start">
-     <div className="  h-full border rounded-sm border-(--text-colour)/45 flex flex-col lg:p-4 p-2 gap-2 ">
-
-    {/* Identity */}
-
-      <div className="flex items-center  gap-2 text-[#fffced] font-medium px-2 py-1 mb-2 rounded bg-[#5a4c87]">
-        <svg className="size-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H11V21C11 21.5523 11.4477 22 12 22C12.5523 22 13 21.5523 13 21V13H21C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H13V3Z" fill="#ededed"></path> </g></svg>
-        <h4 className="dmsans  text-[13px]"> Category </h4>
-      </div>
-
-
-    {/* Navigation */}
-
-    <div className="flex flex-col gap-2  pl-0.5">
-
-      {/* Overview */}
-
-      <div className="flex items-center gap-3 text-[#fffced] font-medium px-1 py-1 rounded bg-(--text-color)/60">
-       <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  > <div  className="flex   bg-(--primary-color)/90  border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div></div>
-      <h4 className="geonova text-[13px] text-[#cecdcd]">
-          Poster designs
-        </h4>
-      </div>
-
-
-      {/* Projects */}
-
-      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-    
-       <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-
-          <h4 className="geonova text-[13px] text-[#7a7e80]">
-          Music artworks
-        </h4>
-      </div>
-
-
-      {/* Analytics */}
-
-      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-    <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-
-        <h4 className="geonova text-[13px] text-[#7a7e80]">
-          Book covers
-        </h4>
-      </div>
-
-
-      {/* Network */}
-
-      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-        <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-
-        <h4 className="geonova text-[13px] text-[#7a7e80]">
-          Logos
-        </h4>
-      </div>
-
-
-      {/* Services */}
-
-      <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-     <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-       <h4 className="geonova text-[13px] text-[#7a7e80]">Weeding cards</h4>
-      </div>
-       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-      <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-        <h4 className="geonova text-[13px] text-[#7a7e80]">T-shirt design</h4>
-      </div>
-       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-      <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-       <h4 className="geonova text-[13px] text-[#7a7e80]">Business cards</h4>
-      </div>
-       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-                <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-
-              
-       <h4 className="geonova text-[13px] text-[#7a7e80]">Brochure, Leaflets & Booklet</h4>
-      </div>
-       <div className="flex items-center gap-3 text-(--text-color) font-medium px-1 py-1 rounded">
-       <div  className="flex  px-2 hover:bg-(--primary-color)/90  py-2 border group border-[#fffced]/40 rounded-full items-center justify-between gap-4 cursor-pointer transition"  ></div>
-       <h4 className="geonova text-[13px] text-[#7a7e80]">Roll banners</h4>
-      </div>
-
-    </div>
-
-
-    {/* Technology block */}
-
-    <div className="mt-auto border-t border-(--text-color) pt-3">
-
-      <h2 className="text-[10px] uppercase chivo tracking-wider text-zinc-500 mb-2">
-        92 products
-      </h2>
-
-      <div className="flex flex-wrap gap-1">
-
-        <span className="px-1.5 py-1 dmsans rounded text-[#ededed] text-[12px] text-zinc-400">
-          See services
-        </span>
-
-         <span className="px-1.5 py-1 dmsans rounded text-[#ededed] text-[12px] text-zinc-400">
-          Pricing
-        </span>
-
-       <span className="px-1.5 py-1 dmsans rounded text-[#ededed] text-[12px] text-zinc-400">
-          Comments
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
+       <div className="lg:w-[20%] lg:sticky lg:top-22 w-full flex flex-col start-start justify-start">
+            <aside className="lg:col-span-3">
+        <PortfolioFilter
+           selectedCategories={selectedCategories}
+            onCategoryChange={handleCategoryChange}
+          productCount={92}
+        />
+      </aside>
+ 
 
 
        
        </div>
-  <div  
-      className="w-full lg:col-span-4 card_space">
-      <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={mockup} className="size-full grayscale object-cover" />
-                 <div className="absolute bottom-0 p-3 flex left-0 gap-2">
-                  {/* Previous */}
-        
-                 <h4 className="text_para font-normal text-[14px]">2/3</h4>
-        
-               
-                </div>
-                 <div className="absolute bottom-0 p-3 flex right-0 gap-2">
-                  {/* Previous */}
-        
-                  <button
-                    type="button"
-                   
-                    className="
-                      flex
-                      h-6
-                      w-6
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#fffced]/20
-                      bg-[#fffced]
-                      text-[var(--primary-color)]
-                      transition-all
-                      duration-300
-                      hover:scale-105
-                      disabled:cursor-not-allowed
-                      disabled:opacity-30
-                      disabled:hover:scale-100
-                    "
-                  >
-                    <ArrowLeft color="#0b0b0d" size={20} />
-                  </button>
-        
-                  {/* Next */}
-        
-                  <button
-                    type="button"
-                  
-                    className="
-                      flex
-                       h-6
-                      w-6
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#fffced]/20
-                      bg-[#fffced]
-                      text-[var(--primary-color)]
-                      transition-all
-                      duration-300
-                      hover:scale-105
-                      disabled:cursor-not-allowed
-                      disabled:opacity-30
-                      disabled:hover:scale-100
-                    "
-                  >
-                    <ArrowRight color="#0b0b0d" size={20} />
-                  </button>
-                </div>
 
+       <div className="lg:w-[70%]">
+        <PortfolioCard selectedCategories={selectedCategories} />
        </div>
 
-       <div className="">
-        <div className="flex mt-3 flex-col gap-3">
-              <h4 className="dmsans card_heading leading-0 text-[32px]"> Konnes Tech Systems</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-        </div>
-        
-     
-       </div>
-  
-       </div>
-
-        <div  
-      className="w-full lg:col-span-4 card_space">
-      <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={mockup} className="size-full grayscale object-cover" />
-                 <div className="absolute bottom-0 p-3 flex left-0 gap-2">
-                  {/* Previous */}
-        
-                 <h4 className="text_para font-normal text-[14px]">2/3</h4>
-        
-               
-                </div>
-                 <div className="absolute bottom-0 p-3 flex right-0 gap-2">
-                  {/* Previous */}
-        
-                  <button
-                    type="button"
-                   
-                    className="
-                      flex
-                      h-6
-                      w-6
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#fffced]/20
-                      bg-[#fffced]
-                      text-[var(--primary-color)]
-                      transition-all
-                      duration-300
-                      hover:scale-105
-                      disabled:cursor-not-allowed
-                      disabled:opacity-30
-                      disabled:hover:scale-100
-                    "
-                  >
-                    <ArrowLeft color="#0b0b0d" size={20} />
-                  </button>
-        
-                  {/* Next */}
-        
-                  <button
-                    type="button"
-                  
-                    className="
-                      flex
-                       h-6
-                      w-6
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#fffced]/20
-                      bg-[#fffced]
-                      text-[var(--primary-color)]
-                      transition-all
-                      duration-300
-                      hover:scale-105
-                      disabled:cursor-not-allowed
-                      disabled:opacity-30
-                      disabled:hover:scale-100
-                    "
-                  >
-                    <ArrowRight color="#0b0b0d" size={20} />
-                  </button>
-                </div>
-
-       </div>
-
-       <div className="">
-        <div className="flex mt-3 flex-col gap-3">
-              <h4 className="dmsans card_heading leading-0 text-[32px]"> Konnes Tech Systems</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-        </div>
-        
-     
-       </div>
-  
-       </div>
 
      </div>
 
      
   </section>
 
-  <section className=" mt-18 h-screen">
+  <section className=" mt-12 h-fit">
 
          <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
        
@@ -1030,7 +790,6 @@ const [isHovered, setIsHovered] = useState(false);
         <h2 className="dmsans uppercase text-(--secondary-color) font-bold text-[42px]">Clients</h2>
         </div>
 
-        <p></p>
        </div>  
 
 
@@ -1091,9 +850,7 @@ const [isHovered, setIsHovered] = useState(false);
      
             
                 </div>
-                       <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
-                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            </div>
+            
                      
             </ScrollVelocityRow>
           
@@ -1106,11 +863,7 @@ const [isHovered, setIsHovered] = useState(false);
 
 </section>
 
-  <section className=" mt-18 min-h-screen">
-
-  
-
-  
+  <section className=" mt-22  ">
 
 
     <div className="w-full mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
@@ -1119,18 +872,17 @@ const [isHovered, setIsHovered] = useState(false);
 
       
     
-            <div className="col-span-8 flex flex-col start-center justify-end">
+            <div className="lg:col-span-8 flex flex-col start-center justify-end">
         <div className="flex flex-col gap-1">
           <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[18px]">Our </h2>
                 
         <h2 className="dmsans uppercase text-(--secondary-color) font-bold text-[42px]">Services</h2>
         </div>
 
-        <p></p>
        </div>  
 
 
-                <div className="col-span-4  flex flex-row gap-4 items-center justify-start">
+                <div className="lg:col-span-4  flex flex-row gap-4 items-center justify-start">
         <div className="flex flex-col gap-3">
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </div>
@@ -1157,51 +909,26 @@ const [isHovered, setIsHovered] = useState(false);
     </div>
  
 
-      <div className=" w-full  lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 ">
-       
-        
-
       
-    
-            <div className="col-span-12  p-6 border-b border-b-[#909090] border-t border-t-[#909090] flex flex-col items-start justify-center">
-        <div className="flex  gap-12 items-start">
-           <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[32px]">App and website development. </h2>
-         <svg className="size-15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12L18 12" stroke="#ededed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-      
-        </div>
 
-        <p></p>
-       </div>  
-
-
-    
-
-
-
-    </div>
-           <div className="w-full mt-22 px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
-   
- 
-
-    </div>
 
 </section>
 
     
 
  
-         <ScrollVelocityContainer className='z-90 mt-16'>
+         <ScrollVelocityContainer className='z-90 mt-4 lg:mt-12 '>
                       
             
-            <ScrollVelocityRow baseVelocity={-2} className='lg:p-0 '>
-                <div className='flex px-6 items-center justify-center gap-6 min-w-[620px]' >
-            <h2 className="dmsans text_outline uppercase leading-0 text-[#ededed] font-black text-[66px]"> See Portfolio</h2>
+            <ScrollVelocityRow baseVelocity={-12} className='lg:p-0 '>
+                <div className='flex px-6 btn items-center justify-center gap-6 lg:min-w-[620px]' >
+            <h2 className="dmsans text_outline uppercase leading-0 text-[#ededed] font-black text-[22px] lg:text-[66px]"> See Portfolio</h2>
 
      
             
                 </div>
                        <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
-                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                <svg className="lg:size-20 size-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             </div>
                      
             </ScrollVelocityRow>

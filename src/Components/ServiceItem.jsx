@@ -1,8 +1,15 @@
 
-import React from "react";
+import {React, useRef} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReactiveImage from "./ScrollReactiveImage.jsx";
 import mockup from "../assets/Mock-up.jpg";
+import media_Equip from"../assets/MediaEquip.jpg";
+import audio from "../assets/Audioprod.jpg"
+import SplitText from "gsap/SplitText";
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const servicesInfo = [
   {
@@ -17,7 +24,7 @@ export const servicesInfo = [
     ],
   },
   {
-    id: "Digital Experience Services.",
+    id: "Graphic designing and publishing.",
     subHeading:
       "We create digital experiences that connect brands with their audiences.",
     image: mockup,
@@ -25,43 +32,150 @@ export const servicesInfo = [
       "Web design.",
       "Digital strategy.",
       "User experience.",
+      "Brand strategy.",
     ],
   },
   {
-    id: "Creative Communication Services.",
+    id: "Audio and visual media production",
     subHeading:
-      "We develop creative communication that gives brands a distinctive voice.",
-    image: mockup,
+      "We are experts in producing quality sounds for all audience.",
+    image: audio,
     expertise: [
-      "Creative direction.",
-      "Visual communication.",
-      "Campaign development.",
+      "Music production.",
+      "Radio adverts.",
+      "podcasts.",
+    ],
+  },
+
+    {
+    id: "Professional and creative writing",
+    subHeading:
+      "We are experts in producing quality sounds for all audience.",
+    image: audio,
+    expertise: [
+      "Music production.",
+      "Radio adverts.",
+      "podcasts.",
+    ],
+  },
+    {
+    id: "Selling media equipments.",
+    subHeading:
+      "Buy media-related equipments from the most trusted brand.",
+    image: media_Equip,
+    expertise: [
+      "Studio gears.",
+      "Cameras.",
+      "Laptops.",
     ],
   },
 ];
 
 const ServiceItem = ({ service, isOpen, onToggle }) => {
+
+      const processHeadingRef = useRef(null);
+
+useGSAP(() => {
+  const heading = processHeadingRef.current;
+  if (!heading) return;
+
+  const heroSplit = new SplitText(heading, {
+    type: "lines, words, chars",
+    mask: "chars",
+  });
+
+  const chars = heroSplit.chars;
+
+  // --------------------------------
+  // 1. ENTRY REVEAL — PLAYS ONCE
+  // --------------------------------
+
+  const entryTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  const groupSize = 17;
+  const charStagger = 0.005;
+
+  for (let i = 0; i < chars.length; i += groupSize) {
+    const group = chars.slice(i, i + groupSize);
+
+    entryTl.from(group, {
+      opacity: 0,
+      yPercent: 120,
+      duration: 0.03,
+      stagger: charStagger,
+      ease: "expo.out",
+    });
+
+    if (i + groupSize < chars.length) {
+      entryTl.to({}, {
+        duration: 0.05,
+      });
+    }
+  }
+
+  // --------------------------------
+  // 2. SCROLL COLOUR — SCRUB BASED
+  // --------------------------------
+
+  gsap.set(chars, {
+    color: "#4a4a4a",
+  });
+
+  const colorTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: heading,
+      start: "top 80%",
+      end: "bottom 35%",
+      scrub: 1,
+    },
+  });
+
+  colorTl.to(chars, {
+    color: "#ededed",
+    stagger: {
+      each: 0.045,
+      from: "start",
+    },
+    ease: "none",
+    duration: 1,
+  });
+
+  return () => {
+    heroSplit.revert();
+  };
+}, {
+  scope: processHeadingRef,
+});
+    
   return (
-    <div className="px-12">
-      <div className="w-full border-t border-[#909090]/70">
+    <div className="lg:px-12 px-0">
+      <div className="w-full border-t border-[#909090]/60">
 
         {/* Service Heading */}
         <button
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="w-full text-left cursor-pointer"
+          className="w-full btn relative text-left cursor-pointer"
         >
+         
+
           <div className="w-full lg:px-6">
-            <div className="py-6 flex flex-col items-start justify-center">
-              <div className="flex gap-12 items-start">
-                <h2 className="dmsans uppercase text-[#ededed] font-semibold text-[32px]">
+            <div className="py-6  flex flex-col items-start justify-between">
+              <div className="flex  lg:gap-12 gap-6 items-start justify-between">
+                <h2 ref={processHeadingRef} className="dmsans uppercase text-[#ededed] font-semibold text-[22px] lg:text-[32px]">
                   {service.id}
                 </h2>
 
                 {/* Plus / Minus */}
                 <motion.svg
-                  className="size-15 shrink-0"
+                  className="lg:size-15 size-8 shrink-0"
                   viewBox="0 0 24 24"
                   fill="none"
                   animate={{ rotate: isOpen ? 180 : 0 }}
@@ -111,7 +225,7 @@ const ServiceItem = ({ service, isOpen, onToggle }) => {
               }}
               className="overflow-hidden"
             >
-              <div className="w-full mt-12 px-6 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+              <div className="w-full lg:mt-12 mt-4 lg:px-6 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 
                 {/* Description */}
                 <motion.div
@@ -166,13 +280,13 @@ const ServiceItem = ({ service, isOpen, onToggle }) => {
                   <div className="relative h-[400px] w-full">
                     <ScrollReactiveImage
                       src={service.image}
-                      className="size-full grayscale object-cover"
+                      className="size-full hover:grayscale object-cover"
                     />
                   </div>
                 </motion.div>
 
                 {/* Expertise */}
-                <div className="col-span-2 flex flex-col items-end justify-end">
+                <div className="col-span-2 flex flex-wrap gap-4  lg:flex-col lg:items-end lg:justify-end">
                   {service.expertise.map((item, index) => (
                     <motion.h4
                       key={item}
