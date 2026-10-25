@@ -259,12 +259,12 @@ const ServiceItem = ({ service, isOpen, onToggle }) => {
                 <div className="w-full min-w-0 lg:col-span-2 lg:items-end lg:justify-start">
                 
                     <ScrollVelocityContainer className="z-90 w-full min-w-0 flex flex-col gap-4">
-                         <ScrollVelocityRow baseVelocity={-8} className="w-full min-w-0 flex gap-6">
-                            <div className='flex px-6  items-center justify-center gap-6 min-w-[200px]' >
+                         <ScrollVelocityRow baseVelocity={-12} className="w-full min-w-0 flex gap-6">
+                            <div className='flex px-6   items-center justify-center gap-6 min-w-[150px]' >
                                             {service.expertise.map((item, index) => (
                                        <motion.h4
                       key={item}
-                      className="text-[#909090]  text-[15px]"
+                      className="text-[#ededed] bg-[#909090]/30 px-1.5 py-1 rounded-full  text-[15px]"
                       initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}

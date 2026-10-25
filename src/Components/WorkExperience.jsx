@@ -25,6 +25,7 @@ import audio from "../assets/Audioprod.jpg"
 import PortfolioCard from "./PortfolioCard.jsx";
 import PortfolioFilter from "./PortfolioFilter.jsx";
 import OurTeamCards from "./OurTeamCards.jsx";
+import logo1 from "../assets/Deexer.png"
 
 const WorkExperience = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -526,7 +527,7 @@ const [isHovered, setIsHovered] = useState(false);
        </div>  
 
 
-                <div className="col-span-4 flex flex-row gap-4 items-center justify-start">
+                <div className="col-span-6 flex flex-row gap-4 items-center justify-start">
         <div className="flex flex-col gap-3">
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </div>
@@ -549,9 +550,9 @@ const [isHovered, setIsHovered] = useState(false);
             
             <ScrollVelocityRow baseVelocity={-2} className='lg:p-0 mt-6'>
                 <div className='flex px-6 items-center justify-center gap-6 min-w-[420px]' >
-                      <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
-                <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            </div>
+                      <div className="size-30 flex-center bg-transparent  rounded-full ">
+                        <img src={logo1} className="object-cover" />
+               </div>
 
                          <div className="flex-center bg-transparent border rounded-full border-(--text-color)">
                 <svg className="size-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>

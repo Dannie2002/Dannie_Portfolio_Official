@@ -13,6 +13,7 @@ import WebPerformance from "../SVGS/WebPerformance.jsx";
 import CleanCode from "../SVGS/CleanCode.jsx";
 import ResponsiveLayout from "../SVGS/ResponsiveLayout.jsx";
 import Scribble from "./Scribble.jsx";
+import TablePhoneMockup from "./TablePhoneMockup.jsx";
 import CodeMerge from "../SVGS/CodeMeerge.jsx";
 import MoonBalls from "./MoonBalls.jsx"
 
@@ -157,7 +158,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
         e.currentTarget.style.setProperty("--mouseX", `${x}%`);
         e.currentTarget.style.setProperty("--mouseY", `${y}%`);
       }}
-      className="moving-border-card card_transparent group relative overflow-hidden"
+      className="moving-border-card flex flex-col gap-6 h-auto group relative overflow-hidden"
     >
 
       <div className="card-spotlight-border z-10" />
@@ -172,7 +173,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
       {/* Card Content */}
           <div className="card_space">
-                <motion.div style={{ rotate }} className="svg_container">
+                <motion.div style={{ rotate }} className="hidden svg_container">
                   <div className="absolute size-8 rounded-full -bottom-5 blur-xl opacity-90 bg-(--secondary-color)" />
 
                   <motion.svg
@@ -203,7 +204,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
                   </motion.svg>
                 </motion.div>
 
-                <h4 className="card_heading">{title}</h4>
+                <h4 className="card_heading text-[22px]">{title}</h4>
           </div>
 
         <p className="text_para z-5">{description}</p>
@@ -246,7 +247,7 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
 
           <div className="Section_wrapper z-10">
             <div className="flex_container ">
-                <div className="Grid_4">
+                <div className="w-1/2 Grid_4 lg:grid-cols-2">
                 {websiteCards.map((card, index) => (
                   <div key={index} className="z-20">
                     <WebsiteCard
@@ -258,16 +259,21 @@ const WebsiteCard = ({  index,title, icon: Icon, description}) => {
                   </div>
                 ))}
                 </div>
+                <div className="w-1/2">
+                <TablePhoneMockup className="mx-auto max-w-5xl" />
+                </div>
             </div>
           </div>
 
+
+    
 
    <section>
         <div className="Section_wrapper">
 
            <div className="card_space">
               <h4 ref={processHeadingRef} className="Section_title head">
-                Turning imaginations into real products in few steps.
+                I turn imaginations into real products in a strategic steps.
               </h4>
             </div>
  
