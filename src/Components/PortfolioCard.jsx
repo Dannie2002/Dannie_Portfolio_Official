@@ -43,11 +43,11 @@ const portfolioItems = [
 const PortfolioCardItem = ({ item }) => {
   return (
     <div
-      className={`w-full  ${
+      className={`w-full border lg:border-0 rounded-[8px] border-[#909090]/40 px-5 py-6 lg:p-0 ${
         item.colSpan === 8 ? "col-span-1 lg:col-span-8" : "col-span-1 lg:col-span-4"
       } card_space`}
     >
-      <div className="relative h-[320px] lg:h-[400px] w-full bg-(--primary-color)">
+      <div className="relative h-[260px] lg:h-[400px] w-full bg-(--primary-color)">
         <img
           src={item.image}
           alt={item.title}
@@ -80,8 +80,8 @@ const PortfolioCardItem = ({ item }) => {
       </div>
 
       <div>
-        <div className="mt-3 flex flex-col gap-3">
-          <h4 className="dmsans card_heading leading-0 text-[26px] lg:text-[32px]">
+        <div className="mt-3 flex flex-col gap-2 lg:gap-3">
+          <h4 className="dmsans card_heading  text-[26px] lg:text-[32px]">
             {item.title}
           </h4>
 
@@ -103,7 +103,7 @@ const PortfolioCard = ({ selectedCategories = [] }) => {
         );
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-8 lg:gap-8">
+    <div className="grid grid-cols-1 p-2 lg:p-0 gap-6 lg:grid-cols-8 lg:gap-8">
       {filteredItems.map((item) => (
         <PortfolioCardItem key={item.id} item={item} />
       ))}

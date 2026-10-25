@@ -1,27 +1,23 @@
-
-import {React, useRef} from "react";
+import { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReactiveImage from "./ScrollReactiveImage.jsx";
 import mockup from "../assets/Mock-up.jpg";
-import media_Equip from"../assets/MediaEquip.jpg";
-import audio from "../assets/Audioprod.jpg"
+import media_Equip from "../assets/MediaEquip.jpg";
+import audio from "../assets/Audioprod.jpg";
 import SplitText from "gsap/SplitText";
-gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollVelocityContainer, ScrollVelocityRow } from '../Components/ScrollVelocity';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export const servicesInfo = [
   {
     id: "Branding and Visibility Services.",
-    subHeading:
-      "CMC cares about making brands standout in digital dimension.",
+    subHeading: "CMC cares about making brands standout in digital dimension.",
     image: mockup,
-    expertise: [
-      "Content strategy.",
-      "Brand concept.",
-      "Brand consulting.",
-    ],
+    expertise: ["Content strategy.", "Brand concept.", "Brand consulting."],
   },
   {
     id: "Graphic designing and publishing.",
@@ -37,112 +33,104 @@ export const servicesInfo = [
   },
   {
     id: "Audio and visual media production",
-    subHeading:
-      "We are experts in producing quality sounds for all audience.",
+    subHeading: "We are experts in producing quality sounds for all audience.",
     image: audio,
-    expertise: [
-      "Music production.",
-      "Radio adverts.",
-      "podcasts.",
-    ],
+    expertise: ["Music production.", "Radio adverts.", "podcasts."],
   },
-
-    {
+  {
     id: "Professional and creative writing",
-    subHeading:
-      "We are experts in producing quality sounds for all audience.",
+    subHeading: "We are experts in producing quality sounds for all audience.",
     image: audio,
-    expertise: [
-      "Music production.",
-      "Radio adverts.",
-      "podcasts.",
-    ],
+    expertise: ["Music production.", "Radio adverts.", "podcasts."],
   },
-    {
+  {
     id: "Selling media equipments.",
-    subHeading:
-      "Buy media-related equipments from the most trusted brand.",
+    subHeading: "Buy media-related equipments from the most trusted brand.",
     image: media_Equip,
-    expertise: [
-      "Studio gears.",
-      "Cameras.",
-      "Laptops.",
-    ],
+    expertise: ["Studio gears.", "Cameras.", "Laptops."],
   },
 ];
 
 const ServiceItem = ({ service, isOpen, onToggle }) => {
+  const processHeadingRef = useRef(null);
+  const serviceItemRef = useRef(null);
 
-      const processHeadingRef = useRef(null);
+  useGSAP(() => {
+    const heading = processHeadingRef.current;
+    if (!heading) return;
 
-useGSAP(() => {
-  const heading = processHeadingRef.current;
-  if (!heading) return;
-
-  const heroSplit = new SplitText(heading, {
-    type: "lines, words, chars",
-    mask: "chars",
-  });
-
-  const chars = heroSplit.chars;
-
-  // --------------------------------
-  // ENTRY REVEAL — PLAYS ONCE
-  // --------------------------------
-
-  const entryTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: heading,
-      start: "top 80%",
-      once: true,
-    },
-  });
-
-  const groupSize = 17;
-  const charStagger = 0.005;
-
-  for (let i = 0; i < chars.length; i += groupSize) {
-    const group = chars.slice(i, i + groupSize);
-
-    entryTl.from(group, {
-      opacity: 0,
-      yPercent: 120,
-      duration: 0.03,
-      stagger: charStagger,
-      ease: "expo.out",
+    const heroSplit = new SplitText(heading, {
+      type: "lines, words, chars",
+      mask: "chars",
     });
 
-    if (i + groupSize < chars.length) {
-      entryTl.to({}, {
-        duration: 0.05,
-      });
-    }
-  }
+    const chars = heroSplit.chars;
 
-  return () => {
-    heroSplit.revert();
-  };
-}, {
-  scope: processHeadingRef,
-});
-    
+    // --------------------------------
+    // ENTRY REVEAL — PLAYS ONCE
+    // --------------------------------
+
+    const entryTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 80%",
+        once: true,
+      },
+    });
+
+    const groupSize = 17;
+    const charStagger = 0.005;
+
+    for (let i = 0; i < chars.length; i += groupSize) {
+      const group = chars.slice(i, i + groupSize);
+
+      entryTl.from(group, {
+        opacity: 0,
+        yPercent: 120,
+        duration: 0.03,
+        stagger: charStagger,
+        ease: "expo.out",
+      });
+
+      if (i + groupSize < chars.length) {
+        entryTl.to({}, {
+          duration: 0.05,
+        });
+      }
+    }
+
+    return () => {
+      heroSplit.revert();
+    };
+  }, {
+    scope: processHeadingRef,
+  });
+
   return (
-    <div className="lg:px-12 px-0">
+    <div
+      className="lg:px-12 px-0"
+    >
       <div className="w-full border-t border-[#909090]/60">
 
         {/* Service Heading */}
         <button
+          ref={serviceItemRef}
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
+          aria-label={`${isOpen ? "Close" : "Open"} ${service.id}`}
           className="w-full btn relative text-left cursor-pointer"
         >
-         
-
           <div className="w-full lg:px-6">
-            <div className="py-6  flex flex-col items-start justify-between">
-              <div className="flex  lg:gap-12 gap-6 items-start justify-between">
-                <h2 ref={processHeadingRef} className="dmsans uppercase text-[#ededed] font-semibold text-[22px] lg:text-[32px]">
+            <div className="py-6 flex flex-col items-start justify-between">
+              <div
+                className="flex w-full lg:gap-12 gap-6 items-start justify-between"
+              >
+
+                <h2
+                  ref={processHeadingRef}
+                  className="dmsans uppercase text-[#ededed] font-semibold text-[20px] lg:text-[32px]"
+                >
                   {service.id}
                 </h2>
 
@@ -173,6 +161,7 @@ useGSAP(() => {
                     transition={{ duration: 0.25 }}
                   />
                 </motion.svg>
+
               </div>
             </div>
           </div>
@@ -197,12 +186,20 @@ useGSAP(() => {
                 },
               }}
               className="overflow-hidden"
+              onAnimationComplete={() => {
+                if (isOpen) {
+                  serviceItemRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }
+              }}
             >
               <div className="w-full lg:mt-12 mt-4 lg:px-6 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 
                 {/* Description */}
                 <motion.div
-                  className="col-span-4"
+                  className="w-full min-w-0 lg:col-span-4"
                   initial={{ opacity: 0, y: 28 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 18 }}
@@ -213,7 +210,7 @@ useGSAP(() => {
                   }}
                 >
                   <div className="flex flex-col items-start">
-                    <h2 className="text-[#ededed] font-medium leading-normal text-[24px]">
+                    <h2 className="text-[#c7c4c4] font-medium leading-normal text-[16px] lg:text-[18px]">
                       {service.subHeading}
                     </h2>
 
@@ -234,7 +231,7 @@ useGSAP(() => {
 
                 {/* Image Reveal */}
                 <motion.div
-                  className="col-span-6 overflow-hidden"
+                  className="w-full min-w-0 overflow-hidden lg:col-span-6"
                   initial={{
                     clipPath: "inset(100% 0% 0% 0%)",
                   }}
@@ -250,7 +247,7 @@ useGSAP(() => {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <div className="relative h-[400px] w-full">
+                  <div className="relative h-[220px] lg:h-[400px] w-full">
                     <ScrollReactiveImage
                       src={service.image}
                       className="size-full hover:grayscale object-cover"
@@ -259,11 +256,15 @@ useGSAP(() => {
                 </motion.div>
 
                 {/* Expertise */}
-                <div className="col-span-2 flex flex-wrap gap-4  lg:flex-col lg:items-end lg:justify-end">
-                  {service.expertise.map((item, index) => (
-                    <motion.h4
+                <div className="w-full min-w-0 lg:col-span-2 lg:items-end lg:justify-start">
+                
+                    <ScrollVelocityContainer className="z-90 w-full min-w-0 flex flex-col gap-4">
+                         <ScrollVelocityRow baseVelocity={-8} className="w-full min-w-0 flex gap-6">
+                            <div className='flex px-6  items-center justify-center gap-6 min-w-[200px]' >
+                                            {service.expertise.map((item, index) => (
+                                       <motion.h4
                       key={item}
-                      className="text-[#909090] text-[14px]"
+                      className="text-[#909090]  text-[15px]"
                       initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
@@ -275,7 +276,15 @@ useGSAP(() => {
                     >
                       {item}
                     </motion.h4>
-                  ))}
+                       ))}
+                            </div>
+               
+                         </ScrollVelocityRow>
+                     
+
+                    </ScrollVelocityContainer>
+              
+               
                 </div>
 
               </div>
@@ -286,5 +295,4 @@ useGSAP(() => {
     </div>
   );
 };
-
 export default ServiceItem;

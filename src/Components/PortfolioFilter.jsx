@@ -139,7 +139,7 @@ const PortfolioFilter = ({
       {/* Mobile Filter Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-4 py-6 backdrop-blur-sm lg:hidden"
+          className="fixed top-20 inset-0 z-[100] p-3 flex items-center justify-center bg-black/50  py-6 backdrop-blur-[3px] lg:hidden"
           onClick={() => setIsOpen(false)}
         >
           <div
@@ -147,7 +147,7 @@ const PortfolioFilter = ({
             role="dialog"
             aria-modal="true"
             aria-label="Filter portfolio projects"
-            className="flex max-h-[85dvh] w-full max-w-sm flex-col gap-3 overflow-y-auto rounded-[22px] border border-(--text-colour)/45 bg-(--primary-color) p-4 shadow-2xl"
+            className="flex max-h-[85dvh] w-full max-w-sm flex-col gap-3 overflow-y-auto rounded-[22px] border border-(--text-colour)/45 bg-(--background-color) p-4 shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-1 flex items-center justify-between">

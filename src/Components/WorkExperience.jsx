@@ -39,9 +39,7 @@ const WorkExperience = () => {
       });
     });
   };
-   const [openService, setOpenService] = useState(
-    servicesInfo[0]?.id ?? null
-  );
+   const [openService, setOpenService] = useState(null);
 
   const handleToggle = (id) => {
     setOpenService((current) => (current === id ? null : id));
