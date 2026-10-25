@@ -24,6 +24,7 @@ import ServiceItem, { servicesInfo } from "./ServiceItem.jsx";
 import audio from "../assets/Audioprod.jpg"
 import PortfolioCard from "./PortfolioCard.jsx";
 import PortfolioFilter from "./PortfolioFilter.jsx";
+import OurTeamCards from "./OurTeamCards.jsx";
 
 const WorkExperience = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -452,273 +453,7 @@ const [isHovered, setIsHovered] = useState(false);
 
     <section className=" mt-34 min-h-screen">
 
-           <div className="w-full px-3 lg:mt-4 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 ">
-
-       <div className="lg:col-span-3  w-full flex flex-col start-start justify-start">
-        <div className="flex flex-col gap-1">
-          <h2 className="dmsans uppercase  text-[#ededed] font-medium text-[24px]">Our</h2>
-                
-        <h2 className="dmsans leading-10 uppercase text-(--secondary-color) font-black text-[42px]">Team</h2>
-        </div>
-
-       
-       </div>
-       
-
-       <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className=" lg:col-span-3 w-full p-0 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={worker2} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-
-        <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={worker2} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex mt-1 flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-    
-
-                   
-        <div className="lg:col-span-3 flex flex-col items-end justify-start">
-         <div className="flex justify-center items-center flex-col size-25 -bottom-15 -left-15 rounded-sm bg-(--secondary-color)">
-          <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        </div>
-
-        <p></p>
-       </div>
-
-             <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={branding} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex mt-1 flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-
-              <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={branding} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex mt-1 flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-
-          <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={worker} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex mt-1 flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-
-          <div  
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)} className="w-full lg:col-span-3 card_space">
-                 <div className="relative h-[400px] w-full  bg-(--primary-color)">
-                <img src={Worker} className="size-full grayscale object-cover" />
-                <motion.div
-                           animate={{
-              height: isHovered ? "auto" : 0,
-              opacity: isHovered ? 1 : 0,
-            }}
-            transition={{
-              height: {
-                duration: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-              opacity: {
-                duration: 0.4,
-                ease: "easeOut",
-              },
-            }}
-                
-                
-                className="absolute overflow-hidden right-0 bottom-0 flex-col gap-2 p-2">
-                      <h2>Facebook</h2>
-                      <h2>Instagram</h2>
-                      <h2>Linkdin</h2>
-
-
-                </motion.div>
-
-       </div>
-       <div className="flex mt-1 flex-col gap-2">
-       <h4 className="card_heading leading-0 text-[18px]"> Dannie Mankhwazi</h4>
-            <h4 className="text_para  text-[14px] dmsans">Web designer & developer</h4>
-       </div>
-  
-       </div>
-
-
-
-
-    </div>
+   <OurTeamCards />
 
     </section>
   
@@ -740,7 +475,7 @@ const [isHovered, setIsHovered] = useState(false);
      
        <div className="flex_container gap-8">
 
-        <div className="lg:w-[10%] lg:sticky lg:top-22  w-full flex flex-col items-sart justify-center">
+        <div className="lg:w-[5%] lg:sticky lg:top-22  w-full flex flex-col items-sart justify-center">
            <div className="flex flex-row gap-3">
            
      <svg className="size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 7L7 17M7 17H17M7 17V7" stroke="#ededed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -749,7 +484,7 @@ const [isHovered, setIsHovered] = useState(false);
        
        </div>
 
-       <div className="lg:w-[20%] lg:sticky lg:top-22 w-full flex flex-col start-start justify-start">
+       <div className="lg:w-[25%] lg:sticky lg:top-22 w-full flex flex-col start-start justify-start">
             <aside className="lg:col-span-3">
         <PortfolioFilter
            selectedCategories={selectedCategories}

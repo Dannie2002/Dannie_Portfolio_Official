@@ -6,7 +6,7 @@ const defaultCategories = [
   "Music artworks",
   "Book covers",
   "Logos",
-  "Wedding cards",
+  "App & Website development",
   "T-shirt design",
   "Business cards",
   "Brochure, Leaflets & Booklet",
