@@ -34,7 +34,7 @@ const portfolioItems = [
     title: "Be content T shirt design.",
     category: "T-shirt design", 
     image: tshirt,
-    colSpan: 8,
+    colSpan: 4,
   },
 
 
@@ -43,8 +43,8 @@ const portfolioItems = [
 const PortfolioCardItem = ({ item }) => {
   return (
     <div
-      className={`w-full ${
-        item.colSpan === 8 ? "lg:col-span-8" : "lg:col-span-4"
+      className={`w-full  ${
+        item.colSpan === 8 ? "col-span-1 lg:col-span-8" : "col-span-1 lg:col-span-4"
       } card_space`}
     >
       <div className="relative h-[320px] lg:h-[400px] w-full bg-(--primary-color)">

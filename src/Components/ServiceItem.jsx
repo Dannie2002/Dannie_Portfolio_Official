@@ -87,7 +87,7 @@ useGSAP(() => {
   const chars = heroSplit.chars;
 
   // --------------------------------
-  // 1. ENTRY REVEAL — PLAYS ONCE
+  // ENTRY REVEAL — PLAYS ONCE
   // --------------------------------
 
   const entryTl = gsap.timeline({
@@ -118,33 +118,6 @@ useGSAP(() => {
       });
     }
   }
-
-  // --------------------------------
-  // 2. SCROLL COLOUR — SCRUB BASED
-  // --------------------------------
-
-  gsap.set(chars, {
-    color: "#4a4a4a",
-  });
-
-  const colorTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: heading,
-      start: "top 80%",
-      end: "bottom 35%",
-      scrub: 1,
-    },
-  });
-
-  colorTl.to(chars, {
-    color: "#ededed",
-    stagger: {
-      each: 0.045,
-      from: "start",
-    },
-    ease: "none",
-    duration: 1,
-  });
 
   return () => {
     heroSplit.revert();
